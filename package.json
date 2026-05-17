@@ -1,0 +1,42 @@
+{
+  "name": "wooolfmesh.github.io",
+  "version": "1.0.0",
+  "description": "Public GitHub Pages website for Wooolfmesh.",
+  "scripts": {
+    "build": "node scripts/build-site.mjs && npm run generate:og",
+    "generate:og": "node scripts/generate-og.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:html": "html-validate \"*.html\" \"*/index.html\" \"*/*/index.html\"",
+    "check:links": "linkinator http://127.0.0.1:4173 --recurse --skip \"^(https://|mailto:)\"",
+    "check:a11y": "pa11y-ci --config .pa11yci.json",
+    "validate": "node scripts/validate-site.mjs",
+    "check": "npm run build && npm run format && npm run validate && npm run format:check && npm run lint:html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wooolfmesh/wooolfmesh.github.io.git"
+  },
+  "keywords": [
+    "local-first",
+    "agentic-work",
+    "productivity",
+    "markdown",
+    "personal-knowledge-management"
+  ],
+  "author": "Dzmitryi Kharlanau",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/wooolfmesh/wooolfmesh.github.io/issues"
+  },
+  "homepage": "https://wooolfmesh.github.io/",
+  "devDependencies": {
+    "html-validate": "^11.1.0",
+    "linkinator": "^7.6.1",
+    "pa11y-ci": "^4.1.1",
+    "prettier": "^3.8.3",
+    "sharp": "^0.34.5"
+  }
+}

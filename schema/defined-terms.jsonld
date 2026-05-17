@@ -1,0 +1,99 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://wooolfmesh.github.io/glossary/#defined-term-set",
+  "name": "Wooolfmesh glossary",
+  "url": "https://wooolfmesh.github.io/glossary/",
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Wooolfmesh",
+      "description": "A local-first work memory system for agentic work that turns tasks, notes, decisions, lessons and work history into reusable execution memory.",
+      "url": "https://wooolfmesh.github.io/glossary/#wooolfmesh"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "WorkOS Local",
+      "description": "The legacy/internal name that preceded Wooolfmesh.",
+      "url": "https://wooolfmesh.github.io/glossary/#workos-local"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Agentic work memory",
+      "description": "Structured context that helps humans and AI assistants retrieve what matters from prior work, decisions, reviews and lessons.",
+      "url": "https://wooolfmesh.github.io/glossary/#agentic-work-memory"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Local-first",
+      "description": "A design approach where user-owned local storage remains primary and cloud dependencies are optional rather than required.",
+      "url": "https://wooolfmesh.github.io/glossary/#local-first"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Markdown vault",
+      "description": "A local folder of Markdown files that acts as durable, human-readable storage for work memory.",
+      "url": "https://wooolfmesh.github.io/glossary/#markdown-vault"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Today command center",
+      "description": "The daily operating layer that gathers priority, readiness and next work context.",
+      "url": "https://wooolfmesh.github.io/glossary/#today-command-center"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Capture",
+      "description": "The act of collecting raw notes, links, signals, tasks and decisions before they are clarified.",
+      "url": "https://wooolfmesh.github.io/glossary/#capture"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Focus session",
+      "description": "A bounded work session connected to task context, goal, interruptions and outcome.",
+      "url": "https://wooolfmesh.github.io/glossary/#focus-session"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Review",
+      "description": "A daily, weekly, project or experience reflection that converts work history into follow-up actions and lessons.",
+      "url": "https://wooolfmesh.github.io/glossary/#review"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Cognitive bite",
+      "description": "A compact reusable lesson, heuristic, mistake, prompt or operating rule.",
+      "url": "https://wooolfmesh.github.io/glossary/#cognitive-bite"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Project health",
+      "description": "A view of momentum, blockers, stale work, commitments and review debt around a project.",
+      "url": "https://wooolfmesh.github.io/glossary/#project-health"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Signal",
+      "description": "A local pattern or event that helps interpret work state, workload, friction or progress.",
+      "url": "https://wooolfmesh.github.io/glossary/#signal"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Optional AI provider",
+      "description": "A local or external AI system that may assist the product but is not required for core usefulness.",
+      "url": "https://wooolfmesh.github.io/glossary/#optional-ai-provider"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "No silent mutation",
+      "description": "The principle that the system should not save or alter private work memory without clear user action.",
+      "url": "https://wooolfmesh.github.io/glossary/#no-silent-mutation"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Preview-first",
+      "description": "Capture and AI-assisted flows should show proposed changes before saving them.",
+      "url": "https://wooolfmesh.github.io/glossary/#preview-first"
+    }
+  ]
+}

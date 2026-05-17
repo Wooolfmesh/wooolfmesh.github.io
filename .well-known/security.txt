@@ -1,0 +1,3 @@
+Contact: https://dkharlanau.github.io/
+Preferred-Languages: en
+Canonical: https://wooolfmesh.github.io/.well-known/security.txt

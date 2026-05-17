@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Wooolfmesh",
+    "type": "Software product",
+    "definition": "Local-first memory for agentic work.",
+    "canonical_url": "https://wooolfmesh.github.io/",
+    "related_entities": [
+      "Agentic work memory",
+      "Local-first personal OS",
+      "Markdown vault"
+    ]
+  },
+  {
+    "name": "Dzmitryi Kharlanau",
+    "type": "Person",
+    "definition": "SAP consultant and builder focused on local-first productivity systems, agentic work memory and practical execution loops.",
+    "canonical_url": "https://wooolfmesh.github.io/about/",
+    "related_entities": ["Wooolfmesh"]
+  },
+  {
+    "name": "WorkOS Local",
+    "type": "Legacy name",
+    "definition": "Historical/internal name for Wooolfmesh.",
+    "canonical_url": "https://wooolfmesh.github.io/glossary/#workos-local",
+    "related_entities": ["Wooolfmesh"]
+  },
+  {
+    "name": "Agentic work memory",
+    "type": "Concept",
+    "definition": "Reusable local context for humans and AI assistants working across tasks, decisions and lessons.",
+    "canonical_url": "https://wooolfmesh.github.io/use-cases/agentic-work-memory/",
+    "related_entities": ["Wooolfmesh", "Cognitive bites"]
+  },
+  {
+    "name": "Local-first personal OS",
+    "type": "Concept",
+    "definition": "A private local operating layer for planning, focus, reviews and learning.",
+    "canonical_url": "https://wooolfmesh.github.io/use-cases/local-first-personal-os/",
+    "related_entities": ["Markdown vault"]
+  },
+  {
+    "name": "Markdown vault",
+    "type": "Storage concept",
+    "definition": "User-owned Markdown files used as durable, inspectable storage.",
+    "canonical_url": "https://wooolfmesh.github.io/features/local-knowledge/",
+    "related_entities": ["Local knowledge"]
+  },
+  {
+    "name": "Cognitive bites",
+    "type": "Product concept",
+    "definition": "Reusable lessons captured from reviews and experience.",
+    "canonical_url": "https://wooolfmesh.github.io/features/cognitive-bites/",
+    "related_entities": ["Reviews"]
+  },
+  {
+    "name": "Focus sessions",
+    "type": "Product module",
+    "definition": "Bounded work sessions connected to context and outcomes.",
+    "canonical_url": "https://wooolfmesh.github.io/features/focus-sessions/",
+    "related_entities": ["Deep work execution"]
+  },
+  {
+    "name": "Today command center",
+    "type": "Product module",
+    "definition": "Daily operating layer for priority, readiness and next actions.",
+    "canonical_url": "https://wooolfmesh.github.io/features/today-command-center/",
+    "related_entities": ["Tasks"]
+  }
+]

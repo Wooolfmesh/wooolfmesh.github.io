@@ -1,0 +1,11 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "element-permitted-content": "off",
+    "doctype-style": "off",
+    "no-inline-style": "off",
+    "prefer-native-element": "off",
+    "svg-focusable": "off",
+    "void-style": "off"
+  }
+}

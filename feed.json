@@ -1,0 +1,45 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Wooolfmesh Changelog",
+  "home_page_url": "https://wooolfmesh.github.io/",
+  "feed_url": "https://wooolfmesh.github.io/feed.json",
+  "description": "Public updates for Wooolfmesh.",
+  "language": "en",
+  "items": [
+    {
+      "id": "https://wooolfmesh.github.io/changelog/#public-site-created",
+      "url": "https://wooolfmesh.github.io/changelog/#public-site-created",
+      "title": "Public site created",
+      "date_published": "${updatedIso}",
+      "summary": "Created the first serious public GitHub Pages foundation for Wooolfmesh."
+    },
+    {
+      "id": "https://wooolfmesh.github.io/changelog/#rebrand-direction-to-wooolfmesh",
+      "url": "https://wooolfmesh.github.io/changelog/#rebrand-direction-to-wooolfmesh",
+      "title": "Rebrand direction to Wooolfmesh",
+      "date_published": "${updatedIso}",
+      "summary": "Established Wooolfmesh as the public brand. WorkOS Local remains a legacy/internal name."
+    },
+    {
+      "id": "https://wooolfmesh.github.io/changelog/#product-positioning-published",
+      "url": "https://wooolfmesh.github.io/changelog/#product-positioning-published",
+      "title": "Product positioning published",
+      "date_published": "${updatedIso}",
+      "summary": "Published the tagline and core message for local-first memory for agentic work."
+    },
+    {
+      "id": "https://wooolfmesh.github.io/changelog/#roadmap-published",
+      "url": "https://wooolfmesh.github.io/changelog/#roadmap-published",
+      "title": "Roadmap published",
+      "date_published": "${updatedIso}",
+      "summary": "Added a Now / Next / Later public roadmap."
+    },
+    {
+      "id": "https://wooolfmesh.github.io/changelog/#local-first-privacy-principles-published",
+      "url": "https://wooolfmesh.github.io/changelog/#local-first-privacy-principles-published",
+      "title": "Local-first/privacy principles published",
+      "date_published": "${updatedIso}",
+      "summary": "Documented Markdown ownership, SQLite runtime support, optional AI and preview-first principles."
+    }
+  ]
+}

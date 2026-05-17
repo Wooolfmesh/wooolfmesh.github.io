@@ -1,0 +1,5 @@
+Product: Wooolfmesh
+Author: Dzmitryi Kharlanau
+Site purpose: Public product website and AI-readable knowledge base foundation.
+Public repository: https://github.com/wooolfmesh/wooolfmesh.github.io
+No private data note: this site must not contain private vault data, secrets, sensitive screenshots, personal logs or client information.

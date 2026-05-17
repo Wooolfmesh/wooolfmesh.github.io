@@ -1,0 +1,18 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 30000,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox"]
+    }
+  },
+  "urls": [
+    "http://127.0.0.1:4173/",
+    "http://127.0.0.1:4173/product/",
+    "http://127.0.0.1:4173/privacy/",
+    "http://127.0.0.1:4173/install/",
+    "http://127.0.0.1:4173/faq/",
+    "http://127.0.0.1:4173/glossary/",
+    "http://127.0.0.1:4173/ai/context/"
+  ]
+}

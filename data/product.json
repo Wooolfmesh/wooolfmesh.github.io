@@ -1,0 +1,136 @@
+{
+  "name": "Wooolfmesh",
+  "tagline": "Local-first memory for agentic work.",
+  "description": "Wooolfmesh turns tasks, notes, decisions, lessons and work history into reusable execution memory.",
+  "legacy_name": "WorkOS Local",
+  "category": [
+    "local-first software",
+    "personal operating system",
+    "agentic work memory",
+    "productivity system",
+    "knowledge work"
+  ],
+  "core_loop": [
+    "Capture",
+    "Clarify",
+    "Plan",
+    "Focus",
+    "Review",
+    "Learn",
+    "Reuse"
+  ],
+  "features": [
+    {
+      "slug": "today-command-center",
+      "title": "Today command center",
+      "short": "A daily operating layer for priorities, readiness, reminders, focus context and review actions.",
+      "problem": "Daily work becomes scattered across task lists, notes, calendar pressure and unfinished review follow-ups.",
+      "does": "Wooolfmesh brings the next useful work, readiness signals and execution context into one local daily view.",
+      "why": "The point is to reduce decision drag before work starts and make the next action explicit.",
+      "loop": ["Clarify", "Plan", "Focus", "Review"],
+      "terms": [
+        "daily operating layer",
+        "review-driven productivity",
+        "private work memory"
+      ]
+    },
+    {
+      "slug": "tasks",
+      "title": "Tasks",
+      "short": "Tasks carry next actions, definition of done, project links and review history.",
+      "problem": "A task title alone rarely contains enough context to restart serious work after interruption.",
+      "does": "Wooolfmesh treats tasks as execution memory: action, outcome, context, links and follow-through.",
+      "why": "Tasks become less like inventory and more like durable work instructions for the future self or an assisting agent.",
+      "loop": ["Clarify", "Plan", "Focus", "Review"],
+      "terms": [
+        "next action",
+        "definition of done",
+        "task and knowledge execution loop"
+      ]
+    },
+    {
+      "slug": "capture-inbox",
+      "title": "Capture and inbox",
+      "short": "Preview-first capture for raw notes, links, tasks, decisions, signals and possible lessons.",
+      "problem": "Important fragments arrive faster than they can be organized, then disappear into unreviewed notes.",
+      "does": "Wooolfmesh keeps capture explicit and preview-first so extracted entities can be reviewed before saving.",
+      "why": "Fast capture is useful only when it does not silently mutate private work memory.",
+      "loop": ["Capture", "Clarify"],
+      "terms": ["preview-first", "no silent mutation", "capture inbox"]
+    },
+    {
+      "slug": "focus-sessions",
+      "title": "Focus sessions",
+      "short": "A focused work container that keeps goal, context, interruptions and outcome together.",
+      "problem": "Deep work is fragile when the goal, source material and stopping point are not captured together.",
+      "does": "Wooolfmesh connects a session to tasks, context and review notes so the work can be resumed or learned from.",
+      "why": "Focus becomes a reusable record, not just a timer event.",
+      "loop": ["Plan", "Focus", "Review"],
+      "terms": ["focus sessions", "deep work execution", "execution memory"]
+    },
+    {
+      "slug": "reviews",
+      "title": "Reviews",
+      "short": "Daily, weekly, project and experience reviews that convert work history into follow-up actions and lessons.",
+      "problem": "Work repeats the same mistakes when outcomes, decisions and friction are never reviewed.",
+      "does": "Wooolfmesh turns reviews into actions, signals and reusable cognitive bites.",
+      "why": "Reflection only matters when it feeds the next execution loop.",
+      "loop": ["Review", "Learn", "Reuse"],
+      "terms": ["review-driven productivity", "daily review", "weekly review"]
+    },
+    {
+      "slug": "cognitive-bites",
+      "title": "Cognitive bites",
+      "short": "Small reusable lessons, heuristics, prompts, mistakes and operating rules.",
+      "problem": "Useful learning is often trapped in long notes or forgotten after the next project starts.",
+      "does": "Wooolfmesh captures lessons as compact pieces of execution memory that can be reused in later work.",
+      "why": "A cognitive bite makes experience easier to retrieve at the moment of action.",
+      "loop": ["Review", "Learn", "Reuse"],
+      "terms": ["cognitive bites", "reusable lessons", "agentic work memory"]
+    },
+    {
+      "slug": "project-health",
+      "title": "Project health",
+      "short": "A way to see momentum, blockers, stale tasks, commitments and review debt around a project.",
+      "problem": "Projects become unclear when progress, blockers and next outcomes are spread across multiple systems.",
+      "does": "Wooolfmesh connects project tasks, signals, reviews and follow-through into a local health picture.",
+      "why": "Project health should show where execution is stuck before the backlog becomes noise.",
+      "loop": ["Plan", "Focus", "Review", "Reuse"],
+      "terms": ["project health", "follow-through", "signals"]
+    },
+    {
+      "slug": "signals-analytics",
+      "title": "Signals and analytics",
+      "short": "Local patterns over focus, completion, review debt, workload and recurring friction.",
+      "problem": "Personal work systems rarely expose patterns without sending private behavior into a hosted analytics tool.",
+      "does": "Wooolfmesh uses local signals to show useful patterns while keeping private work memory under user control.",
+      "why": "The goal is better self-calibration, not surveillance.",
+      "loop": ["Review", "Learn", "Plan"],
+      "terms": ["signals", "analytics", "private work memory"]
+    },
+    {
+      "slug": "local-knowledge",
+      "title": "Local knowledge",
+      "short": "Markdown vault storage, local retrieval context and human-readable work memory.",
+      "problem": "Productivity tools often hide knowledge in proprietary systems that are hard to inspect or reuse.",
+      "does": "Wooolfmesh keeps user-owned Markdown as the durable layer and uses runtime support for indexing and reminders.",
+      "why": "Local knowledge should remain portable and useful outside the app.",
+      "loop": ["Capture", "Clarify", "Learn", "Reuse"],
+      "terms": [
+        "Markdown vault productivity system",
+        "local-first",
+        "retrieval"
+      ]
+    }
+  ],
+  "author": {
+    "name": "Dzmitryi Kharlanau",
+    "url": "https://dkharlanau.github.io/",
+    "description": "SAP consultant and builder focused on local-first productivity systems, agentic work memory and practical execution loops."
+  },
+  "urls": {
+    "site": "https://wooolfmesh.github.io/",
+    "source": "https://github.com/dkharlanau/work-os-local",
+    "site_repo": "https://github.com/wooolfmesh/wooolfmesh.github.io"
+  }
+}

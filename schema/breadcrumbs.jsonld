@@ -1,0 +1,641 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "product",
+          "item": "https://wooolfmesh.github.io/product/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "features",
+          "item": "https://wooolfmesh.github.io/features/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "features",
+          "item": "https://wooolfmesh.github.io/features/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "today command center",
+          "item": "https://wooolfmesh.github.io/features/today-command-center/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "features",
+          "item": "https://wooolfmesh.github.io/features/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "tasks",
+          "item": "https://wooolfmesh.github.io/features/tasks/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "features",
+          "item": "https://wooolfmesh.github.io/features/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "capture inbox",
+          "item": "https://wooolfmesh.github.io/features/capture-inbox/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "features",
+          "item": "https://wooolfmesh.github.io/features/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "focus sessions",
+          "item": "https://wooolfmesh.github.io/features/focus-sessions/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "features",
+          "item": "https://wooolfmesh.github.io/features/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "reviews",
+          "item": "https://wooolfmesh.github.io/features/reviews/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "features",
+          "item": "https://wooolfmesh.github.io/features/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "cognitive bites",
+          "item": "https://wooolfmesh.github.io/features/cognitive-bites/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "features",
+          "item": "https://wooolfmesh.github.io/features/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "project health",
+          "item": "https://wooolfmesh.github.io/features/project-health/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "features",
+          "item": "https://wooolfmesh.github.io/features/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "signals analytics",
+          "item": "https://wooolfmesh.github.io/features/signals-analytics/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "features",
+          "item": "https://wooolfmesh.github.io/features/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "local knowledge",
+          "item": "https://wooolfmesh.github.io/features/local-knowledge/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "use cases",
+          "item": "https://wooolfmesh.github.io/use-cases/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "use cases",
+          "item": "https://wooolfmesh.github.io/use-cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "agentic work memory",
+          "item": "https://wooolfmesh.github.io/use-cases/agentic-work-memory/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "use cases",
+          "item": "https://wooolfmesh.github.io/use-cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "local first personal os",
+          "item": "https://wooolfmesh.github.io/use-cases/local-first-personal-os/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "use cases",
+          "item": "https://wooolfmesh.github.io/use-cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "deep work execution",
+          "item": "https://wooolfmesh.github.io/use-cases/deep-work-execution/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "use cases",
+          "item": "https://wooolfmesh.github.io/use-cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "reusable lessons",
+          "item": "https://wooolfmesh.github.io/use-cases/reusable-lessons/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "use cases",
+          "item": "https://wooolfmesh.github.io/use-cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "private ai productivity",
+          "item": "https://wooolfmesh.github.io/use-cases/private-ai-productivity/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "roadmap",
+          "item": "https://wooolfmesh.github.io/roadmap/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "changelog",
+          "item": "https://wooolfmesh.github.io/changelog/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "privacy",
+          "item": "https://wooolfmesh.github.io/privacy/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "install",
+          "item": "https://wooolfmesh.github.io/install/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "about",
+          "item": "https://wooolfmesh.github.io/about/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "faq",
+          "item": "https://wooolfmesh.github.io/faq/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "glossary",
+          "item": "https://wooolfmesh.github.io/glossary/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "compare",
+          "item": "https://wooolfmesh.github.io/compare/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ai",
+          "item": "https://wooolfmesh.github.io/ai/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ai",
+          "item": "https://wooolfmesh.github.io/ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "context",
+          "item": "https://wooolfmesh.github.io/ai/context/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ai",
+          "item": "https://wooolfmesh.github.io/ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "use cases",
+          "item": "https://wooolfmesh.github.io/ai/use-cases/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wooolfmesh.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ai",
+          "item": "https://wooolfmesh.github.io/ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "entities",
+          "item": "https://wooolfmesh.github.io/ai/entities/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Wooolfmesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wooolfmesh is local-first memory for agentic work. It connects tasks, notes, decisions, reviews, lessons and local knowledge into a reusable execution loop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was Wooolfmesh previously called WorkOS Local?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Wooolfmesh began as WorkOS Local. WorkOS Local is now a legacy/internal name, while Wooolfmesh is the public product brand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Wooolfmesh a task manager?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not only. It includes tasks, but the larger purpose is a private work memory layer that connects tasks with context, focus sessions, reviews and lessons."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Wooolfmesh an AI chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. AI is optional assistance for extraction, summaries and reflection. The core product is the local-first execution memory loop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does local-first mean here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Local-first means user-owned local files and runtime data are the default. The product should not require hosted accounts, cloud databases or hosted AI to be useful."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does user data live?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The product direction uses a user-owned Markdown vault as the durable storage layer, with SQLite as runtime support for reminders, events, metadata and indexing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is AI required?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Wooolfmesh should degrade when AI is unavailable and keep normal operation useful without hosted models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are cognitive bites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cognitive bites are compact reusable lessons, heuristics, prompts, mistakes or operating rules captured from real work and reviews."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is agentic work memory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Agentic work memory is structured local context that helps humans and AI assistants understand tasks, decisions, lessons and work history across execution cycles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an installer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A public installer may not be ready yet. The install path is evolving toward simple local setup, Windows/macOS support and safer update/backup flows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is building Wooolfmesh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wooolfmesh is built by Dzmitryi Kharlanau, an SAP consultant and builder focused on local-first productivity systems and practical execution loops."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it ready for daily use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The product is evolving. The public site is honest about current limitations and developer-oriented setup while the productization path matures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I follow the roadmap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The roadmap page publishes the Now, Next and Later direction for Wooolfmesh."
+      }
+    }
+  ]
+}

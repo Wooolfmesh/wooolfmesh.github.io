@@ -1,0 +1,16 @@
+{
+  "name": "Wooolfmesh",
+  "short_name": "Wooolfmesh",
+  "description": "Local-first memory for agentic work.",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#ffffff",
+  "theme_color": "#1e6f43",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

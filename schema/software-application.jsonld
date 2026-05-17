@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://wooolfmesh.github.io/#software",
+  "name": "Wooolfmesh",
+  "alternateName": "WorkOS Local",
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "Windows, macOS, local web app",
+  "url": "https://wooolfmesh.github.io/",
+  "image": "https://wooolfmesh.github.io/assets/og.png",
+  "author": {
+    "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
+  },
+  "description": "Wooolfmesh is local-first memory for agentic work. It turns tasks, notes, decisions, lessons and work history into reusable execution memory.",
+  "isAccessibleForFree": true,
+  "keywords": [
+    "local-first memory for agentic work",
+    "agentic work memory",
+    "local-first personal operating system",
+    "private work memory",
+    "task and knowledge execution loop",
+    "Markdown vault productivity system",
+    "cognitive bites",
+    "focus sessions",
+    "review-driven productivity",
+    "local-first AI productivity",
+    "WorkOS Local legacy name"
+  ],
+  "featureList": [
+    "Today command center",
+    "Tasks",
+    "Capture and inbox",
+    "Focus sessions",
+    "Reviews",
+    "Cognitive bites",
+    "Project health",
+    "Signals and analytics",
+    "Local knowledge"
+  ],
+  "sameAs": [
+    "https://github.com/dkharlanau/work-os-local"
+  ]
+}

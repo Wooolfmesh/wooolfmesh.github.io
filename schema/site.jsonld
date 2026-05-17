@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://wooolfmesh.github.io/#website",
+  "name": "Wooolfmesh",
+  "alternateName": [
+    "WorkOS Local",
+    "work-os-local",
+    "Work OS Local"
+  ],
+  "url": "https://wooolfmesh.github.io/",
+  "description": "Local-first memory for agentic work.",
+  "inLanguage": "en",
+  "dateModified": "2026-05-17",
+  "publisher": {
+    "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
+  },
+  "author": {
+    "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
+  },
+  "potentialAction": {
+    "@type": "ReadAction",
+    "target": [
+      "https://wooolfmesh.github.io/product/",
+      "https://wooolfmesh.github.io/ai/context/",
+      "https://wooolfmesh.github.io/llms.txt"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+# Wooolfmesh
+
+Wooolfmesh is local-first memory for agentic work.
+
+It turns tasks, notes, decisions, lessons and work history into reusable execution memory.
+
+## Main pages
+
+- [Wooolfmesh — Local-first memory for agentic work](https://wooolfmesh.github.io/)
+- [Product](https://wooolfmesh.github.io/product/)
+- [Features](https://wooolfmesh.github.io/features/)
+- [Today command center feature](https://wooolfmesh.github.io/features/today-command-center/)
+- [Tasks feature](https://wooolfmesh.github.io/features/tasks/)
+- [Capture and inbox feature](https://wooolfmesh.github.io/features/capture-inbox/)
+- [Focus sessions feature](https://wooolfmesh.github.io/features/focus-sessions/)
+- [Reviews feature](https://wooolfmesh.github.io/features/reviews/)
+- [Cognitive bites feature](https://wooolfmesh.github.io/features/cognitive-bites/)
+- [Project health feature](https://wooolfmesh.github.io/features/project-health/)
+- [Signals and analytics feature](https://wooolfmesh.github.io/features/signals-analytics/)
+- [Local knowledge feature](https://wooolfmesh.github.io/features/local-knowledge/)
+- [Use cases](https://wooolfmesh.github.io/use-cases/)
+- [Agentic work memory use case](https://wooolfmesh.github.io/use-cases/agentic-work-memory/)
+- [Local-first personal operating system use case](https://wooolfmesh.github.io/use-cases/local-first-personal-os/)
+- [Deep work execution use case](https://wooolfmesh.github.io/use-cases/deep-work-execution/)
+- [Reusable lessons use case](https://wooolfmesh.github.io/use-cases/reusable-lessons/)
+- [Private AI productivity use case](https://wooolfmesh.github.io/use-cases/private-ai-productivity/)
+- [Roadmap](https://wooolfmesh.github.io/roadmap/)
+- [Changelog](https://wooolfmesh.github.io/changelog/)
+- [Privacy and local-first principles](https://wooolfmesh.github.io/privacy/)
+- [Install and getting started](https://wooolfmesh.github.io/install/)
+- [About](https://wooolfmesh.github.io/about/)
+- [FAQ](https://wooolfmesh.github.io/faq/)
+- [Glossary](https://wooolfmesh.github.io/glossary/)
+- [Compare](https://wooolfmesh.github.io/compare/)
+- [AI overview](https://wooolfmesh.github.io/ai/)
+- [AI context](https://wooolfmesh.github.io/ai/context/)
+- [AI use case summary](https://wooolfmesh.github.io/ai/use-cases/)
+- [Entity index](https://wooolfmesh.github.io/ai/entities/)
+
+## Machine-readable files
+
+- [Product data](https://wooolfmesh.github.io/data/product.json)
+- [Features data](https://wooolfmesh.github.io/data/features.json)
+- [Roadmap data](https://wooolfmesh.github.io/data/roadmap.json)
+- [Glossary data](https://wooolfmesh.github.io/data/glossary.json)
+- [FAQ data](https://wooolfmesh.github.io/data/faq.json)
+- [Entities data](https://wooolfmesh.github.io/data/entities.json)
+- [Full AI context](https://wooolfmesh.github.io/llms-full.txt)
+
+No private vault data is published on this site.

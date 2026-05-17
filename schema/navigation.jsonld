@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://wooolfmesh.github.io/#site-navigation",
+  "name": "Wooolfmesh site navigation",
+  "itemListElement": [
+    {
+      "@type": "SiteNavigationElement",
+      "position": 1,
+      "name": "Home",
+      "url": "https://wooolfmesh.github.io/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 2,
+      "name": "Product",
+      "url": "https://wooolfmesh.github.io/product/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 3,
+      "name": "Features",
+      "url": "https://wooolfmesh.github.io/features/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 4,
+      "name": "Use cases",
+      "url": "https://wooolfmesh.github.io/use-cases/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 5,
+      "name": "Roadmap",
+      "url": "https://wooolfmesh.github.io/roadmap/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 6,
+      "name": "Changelog",
+      "url": "https://wooolfmesh.github.io/changelog/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 7,
+      "name": "Privacy",
+      "url": "https://wooolfmesh.github.io/privacy/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 8,
+      "name": "Install",
+      "url": "https://wooolfmesh.github.io/install/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 9,
+      "name": "About",
+      "url": "https://wooolfmesh.github.io/about/"
+    }
+  ]
+}
