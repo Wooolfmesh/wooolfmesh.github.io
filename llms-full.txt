@@ -1,60 +1,36 @@
 # Wooolfmesh full AI context
 
 ## Product definition
-Wooolfmesh is a local-first work memory system for agentic work. It connects tasks, capture, focus sessions, reviews, cognitive bites, projects, signals and local knowledge into one execution loop.
+Wooolfmesh is a private local-first command center for tasks, capture, focus sessions, reviews, cognitive bites, memory, routines, signals, analytics, quick links, prompts, vault registry, search/retrieval, diagnostics and optional AI.
 
 ## Product thesis
-Modern work creates scattered tasks, notes, decisions, interruptions and lessons. Wooolfmesh turns that work history into reusable execution memory while keeping private work memory under user control.
-
-## Target users
-Consultants, builders, operators and knowledge workers who need private local context for task execution, review-driven productivity and optional AI-assisted work.
+Your Markdown vault stays yours. SQLite supports runtime state; Markdown remains the ownership layer. AI can help, but the app works without it.
 
 ## Core loop
-Capture → Clarify → Plan → Focus → Review → Learn → Reuse
+Capture -> Clarify -> Plan -> Focus -> Review -> Learn -> Reuse
 
-## Main modules
-- Today command center: A daily operating layer for priorities, readiness, reminders, focus context and review actions.
-- Tasks: Tasks carry next actions, definition of done, project links and review history.
-- Capture and inbox: Preview-first capture for raw notes, links, tasks, decisions, signals and possible lessons.
-- Focus sessions: A focused work container that keeps goal, context, interruptions and outcome together.
-- Reviews: Daily, weekly, project and experience reviews that convert work history into follow-up actions and lessons.
-- Cognitive bites: Small reusable lessons, heuristics, prompts, mistakes and operating rules.
-- Project health: A way to see momentum, blockers, stale tasks, commitments and review debt around a project.
-- Signals and analytics: Local patterns over focus, completion, review debt, workload and recurring friction.
-- Local knowledge: Markdown vault storage, local retrieval context and human-readable work memory.
+## Feature status
+- Today command center: Built. A daily operating layer for next action, routines, reminders, freshness, focus readiness and work queues.
+- Tasks and planning: Built. Markdown-backed tasks with next action, definition of done, effort, energy, work mode, links and reminders.
+- Capture and inbox: Built. Preview-first capture for raw notes, tasks, memory, cognitive bites and later processing.
+- Focus sessions: Built. Deep work sessions connected to a task, definition of done, interruptions, outcome and next action.
+- Reviews: Partial. Daily, weekly, project and experience reviews with suggested actions and approval flows.
+- Cognitive bites: Built. Reusable lessons, decisions, mistakes, playbooks, principles and patterns.
+- Project health: Partial. Project momentum, blockers, stale work, related lessons and suggested next moves.
+- Signals and analytics: Built. Local patterns over focus, completion, routines, signals, planning quality and app health.
+- Local knowledge and search: Partial. Markdown vault storage, vault registry, search, retrieval, citations and provenance.
+- Optional AI providers: Optional. Ollama, hosted provider settings, ADK previews and OCR paths are optional and provider-dependent.
 
-## Local-first architecture summary
-Markdown is the user-owned durable layer. SQLite is runtime support for reminders, events, metadata, caches and indexing. AI providers are optional and must not be required for core usefulness.
+## Store readiness
+Wooolfmesh is not Microsoft Store-ready yet. Missing: MSIX/upload package, package validation, clean Windows install/update/uninstall validation, Partner Center confirmation, final Store screenshots and legal review.
 
 ## Privacy principles
-No private vault data is published on this site. Capture is preview-first. No silent mutation. External integrations are opt-in.
-
-## Roadmap summary
-Now: Rebrand from WorkOS Local to Wooolfmesh; Launch public GitHub Pages site; Improve Today as daily operating layer; Strengthen focus readiness; Connect review actions to execution; Clarify install/productization path.
-Next: Weekly outcomes planner; Project health workbench; Better contextual use of cognitive bites and operating manual; Human-readable documentation; Public demo assets and screenshots.
-Later: Calendar-aware capacity planning; Installer-grade productization; Optional external commitment sync; Microsoft Store / desktop packaging direction; Public templates or starter vault.
-
-## Current limitations
-The product is evolving. A public installer may not be ready yet, and current setup may still be developer-oriented.
-
-## Glossary
-- Wooolfmesh: A local-first work memory system for agentic work that turns tasks, notes, decisions, lessons and work history into reusable execution memory.
-- WorkOS Local: The legacy/internal name that preceded Wooolfmesh.
-- Agentic work memory: Structured context that helps humans and AI assistants retrieve what matters from prior work, decisions, reviews and lessons.
-- Local-first: A design approach where user-owned local storage remains primary and cloud dependencies are optional rather than required.
-- Markdown vault: A local folder of Markdown files that acts as durable, human-readable storage for work memory.
-- Today command center: The daily operating layer that gathers priority, readiness and next work context.
-- Capture: The act of collecting raw notes, links, signals, tasks and decisions before they are clarified.
-- Focus session: A bounded work session connected to task context, goal, interruptions and outcome.
-- Review: A daily, weekly, project or experience reflection that converts work history into follow-up actions and lessons.
-- Cognitive bite: A compact reusable lesson, heuristic, mistake, prompt or operating rule.
-- Project health: A view of momentum, blockers, stale work, commitments and review debt around a project.
-- Signal: A local pattern or event that helps interpret work state, workload, friction or progress.
-- Optional AI provider: A local or external AI system that may assist the product but is not required for core usefulness.
-- No silent mutation: The principle that the system should not save or alter private work memory without clear user action.
-- Preview-first: Capture and AI-assisted flows should show proposed changes before saving them.
+No private vault data is published on this site. Capture is preview-first. External integrations and AI providers are optional.
 
 ## Canonical links
 - Site: https://wooolfmesh.github.io/
-- Product source: https://github.com/dkharlanau/work-os-local
+- Privacy: https://wooolfmesh.github.io/privacy/
+- Support: https://wooolfmesh.github.io/support/
+- Store readiness: https://wooolfmesh.github.io/store-readiness/
+- Source: https://github.com/dkharlanau/work-os-local
 - Author: https://dkharlanau.github.io/

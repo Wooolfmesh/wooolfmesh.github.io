@@ -11,6 +11,8 @@
   --accent: #1e6f43;
   --accent-dark: #14532d;
   --accent-soft: #e6f3eb;
+  --yellow: #ffd23f;
+  --red: #d22929;
   --warning: #8a5a13;
   --shadow: 0 24px 70px rgba(17, 24, 39, 0.08);
   --max: 1180px;
@@ -256,6 +258,96 @@ main {
   margin-top: 26px;
   color: var(--muted);
   font-weight: 600;
+}
+
+.terminal-visual {
+  overflow: hidden;
+  border: 1px solid #111827;
+  border-radius: 8px;
+  background: #050505;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+.terminal-top {
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--yellow);
+  font-weight: 800;
+}
+
+.terminal-line {
+  padding: 16px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.terminal-line.strong {
+  color: #fff;
+  font-size: clamp(1.15rem, 2vw, 1.7rem);
+  font-weight: 800;
+}
+
+.terminal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.terminal-grid span {
+  min-height: 72px;
+  padding: 16px 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--yellow);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.signal-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.signal-pill,
+.status-badge,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.signal-pill.hot,
+.status-badge.built,
+.status-badge.pass {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.signal-pill.red,
+.status-badge.missing {
+  border-color: rgba(210, 41, 41, 0.35);
+  background: #fff1f1;
+  color: var(--red);
+}
+
+.status-badge.partial,
+.status-badge.optional,
+.status-badge.unknown {
+  border-color: #d1a928;
+  background: #fff8d9;
+  color: #6c5100;
 }
 
 .privacy-note svg {
@@ -613,6 +705,99 @@ main {
   background: #fff;
 }
 
+.card-meta {
+  min-height: 30px;
+  margin-bottom: 12px;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.screenshot-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 22px 70px rgba(17, 24, 39, 0.08);
+}
+
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+  border-bottom: 1px solid var(--line);
+}
+
+.screenshot-card figcaption {
+  display: grid;
+  gap: 6px;
+  padding: 18px;
+}
+
+.screenshot-card figcaption span {
+  color: var(--muted);
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.status-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.status-table th,
+.status-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.status-table th {
+  background: var(--surface);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.architecture-flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin-bottom: 36px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.architecture-flow div {
+  min-height: 150px;
+  padding: 22px;
+  background: #fff;
+  font-size: 1.05rem;
+  font-weight: 850;
+}
+
+.architecture-flow span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 .index-card h2,
 .index-card h3 {
   margin: 0;
@@ -636,7 +821,7 @@ main {
 .definition strong {
   display: block;
   margin-bottom: 8px;
-  color: var(--accent);
+  color: var(--ink);
   font-size: 0.88rem;
   text-transform: uppercase;
 }
@@ -1356,6 +1541,7 @@ body {
 
 .signal-pill.hot {
   background: var(--accent);
+  color: var(--ink);
 }
 
 .signal-pill.red {
@@ -1651,5 +1837,23 @@ body {
 
   .signal-pill {
     font-size: 0.68rem;
+  }
+
+  .terminal-grid,
+  .screenshot-grid,
+  .guide-grid,
+  .architecture-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .terminal-grid span {
+    min-height: 46px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .status-table {
+    display: block;
+    overflow-x: auto;
   }
 }

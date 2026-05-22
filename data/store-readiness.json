@@ -1,0 +1,52 @@
+[
+  {
+    "item": "App name and brand",
+    "status": "pass",
+    "notes": "Public brand is Wooolfmesh; legacy WorkOS Local remains internal compatibility name."
+  },
+  {
+    "item": "Public site",
+    "status": "pass",
+    "notes": "GitHub Pages target is https://wooolfmesh.github.io/."
+  },
+  {
+    "item": "Privacy URL",
+    "status": "partial",
+    "notes": "Target page exists in the refreshed site; verify live before submission."
+  },
+  {
+    "item": "Support URL",
+    "status": "partial",
+    "notes": "Target page exists in the refreshed site; verify live before submission."
+  },
+  {
+    "item": "Screenshots",
+    "status": "partial",
+    "notes": "Sanitized QA screenshots prepared; final Store export/review pending."
+  },
+  {
+    "item": "MSIX/upload package",
+    "status": "missing",
+    "notes": "No Store-ready package exists."
+  },
+  {
+    "item": "Windows install/update/uninstall validation",
+    "status": "missing",
+    "notes": "Not run for a Store package."
+  },
+  {
+    "item": "Partner Center account/name reservation",
+    "status": "unknown",
+    "notes": "Manual verification required."
+  },
+  {
+    "item": "Age rating",
+    "status": "unknown",
+    "notes": "Partner Center questionnaire required."
+  },
+  {
+    "item": "Legal review",
+    "status": "partial",
+    "notes": "Draft privacy, support, EULA and notices exist; human/legal review required."
+  }
+]

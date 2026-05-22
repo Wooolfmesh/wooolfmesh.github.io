@@ -1,24 +1,20 @@
 {
   "Now": [
-    "Rebrand from WorkOS Local to Wooolfmesh",
-    "Launch public GitHub Pages site",
-    "Improve Today as daily operating layer",
-    "Strengthen focus readiness",
-    "Connect review actions to execution",
-    "Clarify install/productization path"
+    "Refresh public site from the real product state",
+    "Publish sanitized screenshots and guide structure",
+    "Keep Store readiness marked incomplete",
+    "Clarify privacy, support, AI and diagnostics disclosure"
   ],
   "Next": [
-    "Weekly outcomes planner",
-    "Project health workbench",
-    "Better contextual use of cognitive bites and operating manual",
-    "Human-readable documentation",
-    "Public demo assets and screenshots"
+    "Package-mode launcher contract",
+    "Final Store-sized screenshot export",
+    "Windows install/update/uninstall validation",
+    "Partner Center draft submission data"
   ],
   "Later": [
-    "Calendar-aware capacity planning",
-    "Installer-grade productization",
+    "Store-ready MSIX/upload package",
     "Optional external commitment sync",
-    "Microsoft Store / desktop packaging direction",
-    "Public templates or starter vault"
+    "Public starter vault or templates",
+    "More demo videos and release posts"
   ]
 }

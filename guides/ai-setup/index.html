@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI setup guide — Wooolfmesh</title>
+    <meta
+      name="description"
+      content="AI setup: AI can help, but the app works without it. Ollama is local; hosted providers are explicit."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="author" content="Dzmitryi Kharlanau" />
+    <meta name="application-name" content="Wooolfmesh" />
+    <meta
+      name="keywords"
+      content="local-first memory for agentic work, agentic work memory, private local command center, Markdown vault productivity system, private work memory, focus sessions, cognitive bites, review-driven productivity, local-first AI productivity, WorkOS Local legacy name"
+    />
+    <link
+      rel="canonical"
+      href="https://wooolfmesh.github.io/guides/ai-setup/"
+    />
+    <link rel="author" href="https://dkharlanau.github.io/" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wooolfmesh" />
+    <meta property="og:title" content="AI setup guide — Wooolfmesh" />
+    <meta
+      property="og:description"
+      content="AI setup: AI can help, but the app works without it. Ollama is local; hosted providers are explicit."
+    />
+    <meta
+      property="og:url"
+      content="https://wooolfmesh.github.io/guides/ai-setup/"
+    />
+    <meta
+      property="og:image"
+      content="https://wooolfmesh.github.io/assets/og.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Wooolfmesh local-first command center"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI setup guide — Wooolfmesh" />
+    <meta
+      name="twitter:description"
+      content="AI setup: AI can help, but the app works without it. Ollama is local; hosted providers are explicit."
+    />
+    <meta
+      name="twitter:image"
+      content="https://wooolfmesh.github.io/assets/og.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Wooolfmesh local-first command center"
+    />
+    <meta name="theme-color" content="#050505" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Wooolfmesh RSS"
+      href="/feed.xml"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Wooolfmesh Atom"
+      href="/atom.xml"
+    />
+    <link
+      rel="alternate"
+      type="application/feed+json"
+      title="Wooolfmesh JSON Feed"
+      href="/feed.json"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://wooolfmesh.github.io/guides/ai-setup/#webpage",
+        "name": "AI setup guide",
+        "url": "https://wooolfmesh.github.io/guides/ai-setup/",
+        "description": "AI setup: AI can help, but the app works without it. Ollama is local; hosted providers are explicit.",
+        "inLanguage": "en",
+        "datePublished": "2026-05-22",
+        "dateModified": "2026-05-22",
+        "isPartOf": { "@id": "https://wooolfmesh.github.io/#website" },
+        "author": {
+          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://wooolfmesh.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "guides",
+            "item": "https://wooolfmesh.github.io/guides/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "ai setup",
+            "item": "https://wooolfmesh.github.io/guides/ai-setup/"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="Wooolfmesh home"
+          ><img src="/assets/logo.svg" alt="" />Wooolfmesh</a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          <span></span>
+        </button>
+        <div class="nav-links" data-nav-links>
+          <a href="/">Home</a><a href="/product/">Product</a
+          ><a href="/features/">Features</a
+          ><a href="/screenshots/">Screenshots</a
+          ><a href="/guides/" aria-current="page">Guides</a
+          ><a href="/releases/">Releases</a><a href="/roadmap/">Roadmap</a
+          ><a href="/privacy/">Privacy</a><a href="/store-readiness/">Store</a
+          ><a href="/support/">Support</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero compact">
+        <div class="shell reveal">
+          <h1>AI setup</h1>
+          <p class="lead">
+            AI can help, but the app works without it. Ollama is local; hosted
+            providers are explicit.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="shell content-flow">
+          <div class="definition">
+            <strong>Rule</strong>Your Markdown vault stays yours. Do not use
+            private vault content for public demos or screenshots.
+          </div>
+          <section>
+            <h2>What to do</h2>
+            <p>
+              Ollama keeps AI local. Hosted providers are optional and should be
+              configured deliberately.
+            </p>
+          </section>
+          <section>
+            <h2>What to avoid</h2>
+            <p>
+              Do not add hosted services, analytics vendors, cloud AI, or
+              private screenshots as requirements for normal operation.
+            </p>
+          </section>
+          <section>
+            <h2>Related</h2>
+            <p>
+              <a href="/privacy/">Privacy and local-first principles</a> ·
+              <a href="/support/">Support</a> ·
+              <a href="/store-readiness/">Store readiness</a>
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-shell">
+        <div class="footer-brand">
+          <strong>Wooolfmesh</strong>
+          <p>
+            Private local-first command center for tasks, capture, focus,
+            reviews, lessons and optional AI.
+          </p>
+          <p class="footer-small">
+            Wooolfmesh began as WorkOS Local. No private vault data is published
+            here.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="/">Home</a><a href="/product/">Product</a
+          ><a href="/features/">Features</a
+          ><a href="/screenshots/">Screenshots</a><a href="/guides/">Guides</a
+          ><a href="/releases/">Releases</a><a href="/roadmap/">Roadmap</a
+          ><a href="/privacy/">Privacy</a><a href="/store-readiness/">Store</a
+          ><a href="/support/">Support</a>
+          <a href="/ai/">AI disclosure</a>
+          <a href="https://github.com/dkharlanau/work-os-local">App source</a>
+          <a href="https://github.com/wooolfmesh/wooolfmesh.github.io"
+            >Site repo</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/script.js"></script>
+  </body>
+</html>

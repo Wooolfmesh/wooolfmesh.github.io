@@ -11,31 +11,31 @@
   "author": {
     "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
   },
-  "description": "Wooolfmesh is local-first memory for agentic work. It turns tasks, notes, decisions, lessons and work history into reusable execution memory.",
+  "description": "Wooolfmesh is a private local-first command center for tasks, capture, focus, reviews, lessons, routines, analytics, search and optional AI.",
   "isAccessibleForFree": true,
   "keywords": [
     "local-first memory for agentic work",
     "agentic work memory",
-    "local-first personal operating system",
-    "private work memory",
-    "task and knowledge execution loop",
+    "private local command center",
     "Markdown vault productivity system",
-    "cognitive bites",
+    "private work memory",
     "focus sessions",
+    "cognitive bites",
     "review-driven productivity",
     "local-first AI productivity",
     "WorkOS Local legacy name"
   ],
   "featureList": [
-    "Today command center",
-    "Tasks",
-    "Capture and inbox",
-    "Focus sessions",
-    "Reviews",
-    "Cognitive bites",
-    "Project health",
-    "Signals and analytics",
-    "Local knowledge"
+    "Today command center (Built)",
+    "Tasks and planning (Built)",
+    "Capture and inbox (Built)",
+    "Focus sessions (Built)",
+    "Reviews (Partial)",
+    "Cognitive bites (Built)",
+    "Project health (Partial)",
+    "Signals and analytics (Built)",
+    "Local knowledge and search (Partial)",
+    "Optional AI providers (Optional)"
   ],
   "sameAs": [
     "https://github.com/dkharlanau/work-os-local"

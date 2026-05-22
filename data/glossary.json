@@ -1,62 +1,34 @@
 [
   {
     "term": "Wooolfmesh",
-    "definition": "A local-first work memory system for agentic work that turns tasks, notes, decisions, lessons and work history into reusable execution memory."
+    "definition": "A private local-first command center and memory system for agentic work."
   },
   {
     "term": "WorkOS Local",
-    "definition": "The legacy/internal name that preceded Wooolfmesh."
-  },
-  {
-    "term": "Agentic work memory",
-    "definition": "Structured context that helps humans and AI assistants retrieve what matters from prior work, decisions, reviews and lessons."
-  },
-  {
-    "term": "Local-first",
-    "definition": "A design approach where user-owned local storage remains primary and cloud dependencies are optional rather than required."
+    "definition": "Legacy/internal name for Wooolfmesh."
   },
   {
     "term": "Markdown vault",
-    "definition": "A local folder of Markdown files that acts as durable, human-readable storage for work memory."
+    "definition": "A local `_WorkOS` folder that stores durable user-owned work memory."
   },
   {
-    "term": "Today command center",
-    "definition": "The daily operating layer that gathers priority, readiness and next work context."
-  },
-  {
-    "term": "Capture",
-    "definition": "The act of collecting raw notes, links, signals, tasks and decisions before they are clarified."
-  },
-  {
-    "term": "Focus session",
-    "definition": "A bounded work session connected to task context, goal, interruptions and outcome."
-  },
-  {
-    "term": "Review",
-    "definition": "A daily, weekly, project or experience reflection that converts work history into follow-up actions and lessons."
-  },
-  {
-    "term": "Cognitive bite",
-    "definition": "A compact reusable lesson, heuristic, mistake, prompt or operating rule."
-  },
-  {
-    "term": "Project health",
-    "definition": "A view of momentum, blockers, stale work, commitments and review debt around a project."
-  },
-  {
-    "term": "Signal",
-    "definition": "A local pattern or event that helps interpret work state, workload, friction or progress."
-  },
-  {
-    "term": "Optional AI provider",
-    "definition": "A local or external AI system that may assist the product but is not required for core usefulness."
-  },
-  {
-    "term": "No silent mutation",
-    "definition": "The principle that the system should not save or alter private work memory without clear user action."
+    "term": "SQLite runtime support",
+    "definition": "Local database support for reminders, events, indexes, diagnostics and local analytics."
   },
   {
     "term": "Preview-first",
-    "definition": "Capture and AI-assisted flows should show proposed changes before saving them."
+    "definition": "Generated or extracted changes are shown before the user saves anything."
+  },
+  {
+    "term": "No silent mutation",
+    "definition": "The app must not alter private work memory without explicit user action."
+  },
+  {
+    "term": "Cognitive bite",
+    "definition": "A reusable lesson, decision, mistake, playbook, principle or pattern."
+  },
+  {
+    "term": "Optional AI provider",
+    "definition": "A local or hosted model provider that assists workflows but is not required."
   }
 ]

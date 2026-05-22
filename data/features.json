@@ -2,99 +2,101 @@
   {
     "slug": "today-command-center",
     "title": "Today command center",
-    "short": "A daily operating layer for priorities, readiness, reminders, focus context and review actions.",
-    "problem": "Daily work becomes scattered across task lists, notes, calendar pressure and unfinished review follow-ups.",
-    "does": "Wooolfmesh brings the next useful work, readiness signals and execution context into one local daily view.",
-    "why": "The point is to reduce decision drag before work starts and make the next action explicit.",
-    "loop": ["Clarify", "Plan", "Focus", "Review"],
-    "terms": [
-      "daily operating layer",
-      "review-driven productivity",
-      "private work memory"
-    ]
+    "status": "built",
+    "short": "A daily operating layer for next action, routines, reminders, freshness, focus readiness and work queues.",
+    "problem": "Daily work gets split across task lists, notes, reviews, interruptions and system status.",
+    "does": "Wooolfmesh gathers local work context into one starting surface so the next useful action is visible.",
+    "why": "The app is strongest when it reduces decision drag before work starts.",
+    "loop": ["Clarify", "Plan", "Focus", "Review"]
   },
   {
     "slug": "tasks",
-    "title": "Tasks",
-    "short": "Tasks carry next actions, definition of done, project links and review history.",
-    "problem": "A task title alone rarely contains enough context to restart serious work after interruption.",
-    "does": "Wooolfmesh treats tasks as execution memory: action, outcome, context, links and follow-through.",
-    "why": "Tasks become less like inventory and more like durable work instructions for the future self or an assisting agent.",
-    "loop": ["Clarify", "Plan", "Focus", "Review"],
-    "terms": [
-      "next action",
-      "definition of done",
-      "task and knowledge execution loop"
-    ]
+    "title": "Tasks and planning",
+    "status": "built",
+    "short": "Markdown-backed tasks with next action, definition of done, effort, energy, work mode, links and reminders.",
+    "problem": "A title-only task is rarely enough to restart serious work after interruption.",
+    "does": "Wooolfmesh treats a task as executable local memory, not just an item in a list.",
+    "why": "Tasks become useful context for focus sessions, reviews and future retrieval.",
+    "loop": ["Clarify", "Plan", "Focus"]
   },
   {
     "slug": "capture-inbox",
     "title": "Capture and inbox",
-    "short": "Preview-first capture for raw notes, links, tasks, decisions, signals and possible lessons.",
-    "problem": "Important fragments arrive faster than they can be organized, then disappear into unreviewed notes.",
-    "does": "Wooolfmesh keeps capture explicit and preview-first so extracted entities can be reviewed before saving.",
-    "why": "Fast capture is useful only when it does not silently mutate private work memory.",
-    "loop": ["Capture", "Clarify"],
-    "terms": ["preview-first", "no silent mutation", "capture inbox"]
+    "status": "built",
+    "short": "Preview-first capture for raw notes, tasks, memory, cognitive bites and later processing.",
+    "problem": "Useful fragments arrive faster than they can be organized safely.",
+    "does": "Capture can propose structured items, but the user decides what becomes durable.",
+    "why": "No silent mutation is a product trust requirement.",
+    "loop": ["Capture", "Clarify"]
   },
   {
     "slug": "focus-sessions",
     "title": "Focus sessions",
-    "short": "A focused work container that keeps goal, context, interruptions and outcome together.",
-    "problem": "Deep work is fragile when the goal, source material and stopping point are not captured together.",
-    "does": "Wooolfmesh connects a session to tasks, context and review notes so the work can be resumed or learned from.",
-    "why": "Focus becomes a reusable record, not just a timer event.",
-    "loop": ["Plan", "Focus", "Review"],
-    "terms": ["focus sessions", "deep work execution", "execution memory"]
+    "status": "built",
+    "short": "Deep work sessions connected to a task, definition of done, interruptions, outcome and next action.",
+    "problem": "A timer alone does not preserve why the work mattered or what changed.",
+    "does": "Wooolfmesh keeps focus context and session outcome together as local work memory.",
+    "why": "Focus becomes something reviewable and reusable, not only time spent.",
+    "loop": ["Plan", "Focus", "Review"]
   },
   {
     "slug": "reviews",
     "title": "Reviews",
-    "short": "Daily, weekly, project and experience reviews that convert work history into follow-up actions and lessons.",
-    "problem": "Work repeats the same mistakes when outcomes, decisions and friction are never reviewed.",
-    "does": "Wooolfmesh turns reviews into actions, signals and reusable cognitive bites.",
-    "why": "Reflection only matters when it feeds the next execution loop.",
-    "loop": ["Review", "Learn", "Reuse"],
-    "terms": ["review-driven productivity", "daily review", "weekly review"]
+    "status": "partial",
+    "short": "Daily, weekly, project and experience reviews with suggested actions and approval flows.",
+    "problem": "Reflection does not matter if it never reaches future execution.",
+    "does": "Reviews can generate follow-up actions and lessons while keeping suggestions preview-first.",
+    "why": "Review-driven productivity turns work history into practical next moves.",
+    "loop": ["Review", "Learn", "Reuse"]
   },
   {
     "slug": "cognitive-bites",
     "title": "Cognitive bites",
-    "short": "Small reusable lessons, heuristics, prompts, mistakes and operating rules.",
-    "problem": "Useful learning is often trapped in long notes or forgotten after the next project starts.",
-    "does": "Wooolfmesh captures lessons as compact pieces of execution memory that can be reused in later work.",
-    "why": "A cognitive bite makes experience easier to retrieve at the moment of action.",
-    "loop": ["Review", "Learn", "Reuse"],
-    "terms": ["cognitive bites", "reusable lessons", "agentic work memory"]
+    "status": "built",
+    "short": "Reusable lessons, decisions, mistakes, playbooks, principles and patterns.",
+    "problem": "Lessons are often buried in long notes and forgotten by the next project.",
+    "does": "Wooolfmesh stores compact lessons that can be retrieved during later planning and review.",
+    "why": "Experience becomes reusable execution memory.",
+    "loop": ["Review", "Learn", "Reuse"]
   },
   {
     "slug": "project-health",
     "title": "Project health",
-    "short": "A way to see momentum, blockers, stale tasks, commitments and review debt around a project.",
-    "problem": "Projects become unclear when progress, blockers and next outcomes are spread across multiple systems.",
-    "does": "Wooolfmesh connects project tasks, signals, reviews and follow-through into a local health picture.",
-    "why": "Project health should show where execution is stuck before the backlog becomes noise.",
-    "loop": ["Plan", "Focus", "Review", "Reuse"],
-    "terms": ["project health", "follow-through", "signals"]
+    "status": "partial",
+    "short": "Project momentum, blockers, stale work, related lessons and suggested next moves.",
+    "problem": "Projects drift when blockers, stale tasks and review debt are scattered.",
+    "does": "Wooolfmesh connects project tasks, memory, bites and reviews into a local health picture.",
+    "why": "The app should show where execution is stuck before a backlog becomes noise.",
+    "loop": ["Plan", "Focus", "Review"]
   },
   {
     "slug": "signals-analytics",
     "title": "Signals and analytics",
-    "short": "Local patterns over focus, completion, review debt, workload and recurring friction.",
-    "problem": "Personal work systems rarely expose patterns without sending private behavior into a hosted analytics tool.",
-    "does": "Wooolfmesh uses local signals to show useful patterns while keeping private work memory under user control.",
-    "why": "The goal is better self-calibration, not surveillance.",
-    "loop": ["Review", "Learn", "Plan"],
-    "terms": ["signals", "analytics", "private work memory"]
+    "status": "built",
+    "short": "Local patterns over focus, completion, routines, signals, planning quality and app health.",
+    "problem": "Useful self-calibration often becomes cloud telemetry in other tools.",
+    "does": "Wooolfmesh keeps analytics local and clearable while surfacing work patterns.",
+    "why": "The goal is better personal calibration, not surveillance.",
+    "loop": ["Review", "Learn", "Plan"]
   },
   {
     "slug": "local-knowledge",
-    "title": "Local knowledge",
-    "short": "Markdown vault storage, local retrieval context and human-readable work memory.",
-    "problem": "Productivity tools often hide knowledge in proprietary systems that are hard to inspect or reuse.",
-    "does": "Wooolfmesh keeps user-owned Markdown as the durable layer and uses runtime support for indexing and reminders.",
-    "why": "Local knowledge should remain portable and useful outside the app.",
-    "loop": ["Capture", "Clarify", "Learn", "Reuse"],
-    "terms": ["Markdown vault productivity system", "local-first", "retrieval"]
+    "title": "Local knowledge and search",
+    "status": "partial",
+    "short": "Markdown vault storage, vault registry, search, retrieval, citations and provenance.",
+    "problem": "Knowledge work loses context when notes, decisions and tasks cannot be retrieved together.",
+    "does": "Wooolfmesh indexes and retrieves local context while keeping Markdown as the ownership layer.",
+    "why": "Your Markdown vault stays yours.",
+    "loop": ["Capture", "Clarify", "Learn", "Reuse"]
+  },
+  {
+    "slug": "optional-ai",
+    "title": "Optional AI providers",
+    "status": "optional",
+    "short": "Ollama, hosted provider settings, ADK previews and OCR paths are optional and provider-dependent.",
+    "problem": "AI productivity tools often require uploading private context before they are useful.",
+    "does": "Wooolfmesh keeps manual/local workflows primary and treats AI as optional assistance.",
+    "why": "AI can help, but the app works without it.",
+    "loop": ["Capture", "Clarify", "Review"]
   }
 ]

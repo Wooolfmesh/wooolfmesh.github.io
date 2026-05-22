@@ -1,54 +1,30 @@
 [
   {
     "question": "What is Wooolfmesh?",
-    "answer": "Wooolfmesh is local-first memory for agentic work. It connects tasks, notes, decisions, reviews, lessons and local knowledge into a reusable execution loop."
+    "answer": "A private local-first command center for tasks, capture, focus, reviews, lessons, routines, analytics, search and optional AI."
   },
   {
     "question": "Was Wooolfmesh previously called WorkOS Local?",
-    "answer": "Yes. Wooolfmesh began as WorkOS Local. WorkOS Local is now a legacy/internal name, while Wooolfmesh is the public product brand."
-  },
-  {
-    "question": "Is Wooolfmesh a task manager?",
-    "answer": "Not only. It includes tasks, but the larger purpose is a private work memory layer that connects tasks with context, focus sessions, reviews and lessons."
-  },
-  {
-    "question": "Is Wooolfmesh an AI chatbot?",
-    "answer": "No. AI is optional assistance for extraction, summaries and reflection. The core product is the local-first execution memory loop."
-  },
-  {
-    "question": "What does local-first mean here?",
-    "answer": "Local-first means user-owned local files and runtime data are the default. The product should not require hosted accounts, cloud databases or hosted AI to be useful."
+    "answer": "Yes. Wooolfmesh began as WorkOS Local. The old name remains legacy/internal for compatibility."
   },
   {
     "question": "Where does user data live?",
-    "answer": "The product direction uses a user-owned Markdown vault as the durable storage layer, with SQLite as runtime support for reminders, events, metadata and indexing."
+    "answer": "Durable work memory lives in a user-owned Markdown vault. SQLite supports runtime state."
   },
   {
     "question": "Is AI required?",
-    "answer": "No. Wooolfmesh should degrade when AI is unavailable and keep normal operation useful without hosted models."
+    "answer": "No. AI can help, but the app works without it."
+  },
+  {
+    "question": "Is Wooolfmesh Store-ready?",
+    "answer": "No. Store submission is blocked until package, screenshots, public URLs and Windows lifecycle validation are complete."
   },
   {
     "question": "What are cognitive bites?",
-    "answer": "Cognitive bites are compact reusable lessons, heuristics, prompts, mistakes or operating rules captured from real work and reviews."
+    "answer": "Compact reusable lessons, decisions, playbooks, mistakes and patterns captured from work history."
   },
   {
-    "question": "What is agentic work memory?",
-    "answer": "Agentic work memory is structured local context that helps humans and AI assistants understand tasks, decisions, lessons and work history across execution cycles."
-  },
-  {
-    "question": "Is there an installer?",
-    "answer": "A public installer may not be ready yet. The install path is evolving toward simple local setup, Windows/macOS support and safer update/backup flows."
-  },
-  {
-    "question": "Who is building Wooolfmesh?",
-    "answer": "Wooolfmesh is built by Dzmitryi Kharlanau, an SAP consultant and builder focused on local-first productivity systems and practical execution loops."
-  },
-  {
-    "question": "Is it ready for daily use?",
-    "answer": "The product is evolving. The public site is honest about current limitations and developer-oriented setup while the productization path matures."
-  },
-  {
-    "question": "Can I follow the roadmap?",
-    "answer": "Yes. The roadmap page publishes the Now, Next and Later direction for Wooolfmesh."
+    "question": "Does this site publish private vault data?",
+    "answer": "No. Public screenshots and demo data must be fictional or isolated."
   }
 ]

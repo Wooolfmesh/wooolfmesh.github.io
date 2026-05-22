@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "windows-install",
+    "title": "Windows install",
+    "description": "Current developer/portable Windows setup and Store packaging caveat.",
+    "url": "https://wooolfmesh.github.io/guides/windows-install/"
+  },
+  {
+    "slug": "macos-install",
+    "title": "macOS install",
+    "description": "Local script setup for macOS; not an App Store package.",
+    "url": "https://wooolfmesh.github.io/guides/macos-install/"
+  },
+  {
+    "slug": "first-run",
+    "title": "First run",
+    "description": "Choose a vault, confirm local runtime, start from Today.",
+    "url": "https://wooolfmesh.github.io/guides/first-run/"
+  },
+  {
+    "slug": "vault-setup",
+    "title": "Vault setup",
+    "description": "WORKOS_VAULT_PATH must point to the `_WorkOS` folder. Your Markdown vault stays yours.",
+    "url": "https://wooolfmesh.github.io/guides/vault-setup/"
+  },
+  {
+    "slug": "tasks",
+    "title": "Tasks",
+    "description": "Use next action, definition of done, effort, energy and work mode to make tasks executable.",
+    "url": "https://wooolfmesh.github.io/guides/tasks/"
+  },
+  {
+    "slug": "capture-inbox",
+    "title": "Capture and inbox",
+    "description": "Capture is preview-first. Nothing is saved until you decide.",
+    "url": "https://wooolfmesh.github.io/guides/capture-inbox/"
+  },
+  {
+    "slug": "focus",
+    "title": "Focus sessions",
+    "description": "Start with a ready task, capture interruptions, close with outcome and next action.",
+    "url": "https://wooolfmesh.github.io/guides/focus/"
+  },
+  {
+    "slug": "reviews",
+    "title": "Reviews",
+    "description": "Daily, weekly, project and experience reviews feed actions and lessons.",
+    "url": "https://wooolfmesh.github.io/guides/reviews/"
+  },
+  {
+    "slug": "cognitive-bites",
+    "title": "Cognitive bites",
+    "description": "Turn repeated lessons and mistakes into reusable local memory.",
+    "url": "https://wooolfmesh.github.io/guides/cognitive-bites/"
+  },
+  {
+    "slug": "links-prompts",
+    "title": "Quick links and prompts",
+    "description": "Keep recurring resources and thinking templates local and reusable.",
+    "url": "https://wooolfmesh.github.io/guides/links-prompts/"
+  },
+  {
+    "slug": "ai-setup",
+    "title": "AI setup",
+    "description": "AI can help, but the app works without it. Ollama is local; hosted providers are explicit.",
+    "url": "https://wooolfmesh.github.io/guides/ai-setup/"
+  },
+  {
+    "slug": "backup-restore",
+    "title": "Backup and restore",
+    "description": "Back up the Markdown vault and understand what SQLite stores at runtime.",
+    "url": "https://wooolfmesh.github.io/guides/backup-restore/"
+  },
+  {
+    "slug": "safe-update",
+    "title": "Safe update",
+    "description": "App code can change; updates must not mutate the user vault.",
+    "url": "https://wooolfmesh.github.io/guides/safe-update/"
+  },
+  {
+    "slug": "windows-troubleshooting",
+    "title": "Windows troubleshooting",
+    "description": "Diagnose ports, stale processes, stale config, wrong clone and PWA cache.",
+    "url": "https://wooolfmesh.github.io/guides/windows-troubleshooting/"
+  },
+  {
+    "slug": "diagnostics",
+    "title": "Diagnostics",
+    "description": "Export safe diagnostics, review before sharing, never include secrets.",
+    "url": "https://wooolfmesh.github.io/guides/diagnostics/"
+  },
+  {
+    "slug": "limitations",
+    "title": "Limitations",
+    "description": "Store package, Microsoft sync and some AI/OCR paths are not complete.",
+    "url": "https://wooolfmesh.github.io/guides/limitations/"
+  }
+]

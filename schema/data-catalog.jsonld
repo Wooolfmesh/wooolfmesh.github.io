@@ -1,46 +1,53 @@
 {
   "@context": "https://schema.org",
   "@type": "DataCatalog",
-  "@id": "https://wooolfmesh.github.io/data/#catalog",
   "name": "Wooolfmesh public machine-readable data",
-  "description": "Public JSON files that describe Wooolfmesh product entities, features, roadmap, FAQ, glossary and entity graph. No private vault data is included.",
-  "url": "https://wooolfmesh.github.io/ai/",
+  "description": "Public product data. No private vault data is included.",
   "dataset": [
     {
       "@type": "Dataset",
-      "name": "Product data",
-      "url": "https://wooolfmesh.github.io/data/product.json",
-      "license": "https://github.com/wooolfmesh/wooolfmesh.github.io"
+      "name": "product",
+      "url": "https://wooolfmesh.github.io/data/product.json"
     },
     {
       "@type": "Dataset",
-      "name": "Features data",
-      "url": "https://wooolfmesh.github.io/data/features.json",
-      "license": "https://github.com/wooolfmesh/wooolfmesh.github.io"
+      "name": "features",
+      "url": "https://wooolfmesh.github.io/data/features.json"
     },
     {
       "@type": "Dataset",
-      "name": "Roadmap data",
-      "url": "https://wooolfmesh.github.io/data/roadmap.json",
-      "license": "https://github.com/wooolfmesh/wooolfmesh.github.io"
+      "name": "roadmap",
+      "url": "https://wooolfmesh.github.io/data/roadmap.json"
     },
     {
       "@type": "Dataset",
-      "name": "Glossary data",
-      "url": "https://wooolfmesh.github.io/data/glossary.json",
-      "license": "https://github.com/wooolfmesh/wooolfmesh.github.io"
+      "name": "releases",
+      "url": "https://wooolfmesh.github.io/data/releases.json"
     },
     {
       "@type": "Dataset",
-      "name": "FAQ data",
-      "url": "https://wooolfmesh.github.io/data/faq.json",
-      "license": "https://github.com/wooolfmesh/wooolfmesh.github.io"
+      "name": "guides",
+      "url": "https://wooolfmesh.github.io/data/guides.json"
     },
     {
       "@type": "Dataset",
-      "name": "Entities data",
-      "url": "https://wooolfmesh.github.io/data/entities.json",
-      "license": "https://github.com/wooolfmesh/wooolfmesh.github.io"
+      "name": "store-readiness",
+      "url": "https://wooolfmesh.github.io/data/store-readiness.json"
+    },
+    {
+      "@type": "Dataset",
+      "name": "glossary",
+      "url": "https://wooolfmesh.github.io/data/glossary.json"
+    },
+    {
+      "@type": "Dataset",
+      "name": "faq",
+      "url": "https://wooolfmesh.github.io/data/faq.json"
+    },
+    {
+      "@type": "Dataset",
+      "name": "entities",
+      "url": "https://wooolfmesh.github.io/data/entities.json"
     }
   ]
 }

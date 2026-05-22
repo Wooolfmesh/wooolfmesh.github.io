@@ -4,7 +4,6 @@
   "@id": "https://wooolfmesh.github.io/#project",
   "name": "Wooolfmesh",
   "alternateName": "WorkOS Local",
-  "url": "https://wooolfmesh.github.io/",
   "creator": {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -13,16 +12,9 @@
     "url": "https://dkharlanau.github.io/",
     "jobTitle": "SAP consultant and builder",
     "description": "SAP consultant and builder focused on local-first productivity systems, agentic work memory and practical execution loops.",
-    "knowsAbout": [
-      "SAP consulting",
-      "local-first software",
-      "agentic work memory",
-      "productivity systems",
-      "knowledge work execution loops"
-    ],
     "sameAs": [
       "https://dkharlanau.github.io/"
     ]
   },
-  "description": "Wooolfmesh is local-first memory for agentic work. It turns tasks, notes, decisions, lessons and work history into reusable execution memory."
+  "description": "Wooolfmesh is a private local-first command center for tasks, capture, focus, reviews, lessons, routines, analytics, search and optional AI."
 }

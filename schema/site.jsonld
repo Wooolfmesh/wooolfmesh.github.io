@@ -9,21 +9,10 @@
     "Work OS Local"
   ],
   "url": "https://wooolfmesh.github.io/",
-  "description": "Local-first memory for agentic work.",
+  "description": "Private local-first command center for agentic work.",
   "inLanguage": "en",
-  "dateModified": "2026-05-17",
+  "dateModified": "2026-05-22",
   "publisher": {
     "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-  },
-  "author": {
-    "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-  },
-  "potentialAction": {
-    "@type": "ReadAction",
-    "target": [
-      "https://wooolfmesh.github.io/product/",
-      "https://wooolfmesh.github.io/ai/context/",
-      "https://wooolfmesh.github.io/llms.txt"
-    ]
   }
 }

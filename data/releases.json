@@ -1,0 +1,21 @@
+[
+  {
+    "version": "0.19.3 public-site-prep",
+    "date": "2026-05-22",
+    "summary": "Public documentation and site refresh prepared from the real local-first product state.",
+    "user": [
+      "Added public screenshots from isolated QA data.",
+      "Added guide structure for install, vault setup, capture, focus, reviews and diagnostics.",
+      "Added Store readiness and support pages with honest blockers."
+    ],
+    "technical": [
+      "Added isolated demo vault generator.",
+      "Added repeatable screenshot capture script for a locally running demo app.",
+      "Expanded crawler and AI-readable site data."
+    ],
+    "limitations": [
+      "No Microsoft Store package is available yet.",
+      "WACK/MSIX validation has not been run."
+    ]
+  }
+]
