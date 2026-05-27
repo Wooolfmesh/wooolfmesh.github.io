@@ -1,9 +1,10 @@
 {
   "name": "Wooolfmesh",
-  "tagline": "Local-first memory for agentic work.",
-  "description": "Wooolfmesh is a private local-first command center for tasks, capture, focus, reviews, lessons, routines, analytics, search and optional AI.",
+  "definition": "Wooolfmesh is a private local operating system for turning personal knowledge, tasks, memory, reviews, and lessons into daily execution.",
+  "tagline": "Private local operating system for daily execution over a Markdown vault.",
+  "description": "Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.",
   "legacy_name": "WorkOS Local",
-  "current_status": "Product implemented in many areas; Microsoft Store package not ready.",
+  "current_status": "Many product surfaces are implemented; some integration loops and public packaging remain partial or roadmap.",
   "core_loop": [
     "Capture",
     "Clarify",
@@ -16,13 +17,14 @@
   "author": {
     "name": "Dzmitryi Kharlanau",
     "url": "https://dkharlanau.github.io/",
-    "description": "SAP consultant and builder focused on local-first productivity systems, agentic work memory and practical execution loops."
+    "description": "SAP consultant and builder focused on local-first productivity systems, agentic work memory, and practical execution loops."
   },
   "urls": {
     "site": "https://wooolfmesh.github.io/",
     "privacy": "https://wooolfmesh.github.io/privacy/",
     "support": "https://wooolfmesh.github.io/support/",
+    "feedback": "https://github.com/Wooolfmesh/wooolfmesh.github.io/issues",
     "source": "https://github.com/dkharlanau/work-os-local",
-    "site_repo": "https://github.com/wooolfmesh/wooolfmesh.github.io"
+    "site_repo": "https://github.com/Wooolfmesh/wooolfmesh.github.io"
   }
 }

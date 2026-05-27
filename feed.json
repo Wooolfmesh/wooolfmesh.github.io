@@ -7,11 +7,11 @@
   "language": "en",
   "items": [
     {
-      "id": "https://wooolfmesh.github.io/releases/#release-0-19-3-public-site-prep",
-      "url": "https://wooolfmesh.github.io/releases/#release-0-19-3-public-site-prep",
-      "title": "0.19.3 public-site-prep",
-      "date_published": "2026-05-22T00:00:00+03:00",
-      "summary": "Public documentation and site refresh prepared from the real local-first product state."
+      "id": "https://wooolfmesh.github.io/releases/#release-2026-05-27-public-positioning-refresh",
+      "url": "https://wooolfmesh.github.io/releases/#release-2026-05-27-public-positioning-refresh",
+      "title": "2026-05-27 public positioning refresh",
+      "date_published": "2026-05-27T00:00:00+03:00",
+      "summary": "Refreshes the public site around Wooolfmesh as a private local operating system for daily execution."
     }
   ]
 }

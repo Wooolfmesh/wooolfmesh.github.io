@@ -1,11 +1,11 @@
 {
   "name": "Wooolfmesh",
   "short_name": "Wooolfmesh",
-  "description": "Local-first memory for agentic work.",
+  "description": "Private local operating system for tasks, focus, memory, reviews, and personal knowledge.",
   "start_url": "/",
   "display": "minimal-ui",
   "background_color": "#ffffff",
-  "theme_color": "#1e6f43",
+  "theme_color": "#1f6f4a",
   "icons": [
     {
       "src": "/favicon.svg",

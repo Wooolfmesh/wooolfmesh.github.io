@@ -4,7 +4,7 @@
   "@id": "https://wooolfmesh.github.io/#product",
   "name": "Wooolfmesh",
   "alternateName": "WorkOS Local",
-  "description": "Wooolfmesh is a private local-first command center for tasks, capture, focus, reviews, lessons, routines, analytics, search and optional AI.",
+  "description": "Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.",
   "brand": "Wooolfmesh",
   "url": "https://wooolfmesh.github.io/",
   "image": "https://wooolfmesh.github.io/assets/og.png"

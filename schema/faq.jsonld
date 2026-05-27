@@ -7,7 +7,7 @@
       "name": "What is Wooolfmesh?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A private local-first command center for tasks, capture, focus, reviews, lessons, routines, analytics, search and optional AI."
+        "text": "Wooolfmesh is a private local operating system for turning personal knowledge, tasks, memory, reviews, and lessons into daily execution."
       }
     },
     {
@@ -15,15 +15,15 @@
       "name": "Was Wooolfmesh previously called WorkOS Local?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Wooolfmesh began as WorkOS Local. The old name remains legacy/internal for compatibility."
+        "text": "Yes. WorkOS Local remains the compatibility name for package names, paths, environment variables, and the `_WorkOS` vault layout."
       }
     },
     {
       "@type": "Question",
-      "name": "Where does user data live?",
+      "name": "Where does data live?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Durable work memory lives in a user-owned Markdown vault. SQLite supports runtime state."
+        "text": "Durable user-owned entities live as Markdown under the configured `_WorkOS` vault. SQLite stores runtime support such as reminders, events, indexes, registry data, and analytics."
       }
     },
     {
@@ -31,7 +31,23 @@
       "name": "Is AI required?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. AI can help, but the app works without it."
+        "text": "No. AI is optional. Ollama/local AI and configured hosted providers can assist, but normal workflows remain usable without a model."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Wooolfmesh write into my other notes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The control vault is writable for Wooolfmesh-owned entities. Registered reference vaults are read-only by default and should not be silently mutated."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should I report bugs or product ideas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open a public issue at https://github.com/Wooolfmesh/wooolfmesh.github.io/issues."
       }
     },
     {
@@ -39,23 +55,7 @@
       "name": "Is Wooolfmesh Store-ready?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Store submission is blocked until package, screenshots, public URLs and Windows lifecycle validation are complete."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are cognitive bites?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Compact reusable lessons, decisions, playbooks, mistakes and patterns captured from work history."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does this site publish private vault data?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Public screenshots and demo data must be fictional or isolated."
+        "text": "No. Packaging, package validation, final Store screenshots, Windows lifecycle validation, and policy review are still incomplete."
       }
     }
   ]

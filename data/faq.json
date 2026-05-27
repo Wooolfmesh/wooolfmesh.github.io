@@ -1,30 +1,30 @@
 [
   {
     "question": "What is Wooolfmesh?",
-    "answer": "A private local-first command center for tasks, capture, focus, reviews, lessons, routines, analytics, search and optional AI."
+    "answer": "Wooolfmesh is a private local operating system for turning personal knowledge, tasks, memory, reviews, and lessons into daily execution."
   },
   {
     "question": "Was Wooolfmesh previously called WorkOS Local?",
-    "answer": "Yes. Wooolfmesh began as WorkOS Local. The old name remains legacy/internal for compatibility."
+    "answer": "Yes. WorkOS Local remains the compatibility name for package names, paths, environment variables, and the `_WorkOS` vault layout."
   },
   {
-    "question": "Where does user data live?",
-    "answer": "Durable work memory lives in a user-owned Markdown vault. SQLite supports runtime state."
+    "question": "Where does data live?",
+    "answer": "Durable user-owned entities live as Markdown under the configured `_WorkOS` vault. SQLite stores runtime support such as reminders, events, indexes, registry data, and analytics."
   },
   {
     "question": "Is AI required?",
-    "answer": "No. AI can help, but the app works without it."
+    "answer": "No. AI is optional. Ollama/local AI and configured hosted providers can assist, but normal workflows remain usable without a model."
+  },
+  {
+    "question": "Can Wooolfmesh write into my other notes?",
+    "answer": "The control vault is writable for Wooolfmesh-owned entities. Registered reference vaults are read-only by default and should not be silently mutated."
+  },
+  {
+    "question": "Where should I report bugs or product ideas?",
+    "answer": "Open a public issue at https://github.com/Wooolfmesh/wooolfmesh.github.io/issues."
   },
   {
     "question": "Is Wooolfmesh Store-ready?",
-    "answer": "No. Store submission is blocked until package, screenshots, public URLs and Windows lifecycle validation are complete."
-  },
-  {
-    "question": "What are cognitive bites?",
-    "answer": "Compact reusable lessons, decisions, playbooks, mistakes and patterns captured from work history."
-  },
-  {
-    "question": "Does this site publish private vault data?",
-    "answer": "No. Public screenshots and demo data must be fictional or isolated."
+    "answer": "No. Packaging, package validation, final Store screenshots, Windows lifecycle validation, and policy review are still incomplete."
   }
 ]

@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Releases — Wooolfmesh</title>
+    <title>Releases - Wooolfmesh</title>
     <meta
       name="description"
-      content="Readable Wooolfmesh release notes and product update summaries."
+      content="Readable Wooolfmesh release notes and public product update summaries."
     />
     <meta
       name="robots"
@@ -16,17 +16,17 @@
     <meta name="application-name" content="Wooolfmesh" />
     <meta
       name="keywords"
-      content="local-first memory for agentic work, agentic work memory, private local command center, Markdown vault productivity system, private work memory, focus sessions, cognitive bites, review-driven productivity, local-first AI productivity, WorkOS Local legacy name"
+      content="private local operating system, local-first productivity, Markdown vault productivity system, personal knowledge management, agentic work memory, daily execution loop, focus sessions, cognitive bites, review-driven productivity, WorkOS Local"
     />
     <link rel="canonical" href="https://wooolfmesh.github.io/releases/" />
     <link rel="author" href="https://dkharlanau.github.io/" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Wooolfmesh" />
-    <meta property="og:title" content="Releases — Wooolfmesh" />
+    <meta property="og:title" content="Releases - Wooolfmesh" />
     <meta
       property="og:description"
-      content="Readable Wooolfmesh release notes and product update summaries."
+      content="Readable Wooolfmesh release notes and public product update summaries."
     />
     <meta property="og:url" content="https://wooolfmesh.github.io/releases/" />
     <meta
@@ -37,13 +37,13 @@
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Wooolfmesh local-first command center"
+      content="Wooolfmesh private local operating system"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Releases — Wooolfmesh" />
+    <meta name="twitter:title" content="Releases - Wooolfmesh" />
     <meta
       name="twitter:description"
-      content="Readable Wooolfmesh release notes and product update summaries."
+      content="Readable Wooolfmesh release notes and public product update summaries."
     />
     <meta
       name="twitter:image"
@@ -51,9 +51,9 @@
     />
     <meta
       name="twitter:image:alt"
-      content="Wooolfmesh local-first command center"
+      content="Wooolfmesh private local operating system"
     />
-    <meta name="theme-color" content="#050505" />
+    <meta name="theme-color" content="#1f6f4a" />
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -82,10 +82,10 @@
         "@id": "https://wooolfmesh.github.io/releases/#webpage",
         "name": "Releases",
         "url": "https://wooolfmesh.github.io/releases/",
-        "description": "Readable Wooolfmesh release notes and product update summaries.",
+        "description": "Readable Wooolfmesh release notes and public product update summaries.",
         "inLanguage": "en",
-        "datePublished": "2026-05-22",
-        "dateModified": "2026-05-22",
+        "datePublished": "2026-05-27",
+        "dateModified": "2026-05-27",
         "isPartOf": { "@id": "https://wooolfmesh.github.io/#website" },
         "author": {
           "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
@@ -130,11 +130,9 @@
         </button>
         <div class="nav-links" data-nav-links>
           <a href="/">Home</a><a href="/product/">Product</a
-          ><a href="/features/">Features</a
-          ><a href="/screenshots/">Screenshots</a><a href="/guides/">Guides</a
-          ><a href="/releases/" aria-current="page">Releases</a
-          ><a href="/roadmap/">Roadmap</a><a href="/privacy/">Privacy</a
-          ><a href="/store-readiness/">Store</a><a href="/support/">Support</a>
+          ><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a
+          ><a href="/architecture/">Architecture</a
+          ><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
         </div>
       </nav>
     </header>
@@ -143,8 +141,8 @@
         <div class="shell reveal">
           <h1>Releases</h1>
           <p class="lead">
-            Short product updates focused on what changed for users, what
-            changed technically, and what remains limited.
+            Short product updates focused on user-visible changes, technical
+            changes, and known limits.
           </p>
         </div>
       </section>
@@ -152,38 +150,62 @@
         <div class="shell timeline">
           <article
             class="changelog-entry reveal"
-            id="release-0-19-3-public-site-prep"
+            id="release-2026-05-27-public-positioning-refresh"
           >
-            <span class="date">2026-05-22</span>
-            <h2>0.19.3 public-site-prep</h2>
+            <span class="date">2026-05-27</span>
+            <h2>2026-05-27 public positioning refresh</h2>
             <p>
-              Public documentation and site refresh prepared from the real
-              local-first product state.
+              Refreshes the public site around Wooolfmesh as a private local
+              operating system for daily execution.
             </p>
             <h3>User-visible</h3>
             <ul>
-              <li>Added public screenshots from isolated QA data.</li>
               <li>
-                Added guide structure for install, vault setup, capture, focus,
-                reviews and diagnostics.
+                Repositions the product around Capture -&gt; Clarify -&gt; Plan
+                -&gt; Focus -&gt; Review -&gt; Learn -&gt; Reuse.
               </li>
               <li>
-                Added Store readiness and support pages with honest blockers.
+                Adds scenario-led documentation for daily operation, capture,
+                focus, reviews, project health, search, routines, and optional
+                AI.
+              </li>
+              <li>
+                Separates implemented capabilities from partial and roadmap
+                work.
+              </li>
+              <li>
+                Moves public feedback CTAs to the public site issue tracker.
               </li>
             </ul>
             <h3>Technical</h3>
             <ul>
-              <li>Added isolated demo vault generator.</li>
               <li>
-                Added repeatable screenshot capture script for a locally running
-                demo app.
+                Keeps the static generator as the source of truth for pages,
+                JSON, JSON-LD, feeds, sitemap, and LLM files.
               </li>
-              <li>Expanded crawler and AI-readable site data.</li>
+              <li>
+                Refreshes metadata, structured data, OpenGraph copy,
+                machine-readable product data, and public support links.
+              </li>
+              <li>
+                Softens the visual system into a calmer product/documentation
+                site without adding dependencies.
+              </li>
             </ul>
             <h3>Known limits</h3>
             <ul>
-              <li>No Microsoft Store package is available yet.</li>
-              <li>WACK/MSIX validation has not been run.</li>
+              <li>
+                The canonical product source repository may not be publicly
+                accessible to all users.
+              </li>
+              <li>
+                A GitHub Pages cache delay can briefly serve the previous build
+                after push.
+              </li>
+              <li>
+                The product is not Store-ready and should not be described as
+                packaged distribution.
+              </li>
             </ul>
           </article>
         </div>
@@ -194,25 +216,28 @@
         <div class="footer-brand">
           <strong>Wooolfmesh</strong>
           <p>
-            Private local-first command center for tasks, capture, focus,
-            reviews, lessons and optional AI.
+            Wooolfmesh is a private local operating system for turning personal
+            knowledge, tasks, memory, reviews, and lessons into daily execution.
           </p>
           <p class="footer-small">
-            Wooolfmesh began as WorkOS Local. No private vault data is published
-            here.
+            Formerly WorkOS Local. No private vault data is published here.
           </p>
         </div>
         <div class="footer-links">
           <a href="/">Home</a><a href="/product/">Product</a
-          ><a href="/features/">Features</a
-          ><a href="/screenshots/">Screenshots</a><a href="/guides/">Guides</a
-          ><a href="/releases/">Releases</a><a href="/roadmap/">Roadmap</a
-          ><a href="/privacy/">Privacy</a><a href="/store-readiness/">Store</a
-          ><a href="/support/">Support</a>
+          ><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a
+          ><a href="/architecture/">Architecture</a
+          ><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
+          <a href="/privacy/">Privacy</a>
           <a href="/ai/">AI disclosure</a>
-          <a href="https://github.com/dkharlanau/work-os-local">App source</a>
-          <a href="https://github.com/wooolfmesh/wooolfmesh.github.io"
-            >Site repo</a
+          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io/issues"
+            >Report a bug</a
+          >
+          <a href="https://github.com/dkharlanau/work-os-local"
+            >Product source</a
+          >
+          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io"
+            >Site source</a
           >
         </div>
       </div>

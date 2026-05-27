@@ -1,34 +1,38 @@
 [
   {
     "term": "Wooolfmesh",
-    "definition": "A private local-first command center and memory system for agentic work."
+    "definition": "Wooolfmesh is a private local operating system for turning personal knowledge, tasks, memory, reviews, and lessons into daily execution."
   },
   {
     "term": "WorkOS Local",
-    "definition": "Legacy/internal name for Wooolfmesh."
+    "definition": "Legacy/internal compatibility name for Wooolfmesh."
   },
   {
     "term": "Markdown vault",
-    "definition": "A local `_WorkOS` folder that stores durable user-owned work memory."
+    "definition": "The local `_WorkOS` subtree where durable Wooolfmesh-owned entities are stored as Markdown."
   },
   {
     "term": "SQLite runtime support",
-    "definition": "Local database support for reminders, events, indexes, diagnostics and local analytics."
+    "definition": "Local database support for reminders, events, indexes, diagnostics, local analytics, and integration metadata."
   },
   {
     "term": "Preview-first",
-    "definition": "Generated or extracted changes are shown before the user saves anything."
+    "definition": "Generated, extracted, or imported changes are shown before the user saves or applies anything durable."
   },
   {
     "term": "No silent mutation",
-    "definition": "The app must not alter private work memory without explicit user action."
+    "definition": "The product must not alter private work memory without explicit user action."
   },
   {
     "term": "Cognitive bite",
-    "definition": "A reusable lesson, decision, mistake, playbook, principle or pattern."
+    "definition": "A compact reusable lesson, decision, mistake, principle, playbook, or pattern."
   },
   {
-    "term": "Optional AI provider",
-    "definition": "A local or hosted model provider that assists workflows but is not required."
+    "term": "Operating manual",
+    "definition": "A user-authored local rulebook for recurring preferences, principles, and work habits."
+  },
+  {
+    "term": "Read-only knowledge vault",
+    "definition": "A registered vault that Wooolfmesh may index for search but must not write to by default."
   }
 ]

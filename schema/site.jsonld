@@ -9,9 +9,9 @@
     "Work OS Local"
   ],
   "url": "https://wooolfmesh.github.io/",
-  "description": "Private local-first command center for agentic work.",
+  "description": "Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.",
   "inLanguage": "en",
-  "dateModified": "2026-05-22",
+  "dateModified": "2026-05-27",
   "publisher": {
     "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
   }

@@ -18,48 +18,30 @@
     {
       "@type": "SiteNavigationElement",
       "position": 3,
-      "name": "Features",
-      "url": "https://wooolfmesh.github.io/features/"
+      "name": "Use cases",
+      "url": "https://wooolfmesh.github.io/use-cases/"
     },
     {
       "@type": "SiteNavigationElement",
       "position": 4,
-      "name": "Screenshots",
-      "url": "https://wooolfmesh.github.io/screenshots/"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "position": 5,
       "name": "Guides",
       "url": "https://wooolfmesh.github.io/guides/"
     },
     {
       "@type": "SiteNavigationElement",
-      "position": 6,
-      "name": "Releases",
-      "url": "https://wooolfmesh.github.io/releases/"
+      "position": 5,
+      "name": "Architecture",
+      "url": "https://wooolfmesh.github.io/architecture/"
     },
     {
       "@type": "SiteNavigationElement",
-      "position": 7,
+      "position": 6,
       "name": "Roadmap",
       "url": "https://wooolfmesh.github.io/roadmap/"
     },
     {
       "@type": "SiteNavigationElement",
-      "position": 8,
-      "name": "Privacy",
-      "url": "https://wooolfmesh.github.io/privacy/"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "position": 9,
-      "name": "Store",
-      "url": "https://wooolfmesh.github.io/store-readiness/"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "position": 10,
+      "position": 7,
       "name": "Support",
       "url": "https://wooolfmesh.github.io/support/"
     }

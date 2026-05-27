@@ -1,28 +1,28 @@
 [
   {
-    "item": "App name and brand",
-    "status": "pass",
-    "notes": "Public brand is Wooolfmesh; legacy WorkOS Local remains internal compatibility name."
-  },
-  {
     "item": "Public site",
     "status": "pass",
-    "notes": "GitHub Pages target is https://wooolfmesh.github.io/."
+    "notes": "The canonical public site is https://wooolfmesh.github.io/."
   },
   {
-    "item": "Privacy URL",
-    "status": "partial",
-    "notes": "Target page exists in the refreshed site; verify live before submission."
+    "item": "Feedback URL",
+    "status": "pass",
+    "notes": "Public bugs and ideas go to the public site issue tracker."
   },
   {
-    "item": "Support URL",
+    "item": "Product source URL",
     "status": "partial",
-    "notes": "Target page exists in the refreshed site; verify live before submission."
+    "notes": "Canonical source is dkharlanau/work-os-local, but access may be restricted until visibility changes."
+  },
+  {
+    "item": "Privacy/support pages",
+    "status": "partial",
+    "notes": "Public pages exist; final distribution review is still needed before Store submission."
   },
   {
     "item": "Screenshots",
     "status": "partial",
-    "notes": "Sanitized QA screenshots prepared; final Store export/review pending."
+    "notes": "Sanitized QA screenshots exist; final Store export and human review remain pending."
   },
   {
     "item": "MSIX/upload package",
@@ -47,6 +47,6 @@
   {
     "item": "Legal review",
     "status": "partial",
-    "notes": "Draft privacy, support, EULA and notices exist; human/legal review required."
+    "notes": "Draft privacy/support material exists; human/legal review is required before public distribution claims."
   }
 ]

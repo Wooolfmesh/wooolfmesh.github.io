@@ -1,36 +1,66 @@
 # Wooolfmesh full AI context
 
 ## Product definition
-Wooolfmesh is a private local-first command center for tasks, capture, focus sessions, reviews, cognitive bites, memory, routines, signals, analytics, quick links, prompts, vault registry, search/retrieval, diagnostics and optional AI.
+Wooolfmesh is a private local operating system for turning personal knowledge, tasks, memory, reviews, and lessons into daily execution.
 
 ## Product thesis
-Your Markdown vault stays yours. SQLite supports runtime state; Markdown remains the ownership layer. AI can help, but the app works without it.
+Wooolfmesh is a local-first operating layer for daily execution. It connects tasks, capture, focus sessions, reviews, cognitive bites, memory, projects, routines, signals, analytics, search, local knowledge, and optional AI into one loop.
 
 ## Core loop
 Capture -> Clarify -> Plan -> Focus -> Review -> Learn -> Reuse
 
+## Storage model
+Markdown under the configured _WorkOS vault is the durable source of truth for user-owned entities. SQLite stores runtime support such as reminders, task events, indexes, registry data, routine state, diagnostics, and analytics.
+
 ## Feature status
-- Today command center: Built. A daily operating layer for next action, routines, reminders, freshness, focus readiness and work queues.
-- Tasks and planning: Built. Markdown-backed tasks with next action, definition of done, effort, energy, work mode, links and reminders.
-- Capture and inbox: Built. Preview-first capture for raw notes, tasks, memory, cognitive bites and later processing.
-- Focus sessions: Built. Deep work sessions connected to a task, definition of done, interruptions, outcome and next action.
-- Reviews: Partial. Daily, weekly, project and experience reviews with suggested actions and approval flows.
-- Cognitive bites: Built. Reusable lessons, decisions, mistakes, playbooks, principles and patterns.
-- Project health: Partial. Project momentum, blockers, stale work, related lessons and suggested next moves.
-- Signals and analytics: Built. Local patterns over focus, completion, routines, signals, planning quality and app health.
-- Local knowledge and search: Partial. Markdown vault storage, vault registry, search, retrieval, citations and provenance.
-- Optional AI providers: Optional. Ollama, hosted provider settings, ADK previews and OCR paths are optional and provider-dependent.
+- Today operating layer: Implemented. A daily start surface for next action, planned work, routines, reminders, blockers, capacity, and local context.
+- Executable tasks: Implemented. Markdown-backed tasks with next action, definition of done, effort, energy, work mode, dates, reminders, and links.
+- Capture and inbox: Partial. Preview-first capture for raw notes, commitments, tasks, memory, and cognitive bite candidates.
+- Focus sessions: Implemented. Deep work sessions connected to a ready task, interruptions, outcomes, time logs, and next actions.
+- Reviews and follow-through: Partial. Daily, weekly, project, and experience reviews with suggested actions and preview-first approval flows.
+- Memory and cognitive bites: Implemented. Reusable decisions, lessons, mistakes, principles, playbooks, and patterns stored locally.
+- Project health: Partial. Signals for stale, blocked, overloaded, or missing-next-action projects with concrete recovery direction.
+- Signals and analytics: Implemented. Local patterns over focus, planning quality, routines, signals, app health, and learning loops.
+- Local knowledge search: Implemented. Search across Wooolfmesh entities and indexed knowledge notes with citations, scope controls, and provenance.
+- Optional AI assistance: Optional. Ollama/local AI and configured hosted providers can assist capture, shaping, summaries, and reflection, but normal use does not require AI.
+
+## Roadmap
+Now / implemented
+- Today operating layer with next action, due and overdue work, blocked/waiting queues, routines, reminders, task-quality cues, and capacity signals.
+- Markdown-backed tasks, memory, cognitive bites, focus sessions, reviews, prompts, quick links, releases, and operating manual content.
+- Preview-first capture, task shaping, review suggestions, local analytics, routines, local notifications, weekly outcomes, project health, and knowledge search.
+- Local-first architecture: Next.js frontend, FastAPI backend, Markdown source of truth, SQLite runtime support, optional AI providers.
+
+Next / P0
+- Make Today the canonical daily orchestration contract, not only a page-level aggregation.
+- Upgrade focus activation and closeout so readiness, interruptions, outcomes, and lessons feed the learning loop.
+- Consolidate review, project, agent, and import suggestions into one follow-through rail.
+- Keep product docs, backlog, release notes, and public website stewardship aligned with implemented reality.
+
+Later / P1
+- Weekly outcomes planner refinements and stronger outcome-to-review comparison.
+- Operating manual rules and cognitive bites surfaced during planning, task shaping, Today recommendations, and focus start.
+- Project health workbench with movement, milestones, decisions, stale work, blockers, and next-action creation.
+- Capture processing discipline that supports fast capture without becoming a hidden dumping ground.
+- Knowledge vault search completion across read-only indexed vaults, citations, and scoped retrieval.
+
+Exploratory / P2
+- Calendar-aware capacity planning with richer external calendar context.
+- Microsoft To Do, Outlook Calendar, and Outlook Mail commitment sync with opt-in, inspectable, reversible behavior.
+- Local notifications and ritual automation beyond current routine nudges.
+- Packaging, Store readiness, distribution, and update authority when validation is complete.
 
 ## Store readiness
-Wooolfmesh is not Microsoft Store-ready yet. Missing: MSIX/upload package, package validation, clean Windows install/update/uninstall validation, Partner Center confirmation, final Store screenshots and legal review.
+Wooolfmesh is not Microsoft Store-ready yet. Missing: MSIX/upload package, package validation, clean Windows install/update/uninstall validation, Partner Center confirmation, final Store screenshots, and legal/policy review.
 
 ## Privacy principles
-No private vault data is published on this site. Capture is preview-first. External integrations and AI providers are optional.
+No private vault data is published on this site. Capture is preview-first. External integrations and AI providers are optional. Registered knowledge vaults are read-only by default.
 
 ## Canonical links
 - Site: https://wooolfmesh.github.io/
 - Privacy: https://wooolfmesh.github.io/privacy/
 - Support: https://wooolfmesh.github.io/support/
-- Store readiness: https://wooolfmesh.github.io/store-readiness/
-- Source: https://github.com/dkharlanau/work-os-local
+- Public issues: https://github.com/Wooolfmesh/wooolfmesh.github.io/issues
+- Product source: https://github.com/dkharlanau/work-os-local
+- Site source: https://github.com/Wooolfmesh/wooolfmesh.github.io
 - Author: https://dkharlanau.github.io/

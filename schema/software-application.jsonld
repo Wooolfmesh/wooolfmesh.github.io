@@ -11,33 +11,34 @@
   "author": {
     "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
   },
-  "description": "Wooolfmesh is a private local-first command center for tasks, capture, focus, reviews, lessons, routines, analytics, search and optional AI.",
+  "description": "Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.",
   "isAccessibleForFree": true,
   "keywords": [
-    "local-first memory for agentic work",
-    "agentic work memory",
-    "private local command center",
+    "private local operating system",
+    "local-first productivity",
     "Markdown vault productivity system",
-    "private work memory",
+    "personal knowledge management",
+    "agentic work memory",
+    "daily execution loop",
     "focus sessions",
     "cognitive bites",
     "review-driven productivity",
-    "local-first AI productivity",
-    "WorkOS Local legacy name"
+    "WorkOS Local"
   ],
   "featureList": [
-    "Today command center (Built)",
-    "Tasks and planning (Built)",
-    "Capture and inbox (Built)",
-    "Focus sessions (Built)",
-    "Reviews (Partial)",
-    "Cognitive bites (Built)",
+    "Today operating layer (Implemented)",
+    "Executable tasks (Implemented)",
+    "Capture and inbox (Partial)",
+    "Focus sessions (Implemented)",
+    "Reviews and follow-through (Partial)",
+    "Memory and cognitive bites (Implemented)",
     "Project health (Partial)",
-    "Signals and analytics (Built)",
-    "Local knowledge and search (Partial)",
-    "Optional AI providers (Optional)"
+    "Signals and analytics (Implemented)",
+    "Local knowledge search (Implemented)",
+    "Optional AI assistance (Optional)"
   ],
   "sameAs": [
-    "https://github.com/dkharlanau/work-os-local"
+    "https://github.com/dkharlanau/work-os-local",
+    "https://github.com/Wooolfmesh/wooolfmesh.github.io"
   ]
 }

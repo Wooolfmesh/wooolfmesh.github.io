@@ -23,5 +23,10 @@
     "name": "Cognitive bites",
     "type": "Product concept",
     "canonical_url": "https://wooolfmesh.github.io/features/cognitive-bites/"
+  },
+  {
+    "name": "Preview-first capture",
+    "type": "Trust principle",
+    "canonical_url": "https://wooolfmesh.github.io/features/capture-inbox/"
   }
 ]

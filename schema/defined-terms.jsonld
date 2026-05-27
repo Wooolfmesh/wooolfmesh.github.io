@@ -6,50 +6,56 @@
     {
       "@type": "DefinedTerm",
       "name": "Wooolfmesh",
-      "description": "A private local-first command center and memory system for agentic work.",
+      "description": "Wooolfmesh is a private local operating system for turning personal knowledge, tasks, memory, reviews, and lessons into daily execution.",
       "url": "https://wooolfmesh.github.io/glossary/#wooolfmesh"
     },
     {
       "@type": "DefinedTerm",
       "name": "WorkOS Local",
-      "description": "Legacy/internal name for Wooolfmesh.",
+      "description": "Legacy/internal compatibility name for Wooolfmesh.",
       "url": "https://wooolfmesh.github.io/glossary/#workos-local"
     },
     {
       "@type": "DefinedTerm",
       "name": "Markdown vault",
-      "description": "A local `_WorkOS` folder that stores durable user-owned work memory.",
+      "description": "The local `_WorkOS` subtree where durable Wooolfmesh-owned entities are stored as Markdown.",
       "url": "https://wooolfmesh.github.io/glossary/#markdown-vault"
     },
     {
       "@type": "DefinedTerm",
       "name": "SQLite runtime support",
-      "description": "Local database support for reminders, events, indexes, diagnostics and local analytics.",
+      "description": "Local database support for reminders, events, indexes, diagnostics, local analytics, and integration metadata.",
       "url": "https://wooolfmesh.github.io/glossary/#sqlite-runtime-support"
     },
     {
       "@type": "DefinedTerm",
       "name": "Preview-first",
-      "description": "Generated or extracted changes are shown before the user saves anything.",
+      "description": "Generated, extracted, or imported changes are shown before the user saves or applies anything durable.",
       "url": "https://wooolfmesh.github.io/glossary/#preview-first"
     },
     {
       "@type": "DefinedTerm",
       "name": "No silent mutation",
-      "description": "The app must not alter private work memory without explicit user action.",
+      "description": "The product must not alter private work memory without explicit user action.",
       "url": "https://wooolfmesh.github.io/glossary/#no-silent-mutation"
     },
     {
       "@type": "DefinedTerm",
       "name": "Cognitive bite",
-      "description": "A reusable lesson, decision, mistake, playbook, principle or pattern.",
+      "description": "A compact reusable lesson, decision, mistake, principle, playbook, or pattern.",
       "url": "https://wooolfmesh.github.io/glossary/#cognitive-bite"
     },
     {
       "@type": "DefinedTerm",
-      "name": "Optional AI provider",
-      "description": "A local or hosted model provider that assists workflows but is not required.",
-      "url": "https://wooolfmesh.github.io/glossary/#optional-ai-provider"
+      "name": "Operating manual",
+      "description": "A user-authored local rulebook for recurring preferences, principles, and work habits.",
+      "url": "https://wooolfmesh.github.io/glossary/#operating-manual"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Read-only knowledge vault",
+      "description": "A registered vault that Wooolfmesh may index for search but must not write to by default.",
+      "url": "https://wooolfmesh.github.io/glossary/#read-only-knowledge-vault"
     }
   ]
 }

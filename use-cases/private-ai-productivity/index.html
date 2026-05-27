@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Private AI productivity — Wooolfmesh use case</title>
+    <title>Private AI productivity - Wooolfmesh use case</title>
     <meta
       name="description"
-      content="Private AI productivity: Many AI tools ask users to upload the whole work system."
+      content="Private AI productivity: Many AI productivity products require private context upload or make the model the center of the workflow."
     />
     <meta
       name="robots"
@@ -16,7 +16,7 @@
     <meta name="application-name" content="Wooolfmesh" />
     <meta
       name="keywords"
-      content="local-first memory for agentic work, agentic work memory, private local command center, Markdown vault productivity system, private work memory, focus sessions, cognitive bites, review-driven productivity, local-first AI productivity, WorkOS Local legacy name"
+      content="private local operating system, local-first productivity, Markdown vault productivity system, personal knowledge management, agentic work memory, daily execution loop, focus sessions, cognitive bites, review-driven productivity, WorkOS Local"
     />
     <link
       rel="canonical"
@@ -28,11 +28,11 @@
     <meta property="og:site_name" content="Wooolfmesh" />
     <meta
       property="og:title"
-      content="Private AI productivity — Wooolfmesh use case"
+      content="Private AI productivity - Wooolfmesh use case"
     />
     <meta
       property="og:description"
-      content="Private AI productivity: Many AI tools ask users to upload the whole work system."
+      content="Private AI productivity: Many AI productivity products require private context upload or make the model the center of the workflow."
     />
     <meta
       property="og:url"
@@ -46,16 +46,16 @@
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Wooolfmesh local-first command center"
+      content="Wooolfmesh private local operating system"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Private AI productivity — Wooolfmesh use case"
+      content="Private AI productivity - Wooolfmesh use case"
     />
     <meta
       name="twitter:description"
-      content="Private AI productivity: Many AI tools ask users to upload the whole work system."
+      content="Private AI productivity: Many AI productivity products require private context upload or make the model the center of the workflow."
     />
     <meta
       name="twitter:image"
@@ -63,9 +63,9 @@
     />
     <meta
       name="twitter:image:alt"
-      content="Wooolfmesh local-first command center"
+      content="Wooolfmesh private local operating system"
     />
-    <meta name="theme-color" content="#050505" />
+    <meta name="theme-color" content="#1f6f4a" />
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -94,10 +94,10 @@
         "@id": "https://wooolfmesh.github.io/use-cases/private-ai-productivity/#webpage",
         "name": "Private AI productivity use case",
         "url": "https://wooolfmesh.github.io/use-cases/private-ai-productivity/",
-        "description": "Private AI productivity: Many AI tools ask users to upload the whole work system.",
+        "description": "Private AI productivity: Many AI productivity products require private context upload or make the model the center of the workflow.",
         "inLanguage": "en",
-        "datePublished": "2026-05-22",
-        "dateModified": "2026-05-22",
+        "datePublished": "2026-05-27",
+        "dateModified": "2026-05-27",
         "isPartOf": { "@id": "https://wooolfmesh.github.io/#website" },
         "author": {
           "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
@@ -148,11 +148,9 @@
         </button>
         <div class="nav-links" data-nav-links>
           <a href="/">Home</a><a href="/product/">Product</a
-          ><a href="/features/">Features</a
-          ><a href="/screenshots/">Screenshots</a><a href="/guides/">Guides</a
-          ><a href="/releases/">Releases</a><a href="/roadmap/">Roadmap</a
-          ><a href="/privacy/">Privacy</a><a href="/store-readiness/">Store</a
-          ><a href="/support/">Support</a>
+          ><a href="/use-cases/" aria-current="page">Use cases</a
+          ><a href="/guides/">Guides</a><a href="/architecture/">Architecture</a
+          ><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
         </div>
       </nav>
     </header>
@@ -161,35 +159,49 @@
         <div class="shell reveal">
           <h1>Private AI productivity</h1>
           <p class="lead">
-            Many AI tools ask users to upload the whole work system.
+            Many AI productivity products require private context upload or make
+            the model the center of the workflow.
           </p>
         </div>
       </section>
       <section class="section">
         <div class="shell content-grid">
-          <div class="content-flow">
+          <div class="content-flow scenario-detail">
             <section>
-              <h2>Who this is for</h2>
+              <h2>Problem</h2>
               <p>
-                Users who want AI assistance without making hosted AI the center
-                of the system.
+                Many AI productivity products require private context upload or
+                make the model the center of the workflow.
               </p>
             </section>
             <section>
-              <h2>How Wooolfmesh helps</h2>
+              <h2>User flow</h2>
               <p>
-                Wooolfmesh keeps the local-first loop primary and makes
-                providers optional.
+                Use manual workflows by default, configure local Ollama or
+                explicit hosted providers only when desired, and review
+                suggestions before saving them.
+              </p>
+            </section>
+            <section>
+              <h2>Product behavior</h2>
+              <p>
+                AI is optional, provider-dependent, and preview-first across
+                capture, shaping, summaries, and reflection.
+              </p>
+            </section>
+            <section>
+              <h2>Benefit</h2>
+              <p>
+                The user gets assistance without making cloud AI a requirement
+                for normal operation.
               </p>
             </section>
           </div>
           <aside class="sidebar-box">
-            <h2>Modules involved</h2>
-            <div class="badge-row">
-              <span class="badge">Capture</span
-              ><span class="badge">AI settings</span
-              ><span class="badge">Reviews</span>
-            </div>
+            <h2>Implementation status</h2>
+            <span class="status-badge optional">Optional</span>
+            <p>Optional</p>
+            <p><a href="/roadmap/">View roadmap</a></p>
           </aside>
         </div>
       </section>
@@ -199,25 +211,28 @@
         <div class="footer-brand">
           <strong>Wooolfmesh</strong>
           <p>
-            Private local-first command center for tasks, capture, focus,
-            reviews, lessons and optional AI.
+            Wooolfmesh is a private local operating system for turning personal
+            knowledge, tasks, memory, reviews, and lessons into daily execution.
           </p>
           <p class="footer-small">
-            Wooolfmesh began as WorkOS Local. No private vault data is published
-            here.
+            Formerly WorkOS Local. No private vault data is published here.
           </p>
         </div>
         <div class="footer-links">
           <a href="/">Home</a><a href="/product/">Product</a
-          ><a href="/features/">Features</a
-          ><a href="/screenshots/">Screenshots</a><a href="/guides/">Guides</a
-          ><a href="/releases/">Releases</a><a href="/roadmap/">Roadmap</a
-          ><a href="/privacy/">Privacy</a><a href="/store-readiness/">Store</a
-          ><a href="/support/">Support</a>
+          ><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a
+          ><a href="/architecture/">Architecture</a
+          ><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
+          <a href="/privacy/">Privacy</a>
           <a href="/ai/">AI disclosure</a>
-          <a href="https://github.com/dkharlanau/work-os-local">App source</a>
-          <a href="https://github.com/wooolfmesh/wooolfmesh.github.io"
-            >Site repo</a
+          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io/issues"
+            >Report a bug</a
+          >
+          <a href="https://github.com/dkharlanau/work-os-local"
+            >Product source</a
+          >
+          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io"
+            >Site source</a
           >
         </div>
       </div>

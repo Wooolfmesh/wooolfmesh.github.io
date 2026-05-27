@@ -1,21 +1,23 @@
 [
   {
-    "version": "0.19.3 public-site-prep",
-    "date": "2026-05-22",
-    "summary": "Public documentation and site refresh prepared from the real local-first product state.",
+    "version": "2026-05-27 public positioning refresh",
+    "date": "2026-05-27",
+    "summary": "Refreshes the public site around Wooolfmesh as a private local operating system for daily execution.",
     "user": [
-      "Added public screenshots from isolated QA data.",
-      "Added guide structure for install, vault setup, capture, focus, reviews and diagnostics.",
-      "Added Store readiness and support pages with honest blockers."
+      "Repositions the product around Capture -> Clarify -> Plan -> Focus -> Review -> Learn -> Reuse.",
+      "Adds scenario-led documentation for daily operation, capture, focus, reviews, project health, search, routines, and optional AI.",
+      "Separates implemented capabilities from partial and roadmap work.",
+      "Moves public feedback CTAs to the public site issue tracker."
     ],
     "technical": [
-      "Added isolated demo vault generator.",
-      "Added repeatable screenshot capture script for a locally running demo app.",
-      "Expanded crawler and AI-readable site data."
+      "Keeps the static generator as the source of truth for pages, JSON, JSON-LD, feeds, sitemap, and LLM files.",
+      "Refreshes metadata, structured data, OpenGraph copy, machine-readable product data, and public support links.",
+      "Softens the visual system into a calmer product/documentation site without adding dependencies."
     ],
     "limitations": [
-      "No Microsoft Store package is available yet.",
-      "WACK/MSIX validation has not been run."
+      "The canonical product source repository may not be publicly accessible to all users.",
+      "A GitHub Pages cache delay can briefly serve the previous build after push.",
+      "The product is not Store-ready and should not be described as packaged distribution."
     ]
   }
 ]
