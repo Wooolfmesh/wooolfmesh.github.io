@@ -892,6 +892,11 @@ function layout(page) {
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TD5FLHX9');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(page.title)}</title>
     <meta name="description" content="${escapeHtml(page.description)}">
@@ -931,6 +936,8 @@ function layout(page) {
       .join("\n    ")}
   </head>
   <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD5FLHX9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header class="site-header">
       <nav class="nav-shell" aria-label="Main navigation">
         <a class="brand" href="/" aria-label="Wooolfmesh home"><img src="/assets/logo.svg" alt="">Wooolfmesh</a>
@@ -1462,7 +1469,7 @@ async function writeText(file, data) {
 }
 
 function aliasPage(target, title) {
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${escapeHtml(title)}</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="${site}${target}"><meta http-equiv="refresh" content="0; url=${target}"></head><body><p><a href="${target}">Continue to ${escapeHtml(title)}</a></p></body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-TD5FLHX9');</script><meta name="viewport" content="width=device-width, initial-scale=1"><title>${escapeHtml(title)}</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="${site}${target}"><meta http-equiv="refresh" content="0; url=${target}"></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD5FLHX9"\nheight="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><p><a href="${target}">Continue to ${escapeHtml(title)}</a></p></body></html>`;
 }
 
 async function main() {

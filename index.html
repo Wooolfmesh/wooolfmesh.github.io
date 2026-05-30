@@ -1,581 +1,195 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TD5FLHX9');</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Wooolfmesh - Private local operating system</title>
-    <meta
-      name="description"
-      content="Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance."
-    />
-    <meta
-      name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    />
-    <meta name="author" content="Dzmitryi Kharlanau" />
-    <meta name="application-name" content="Wooolfmesh" />
-    <meta
-      name="keywords"
-      content="private local operating system, local-first productivity, Markdown vault productivity system, personal knowledge management, agentic work memory, daily execution loop, focus sessions, cognitive bites, review-driven productivity, WorkOS Local"
-    />
-    <link rel="canonical" href="https://wooolfmesh.github.io/" />
-    <link rel="author" href="https://dkharlanau.github.io/" />
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Wooolfmesh" />
-    <meta
-      property="og:title"
-      content="Wooolfmesh - Private local operating system"
-    />
-    <meta
-      property="og:description"
-      content="Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance."
-    />
-    <meta property="og:url" content="https://wooolfmesh.github.io/" />
-    <meta
-      property="og:image"
-      content="https://wooolfmesh.github.io/assets/og.png"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Wooolfmesh private local operating system"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Wooolfmesh - Private local operating system"
-    />
-    <meta
-      name="twitter:description"
-      content="Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance."
-    />
-    <meta
-      name="twitter:image"
-      content="https://wooolfmesh.github.io/assets/og.png"
-    />
-    <meta
-      name="twitter:image:alt"
-      content="Wooolfmesh private local operating system"
-    />
-    <meta name="theme-color" content="#1f6f4a" />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="Wooolfmesh RSS"
-      href="/feed.xml"
-    />
-    <link
-      rel="alternate"
-      type="application/atom+xml"
-      title="Wooolfmesh Atom"
-      href="/atom.xml"
-    />
-    <link
-      rel="alternate"
-      type="application/feed+json"
-      title="Wooolfmesh JSON Feed"
-      href="/feed.json"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "@id": "https://wooolfmesh.github.io/#webpage",
-        "name": "Wooolfmesh - Private local operating system",
-        "url": "https://wooolfmesh.github.io/",
-        "description": "Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.",
-        "inLanguage": "en",
-        "datePublished": "2026-05-27",
-        "dateModified": "2026-05-27",
-        "isPartOf": { "@id": "https://wooolfmesh.github.io/#website" },
-        "author": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://wooolfmesh.github.io/"
-          }
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": "https://wooolfmesh.github.io/#website",
-        "name": "Wooolfmesh",
-        "alternateName": ["WorkOS Local", "work-os-local", "Work OS Local"],
-        "url": "https://wooolfmesh.github.io/",
-        "description": "Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.",
-        "inLanguage": "en",
-        "dateModified": "2026-05-27",
-        "publisher": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "@id": "https://wooolfmesh.github.io/#software",
-        "name": "Wooolfmesh",
-        "alternateName": "WorkOS Local",
-        "applicationCategory": "ProductivityApplication",
-        "operatingSystem": "Windows, macOS, local web app",
-        "url": "https://wooolfmesh.github.io/",
-        "image": "https://wooolfmesh.github.io/assets/og.png",
-        "author": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-        },
-        "description": "Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.",
-        "isAccessibleForFree": true,
-        "keywords": [
-          "private local operating system",
-          "local-first productivity",
-          "Markdown vault productivity system",
-          "personal knowledge management",
-          "agentic work memory",
-          "daily execution loop",
-          "focus sessions",
-          "cognitive bites",
-          "review-driven productivity",
-          "WorkOS Local"
-        ],
-        "featureList": [
-          "Today operating layer (Implemented)",
-          "Executable tasks (Implemented)",
-          "Capture and inbox (Partial)",
-          "Focus sessions (Implemented)",
-          "Reviews and follow-through (Partial)",
-          "Memory and cognitive bites (Implemented)",
-          "Project health (Partial)",
-          "Signals and analytics (Implemented)",
-          "Local knowledge search (Implemented)",
-          "Optional AI assistance (Optional)"
-        ],
-        "sameAs": [
-          "https://github.com/dkharlanau/work-os-local",
-          "https://github.com/Wooolfmesh/wooolfmesh.github.io"
-        ]
-      }
-    </script>
+    <meta name="description" content="Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Dzmitryi Kharlanau">
+    <meta name="application-name" content="Wooolfmesh">
+    <meta name="keywords" content="private local operating system, local-first productivity, Markdown vault productivity system, personal knowledge management, agentic work memory, daily execution loop, focus sessions, cognitive bites, review-driven productivity, WorkOS Local">
+    <link rel="canonical" href="https://wooolfmesh.github.io/">
+    <link rel="author" href="https://dkharlanau.github.io/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Wooolfmesh">
+    <meta property="og:title" content="Wooolfmesh - Private local operating system">
+    <meta property="og:description" content="Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.">
+    <meta property="og:url" content="https://wooolfmesh.github.io/">
+    <meta property="og:image" content="https://wooolfmesh.github.io/assets/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Wooolfmesh private local operating system">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wooolfmesh - Private local operating system">
+    <meta name="twitter:description" content="Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.">
+    <meta name="twitter:image" content="https://wooolfmesh.github.io/assets/og.png">
+    <meta name="twitter:image:alt" content="Wooolfmesh private local operating system">
+    <meta name="theme-color" content="#1f6f4a">
+    <link rel="alternate" type="application/rss+xml" title="Wooolfmesh RSS" href="/feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="Wooolfmesh Atom" href="/atom.xml">
+    <link rel="alternate" type="application/feed+json" title="Wooolfmesh JSON Feed" href="/feed.json">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://wooolfmesh.github.io/#webpage","name":"Wooolfmesh - Private local operating system","url":"https://wooolfmesh.github.io/","description":"Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.","inLanguage":"en","datePublished":"2026-05-27","dateModified":"2026-05-27","isPartOf":{"@id":"https://wooolfmesh.github.io/#website"},"author":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wooolfmesh.github.io/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://wooolfmesh.github.io/#website","name":"Wooolfmesh","alternateName":["WorkOS Local","work-os-local","Work OS Local"],"url":"https://wooolfmesh.github.io/","description":"Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.","inLanguage":"en","dateModified":"2026-05-27","publisher":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://wooolfmesh.github.io/#software","name":"Wooolfmesh","alternateName":"WorkOS Local","applicationCategory":"ProductivityApplication","operatingSystem":"Windows, macOS, local web app","url":"https://wooolfmesh.github.io/","image":"https://wooolfmesh.github.io/assets/og.png","author":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"},"description":"Wooolfmesh is a private local operating system for tasks, focus, memory, reviews, and personal knowledge. Built local-first around Markdown, with optional AI assistance.","isAccessibleForFree":true,"keywords":["private local operating system","local-first productivity","Markdown vault productivity system","personal knowledge management","agentic work memory","daily execution loop","focus sessions","cognitive bites","review-driven productivity","WorkOS Local"],"featureList":["Today operating layer (Implemented)","Executable tasks (Implemented)","Capture and inbox (Partial)","Focus sessions (Implemented)","Reviews and follow-through (Partial)","Memory and cognitive bites (Implemented)","Project health (Partial)","Signals and analytics (Implemented)","Local knowledge search (Implemented)","Optional AI assistance (Optional)"],"sameAs":["https://github.com/dkharlanau/work-os-local","https://github.com/Wooolfmesh/wooolfmesh.github.io"]}</script>
   </head>
   <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD5FLHX9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header class="site-header">
       <nav class="nav-shell" aria-label="Main navigation">
-        <a class="brand" href="/" aria-label="Wooolfmesh home"
-          ><img src="/assets/logo.svg" alt="" />Wooolfmesh</a
-        >
-        <button
-          class="menu-toggle"
-          type="button"
-          data-menu-toggle
-          aria-expanded="false"
-          aria-label="Open menu"
-        >
-          <span></span>
-        </button>
+        <a class="brand" href="/" aria-label="Wooolfmesh home"><img src="/assets/logo.svg" alt="">Wooolfmesh</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu"><span></span></button>
         <div class="nav-links" data-nav-links>
-          <a href="/">Home</a><a href="/product/">Product</a
-          ><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a
-          ><a href="/architecture/">Architecture</a
-          ><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
+          <a href="/">Home</a><a href="/product/">Product</a><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a><a href="/architecture/">Architecture</a><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
         </div>
       </nav>
     </header>
-    <main>
-      <section class="hero">
-        <div class="shell hero-grid">
-          <div class="reveal">
-            <p class="system-label">Local-first execution loop</p>
-            <h1>Wooolfmesh</h1>
-            <h2>
-              Wooolfmesh is a private local operating system for turning
-              personal knowledge, tasks, memory, reviews, and lessons into daily
-              execution.
-            </h2>
-            <p class="lead">
-              It is not a generic task manager or an AI chatbot wrapper. It is a
-              private daily operating layer over your own Markdown knowledge
-              base.
-            </p>
-            <div class="signal-row">
-              <span class="signal-pill">Markdown owned</span>
-              <span class="signal-pill">SQLite runtime</span>
-              <span class="signal-pill">Preview-first</span>
-              <span class="signal-pill">AI optional</span>
-            </div>
-            <div class="hero-actions">
-              <a class="button primary" href="/product/">Explore product</a
-              ><a class="button" href="/use-cases/">Read scenarios</a>
-            </div>
-          </div>
-          <div
-            class="loop-panel reveal"
-            role="list"
-            aria-label="Wooolfmesh product loop"
-          >
-            <div role="listitem"><span>01</span><strong>Capture</strong></div>
-            <div role="listitem"><span>02</span><strong>Clarify</strong></div>
-            <div role="listitem"><span>03</span><strong>Plan</strong></div>
-            <div role="listitem"><span>04</span><strong>Focus</strong></div>
-            <div role="listitem"><span>05</span><strong>Review</strong></div>
-            <div role="listitem"><span>06</span><strong>Learn</strong></div>
-            <div role="listitem"><span>07</span><strong>Reuse</strong></div>
-          </div>
+    <main><section class="hero">
+    <div class="shell hero-grid">
+      <div class="reveal">
+        <p class="system-label">Local-first execution loop</p>
+        <h1>Wooolfmesh</h1>
+        <h2>Wooolfmesh is a private local operating system for turning personal knowledge, tasks, memory, reviews, and lessons into daily execution.</h2>
+        <p class="lead">It is not a generic task manager or an AI chatbot wrapper. It is a private daily operating layer over your own Markdown knowledge base.</p>
+        <div class="signal-row">
+          <span class="signal-pill">Markdown owned</span>
+          <span class="signal-pill">SQLite runtime</span>
+          <span class="signal-pill">Preview-first</span>
+          <span class="signal-pill">AI optional</span>
         </div>
-      </section>
-      <section class="section tight">
-        <div class="shell">
-          <div class="section-heading reveal">
-            <p class="system-label">Core loop</p>
-            <h2>
-              Capture -&gt; Clarify -&gt; Plan -&gt; Focus -&gt; Review -&gt;
-              Learn -&gt; Reuse
-            </h2>
-            <p>
-              Wooolfmesh is useful when every part of work can feed the next
-              part without leaving local control.
-            </p>
-          </div>
-          <div class="explain-grid">
-            <article>
-              <h3>Local-first</h3>
-              <p>
-                Your work system runs locally. Hosted accounts, cloud LLMs, SaaS
-                databases, and third-party analytics are not required for normal
-                operation.
-              </p>
-            </article>
-            <article>
-              <h3>Markdown vault ownership</h3>
-              <p>
-                Tasks, memory, bites, focus sessions, reviews, prompts, and
-                other durable entities remain user-owned Markdown under
-                <code>_WorkOS</code>.
-              </p>
-            </article>
-            <article>
-              <h3>Optional AI, not dependency</h3>
-              <p>
-                AI can suggest extraction, shaping, summaries, and reflection.
-                Manual workflows remain first-class when no model is running.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="shell">
-          <div class="section-heading reveal">
-            <p class="system-label">Day-to-day</p>
-            <h2>What the product helps with</h2>
-            <p>The public site describes workflows, not only modules.</p>
-          </div>
-          <div class="module-grid">
-            <article class="module reveal">
+        <div class="hero-actions"><a class="button primary" href="/product/">Explore product</a><a class="button" href="/use-cases/">Read scenarios</a></div>
+      </div>
+      <div class="loop-panel reveal" role="list" aria-label="Wooolfmesh product loop">
+        <div role="listitem"><span>01</span><strong>Capture</strong></div><div role="listitem"><span>02</span><strong>Clarify</strong></div><div role="listitem"><span>03</span><strong>Plan</strong></div><div role="listitem"><span>04</span><strong>Focus</strong></div><div role="listitem"><span>05</span><strong>Review</strong></div><div role="listitem"><span>06</span><strong>Learn</strong></div><div role="listitem"><span>07</span><strong>Reuse</strong></div>
+      </div>
+    </div>
+  </section>
+  <section class="section tight">
+    <div class="shell">
+      <div class="section-heading reveal"><p class="system-label">Core loop</p><h2>Capture -&gt; Clarify -&gt; Plan -&gt; Focus -&gt; Review -&gt; Learn -&gt; Reuse</h2><p>Wooolfmesh is useful when every part of work can feed the next part without leaving local control.</p></div>
+      <div class="explain-grid">
+        <article><h3>Local-first</h3><p>Your work system runs locally. Hosted accounts, cloud LLMs, SaaS databases, and third-party analytics are not required for normal operation.</p></article>
+        <article><h3>Markdown vault ownership</h3><p>Tasks, memory, bites, focus sessions, reviews, prompts, and other durable entities remain user-owned Markdown under <code>_WorkOS</code>.</p></article>
+        <article><h3>Optional AI, not dependency</h3><p>AI can suggest extraction, shaping, summaries, and reflection. Manual workflows remain first-class when no model is running.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading reveal"><p class="system-label">Day-to-day</p><h2>What the product helps with</h2><p>The public site describes workflows, not only modules.</p></div>
+      <div class="module-grid">
+        <article class="module reveal">
               <span class="status-badge implemented">Implemented</span>
               <h3>Today operating layer</h3>
-              <p>
-                A daily start surface for next action, planned work, routines,
-                reminders, blockers, capacity, and local context.
-              </p>
-            </article>
-            <article class="module reveal">
+              <p>A daily start surface for next action, planned work, routines, reminders, blockers, capacity, and local context.</p>
+            </article><article class="module reveal">
               <span class="status-badge implemented">Implemented</span>
               <h3>Executable tasks</h3>
-              <p>
-                Markdown-backed tasks with next action, definition of done,
-                effort, energy, work mode, dates, reminders, and links.
-              </p>
-            </article>
-            <article class="module reveal">
+              <p>Markdown-backed tasks with next action, definition of done, effort, energy, work mode, dates, reminders, and links.</p>
+            </article><article class="module reveal">
               <span class="status-badge partial">Partial</span>
               <h3>Capture and inbox</h3>
-              <p>
-                Preview-first capture for raw notes, commitments, tasks, memory,
-                and cognitive bite candidates.
-              </p>
-            </article>
-            <article class="module reveal">
+              <p>Preview-first capture for raw notes, commitments, tasks, memory, and cognitive bite candidates.</p>
+            </article><article class="module reveal">
               <span class="status-badge implemented">Implemented</span>
               <h3>Focus sessions</h3>
-              <p>
-                Deep work sessions connected to a ready task, interruptions,
-                outcomes, time logs, and next actions.
-              </p>
-            </article>
-            <article class="module reveal">
+              <p>Deep work sessions connected to a ready task, interruptions, outcomes, time logs, and next actions.</p>
+            </article><article class="module reveal">
               <span class="status-badge partial">Partial</span>
               <h3>Reviews and follow-through</h3>
-              <p>
-                Daily, weekly, project, and experience reviews with suggested
-                actions and preview-first approval flows.
-              </p>
-            </article>
-            <article class="module reveal">
+              <p>Daily, weekly, project, and experience reviews with suggested actions and preview-first approval flows.</p>
+            </article><article class="module reveal">
               <span class="status-badge implemented">Implemented</span>
               <h3>Memory and cognitive bites</h3>
-              <p>
-                Reusable decisions, lessons, mistakes, principles, playbooks,
-                and patterns stored locally.
-              </p>
-            </article>
-            <article class="module reveal">
+              <p>Reusable decisions, lessons, mistakes, principles, playbooks, and patterns stored locally.</p>
+            </article><article class="module reveal">
               <span class="status-badge partial">Partial</span>
               <h3>Project health</h3>
-              <p>
-                Signals for stale, blocked, overloaded, or missing-next-action
-                projects with concrete recovery direction.
-              </p>
-            </article>
-            <article class="module reveal">
+              <p>Signals for stale, blocked, overloaded, or missing-next-action projects with concrete recovery direction.</p>
+            </article><article class="module reveal">
               <span class="status-badge implemented">Implemented</span>
               <h3>Signals and analytics</h3>
-              <p>
-                Local patterns over focus, planning quality, routines, signals,
-                app health, and learning loops.
-              </p>
-            </article>
-            <article class="module reveal">
+              <p>Local patterns over focus, planning quality, routines, signals, app health, and learning loops.</p>
+            </article><article class="module reveal">
               <span class="status-badge implemented">Implemented</span>
               <h3>Local knowledge search</h3>
-              <p>
-                Search across Wooolfmesh entities and indexed knowledge notes
-                with citations, scope controls, and provenance.
-              </p>
-            </article>
-            <article class="module reveal">
+              <p>Search across Wooolfmesh entities and indexed knowledge notes with citations, scope controls, and provenance.</p>
+            </article><article class="module reveal">
               <span class="status-badge optional">Optional</span>
               <h3>Optional AI assistance</h3>
-              <p>
-                Ollama/local AI and configured hosted providers can assist
-                capture, shaping, summaries, and reflection, but normal use does
-                not require AI.
-              </p>
+              <p>Ollama/local AI and configured hosted providers can assist capture, shaping, summaries, and reflection, but normal use does not require AI.</p>
             </article>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="shell split">
-          <div>
-            <div class="section-heading reveal">
-              <p class="system-label">Different from task apps</p>
-              <h2>A task list is only one layer</h2>
-              <p>
-                Wooolfmesh connects capture, planning, focus, reviews, lessons,
-                project health, routines, and local knowledge so each loop makes
-                the next loop easier.
-              </p>
-            </div>
-          </div>
-          <div class="comparison-list">
-            <div>
-              <strong>Task apps</strong
-              ><span
-                >Usually track items. Wooolfmesh makes work executable and
-                reviewable.</span
-              >
-            </div>
-            <div>
-              <strong>Note apps</strong
-              ><span
-                >Usually store knowledge. Wooolfmesh reuses knowledge during
-                planning and focus.</span
-              >
-            </div>
-            <div>
-              <strong>AI chatbots</strong
-              ><span
-                >Usually answer in a session. Wooolfmesh keeps local durable
-                memory and explicit approval boundaries.</span
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="shell">
-          <div class="section-heading reveal">
-            <p class="system-label">Product evidence</p>
-            <h2>Screenshots from isolated demo data</h2>
-            <p>No private vault data is published on this site.</p>
-          </div>
-          <div class="screenshot-grid">
-            <figure class="screenshot-card reveal">
-              <a href="/assets/screenshots/today-command-center.png"
-                ><img
-                  src="/assets/screenshots/today-command-center.png"
-                  alt="Today operating layer screenshot"
-              /></a>
-              <figcaption>
-                <strong>Today operating layer</strong
-                ><span
-                  >Start from one local surface for next action, routines,
-                  reminders, queues, and capacity.</span
-                >
-              </figcaption>
-            </figure>
-            <figure class="screenshot-card reveal">
-              <a href="/assets/screenshots/task-detail-planning.png"
-                ><img
-                  src="/assets/screenshots/task-detail-planning.png"
-                  alt="Executable task detail screenshot"
-              /></a>
-              <figcaption>
-                <strong>Executable task detail</strong
-                ><span
-                  >Tasks carry next action, definition of done, effort, energy,
-                  work mode, links, and notes.</span
-                >
-              </figcaption>
-            </figure>
-            <figure class="screenshot-card reveal">
-              <a href="/assets/screenshots/capture-inbox.png"
-                ><img
-                  src="/assets/screenshots/capture-inbox.png"
-                  alt="Preview-first capture screenshot"
-              /></a>
-              <figcaption>
-                <strong>Preview-first capture</strong
-                ><span
-                  >Capture raw thoughts and confirm structured candidates before
-                  anything becomes durable.</span
-                >
-              </figcaption>
-            </figure>
-            <figure class="screenshot-card reveal">
-              <a href="/assets/screenshots/focus-session.png"
-                ><img
-                  src="/assets/screenshots/focus-session.png"
-                  alt="Focus session screenshot"
-              /></a>
-              <figcaption>
-                <strong>Focus session</strong
-                ><span
-                  >Focus preserves task intent, interruptions, outcome, and next
-                  action.</span
-                >
-              </figcaption>
-            </figure>
-            <figure class="screenshot-card reveal">
-              <a href="/assets/screenshots/reviews-actions.png"
-                ><img
-                  src="/assets/screenshots/reviews-actions.png"
-                  alt="Reviews and actions screenshot"
-              /></a>
-              <figcaption>
-                <strong>Reviews and actions</strong
-                ><span
-                  >Reviews turn work history into suggested actions and reusable
-                  lessons.</span
-                >
-              </figcaption>
-            </figure>
-            <figure class="screenshot-card reveal">
-              <a href="/assets/screenshots/project-health.png"
-                ><img
-                  src="/assets/screenshots/project-health.png"
-                  alt="Project health screenshot"
-              /></a>
-              <figcaption>
-                <strong>Project health</strong
-                ><span
-                  >Project health shows blockers, stale work, movement signals,
-                  and recovery direction.</span
-                >
-              </figcaption>
-            </figure>
-            <figure class="screenshot-card reveal">
-              <a href="/assets/screenshots/memory-bites.png"
-                ><img
-                  src="/assets/screenshots/memory-bites.png"
-                  alt="Memory and cognitive bites screenshot"
-              /></a>
-              <figcaption>
-                <strong>Memory and cognitive bites</strong
-                ><span
-                  >Decisions, mistakes, and lessons become reusable local
-                  memory.</span
-                >
-              </figcaption>
-            </figure>
-            <figure class="screenshot-card reveal">
-              <a href="/assets/screenshots/search-retrieval.png"
-                ><img
-                  src="/assets/screenshots/search-retrieval.png"
-                  alt="Search and retrieval screenshot"
-              /></a>
-              <figcaption>
-                <strong>Search and retrieval</strong
-                ><span
-                  >Local search retrieves WorkOS entities and indexed knowledge
-                  notes with provenance.</span
-                >
-              </figcaption>
-            </figure>
-            <figure class="screenshot-card reveal">
-              <a href="/assets/screenshots/settings-trust-ai.png"
-                ><img
-                  src="/assets/screenshots/settings-trust-ai.png"
-                  alt="Settings, trust, and AI screenshot"
-              /></a>
-              <figcaption>
-                <strong>Settings, trust, and AI</strong
-                ><span
-                  >Settings expose vaults, runtime health, AI providers, data
-                  controls, and diagnostics.</span
-                >
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-    </main>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="shell split">
+      <div><div class="section-heading reveal"><p class="system-label">Different from task apps</p><h2>A task list is only one layer</h2><p>Wooolfmesh connects capture, planning, focus, reviews, lessons, project health, routines, and local knowledge so each loop makes the next loop easier.</p></div></div>
+      <div class="comparison-list">
+        <div><strong>Task apps</strong><span>Usually track items. Wooolfmesh makes work executable and reviewable.</span></div>
+        <div><strong>Note apps</strong><span>Usually store knowledge. Wooolfmesh reuses knowledge during planning and focus.</span></div>
+        <div><strong>AI chatbots</strong><span>Usually answer in a session. Wooolfmesh keeps local durable memory and explicit approval boundaries.</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading reveal"><p class="system-label">Product evidence</p><h2>Screenshots from isolated demo data</h2><p>No private vault data is published on this site.</p></div>
+      <div class="screenshot-grid"><figure class="screenshot-card reveal">
+        <a href="/assets/screenshots/today-command-center.png"><img src="/assets/screenshots/today-command-center.png" alt="Today operating layer screenshot"></a>
+        <figcaption><strong>Today operating layer</strong><span>Start from one local surface for next action, routines, reminders, queues, and capacity.</span></figcaption>
+      </figure><figure class="screenshot-card reveal">
+        <a href="/assets/screenshots/task-detail-planning.png"><img src="/assets/screenshots/task-detail-planning.png" alt="Executable task detail screenshot"></a>
+        <figcaption><strong>Executable task detail</strong><span>Tasks carry next action, definition of done, effort, energy, work mode, links, and notes.</span></figcaption>
+      </figure><figure class="screenshot-card reveal">
+        <a href="/assets/screenshots/capture-inbox.png"><img src="/assets/screenshots/capture-inbox.png" alt="Preview-first capture screenshot"></a>
+        <figcaption><strong>Preview-first capture</strong><span>Capture raw thoughts and confirm structured candidates before anything becomes durable.</span></figcaption>
+      </figure><figure class="screenshot-card reveal">
+        <a href="/assets/screenshots/focus-session.png"><img src="/assets/screenshots/focus-session.png" alt="Focus session screenshot"></a>
+        <figcaption><strong>Focus session</strong><span>Focus preserves task intent, interruptions, outcome, and next action.</span></figcaption>
+      </figure><figure class="screenshot-card reveal">
+        <a href="/assets/screenshots/reviews-actions.png"><img src="/assets/screenshots/reviews-actions.png" alt="Reviews and actions screenshot"></a>
+        <figcaption><strong>Reviews and actions</strong><span>Reviews turn work history into suggested actions and reusable lessons.</span></figcaption>
+      </figure><figure class="screenshot-card reveal">
+        <a href="/assets/screenshots/project-health.png"><img src="/assets/screenshots/project-health.png" alt="Project health screenshot"></a>
+        <figcaption><strong>Project health</strong><span>Project health shows blockers, stale work, movement signals, and recovery direction.</span></figcaption>
+      </figure><figure class="screenshot-card reveal">
+        <a href="/assets/screenshots/memory-bites.png"><img src="/assets/screenshots/memory-bites.png" alt="Memory and cognitive bites screenshot"></a>
+        <figcaption><strong>Memory and cognitive bites</strong><span>Decisions, mistakes, and lessons become reusable local memory.</span></figcaption>
+      </figure><figure class="screenshot-card reveal">
+        <a href="/assets/screenshots/search-retrieval.png"><img src="/assets/screenshots/search-retrieval.png" alt="Search and retrieval screenshot"></a>
+        <figcaption><strong>Search and retrieval</strong><span>Local search retrieves WorkOS entities and indexed knowledge notes with provenance.</span></figcaption>
+      </figure><figure class="screenshot-card reveal">
+        <a href="/assets/screenshots/settings-trust-ai.png"><img src="/assets/screenshots/settings-trust-ai.png" alt="Settings, trust, and AI screenshot"></a>
+        <figcaption><strong>Settings, trust, and AI</strong><span>Settings expose vaults, runtime health, AI providers, data controls, and diagnostics.</span></figcaption>
+      </figure></div>
+    </div>
+  </section></main>
     <footer class="site-footer">
       <div class="footer-shell">
         <div class="footer-brand">
           <strong>Wooolfmesh</strong>
-          <p>
-            Wooolfmesh is a private local operating system for turning personal
-            knowledge, tasks, memory, reviews, and lessons into daily execution.
-          </p>
-          <p class="footer-small">
-            Formerly WorkOS Local. No private vault data is published here.
-          </p>
+          <p>Wooolfmesh is a private local operating system for turning personal knowledge, tasks, memory, reviews, and lessons into daily execution.</p>
+          <p class="footer-small">Formerly WorkOS Local. No private vault data is published here.</p>
         </div>
         <div class="footer-links">
-          <a href="/">Home</a><a href="/product/">Product</a
-          ><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a
-          ><a href="/architecture/">Architecture</a
-          ><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
+          <a href="/">Home</a><a href="/product/">Product</a><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a><a href="/architecture/">Architecture</a><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
           <a href="/privacy/">Privacy</a>
           <a href="/ai/">AI disclosure</a>
-          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io/issues"
-            >Report a bug</a
-          >
-          <a href="https://github.com/dkharlanau/work-os-local"
-            >Product source</a
-          >
-          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io"
-            >Site source</a
-          >
+          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io/issues">Report a bug</a>
+          <a href="https://github.com/dkharlanau/work-os-local">Product source</a>
+          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io">Site source</a>
         </div>
       </div>
     </footer>
