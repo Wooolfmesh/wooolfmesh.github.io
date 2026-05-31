@@ -200,285 +200,195 @@
     </header>
     <main>
       <section class="hero landing-hero">
-        <div class="shell hero-grid">
-          <div class="hero-copy reveal">
-            <p class="system-label">Local-first memory for agentic work</p>
-            <h1>Wooolfmesh</h1>
-            <h2>
-              A private local command center for technical knowledge workers who
-              want tasks, notes, focus, reviews, and AI suggestions under their
-              control.
-            </h2>
+        <div class="shell indie-hero-grid">
+          <div class="indie-hero-copy reveal">
+            <div class="hero-logo-line">
+              <img src="/assets/wooolfmesh.png" alt="" /><span>Wooolfmesh</span>
+            </div>
+            <p class="system-label">Local-first work memory</p>
+            <h1>Agentic workbench for builders.</h1>
             <p class="lead">
-              Durable work memory stays in your <code>_WorkOS</code> Markdown
-              vault. SQLite handles runtime state. AI stays optional and
-              approval-first.
+              Capture ideas, shape tasks, run focus, review the loop. Your
+              Markdown stays yours.
             </p>
             <div class="hero-actions">
               <a class="button primary" href="/install/">Install locally</a
-              ><a class="button" href="/guides/">Read docs</a
+              ><a class="button" href="/guides/">Docs</a
               ><a
                 class="button ghost"
                 href="https://github.com/dkharlanau/work-os-local"
-                >View repo</a
+                >GitHub</a
               >
             </div>
           </div>
           <div
-            class="hero-visual reveal"
+            class="workbench-visual reveal"
             role="img"
-            aria-label="Wooolfmesh local-first command center diagram"
+            aria-label="Wooolfmesh workbench visual"
           >
-            <div class="mascot-frame">
+            <div class="mascot-chip">
               <img src="/assets/wooolfmesh.png" alt="Wooolfmesh mascot" />
             </div>
-            <div class="command-map" aria-hidden="true">
-              <span>Today</span>
-              <span>Capture</span>
-              <span>Focus</span>
-              <span>Reviews</span>
-              <strong>Markdown vault</strong>
-              <span>Bites</span>
-              <span>Projects</span>
-              <span>Search</span>
-              <span>Analytics</span>
+            <div class="terminal-card">
+              <span class="terminal-dot"></span
+              ><span class="terminal-dot"></span
+              ><span class="terminal-dot"></span>
+              <pre><code>vault: ./_WorkOS
+ capture.md
+ task.next_action
+ focus.session
+ review.lessons
+ bite.reuse</code></pre>
             </div>
+            <div class="stack-card stack-card-a">no silent writes</div>
+            <div class="stack-card stack-card-b">AI optional</div>
+            <div class="stack-card stack-card-c">local-first</div>
           </div>
         </div>
       </section>
       <section class="section loop-section">
-        <div class="shell">
-          <div class="section-heading reveal">
-            <p class="system-label">How it works</p>
-            <h2>One loop that keeps work usable</h2>
-            <p>
-              Wooolfmesh is built around a simple operating rhythm. Each step
-              creates context for the next one without moving ownership out of
-              local files.
-            </p>
-          </div>
+        <div class="shell compact-section">
+          <p class="system-label">Product loop</p>
           <div
-            class="loop-track"
+            class="loop-orbit"
             role="list"
             aria-label="Wooolfmesh product loop"
           >
-            <article class="loop-step reveal" role="listitem">
+            <article class="loop-orbit-step reveal" role="listitem">
               <span>01</span><strong>Capture</strong>
             </article>
-            <article class="loop-step reveal" role="listitem">
+            <article class="loop-orbit-step reveal" role="listitem">
               <span>02</span><strong>Clarify</strong>
             </article>
-            <article class="loop-step reveal" role="listitem">
+            <article class="loop-orbit-step reveal" role="listitem">
               <span>03</span><strong>Plan</strong>
             </article>
-            <article class="loop-step reveal" role="listitem">
+            <article class="loop-orbit-step reveal" role="listitem">
               <span>04</span><strong>Focus</strong>
             </article>
-            <article class="loop-step reveal" role="listitem">
+            <article class="loop-orbit-step reveal" role="listitem">
               <span>05</span><strong>Track</strong>
             </article>
-            <article class="loop-step reveal" role="listitem">
+            <article class="loop-orbit-step reveal" role="listitem">
               <span>06</span><strong>Review</strong>
             </article>
-            <article class="loop-step reveal" role="listitem">
+            <article class="loop-orbit-step reveal" role="listitem">
               <span>07</span><strong>Learn</strong>
             </article>
-            <article class="loop-step reveal" role="listitem">
+            <article class="loop-orbit-step reveal" role="listitem">
               <span>08</span><strong>Reuse</strong>
             </article>
-          </div>
-          <div class="loop-note reveal">
-            Capture raw context. Clarify it into useful shape. Plan one next
-            move. Focus with intent. Track what happened. Review the pattern.
-            Learn once. Reuse later.
           </div>
         </div>
       </section>
       <section class="section architecture-section">
-        <div class="shell architecture-layout">
-          <div>
-            <div class="section-heading reveal">
-              <p class="system-label">Local-first architecture</p>
-              <h2>Private by design, inspectable by default</h2>
-              <p>
-                Durable records stay in Markdown. SQLite handles runtime
-                support. AI is optional. Approval boundaries are explicit.
-              </p>
-            </div>
-            <div class="architecture-key">
-              <span>Markdown source of truth</span>
-              <span>SQLite runtime support</span>
-              <span>Optional AI suggestions</span>
-              <span>Explicit approvals</span>
-            </div>
+        <div class="shell data-map-layout">
+          <div class="section-heading reveal">
+            <p class="system-label">Local-first map</p>
+            <h2>Private context, visible boundaries.</h2>
           </div>
           <div
-            class="local-diagram reveal"
+            class="data-map reveal"
             role="img"
             aria-label="Local-first architecture diagram"
           >
-            <div class="diagram-node user-node">You</div>
-            <div class="diagram-node app-node">Wooolfmesh local app</div>
-            <div class="diagram-row">
-              <div class="diagram-node vault-node">
-                Markdown vault<br /><small>tasks, memory, reviews, bites</small>
+            <div class="data-node data-node-user">Builder</div>
+            <div class="data-arrow">capture / plan / review</div>
+            <div class="data-node data-node-app">Wooolfmesh</div>
+            <div class="data-split">
+              <div class="data-node data-node-vault">
+                Markdown vault<br /><small>owned, readable, portable</small>
               </div>
-              <div class="diagram-node runtime-node">
-                SQLite runtime<br /><small
-                  >reminders, events, indexes, analytics</small
-                >
+              <div class="data-node data-node-runtime">
+                SQLite runtime<br /><small>reminders, events, indexes</small>
               </div>
             </div>
-            <div class="diagram-node ai-node">
-              Optional AI<br /><small>preview output only</small>
+            <div class="data-node data-node-ai">
+              Optional AI<br /><small>suggestions only</small>
             </div>
           </div>
         </div>
       </section>
-      <section class="section workflow-section">
+      <section class="section feature-slab">
         <div class="shell">
-          <div class="section-heading reveal">
-            <p class="system-label">Workflows</p>
-            <h2>A command center, not a backlog skin</h2>
-            <p>
-              The product connects the surfaces a technical knowledge worker
-              already needs to execute and learn.
-            </p>
+          <div class="feature-slab-head reveal">
+            <p class="system-label">Built for the loop</p>
+            <h2>Deep work, tasks, reviews, bites, project memory.</h2>
           </div>
-          <div class="workflow-grid">
-            <article class="workflow-card reveal">
+          <div class="home-feature-grid">
+            <article class="home-feature-card reveal">
               <span>01</span>
-              <h3>Today</h3>
+              <h3>Deep work</h3>
               <p>
-                A quiet command center for due work, routines, reminders,
-                blockers, capacity, and the next useful action.
+                Focus sessions keep intent, interruption, outcome, and next
+                action together.
               </p>
             </article>
-            <article class="workflow-card reveal">
+            <article class="home-feature-card reveal">
               <span>02</span>
-              <h3>Capture</h3>
+              <h3>Tasks</h3>
               <p>
-                Raw notes become proposed tasks, memory, or cognitive bites only
-                after review and explicit save.
+                Executable work items with definition of done, energy, effort,
+                and links.
               </p>
             </article>
-            <article class="workflow-card reveal">
+            <article class="home-feature-card reveal">
               <span>03</span>
-              <h3>Focus</h3>
-              <p>
-                Sessions keep intent, interruptions, outcome, time, and next
-                action attached to the work.
-              </p>
-            </article>
-            <article class="workflow-card reveal">
-              <span>04</span>
               <h3>Reviews</h3>
               <p>
-                Daily, weekly, project, and experience reviews turn history into
-                reusable follow-through.
+                Daily, weekly, project, and experience reflection feeds the next
+                loop.
               </p>
             </article>
-            <article class="workflow-card reveal">
+            <article class="home-feature-card reveal">
+              <span>04</span>
+              <h3>Cognitive bites</h3>
+              <p>
+                Small reusable lessons, mistakes, principles, and project
+                memory.
+              </p>
+            </article>
+            <article class="home-feature-card reveal">
               <span>05</span>
-              <h3>Project Health</h3>
+              <h3>Project memory</h3>
               <p>
-                Stale work, blockers, overloaded projects, and missing next
-                actions surface before they become backlog noise.
+                Stale work, blockers, decisions, and recovery signals in one
+                place.
               </p>
             </article>
-            <article class="workflow-card reveal">
+            <article class="home-feature-card reveal">
               <span>06</span>
-              <h3>Cognitive Bites</h3>
+              <h3>Local search</h3>
               <p>
-                Decisions, mistakes, principles, and playbooks stay compact
-                enough to reuse later.
-              </p>
-            </article>
-            <article class="workflow-card reveal">
-              <span>07</span>
-              <h3>Local Search</h3>
-              <p>
-                Search Wooolfmesh entities and indexed knowledge with citations
-                and clear provenance.
+                Find tasks, notes, decisions, and lessons without uploading
+                context.
               </p>
             </article>
           </div>
         </div>
       </section>
-      <section class="section trust-section">
-        <div class="shell trust-layout">
-          <div
-            class="ownership-map reveal"
-            role="img"
-            aria-label="Data ownership map"
+      <section class="trust-ribbon" aria-label="Wooolfmesh trust principles">
+        <div class="shell trust-ribbon-inner">
+          <span>Your Markdown stays yours</span>
+          <span>AI is optional</span>
+          <span>No silent writes</span>
+          <span>Local-first by default</span>
+        </div>
+      </section>
+      <section class="section landing-link-section">
+        <div class="shell landing-link-grid reveal">
+          <a href="/guides/"
+            ><strong>Docs</strong
+            ><span>Setup, vaults, AI, troubleshooting.</span></a
           >
-            <div class="ownership-core">User-owned<br />Markdown</div>
-            <div>Local app</div>
-            <div>Runtime DB</div>
-            <div>Optional AI</div>
-            <div>Explicit save</div>
-          </div>
-          <div>
-            <div class="section-heading reveal">
-              <p class="system-label">Trust model</p>
-              <h2>Control remains visible</h2>
-              <p>
-                Wooolfmesh is built for private personal work memory. It should
-                be useful without asking you to trade ownership for convenience.
-              </p>
-            </div>
-            <div class="trust-list">
-              <article class="trust-item reveal">
-                <h3>Private by default</h3>
-                <p>
-                  Normal operation does not require hosted accounts, cloud LLMs,
-                  SaaS databases, or third-party analytics.
-                </p>
-              </article>
-              <article class="trust-item reveal">
-                <h3>No silent writes</h3>
-                <p>
-                  Capture, review, import, and AI suggestions stay proposals
-                  until the user explicitly saves or applies them.
-                </p>
-              </article>
-              <article class="trust-item reveal">
-                <h3>User-owned Markdown</h3>
-                <p>
-                  Durable work memory lives in an inspectable `_WorkOS` Markdown
-                  vault, not an opaque cloud workspace.
-                </p>
-              </article>
-              <article class="trust-item reveal">
-                <h3>Optional AI</h3>
-                <p>
-                  Local Ollama or configured providers can help, but manual
-                  workflows remain first-class when no model is running.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section final-cta">
-        <div class="shell cta-layout reveal">
-          <div>
-            <p class="system-label">Run it locally</p>
-            <h2>Start with the source, docs, and current install guides.</h2>
-            <p>
-              Packaging and public distribution are still in progress, so the
-              site points to the implemented local setup and the source
-              repository instead of overclaiming installer maturity.
-            </p>
-          </div>
-          <div class="cta-actions">
-            <a class="button primary" href="/install/">Install status</a
-            ><a
-              class="button"
-              href="https://github.com/dkharlanau/work-os-local"
-              >GitHub repo</a
-            ><a class="button ghost" href="/privacy/">Privacy model</a>
-          </div>
+          <a href="https://github.com/dkharlanau/work-os-local"
+            ><strong>GitHub</strong
+            ><span>Read the source and run locally.</span></a
+          >
+          <a href="/support/"
+            ><strong>Support</strong
+            ><span>Report issues and request workflow fixes.</span></a
+          >
         </div>
       </section>
     </main>

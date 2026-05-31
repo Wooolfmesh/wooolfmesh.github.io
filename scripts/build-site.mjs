@@ -522,6 +522,33 @@ const trustPrinciples = [
   ],
 ];
 
+const homeFeatures = [
+  [
+    "Deep work",
+    "Focus sessions keep intent, interruption, outcome, and next action together.",
+  ],
+  [
+    "Tasks",
+    "Executable work items with definition of done, energy, effort, and links.",
+  ],
+  [
+    "Reviews",
+    "Daily, weekly, project, and experience reflection feeds the next loop.",
+  ],
+  [
+    "Cognitive bites",
+    "Small reusable lessons, mistakes, principles, and project memory.",
+  ],
+  [
+    "Project memory",
+    "Stale work, blockers, decisions, and recovery signals in one place.",
+  ],
+  [
+    "Local search",
+    "Find tasks, notes, decisions, and lessons without uploading context.",
+  ],
+];
+
 const guides = [
   {
     slug: "windows-install",
@@ -1162,107 +1189,80 @@ addPage({
   active: "",
   jsonLd: [siteSchema, softwareSchema],
   body: `<section class="hero landing-hero">
-    <div class="shell hero-grid">
-      <div class="hero-copy reveal">
-        <p class="system-label">Local-first memory for agentic work</p>
-        <h1>Wooolfmesh</h1>
-        <h2>A private local command center for technical knowledge workers who want tasks, notes, focus, reviews, and AI suggestions under their control.</h2>
-        <p class="lead">Durable work memory stays in your <code>_WorkOS</code> Markdown vault. SQLite handles runtime state. AI stays optional and approval-first.</p>
-        <div class="hero-actions"><a class="button primary" href="/install/">Install locally</a><a class="button" href="/guides/">Read docs</a><a class="button ghost" href="${productRepo}">View repo</a></div>
+    <div class="shell indie-hero-grid">
+      <div class="indie-hero-copy reveal">
+        <div class="hero-logo-line"><img src="/assets/wooolfmesh.png" alt=""><span>Wooolfmesh</span></div>
+        <p class="system-label">Local-first work memory</p>
+        <h1>Agentic workbench for builders.</h1>
+        <p class="lead">Capture ideas, shape tasks, run focus, review the loop. Your Markdown stays yours.</p>
+        <div class="hero-actions"><a class="button primary" href="/install/">Install locally</a><a class="button" href="/guides/">Docs</a><a class="button ghost" href="${productRepo}">GitHub</a></div>
       </div>
-      <div class="hero-visual reveal" role="img" aria-label="Wooolfmesh local-first command center diagram">
-        <div class="mascot-frame"><img src="/assets/wooolfmesh.png" alt="Wooolfmesh mascot"></div>
-        <div class="command-map" aria-hidden="true">
-          <span>Today</span>
-          <span>Capture</span>
-          <span>Focus</span>
-          <span>Reviews</span>
-          <strong>Markdown vault</strong>
-          <span>Bites</span>
-          <span>Projects</span>
-          <span>Search</span>
-          <span>Analytics</span>
+      <div class="workbench-visual reveal" role="img" aria-label="Wooolfmesh workbench visual">
+        <div class="mascot-chip"><img src="/assets/wooolfmesh.png" alt="Wooolfmesh mascot"></div>
+        <div class="terminal-card">
+          <span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span>
+          <pre><code>vault: ./_WorkOS
+ capture.md
+ task.next_action
+ focus.session
+ review.lessons
+ bite.reuse</code></pre>
         </div>
+        <div class="stack-card stack-card-a">no silent writes</div>
+        <div class="stack-card stack-card-b">AI optional</div>
+        <div class="stack-card stack-card-c">local-first</div>
       </div>
     </div>
   </section>
   <section class="section loop-section">
-    <div class="shell">
-      ${sectionHeading("How it works", "One loop that keeps work usable", "Wooolfmesh is built around a simple operating rhythm. Each step creates context for the next one without moving ownership out of local files.")}
-      <div class="loop-track" role="list" aria-label="Wooolfmesh product loop">
-        ${loop.map((step, index) => `<article class="loop-step reveal" role="listitem"><span>${String(index + 1).padStart(2, "0")}</span><strong>${step}</strong></article>`).join("")}
+    <div class="shell compact-section">
+      <p class="system-label">Product loop</p>
+      <div class="loop-orbit" role="list" aria-label="Wooolfmesh product loop">
+        ${loop.map((step, index) => `<article class="loop-orbit-step reveal" role="listitem"><span>${String(index + 1).padStart(2, "0")}</span><strong>${step}</strong></article>`).join("")}
       </div>
-      <div class="loop-note reveal">Capture raw context. Clarify it into useful shape. Plan one next move. Focus with intent. Track what happened. Review the pattern. Learn once. Reuse later.</div>
     </div>
   </section>
   <section class="section architecture-section">
-    <div class="shell architecture-layout">
-      <div>
-        ${sectionHeading("Local-first architecture", "Private by design, inspectable by default", "Durable records stay in Markdown. SQLite handles runtime support. AI is optional. Approval boundaries are explicit.")}
-        <div class="architecture-key">
-          <span>Markdown source of truth</span>
-          <span>SQLite runtime support</span>
-          <span>Optional AI suggestions</span>
-          <span>Explicit approvals</span>
+    <div class="shell data-map-layout">
+      <div class="section-heading reveal"><p class="system-label">Local-first map</p><h2>Private context, visible boundaries.</h2></div>
+      <div class="data-map reveal" role="img" aria-label="Local-first architecture diagram">
+        <div class="data-node data-node-user">Builder</div>
+        <div class="data-arrow">capture / plan / review</div>
+        <div class="data-node data-node-app">Wooolfmesh</div>
+        <div class="data-split">
+          <div class="data-node data-node-vault">Markdown vault<br><small>owned, readable, portable</small></div>
+          <div class="data-node data-node-runtime">SQLite runtime<br><small>reminders, events, indexes</small></div>
         </div>
-      </div>
-      <div class="local-diagram reveal" role="img" aria-label="Local-first architecture diagram">
-        <div class="diagram-node user-node">You</div>
-        <div class="diagram-node app-node">Wooolfmesh local app</div>
-        <div class="diagram-row">
-          <div class="diagram-node vault-node">Markdown vault<br><small>tasks, memory, reviews, bites</small></div>
-          <div class="diagram-node runtime-node">SQLite runtime<br><small>reminders, events, indexes, analytics</small></div>
-        </div>
-        <div class="diagram-node ai-node">Optional AI<br><small>preview output only</small></div>
+        <div class="data-node data-node-ai">Optional AI<br><small>suggestions only</small></div>
       </div>
     </div>
   </section>
-  <section class="section workflow-section">
+  <section class="section feature-slab">
     <div class="shell">
-      ${sectionHeading("Workflows", "A command center, not a backlog skin", "The product connects the surfaces a technical knowledge worker already needs to execute and learn.")}
-      <div class="workflow-grid">
-        ${landingWorkflows
+      <div class="feature-slab-head reveal"><p class="system-label">Built for the loop</p><h2>Deep work, tasks, reviews, bites, project memory.</h2></div>
+      <div class="home-feature-grid">
+        ${homeFeatures
           .map(
-            ([title, text], index) => `<article class="workflow-card reveal">
-              <span>${String(index + 1).padStart(2, "0")}</span>
-              <h3>${escapeHtml(title)}</h3>
-              <p>${escapeHtml(text)}</p>
-            </article>`,
+            ([title, text], index) =>
+              `<article class="home-feature-card reveal"><span>${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`,
           )
           .join("")}
       </div>
     </div>
   </section>
-  <section class="section trust-section">
-    <div class="shell trust-layout">
-      <div class="ownership-map reveal" role="img" aria-label="Data ownership map">
-        <div class="ownership-core">User-owned<br>Markdown</div>
-        <div>Local app</div>
-        <div>Runtime DB</div>
-        <div>Optional AI</div>
-        <div>Explicit save</div>
-      </div>
-      <div>
-        ${sectionHeading("Trust model", "Control remains visible", "Wooolfmesh is built for private personal work memory. It should be useful without asking you to trade ownership for convenience.")}
-        <div class="trust-list">
-          ${trustPrinciples
-            .map(
-              ([title, text]) =>
-                `<article class="trust-item reveal"><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`,
-            )
-            .join("")}
-        </div>
-      </div>
+  <section class="trust-ribbon" aria-label="Wooolfmesh trust principles">
+    <div class="shell trust-ribbon-inner">
+      <span>Your Markdown stays yours</span>
+      <span>AI is optional</span>
+      <span>No silent writes</span>
+      <span>Local-first by default</span>
     </div>
   </section>
-  <section class="section final-cta">
-    <div class="shell cta-layout reveal">
-      <div>
-        <p class="system-label">Run it locally</p>
-        <h2>Start with the source, docs, and current install guides.</h2>
-        <p>Packaging and public distribution are still in progress, so the site points to the implemented local setup and the source repository instead of overclaiming installer maturity.</p>
-      </div>
-      <div class="cta-actions"><a class="button primary" href="/install/">Install status</a><a class="button" href="${productRepo}">GitHub repo</a><a class="button ghost" href="/privacy/">Privacy model</a></div>
+  <section class="section landing-link-section">
+    <div class="shell landing-link-grid reveal">
+      <a href="/guides/"><strong>Docs</strong><span>Setup, vaults, AI, troubleshooting.</span></a>
+      <a href="${productRepo}"><strong>GitHub</strong><span>Read the source and run locally.</span></a>
+      <a href="/support/"><strong>Support</strong><span>Report issues and request workflow fixes.</span></a>
     </div>
   </section>`,
 });
