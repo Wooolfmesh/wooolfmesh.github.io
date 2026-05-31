@@ -1,13 +1,13 @@
 # Wooolfmesh full AI context
 
 ## Product definition
-Wooolfmesh is a private local operating system for turning personal knowledge, tasks, memory, reviews, and lessons into daily execution.
+Wooolfmesh is local-first memory for agentic work: a private command center that turns Markdown-owned work memory into daily execution.
 
 ## Product thesis
 Wooolfmesh is a local-first operating layer for daily execution. It connects tasks, capture, focus sessions, reviews, cognitive bites, memory, projects, routines, signals, analytics, search, local knowledge, and optional AI into one loop.
 
 ## Core loop
-Capture -> Clarify -> Plan -> Focus -> Review -> Learn -> Reuse
+Capture -> Clarify -> Plan -> Focus -> Track -> Review -> Learn -> Reuse
 
 ## Storage model
 Markdown under the configured _WorkOS vault is the durable source of truth for user-owned entities. SQLite stores runtime support such as reminders, task events, indexes, registry data, routine state, diagnostics, and analytics.
@@ -51,7 +51,7 @@ Exploratory / P2
 - Packaging, Store readiness, distribution, and update authority when validation is complete.
 
 ## Store readiness
-Wooolfmesh is not Microsoft Store-ready yet. Missing: MSIX/upload package, package validation, clean Windows install/update/uninstall validation, Partner Center confirmation, final Store screenshots, and legal/policy review.
+Wooolfmesh is not ready for Microsoft Store distribution yet. Missing: MSIX/upload package, package validation, clean Windows install/update/uninstall validation, Partner Center confirmation, final Store screenshots, and legal/policy review.
 
 ## Privacy principles
 No private vault data is published on this site. Capture is preview-first. External integrations and AI providers are optional. Registered knowledge vaults are read-only by default.

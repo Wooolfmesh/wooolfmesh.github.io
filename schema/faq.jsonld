@@ -7,7 +7,7 @@
       "name": "What is Wooolfmesh?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Wooolfmesh is a private local operating system for turning personal knowledge, tasks, memory, reviews, and lessons into daily execution."
+        "text": "Wooolfmesh is local-first memory for agentic work: a private command center that turns Markdown-owned work memory into daily execution."
       }
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "@type": "Question",
-      "name": "Is Wooolfmesh Store-ready?",
+      "name": "Is Wooolfmesh ready for Microsoft Store distribution?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "No. Packaging, package validation, final Store screenshots, Windows lifecycle validation, and policy review are still incomplete."

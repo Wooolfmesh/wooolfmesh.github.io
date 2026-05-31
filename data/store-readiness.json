@@ -27,7 +27,7 @@
   {
     "item": "MSIX/upload package",
     "status": "missing",
-    "notes": "No Store-ready package exists."
+    "notes": "No Microsoft Store package exists."
   },
   {
     "item": "Windows install/update/uninstall validation",

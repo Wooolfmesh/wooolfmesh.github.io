@@ -1,74 +1,216 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TD5FLHX9');</script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Install - Wooolfmesh</title>
-    <meta name="description" content="Current Wooolfmesh install status, local setup requirements, and distribution limitations.">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="author" content="Dzmitryi Kharlanau">
-    <meta name="application-name" content="Wooolfmesh">
-    <meta name="keywords" content="private local operating system, local-first productivity, Markdown vault productivity system, personal knowledge management, agentic work memory, daily execution loop, focus sessions, cognitive bites, review-driven productivity, WorkOS Local">
-    <link rel="canonical" href="https://wooolfmesh.github.io/install/">
-    <link rel="author" href="https://dkharlanau.github.io/">
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Wooolfmesh">
-    <meta property="og:title" content="Install - Wooolfmesh">
-    <meta property="og:description" content="Current Wooolfmesh install status, local setup requirements, and distribution limitations.">
-    <meta property="og:url" content="https://wooolfmesh.github.io/install/">
-    <meta property="og:image" content="https://wooolfmesh.github.io/assets/og.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Wooolfmesh private local operating system">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Install - Wooolfmesh">
-    <meta name="twitter:description" content="Current Wooolfmesh install status, local setup requirements, and distribution limitations.">
-    <meta name="twitter:image" content="https://wooolfmesh.github.io/assets/og.png">
-    <meta name="twitter:image:alt" content="Wooolfmesh private local operating system">
-    <meta name="theme-color" content="#1f6f4a">
-    <link rel="alternate" type="application/rss+xml" title="Wooolfmesh RSS" href="/feed.xml">
-    <link rel="alternate" type="application/atom+xml" title="Wooolfmesh Atom" href="/atom.xml">
-    <link rel="alternate" type="application/feed+json" title="Wooolfmesh JSON Feed" href="/feed.json">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/styles.css">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://wooolfmesh.github.io/install/#webpage","name":"Install","url":"https://wooolfmesh.github.io/install/","description":"Current Wooolfmesh install status, local setup requirements, and distribution limitations.","inLanguage":"en","datePublished":"2026-05-27","dateModified":"2026-05-27","isPartOf":{"@id":"https://wooolfmesh.github.io/#website"},"author":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"}}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wooolfmesh.github.io/"},{"@type":"ListItem","position":2,"name":"install","item":"https://wooolfmesh.github.io/install/"}]}</script>
+    <meta
+      name="description"
+      content="Current Wooolfmesh install status, local setup requirements, and distribution limitations."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="author" content="Dzmitryi Kharlanau" />
+    <meta name="application-name" content="Wooolfmesh" />
+    <meta
+      name="keywords"
+      content="private local operating system, local-first productivity, Markdown vault productivity system, personal knowledge management, agentic work memory, daily execution loop, focus sessions, cognitive bites, review-driven productivity, WorkOS Local"
+    />
+    <link rel="canonical" href="https://wooolfmesh.github.io/install/" />
+    <link rel="author" href="https://dkharlanau.github.io/" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wooolfmesh" />
+    <meta property="og:title" content="Install - Wooolfmesh" />
+    <meta
+      property="og:description"
+      content="Current Wooolfmesh install status, local setup requirements, and distribution limitations."
+    />
+    <meta property="og:url" content="https://wooolfmesh.github.io/install/" />
+    <meta
+      property="og:image"
+      content="https://wooolfmesh.github.io/assets/og.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Wooolfmesh local-first memory for agentic work"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Install - Wooolfmesh" />
+    <meta
+      name="twitter:description"
+      content="Current Wooolfmesh install status, local setup requirements, and distribution limitations."
+    />
+    <meta
+      name="twitter:image"
+      content="https://wooolfmesh.github.io/assets/og.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Wooolfmesh local-first memory for agentic work"
+    />
+    <meta name="theme-color" content="#2f654d" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Wooolfmesh RSS"
+      href="/feed.xml"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Wooolfmesh Atom"
+      href="/atom.xml"
+    />
+    <link
+      rel="alternate"
+      type="application/feed+json"
+      title="Wooolfmesh JSON Feed"
+      href="/feed.json"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://wooolfmesh.github.io/install/#webpage",
+        "name": "Install",
+        "url": "https://wooolfmesh.github.io/install/",
+        "description": "Current Wooolfmesh install status, local setup requirements, and distribution limitations.",
+        "inLanguage": "en",
+        "datePublished": "2026-05-27",
+        "dateModified": "2026-05-27",
+        "isPartOf": { "@id": "https://wooolfmesh.github.io/#website" },
+        "author": {
+          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://wooolfmesh.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "install",
+            "item": "https://wooolfmesh.github.io/install/"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD5FLHX9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header class="site-header">
       <nav class="nav-shell" aria-label="Main navigation">
-        <a class="brand" href="/" aria-label="Wooolfmesh home"><img src="/assets/logo.svg" alt="">Wooolfmesh</a>
-        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu"><span></span></button>
+        <a class="brand" href="/" aria-label="Wooolfmesh home"
+          ><img src="/assets/wooolfmesh.png" alt="" />Wooolfmesh</a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          <span></span>
+        </button>
         <div class="nav-links" data-nav-links>
-          <a href="/">Home</a><a href="/product/">Product</a><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a><a href="/architecture/">Architecture</a><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
+          <a href="/">Home</a><a href="/product/">Product</a
+          ><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a
+          ><a href="/architecture/">Architecture</a
+          ><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
         </div>
       </nav>
     </header>
-    <main><section class="page-hero compact"><div class="shell reveal"><h1>Install</h1><p class="lead">Current setup is local and may still be developer-oriented. Public packaged distribution is not complete.</p><div class="page-actions"><a class="button primary" href="/guides/windows-install/">Windows guide</a><a class="button" href="/guides/macos-install/">macOS guide</a></div></div></section>
-  <section class="section"><div class="shell note-grid"><article class="note-block"><h2>Current status</h2><p>Use the source repository and local scripts. A public Store installer is not ready yet.</p></article><article class="note-block"><h2>Requirements</h2><p>Node.js, Python, local backend/frontend runtime, and a user-selected <code>_WorkOS</code> vault.</p></article><article class="note-block"><h2>Planned path</h2><p>Package-mode launcher, safer update flow, Windows validation, and clearer backup/restore.</p></article><article class="note-block"><h2>Known limits</h2><p>Do not treat the current developer setup as Store-certified packaging.</p></article></div></section></main>
+    <main>
+      <section class="page-hero compact">
+        <div class="shell reveal">
+          <h1>Install</h1>
+          <p class="lead">
+            Current setup is local and may still be developer-oriented. Public
+            packaged distribution is not complete.
+          </p>
+          <div class="page-actions">
+            <a class="button primary" href="/guides/windows-install/"
+              >Windows guide</a
+            ><a class="button" href="/guides/macos-install/">macOS guide</a>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="shell note-grid">
+          <article class="note-block">
+            <h2>Current status</h2>
+            <p>
+              Use the source repository and local scripts. A public Store
+              installer is not ready yet.
+            </p>
+          </article>
+          <article class="note-block">
+            <h2>Requirements</h2>
+            <p>
+              Node.js, Python, local backend/frontend runtime, and a
+              user-selected <code>_WorkOS</code> vault.
+            </p>
+          </article>
+          <article class="note-block">
+            <h2>Planned path</h2>
+            <p>
+              Package-mode launcher, safer update flow, Windows validation, and
+              clearer backup/restore.
+            </p>
+          </article>
+          <article class="note-block">
+            <h2>Known limits</h2>
+            <p>
+              Do not treat the current developer setup as packaged distribution.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
     <footer class="site-footer">
       <div class="footer-shell">
         <div class="footer-brand">
           <strong>Wooolfmesh</strong>
-          <p>Wooolfmesh is a private local operating system for turning personal knowledge, tasks, memory, reviews, and lessons into daily execution.</p>
-          <p class="footer-small">Formerly WorkOS Local. No private vault data is published here.</p>
+          <p>
+            Wooolfmesh is local-first memory for agentic work: a private command
+            center that turns Markdown-owned work memory into daily execution.
+          </p>
+          <p class="footer-small">
+            Formerly WorkOS Local. No private vault data is published here.
+          </p>
         </div>
         <div class="footer-links">
-          <a href="/">Home</a><a href="/product/">Product</a><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a><a href="/architecture/">Architecture</a><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
+          <a href="/">Home</a><a href="/product/">Product</a
+          ><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a
+          ><a href="/architecture/">Architecture</a
+          ><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
           <a href="/privacy/">Privacy</a>
           <a href="/ai/">AI disclosure</a>
-          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io/issues">Report a bug</a>
-          <a href="https://github.com/dkharlanau/work-os-local">Product source</a>
-          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io">Site source</a>
+          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io/issues"
+            >Report a bug</a
+          >
+          <a href="https://github.com/dkharlanau/work-os-local"
+            >Product source</a
+          >
+          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io"
+            >Site source</a
+          >
         </div>
       </div>
     </footer>

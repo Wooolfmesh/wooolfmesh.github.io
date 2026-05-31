@@ -17,7 +17,7 @@
     "limitations": [
       "The canonical product source repository may not be publicly accessible to all users.",
       "A GitHub Pages cache delay can briefly serve the previous build after push.",
-      "The product is not Store-ready and should not be described as packaged distribution."
+      "The product is not packaged for Store distribution and should not be described as packaged distribution."
     ]
   }
 ]

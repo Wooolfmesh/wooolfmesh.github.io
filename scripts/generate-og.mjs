@@ -1,22 +1,27 @@
 import sharp from "sharp";
 
 const svg = `<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect width="1200" height="630" fill="#f8f8f4"/>
   <path d="M0 0h1200v630H0z" fill="url(#grid)"/>
-  <rect x="760" y="105" width="330" height="370" rx="24" fill="#e6f3eb" stroke="#1f6f4a" stroke-width="4"/>
-  <circle cx="925" cy="290" r="132" fill="none" stroke="#1f6f4a" stroke-opacity=".28" stroke-width="2" stroke-dasharray="8 12"/>
-  <circle cx="925" cy="290" r="90" fill="#ffffff" stroke="#1f6f4a" stroke-width="4"/>
-  <circle cx="925" cy="290" r="54" fill="#f7c744" stroke="#1f6f4a" stroke-width="4"/>
-  <text x="925" y="314" text-anchor="middle" font-family="Arial, sans-serif" font-size="70" font-weight="900" fill="#142018">W</text>
-  <path d="M795 290H864M986 290H1055M925 158V229M925 351V422M833 198l50 50M1017 198l-50 50M833 382l50-50M1017 382l-50-50" stroke="#1f6f4a" stroke-width="5"/>
-  <text x="86" y="150" font-family="Arial, sans-serif" font-size="88" font-weight="900" fill="#142018">Wooolfmesh</text>
-  <text x="90" y="240" font-family="Arial, sans-serif" font-size="48" font-weight="900" fill="#142018">Private local operating</text>
-  <text x="90" y="302" font-family="Arial, sans-serif" font-size="48" font-weight="900" fill="#142018">system for daily execution.</text>
-  <text x="90" y="382" font-family="Arial, sans-serif" font-size="29" font-weight="600" fill="#55665c">Tasks, focus, memory, reviews and</text>
-  <text x="90" y="422" font-family="Arial, sans-serif" font-size="29" font-weight="600" fill="#55665c">personal knowledge around Markdown.</text>
-  <rect x="90" y="508" width="326" height="60" rx="8" fill="#1f6f4a"/>
-  <text x="253" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="900" fill="#ffffff">wooolfmesh.github.io</text>
-  <defs><pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0v34" fill="none" stroke="#050505" stroke-opacity=".055"/></pattern></defs>
+  <circle cx="980" cy="130" r="260" fill="#f2c94c" opacity=".24"/>
+  <circle cx="1010" cy="500" r="270" fill="#d58d95" opacity=".18"/>
+  <rect x="746" y="108" width="366" height="366" rx="8" fill="#d9d5ca" stroke="#181816" stroke-opacity=".16" stroke-width="3"/>
+  <text x="86" y="146" font-family="Arial, sans-serif" font-size="90" font-weight="900" fill="#181816">Wooolfmesh</text>
+  <text x="90" y="238" font-family="Arial, sans-serif" font-size="46" font-weight="900" fill="#181816">Local-first memory</text>
+  <text x="90" y="298" font-family="Arial, sans-serif" font-size="46" font-weight="900" fill="#181816">for agentic work.</text>
+  <text x="90" y="378" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#5c5e57">Tasks, capture, focus, reviews, learning,</text>
+  <text x="90" y="418" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#5c5e57">search and optional AI over Markdown.</text>
+  <rect x="90" y="506" width="326" height="60" rx="8" fill="#2f654d"/>
+  <text x="253" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="900" fill="#ffffff">wooolfmesh.github.io</text>
+  <defs><pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0v42" fill="none" stroke="#181816" stroke-opacity=".052"/></pattern></defs>
 </svg>`;
 
-await sharp(Buffer.from(svg)).png().toFile("assets/og.png");
+const mascot = await sharp("assets/wooolfmesh.png")
+  .resize(366, 366, { fit: "cover" })
+  .png()
+  .toBuffer();
+
+await sharp(Buffer.from(svg))
+  .composite([{ input: mascot, left: 746, top: 108 }])
+  .png()
+  .toFile("assets/og.png");

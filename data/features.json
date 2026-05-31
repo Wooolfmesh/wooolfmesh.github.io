@@ -7,12 +7,7 @@
     "problem": "Daily work gets split across tasks, notes, reminders, review debt, and project drift.",
     "behavior": "Today gathers local context into one operating layer and points the user toward the next useful action.",
     "value": "The user starts from a concrete move instead of re-reading the whole system every morning.",
-    "loop": [
-      "Clarify",
-      "Plan",
-      "Focus",
-      "Review"
-    ]
+    "loop": ["Clarify", "Plan", "Focus", "Review"]
   },
   {
     "slug": "tasks",
@@ -22,11 +17,7 @@
     "problem": "Title-only tasks are hard to resume after interruption and easy to confuse with vague intentions.",
     "behavior": "Wooolfmesh treats a task as execution memory with enough context to start, focus, and review.",
     "value": "Tasks become reusable work context, not just items in a list.",
-    "loop": [
-      "Clarify",
-      "Plan",
-      "Focus"
-    ]
+    "loop": ["Clarify", "Plan", "Focus"]
   },
   {
     "slug": "capture-inbox",
@@ -36,10 +27,7 @@
     "problem": "Useful fragments arrive faster than they can be organized safely.",
     "behavior": "Capture can propose structured candidates, but the user explicitly decides what becomes durable Markdown.",
     "value": "Fast capture does not turn into silent mutation of a private vault.",
-    "loop": [
-      "Capture",
-      "Clarify"
-    ]
+    "loop": ["Capture", "Clarify"]
   },
   {
     "slug": "focus-sessions",
@@ -49,11 +37,7 @@
     "problem": "A timer records time but not why the work mattered, what interrupted it, or what changed.",
     "behavior": "Focus sessions keep task intent, interruptions, outcome, and follow-up together.",
     "value": "Deep work becomes reviewable and reusable instead of disappearing into a timer log.",
-    "loop": [
-      "Plan",
-      "Focus",
-      "Review"
-    ]
+    "loop": ["Plan", "Focus", "Review"]
   },
   {
     "slug": "reviews",
@@ -63,11 +47,7 @@
     "problem": "Reflection does not matter if lessons and suggested actions never reach future execution.",
     "behavior": "Reviews summarize patterns and produce follow-up candidates without auto-applying them.",
     "value": "Work history can become tasks, cognitive bites, and operating rules.",
-    "loop": [
-      "Review",
-      "Learn",
-      "Reuse"
-    ]
+    "loop": ["Review", "Learn", "Reuse"]
   },
   {
     "slug": "cognitive-bites",
@@ -77,11 +57,7 @@
     "problem": "Lessons are often buried in long notes and missing when similar work appears later.",
     "behavior": "Wooolfmesh stores compact lessons and retrieves them during planning, review, and project work.",
     "value": "Experience compounds into practical operating memory.",
-    "loop": [
-      "Review",
-      "Learn",
-      "Reuse"
-    ]
+    "loop": ["Review", "Learn", "Reuse"]
   },
   {
     "slug": "project-health",
@@ -91,11 +67,7 @@
     "problem": "Projects drift when blockers, stale tasks, missing next actions, and lessons are scattered.",
     "behavior": "Project health connects tasks, memory, bites, reviews, and local signals into a health picture.",
     "value": "The system shows where execution is stuck before the backlog becomes noise.",
-    "loop": [
-      "Plan",
-      "Focus",
-      "Review"
-    ]
+    "loop": ["Plan", "Focus", "Review"]
   },
   {
     "slug": "signals-analytics",
@@ -105,11 +77,7 @@
     "problem": "Personal calibration often becomes cloud telemetry in other tools.",
     "behavior": "Wooolfmesh keeps analytics local and uses them to inform planning and reviews.",
     "value": "The user can see patterns without handing them to a third-party analytics system.",
-    "loop": [
-      "Review",
-      "Learn",
-      "Plan"
-    ]
+    "loop": ["Review", "Learn", "Plan"]
   },
   {
     "slug": "local-knowledge",
@@ -119,12 +87,7 @@
     "problem": "Knowledge work loses leverage when tasks, notes, decisions, and lessons cannot be retrieved together.",
     "behavior": "Wooolfmesh indexes local context while keeping Markdown ownership and read-only vault boundaries clear.",
     "value": "The user can search local work memory without turning the vault into an opaque cloud database.",
-    "loop": [
-      "Capture",
-      "Clarify",
-      "Learn",
-      "Reuse"
-    ]
+    "loop": ["Capture", "Clarify", "Learn", "Reuse"]
   },
   {
     "slug": "optional-ai",
@@ -134,10 +97,6 @@
     "problem": "AI productivity tools often make private context upload the center of the workflow.",
     "behavior": "Wooolfmesh keeps manual/local workflows primary and treats AI output as suggestions.",
     "value": "AI can help when configured, but the product remains useful without it.",
-    "loop": [
-      "Capture",
-      "Clarify",
-      "Review"
-    ]
+    "loop": ["Capture", "Clarify", "Review"]
   }
 ]
