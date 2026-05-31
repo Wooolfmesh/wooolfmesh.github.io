@@ -798,6 +798,7 @@ main {
 .status-columns,
 .index-grid,
 .guide-grid,
+.docs-grid,
 .roadmap-grid,
 .screenshot-grid {
   display: grid;
@@ -955,6 +956,66 @@ main {
 
 .guide-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.docs-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.docs-card {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  min-height: 360px;
+  padding: clamp(24px, 3vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.docs-card h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.3vw, 1.9rem);
+  line-height: 1.1;
+}
+
+.docs-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.docs-link-list {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  margin-top: 4px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--line);
+}
+
+.docs-link {
+  display: grid;
+  gap: 3px;
+  padding: 15px 16px;
+  background: var(--surface);
+}
+
+.docs-link:hover,
+.docs-link:focus-visible {
+  background: var(--accent-soft);
+  color: var(--ink);
+  outline: none;
+}
+
+.docs-link strong {
+  font-size: 0.98rem;
+}
+
+.docs-link span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.35;
 }
 
 .index-card {
@@ -1285,6 +1346,7 @@ main {
 @media (max-width: 1080px) {
   .roadmap-grid,
   .guide-grid,
+  .docs-grid,
   .loop-track {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1448,6 +1510,7 @@ main {
 
   .screenshot-grid,
   .guide-grid,
+  .docs-grid,
   .principles-grid,
   .note-grid,
   .roadmap-grid,

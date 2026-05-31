@@ -18,26 +18,26 @@
     {
       "@type": "SiteNavigationElement",
       "position": 3,
-      "name": "Use cases",
-      "url": "https://wooolfmesh.github.io/use-cases/"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "position": 4,
-      "name": "Guides",
+      "name": "Docs",
       "url": "https://wooolfmesh.github.io/guides/"
     },
     {
       "@type": "SiteNavigationElement",
-      "position": 5,
+      "position": 4,
       "name": "Architecture",
       "url": "https://wooolfmesh.github.io/architecture/"
     },
     {
       "@type": "SiteNavigationElement",
+      "position": 5,
+      "name": "Install",
+      "url": "https://wooolfmesh.github.io/install/"
+    },
+    {
+      "@type": "SiteNavigationElement",
       "position": 6,
-      "name": "Roadmap",
-      "url": "https://wooolfmesh.github.io/roadmap/"
+      "name": "Privacy",
+      "url": "https://wooolfmesh.github.io/privacy/"
     },
     {
       "@type": "SiteNavigationElement",

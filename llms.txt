@@ -35,7 +35,7 @@ The product is local-first, Markdown-backed, and preview-first. AI can help, but
 - [Deep work execution use case](https://wooolfmesh.github.io/use-cases/deep-work-execution/)
 - [Reusable lessons use case](https://wooolfmesh.github.io/use-cases/reusable-lessons/)
 - [Private AI productivity use case](https://wooolfmesh.github.io/use-cases/private-ai-productivity/)
-- [Guides](https://wooolfmesh.github.io/guides/)
+- [Docs](https://wooolfmesh.github.io/guides/)
 - [Windows install guide](https://wooolfmesh.github.io/guides/windows-install/)
 - [macOS install guide](https://wooolfmesh.github.io/guides/macos-install/)
 - [First run guide](https://wooolfmesh.github.io/guides/first-run/)

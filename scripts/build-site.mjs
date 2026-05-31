@@ -37,10 +37,10 @@ const targetKeywords = [
 const nav = [
   ["Home", "/"],
   ["Product", "/product/"],
-  ["Use cases", "/use-cases/"],
-  ["Guides", "/guides/"],
+  ["Docs", "/guides/"],
   ["Architecture", "/architecture/"],
-  ["Roadmap", "/roadmap/"],
+  ["Install", "/install/"],
+  ["Privacy", "/privacy/"],
   ["Support", "/support/"],
 ];
 
@@ -622,6 +622,118 @@ const guides = [
   },
 ];
 
+const docsGroups = [
+  {
+    title: "Getting Started",
+    text: "Install locally, choose a vault, and start from the daily command center.",
+    links: [
+      [
+        "Install status",
+        "/install/",
+        "Current setup path and distribution limits.",
+      ],
+      [
+        "Windows install",
+        "/guides/windows-install/",
+        "Local setup on Windows.",
+      ],
+      ["macOS install", "/guides/macos-install/", "Local setup on macOS."],
+      [
+        "First run",
+        "/guides/first-run/",
+        "Confirm backend health and open Today.",
+      ],
+    ],
+  },
+  {
+    title: "Product Concept",
+    text: "Understand the execution loop and the main surfaces before diving into details.",
+    links: [
+      [
+        "Product overview",
+        "/product/",
+        "Who it is for and how the loop works.",
+      ],
+      ["Good tasks", "/guides/tasks/", "Make work executable, not vague."],
+      ["Capture", "/guides/capture-inbox/", "Review proposals before saving."],
+      [
+        "Focus and reviews",
+        "/guides/focus/",
+        "Protect deep work and close the loop.",
+      ],
+    ],
+  },
+  {
+    title: "Local Data Model",
+    text: "See what stays in Markdown, what SQLite supports, and what never mutates silently.",
+    links: [
+      [
+        "Vault setup",
+        "/guides/vault-setup/",
+        "Point configuration at `_WorkOS`.",
+      ],
+      [
+        "Architecture",
+        "/architecture/",
+        "Markdown, SQLite, runtime, and AI boundaries.",
+      ],
+      [
+        "Backup and restore",
+        "/guides/backup-restore/",
+        "Back up Markdown first.",
+      ],
+      [
+        "Safe update",
+        "/guides/safe-update/",
+        "Update app code without touching personal data.",
+      ],
+    ],
+  },
+  {
+    title: "Optional AI",
+    text: "Use local or configured providers only when they help, with preview-first output.",
+    links: [
+      [
+        "AI setup",
+        "/guides/ai-setup/",
+        "Configure optional assistance deliberately.",
+      ],
+      ["AI disclosure", "/ai/", "Machine-readable AI positioning and limits."],
+      [
+        "Privacy model",
+        "/privacy/",
+        "Approval boundaries and local ownership.",
+      ],
+    ],
+  },
+  {
+    title: "Troubleshooting",
+    text: "Recover from setup, runtime, cache, diagnostics, and packaging confusion.",
+    links: [
+      [
+        "Windows troubleshooting",
+        "/guides/windows-troubleshooting/",
+        "Ports, stale processes, config, and cache.",
+      ],
+      ["Diagnostics", "/guides/diagnostics/", "Export support data safely."],
+      [
+        "Limitations",
+        "/guides/limitations/",
+        "What the product does not claim yet.",
+      ],
+    ],
+  },
+  {
+    title: "Support",
+    text: "Find privacy, support, source, and public feedback routes quickly.",
+    links: [
+      ["Support", "/support/", "Report bugs or request workflow improvements."],
+      ["Privacy", "/privacy/", "Local-first trust principles."],
+      ["Product source", productRepo, "Canonical application repository."],
+    ],
+  },
+];
+
 const roadmap = {
   "Now / implemented": [
     "Today operating layer with next action, due and overdue work, blocked/waiting queues, routines, reminders, task-quality cues, and capacity signals.",
@@ -1006,7 +1118,8 @@ function layout(page) {
         </div>
         <div class="footer-links">
           ${nav.map(([label, href]) => `<a href="${href}">${label}</a>`).join("")}
-          <a href="/privacy/">Privacy</a>
+          <a href="/use-cases/">Use cases</a>
+          <a href="/roadmap/">Roadmap</a>
           <a href="/ai/">AI disclosure</a>
           <a href="${publicIssues}">Report a bug</a>
           <a href="${productRepo}">Product source</a>
@@ -1053,9 +1166,9 @@ addPage({
       <div class="hero-copy reveal">
         <p class="system-label">Local-first memory for agentic work</p>
         <h1>Wooolfmesh</h1>
-        <h2>A private command center for tasks, capture, focus, reviews, learning, analytics, search, and optional AI.</h2>
-        <p class="lead">Your Markdown stays yours. Wooolfmesh sits over a local <code>_WorkOS</code> vault and turns daily work into reusable execution memory.</p>
-        <div class="hero-actions"><a class="button primary" href="/install/">Start local setup</a><a class="button" href="${productRepo}">View source</a><a class="button ghost" href="/guides/">Read docs</a></div>
+        <h2>A private local command center for technical knowledge workers who want tasks, notes, focus, reviews, and AI suggestions under their control.</h2>
+        <p class="lead">Durable work memory stays in your <code>_WorkOS</code> Markdown vault. SQLite handles runtime state. AI stays optional and approval-first.</p>
+        <div class="hero-actions"><a class="button primary" href="/install/">Install locally</a><a class="button" href="/guides/">Read docs</a><a class="button ghost" href="${productRepo}">View repo</a></div>
       </div>
       <div class="hero-visual reveal" role="img" aria-label="Wooolfmesh local-first command center diagram">
         <div class="mascot-frame"><img src="/assets/wooolfmesh.png" alt="Wooolfmesh mascot"></div>
@@ -1254,15 +1367,25 @@ for (const scenario of scenarios) {
 
 addPage({
   url: "/guides/",
-  title: "Guides - Wooolfmesh",
+  title: "Docs - Wooolfmesh",
   description:
     "Practical user-facing documentation for using Wooolfmesh safely day to day.",
   active: "guides",
-  body: `${hero("Guides", "Practical documentation for using Wooolfmesh as a private local operating system.")}
-  <section class="section"><div class="shell guide-grid">${guides
+  body: `${hero("Docs", "Start here for local setup, product concepts, Markdown ownership, optional AI, troubleshooting, and support.")}
+  <section class="section docs-section"><div class="shell docs-grid">${docsGroups
     .map(
-      (guide) =>
-        `<article class="index-card reveal" id="${guide.slug}"><h2>${escapeHtml(guide.title)}</h2><p>${escapeHtml(guide.short)}</p><a class="text-link" href="/guides/${guide.slug}/">Open guide</a></article>`,
+      (group) => `<article class="docs-card reveal">
+        <h2>${escapeHtml(group.title)}</h2>
+        <p>${escapeHtml(group.text)}</p>
+        <div class="docs-link-list">
+          ${group.links
+            .map(
+              ([label, href, text]) =>
+                `<a class="docs-link" href="${href}"><strong>${escapeHtml(label)}</strong><span>${escapeHtml(text)}</span></a>`,
+            )
+            .join("")}
+        </div>
+      </article>`,
     )
     .join("")}</div></section>`,
 });
@@ -1333,8 +1456,8 @@ addPage({
   <section class="section"><div class="shell note-grid">
     <article class="note-block"><h2>Report bugs</h2><p>Use the public issue tracker for broken pages, confusing docs, install problems, or product behavior that needs triage.</p><a class="text-link" href="${publicIssues}">Report a bug</a></article>
     <article class="note-block"><h2>Request features</h2><p>Describe the workflow, the problem, and what would make the local-first loop better.</p><a class="text-link" href="${publicIssues}">Request a feature</a></article>
-    <article class="note-block"><h2>Discuss improvements</h2><p>Use issues for product positioning, docs gaps, roadmap feedback, and support notes that should remain public.</p><a class="text-link" href="${publicIssues}">Start discussion</a></article>
-    <article class="note-block"><h2>View source and roadmap</h2><p>The product source is canonical, while the public site issue tracker is the public feedback fallback.</p><a class="text-link" href="/roadmap/">View roadmap</a></article>
+    <article class="note-block"><h2>Read docs first</h2><p>Use the docs index for setup, local data model, optional AI, troubleshooting, and current limitations.</p><a class="text-link" href="/guides/">Open docs</a></article>
+    <article class="note-block"><h2>Privacy and source</h2><p>Review local-first trust principles, then inspect the product source for implementation details.</p><a class="text-link" href="/privacy/">Privacy model</a></article>
   </div></section>`,
 });
 
@@ -1344,7 +1467,7 @@ addPage({
   description:
     "Wooolfmesh local-first trust principles: Markdown ownership, SQLite runtime support, optional AI, diagnostics, preview-first writes, and read-only knowledge vault indexing.",
   active: "privacy",
-  body: `${hero("Privacy and trust", "Private work memory should remain under local user control.")}
+  body: `${hero("Privacy and trust", "Private work memory should remain under local user control.", `<div class="page-actions"><a class="button primary" href="/guides/vault-setup/">Vault setup</a><a class="button" href="/support/">Support</a></div>`)}
   <section class="section"><div class="shell principles-grid">${[
     [
       "Markdown ownership",
