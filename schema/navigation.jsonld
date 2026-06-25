@@ -6,44 +6,44 @@
     {
       "@type": "SiteNavigationElement",
       "position": 1,
-      "name": "Home",
-      "url": "https://wooolfmesh.github.io/"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "position": 2,
       "name": "Product",
       "url": "https://wooolfmesh.github.io/product/"
     },
     {
       "@type": "SiteNavigationElement",
+      "position": 2,
+      "name": "How it works",
+      "url": "https://wooolfmesh.github.io/#how-it-works"
+    },
+    {
+      "@type": "SiteNavigationElement",
       "position": 3,
+      "name": "Local-first",
+      "url": "https://wooolfmesh.github.io/#local-first"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 4,
       "name": "Docs",
       "url": "https://wooolfmesh.github.io/guides/"
     },
     {
       "@type": "SiteNavigationElement",
-      "position": 4,
-      "name": "Architecture",
-      "url": "https://wooolfmesh.github.io/architecture/"
-    },
-    {
-      "@type": "SiteNavigationElement",
       "position": 5,
-      "name": "Install",
-      "url": "https://wooolfmesh.github.io/install/"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "position": 6,
       "name": "Privacy",
       "url": "https://wooolfmesh.github.io/privacy/"
     },
     {
       "@type": "SiteNavigationElement",
-      "position": 7,
+      "position": 6,
       "name": "Support",
       "url": "https://wooolfmesh.github.io/support/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 7,
+      "name": "GitHub",
+      "url": "https://github.com/dkharlanau/work-os-local"
     }
   ]
 }

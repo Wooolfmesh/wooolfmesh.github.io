@@ -1,7 +1,7 @@
 # Wooolfmesh full AI context
 
 ## Product definition
-Wooolfmesh is local-first memory for agentic work: a private command center that turns Markdown-owned work memory into daily execution.
+Wooolfmesh is local-first memory for agentic work: a private command center that connects tasks, capture, focus, reviews, lessons, project health, and local knowledge into one execution loop over a Markdown vault.
 
 ## Product thesis
 Wooolfmesh is a local-first operating layer for daily execution. It connects tasks, capture, focus sessions, reviews, cognitive bites, memory, projects, routines, signals, analytics, search, local knowledge, and optional AI into one loop.

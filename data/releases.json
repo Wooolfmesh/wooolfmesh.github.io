@@ -1,18 +1,18 @@
 [
   {
-    "version": "2026-05-27 public positioning refresh",
-    "date": "2026-05-27",
-    "summary": "Refreshes the public site around Wooolfmesh as a private local operating system for daily execution.",
+    "version": "2026-06-24 premium product site relaunch",
+    "date": "2026-06-24",
+    "summary": "Rebuilds the public website around Wooolfmesh as local-first memory for agentic work.",
     "user": [
-      "Repositions the product around Capture -> Clarify -> Plan -> Focus -> Review -> Learn -> Reuse.",
-      "Adds scenario-led documentation for daily operation, capture, focus, reviews, project health, search, routines, and optional AI.",
-      "Separates implemented capabilities from partial and roadmap work.",
-      "Moves public feedback CTAs to the public site issue tracker."
+      "Reframes the homepage around the Capture -> Clarify -> Plan -> Focus -> Track -> Review -> Learn -> Reuse execution loop.",
+      "Adds a stronger dark-first product presentation with command-center, mesh, architecture, preview-first, comparison, and use-case sections.",
+      "Keeps local-first ownership, optional AI, and preview-first safety central without implying cloud SaaS or Store-ready distribution.",
+      "Preserves public docs, privacy, support, discovery files, and machine-readable context for humans and crawlers."
     ],
     "technical": [
       "Keeps the static generator as the source of truth for pages, JSON, JSON-LD, feeds, sitemap, and LLM files.",
-      "Refreshes metadata, structured data, OpenGraph copy, machine-readable product data, and public support links.",
-      "Softens the visual system into a calmer product/documentation site without adding dependencies."
+      "Refreshes generated release data, metadata dates, feeds, sitemap, and machine-readable product data.",
+      "Rethemes the static CSS without adding a framework runtime or heavy dependency."
     ],
     "limitations": [
       "The canonical product source repository may not be publicly accessible to all users.",

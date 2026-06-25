@@ -2,17 +2,18 @@ import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const site = "https://wooolfmesh.github.io";
-const today = "2026-05-27";
-const updatedIso = "2026-05-27T00:00:00+03:00";
+const today = "2026-06-24";
+const updatedIso = "2026-06-24T00:00:00+03:00";
+const updatedRss = "Wed, 24 Jun 2026 00:00:00 +0300";
 const siteName = "Wooolfmesh";
 const productRepo = "https://github.com/dkharlanau/work-os-local";
 const publicIssues =
   "https://github.com/Wooolfmesh/wooolfmesh.github.io/issues";
 const siteRepo = "https://github.com/Wooolfmesh/wooolfmesh.github.io";
 const seoDescription =
-  "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, learning, analytics, search, and optional AI over user-owned Markdown.";
+  "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.";
 const oneSentence =
-  "Wooolfmesh is local-first memory for agentic work: a private command center that turns Markdown-owned work memory into daily execution.";
+  "Wooolfmesh is local-first memory for agentic work: a private command center that connects tasks, capture, focus, reviews, lessons, project health, and local knowledge into one execution loop over a Markdown vault.";
 
 const author = {
   name: "Dzmitryi Kharlanau",
@@ -35,13 +36,13 @@ const targetKeywords = [
 ];
 
 const nav = [
-  ["Home", "/"],
   ["Product", "/product/"],
+  ["How it works", "/#how-it-works"],
+  ["Local-first", "/#local-first"],
   ["Docs", "/guides/"],
-  ["Architecture", "/architecture/"],
-  ["Install", "/install/"],
   ["Privacy", "/privacy/"],
   ["Support", "/support/"],
+  ["GitHub", productRepo],
 ];
 
 const loop = [
@@ -245,183 +246,178 @@ const features = [
 
 const scenarios = [
   {
-    slug: "daily-command-center",
-    title: "Daily command center",
+    slug: "plan-today",
+    title: "Plan today",
     status: "implemented",
     problem:
-      "The user starts the day with too many possible inputs: overdue tasks, routines, blocked projects, reminders, and review debt.",
-    flow: "Open Today, scan the next action, check due and overdue work, clear routine nudges, notice blocked or unhealthy projects, and start from one clear action.",
+      "The user opens the app with due work, reminders, routines, blockers, and review debt competing for attention.",
+    flow: "Open Today, read the recommended next move, check why it matters now, and expand later queues only when needed.",
     behavior:
-      "Today combines focus candidates, due work, reminders, routines, stats, capacity cues, task quality cues, and project signals.",
+      "Today combines recommendations, due work, reminders, routines, capacity cues, task quality, and project signals.",
     benefit:
-      "The morning decision becomes one selected move instead of manual synthesis across pages.",
+      "The user starts from one concrete action instead of rebuilding the day from scattered context.",
   },
   {
-    slug: "capture-chaos-to-structured-work",
-    title: "Capture chaos to structured work",
+    slug: "capture-rough-thought-into-task",
+    title: "Capture rough thought into a task",
     status: "partial",
     problem:
-      "Raw notes, screenshots, ideas, and email-like commitments arrive before the user knows whether they are tasks, memory, or lessons.",
-    flow: "Capture raw input, review proposed task/memory/bite candidates, edit or reject them, then explicitly save only the useful records.",
+      "Raw ideas and commitments arrive before the user knows whether they are tasks, memory, or lessons.",
+    flow: "Capture raw input, inspect proposed candidates, check confidence and missing fields, then explicitly create the task or discard the preview.",
     behavior:
-      "Capture is preview-first. Suggestions can be generated, but durable writes happen through explicit user action.",
-    benefit: "The user can unload quickly while preserving trust in the vault.",
+      "Capture remains preview-first. Durable Markdown writes happen only through explicit save/create actions.",
+    benefit:
+      "The user can unload quickly without letting the inbox become an unsafe dumping ground.",
   },
   {
-    slug: "vague-task-to-executable-task",
-    title: "Vague task to executable task",
+    slug: "open-and-clarify-task",
+    title: "Open and clarify a task",
     status: "implemented",
     problem:
-      "A rough task such as 'look into X' is not enough for deep work or future review.",
-    flow: "Shape the rough task into a title, next action, definition of done, effort, energy, work mode, project, tags, and links.",
+      "A task title alone is not enough to resume work or decide whether it is ready for focus.",
+    flow: "Open the task, read next action and definition of done first, inspect blockers and readiness cues, then clarify missing execution fields.",
     behavior:
-      "Task shaping and task fields make missing execution context visible before the user starts work.",
+      "Task detail surfaces next action, finish line, status, dates, effort, energy, work mode, dependencies, and quality cues before secondary metadata.",
     benefit:
-      "The user can restart the task later without rediscovering the intent.",
+      "The user knows what to do now and what must be clarified before deeper work.",
   },
   {
-    slug: "deep-work-session",
-    title: "Deep work session",
+    slug: "start-focus",
+    title: "Start focus",
     status: "implemented",
     problem:
-      "Deep work loses context when interruptions and outcomes are not captured with the task.",
-    flow: "Choose a ready task, start focus, capture interruptions without leaving the session, then end with outcome, time log, and next action.",
+      "A timer alone does not preserve intent, blockers, interruptions, or session outcome.",
+    flow: "Choose a task, confirm finish line and duration, note readiness warnings, start anyway when useful, capture interruptions, and close with outcome and next action.",
     behavior:
-      "Focus sessions are Markdown-backed and linked to tasks, analytics, and later reviews.",
+      "Focus sessions keep task intent, interruption capture, outcome, time, and follow-up connected to local work history.",
     benefit:
-      "Time spent becomes an inspectable work record, not only elapsed minutes.",
+      "Deep work becomes inspectable and reusable instead of just elapsed minutes.",
   },
   {
-    slug: "review-to-learning",
-    title: "Review to learning",
+    slug: "review-and-approve-suggestions",
+    title: "Review and approve suggestions",
     status: "partial",
     problem:
-      "Daily and weekly reviews often produce insight without follow-through.",
-    flow: "Run a daily, weekly, project, or experience review, inspect suggested actions, convert approved items into tasks or bites, and carry lessons forward.",
+      "Reflection loses value when suggested follow-up never reaches execution or applies too much automatically.",
+    flow: "Run a daily, weekly, project, or experience review, inspect suggested actions, approve only the useful ones, and keep the rest as previews.",
     behavior:
-      "Reviews can generate suggested actions and lessons while keeping approval explicit.",
+      "Reviews can create Markdown review files and show suggestions, while action application remains explicit.",
     benefit:
-      "Reflection feeds the next execution loop instead of becoming archived prose.",
+      "The user turns reflection into follow-through without losing control of the vault.",
   },
   {
-    slug: "project-health",
-    title: "Project health recovery",
-    status: "partial",
-    problem:
-      "Projects become stale, overloaded, blocked, or missing a next action before the user notices.",
-    flow: "Open project health, inspect stale tasks, blockers, related lessons, and suggested recovery actions, then create or update the next task deliberately.",
-    behavior:
-      "The product derives project health from tasks, memory, bites, reviews, and retrieval.",
-    benefit:
-      "The user can rescue a project from drift with concrete next moves.",
-  },
-  {
-    slug: "personal-memory-and-reusable-lessons",
-    title: "Personal memory and reusable lessons",
+    slug: "reuse-lessons-and-cognitive-bites",
+    title: "Reuse lessons and cognitive bites",
     status: "implemented",
     problem:
-      "Decisions, mistakes, and reusable knowledge disappear into old notes.",
-    flow: "Save decisions and lessons as memory or cognitive bites, then retrieve them when planning, reviewing, or preparing focus.",
+      "Decisions, repeated mistakes, and useful patterns are easy to forget when similar work returns later.",
+    flow: "Save lessons as memory or cognitive bites, retrieve them through search, task context, reviews, and project workbench views.",
     behavior:
-      "Bites and memory are first-class local entities with search and retrieval support.",
-    benefit: "The system reminds the user of what they have already learned.",
-  },
-  {
-    slug: "local-knowledge-search",
-    title: "Local knowledge search",
-    status: "implemented",
-    problem:
-      "Tasks and knowledge notes are difficult to search together without uploading private context.",
-    flow: "Search across Wooolfmesh entities and selected indexed knowledge notes, filter scope, and follow citations back to local sources.",
-    behavior:
-      "Indexed reference vaults are read-only by default; search writes runtime index/cache data, not knowledge-note mutations.",
-    benefit:
-      "The user can retrieve context while preserving local ownership and boundaries.",
-  },
-  {
-    slug: "routines-reminders",
-    title: "Routines and reminders",
-    status: "implemented",
-    problem:
-      "Recurring rituals and nudges should support execution without becoming ordinary backlog noise.",
-    flow: "Use routines and reminders for repeated attention, planning, health, or shutdown rituals, then act on due nudges from Today.",
-    behavior:
-      "Routine state and reminders are SQLite-backed runtime support, with local notifications available.",
-    benefit:
-      "Recurring behavior has a lightweight rail without polluting task history.",
-  },
-  {
-    slug: "optional-ai-provider-setup",
-    title: "Optional AI provider setup",
-    status: "optional",
-    problem:
-      "The user may want extraction or reflection help without making AI mandatory.",
-    flow: "Use manual workflows by default, configure Ollama/local AI or a hosted provider if desired, and treat generated output as preview data.",
-    behavior:
-      "AI provider settings, Ollama controls, ADK readiness, OCR paths, and hosted providers are optional and degrade gracefully.",
-    benefit:
-      "The product remains local-first and useful when no model is running.",
-  },
-  {
-    slug: "agentic-work-memory",
-    title: "Agentic work memory",
-    status: "partial",
-    problem:
-      "Agent-assisted work often happens in chat sessions that forget the durable task, decision, review, and lesson system.",
-    flow: "Use Wooolfmesh as the local context layer: capture inputs, shape tasks, store decisions and bites, review outcomes, and expose only approved context to agents or AI-assisted flows.",
-    behavior:
-      "The product keeps Markdown and explicit approval as the durable boundary while optional AI assists with suggestions.",
-    benefit:
-      "Human and agent work can share a local memory substrate without turning private knowledge into an uncontrolled chatbot log.",
-  },
-  {
-    slug: "local-first-personal-os",
-    title: "Local-first personal operating system",
-    status: "implemented",
-    problem:
-      "Planning, notes, reviews, reminders, focus history, and lessons are usually scattered across disconnected tools.",
-    flow: "Run the daily loop from Today, use Markdown-backed entities as the durable layer, and let SQLite handle reminders, indexes, routines, and analytics.",
-    behavior:
-      "Wooolfmesh acts as a local operating layer over the `_WorkOS` vault rather than a hosted account.",
-    benefit:
-      "The user keeps ownership while still getting one execution surface for daily work.",
-  },
-  {
-    slug: "deep-work-execution",
-    title: "Deep work execution",
-    status: "implemented",
-    problem:
-      "Complex work is hard to protect when the finish line, interruptions, and outcome are not recorded together.",
-    flow: "Clarify the task, start focus, capture interruptions, end with outcome and next action, then review the session later.",
-    behavior:
-      "Focus sessions link task readiness, interruption capture, session outcome, analytics, and reviewable Markdown history.",
-    benefit:
-      "The user can restart and improve deep work rather than only measuring time spent.",
-  },
-  {
-    slug: "reusable-lessons",
-    title: "Reusable lessons",
-    status: "implemented",
-    problem:
-      "Project lessons, repeated mistakes, and decisions are easy to forget when similar work appears later.",
-    flow: "Turn review outcomes and decisions into cognitive bites, then search or retrieve them during future planning, project health checks, and focus preparation.",
-    behavior:
-      "Cognitive bites and memory are local first-class entities with retrieval and analytics support.",
+      "Bites and memory are local first-class entities with retrieval and provenance support.",
     benefit:
       "Experience becomes an active planning input instead of archived notes.",
   },
   {
-    slug: "private-ai-productivity",
-    title: "Private AI productivity",
+    slug: "check-project-health",
+    title: "Check project health",
+    status: "partial",
+    problem:
+      "Projects drift when stale tasks, blockers, missing next actions, and open loops are spread across the vault.",
+    flow: "Open Projects, scan health signals, inspect stale or blocked work, review suggested next moves, and approve only the recovery action you want.",
+    behavior:
+      "Project health connects tasks, memory, cognitive bites, reviews, and local signals into visible status and next-move cues.",
+    benefit: "The user can recover a project before the backlog becomes noise.",
+  },
+  {
+    slug: "work-without-ai-or-with-optional-ai",
+    title: "Work without AI, or add optional AI",
     status: "optional",
     problem:
-      "Many AI productivity products require private context upload or make the model the center of the workflow.",
-    flow: "Use manual workflows by default, configure local Ollama or explicit hosted providers only when desired, and review suggestions before saving them.",
+      "AI productivity tools often require private context upload or fail when the model is unavailable.",
+    flow: "Use manual workflows by default, enable local Ollama or an explicit hosted provider when desired, and treat generated output as preview data.",
     behavior:
-      "AI is optional, provider-dependent, and preview-first across capture, shaping, summaries, and reflection.",
+      "AI settings are optional and degraded/manual mode remains a normal operating path.",
     benefit:
-      "The user gets assistance without making cloud AI a requirement for normal operation.",
+      "Wooolfmesh stays useful and local-first even when no AI provider is configured.",
   },
+  {
+    slug: "search-local-work-memory",
+    title: "Search local work memory",
+    status: "implemented",
+    problem:
+      "Tasks, decisions, notes, and lessons are hard to retrieve together without uploading private context.",
+    flow: "Search Wooolfmesh entities and indexed knowledge notes, filter scope, and follow citations back to local sources.",
+    behavior:
+      "Indexed reference vaults stay read-only by default; search stores runtime index data rather than mutating knowledge notes.",
+    benefit:
+      "The user can retrieve relevant context while preserving local ownership and boundaries.",
+  },
+  {
+    slug: "run-routines-and-reminders",
+    title: "Run routines and reminders",
+    status: "implemented",
+    problem:
+      "Recurring nudges should help execution without becoming ordinary backlog clutter.",
+    flow: "Use routines and reminders for planning, health checks, or shutdown rituals, then act on due nudges from Today.",
+    behavior:
+      "Routine state and reminders are local runtime support, with optional local notifications.",
+    benefit:
+      "Repeated behavior has a lightweight rail without polluting durable task history.",
+  },
+];
+
+const legacyScenarioRedirects = [
+  ["daily-command-center", "plan-today", "Daily command center"],
+  [
+    "capture-chaos-to-structured-work",
+    "capture-rough-thought-into-task",
+    "Capture chaos to structured work",
+  ],
+  [
+    "vague-task-to-executable-task",
+    "open-and-clarify-task",
+    "Vague task to executable task",
+  ],
+  ["deep-work-session", "start-focus", "Deep work session"],
+  ["deep-work-execution", "start-focus", "Deep work execution"],
+  [
+    "review-to-learning",
+    "review-and-approve-suggestions",
+    "Review to learning",
+  ],
+  ["project-health", "check-project-health", "Project health recovery"],
+  [
+    "personal-memory-and-reusable-lessons",
+    "reuse-lessons-and-cognitive-bites",
+    "Personal memory and reusable lessons",
+  ],
+  ["reusable-lessons", "reuse-lessons-and-cognitive-bites", "Reusable lessons"],
+  [
+    "local-knowledge-search",
+    "search-local-work-memory",
+    "Local knowledge search",
+  ],
+  [
+    "routines-reminders",
+    "run-routines-and-reminders",
+    "Routines and reminders",
+  ],
+  [
+    "optional-ai-provider-setup",
+    "work-without-ai-or-with-optional-ai",
+    "Optional AI provider setup",
+  ],
+  [
+    "private-ai-productivity",
+    "work-without-ai-or-with-optional-ai",
+    "Private AI productivity",
+  ],
+  ["agentic-work-memory", "plan-today", "Agentic work memory"],
+  [
+    "local-first-personal-os",
+    "plan-today",
+    "Local-first personal operating system",
+  ],
 ];
 
 const screenshots = [
@@ -474,78 +470,158 @@ const screenshots = [
 
 const landingWorkflows = [
   [
-    "Today",
-    "A quiet command center for due work, routines, reminders, blockers, capacity, and the next useful action.",
+    "Tasks live in one place.",
+    "Notes, lessons, reviews, AI chats, reminders, and project health often live somewhere else.",
   ],
   [
-    "Capture",
-    "Raw notes become proposed tasks, memory, or cognitive bites only after review and explicit save.",
+    "Modern tools split execution.",
+    "Work starts in chat, moves to notes, hides in a task title, and loses the reason it mattered.",
   ],
   [
-    "Focus",
-    "Sessions keep intent, interruptions, outcome, time, and next action attached to the work.",
+    "Lessons rarely return.",
+    "The same mistakes repeat because reviews and reusable lessons are not connected to future planning.",
   ],
   [
-    "Reviews",
-    "Daily, weekly, project, and experience reviews turn history into reusable follow-through.",
-  ],
-  [
-    "Project Health",
-    "Stale work, blockers, overloaded projects, and missing next actions surface before they become backlog noise.",
-  ],
-  [
-    "Cognitive Bites",
-    "Decisions, mistakes, principles, and playbooks stay compact enough to reuse later.",
-  ],
-  [
-    "Local Search",
-    "Search Wooolfmesh entities and indexed knowledge with citations and clear provenance.",
+    "Ownership gets blurred.",
+    "Cloud-first productivity systems make private work memory hard to inspect, move, or recover.",
   ],
 ];
 
-const trustPrinciples = [
+const loopDetails = [
   [
-    "Private by default",
-    "Normal operation does not require hosted accounts, cloud LLMs, SaaS databases, or third-party analytics.",
+    "Capture",
+    "Get rough thoughts, commitments, and fragments out of your head.",
   ],
   [
-    "No silent writes",
-    "Capture, review, import, and AI suggestions stay proposals until the user explicitly saves or applies them.",
+    "Clarify",
+    "Shape them into tasks, memory, or lessons without polluting the vault.",
+  ],
+  ["Plan", "Choose a next action, finish line, effort, energy, and timing."],
+  [
+    "Focus",
+    "Start deep work with intent, interruptions, and session context attached.",
   ],
   [
-    "User-owned Markdown",
-    "Durable work memory lives in an inspectable `_WorkOS` Markdown vault, not an opaque cloud workspace.",
+    "Track",
+    "Keep outcomes, time, movement, routines, and project state visible.",
+  ],
+  ["Review", "Turn the day, week, project, or experience into follow-through."],
+  [
+    "Learn",
+    "Compress decisions, mistakes, patterns, and playbooks into cognitive bites.",
   ],
   [
-    "Optional AI",
-    "Local Ollama or configured providers can help, but manual workflows remain first-class when no model is running.",
+    "Reuse",
+    "Bring those lessons back into future tasks, searches, reviews, and planning.",
   ],
 ];
 
 const homeFeatures = [
   [
-    "Deep work",
-    "Focus sessions keep intent, interruption, outcome, and next action together.",
+    "Today Command Center",
+    "One daily surface for next action, routines, reminders, queues, and capacity.",
+    "command",
   ],
   [
-    "Tasks",
-    "Executable work items with definition of done, energy, effort, and links.",
+    "Capture Inbox",
+    "Unload rough inputs, then decide what deserves durable Markdown.",
+    "capture",
+  ],
+  [
+    "Task Shaping",
+    "Turn vague intent into next action, definition of done, effort, and mode.",
+    "shape",
+  ],
+  [
+    "Deep Work Focus",
+    "Run sessions with a clear finish line, interruptions, outcome, and next step.",
+    "focus",
   ],
   [
     "Reviews",
-    "Daily, weekly, project, and experience reflection feeds the next loop.",
+    "Convert daily, weekly, project, and experience history into follow-through.",
+    "review",
   ],
   [
-    "Cognitive bites",
-    "Small reusable lessons, mistakes, principles, and project memory.",
+    "Cognitive Bites",
+    "Save reusable decisions, lessons, mistakes, principles, and playbooks.",
+    "bite",
   ],
   [
-    "Project memory",
-    "Stale work, blockers, decisions, and recovery signals in one place.",
+    "Project Health",
+    "See stale, blocked, overloaded, or missing-next-action work before it drifts.",
+    "health",
   ],
   [
-    "Local search",
-    "Find tasks, notes, decisions, and lessons without uploading context.",
+    "Local Search / Vault",
+    "Search tasks, notes, decisions, and lessons with provenance and local boundaries.",
+    "search",
+  ],
+  [
+    "Optional AI",
+    "Use local Ollama or configured providers for suggestions without making AI mandatory.",
+    "ai",
+  ],
+];
+
+const homeUseCases = [
+  [
+    "Plan a real day without hiding overload",
+    "Today brings due work, reminders, routines, blocked work, and capacity into one visible decision.",
+  ],
+  [
+    "Capture rough thoughts without polluting the vault",
+    "Capture can propose tasks, memory, or bites, but durable records require explicit action.",
+  ],
+  [
+    "Start deep work with a clear finish line",
+    "Focus starts from a task with intent, definition of done, duration, and interruption capture.",
+  ],
+  [
+    "Turn repeated mistakes into reusable cognitive bites",
+    "Reviews and closeouts can become compact lessons that return during future work.",
+  ],
+  [
+    "See which projects are stale, blocked, or missing a next action",
+    "Project health makes drift visible before it becomes ordinary backlog noise.",
+  ],
+];
+
+const comparison = [
+  [
+    "Cloud task manager",
+    "Tracks work items, but usually rents your work graph and separates reviews from lessons.",
+  ],
+  [
+    "Notes app",
+    "Stores knowledge, but rarely knows which project is blocked or what should happen next.",
+  ],
+  [
+    "Chatbot",
+    "Can generate advice, but the useful context often disappears into session history.",
+  ],
+  [
+    "Wooolfmesh",
+    "Connects execution, local memory, focus, review, lessons, project health, and ownership.",
+  ],
+];
+
+const trustPrinciples = [
+  [
+    "Markdown vault",
+    "Durable user-owned work memory stays in an inspectable `_WorkOS` Markdown subtree.",
+  ],
+  [
+    "SQLite runtime",
+    "Reminders, events, indexes, registry state, diagnostics, and analytics support the loop without becoming the ownership layer.",
+  ],
+  [
+    "Optional AI",
+    "Ollama or configured hosted providers can help, but manual/local workflows remain normal.",
+  ],
+  [
+    "Explicit approval",
+    "Suggestions become durable only after Preview -> Approve -> Write.",
   ],
 ];
 
@@ -791,20 +867,20 @@ const roadmap = {
 
 const releases = [
   {
-    version: "2026-05-27 public positioning refresh",
+    version: "2026-06-24 premium product site relaunch",
     date: today,
     summary:
-      "Refreshes the public site around Wooolfmesh as a private local operating system for daily execution.",
+      "Rebuilds the public website around Wooolfmesh as local-first memory for agentic work.",
     user: [
-      "Repositions the product around Capture -> Clarify -> Plan -> Focus -> Review -> Learn -> Reuse.",
-      "Adds scenario-led documentation for daily operation, capture, focus, reviews, project health, search, routines, and optional AI.",
-      "Separates implemented capabilities from partial and roadmap work.",
-      "Moves public feedback CTAs to the public site issue tracker.",
+      "Reframes the homepage around the Capture -> Clarify -> Plan -> Focus -> Track -> Review -> Learn -> Reuse execution loop.",
+      "Adds a stronger dark-first product presentation with command-center, mesh, architecture, preview-first, comparison, and use-case sections.",
+      "Keeps local-first ownership, optional AI, and preview-first safety central without implying cloud SaaS or Store-ready distribution.",
+      "Preserves public docs, privacy, support, discovery files, and machine-readable context for humans and crawlers.",
     ],
     technical: [
       "Keeps the static generator as the source of truth for pages, JSON, JSON-LD, feeds, sitemap, and LLM files.",
-      "Refreshes metadata, structured data, OpenGraph copy, machine-readable product data, and public support links.",
-      "Softens the visual system into a calmer product/documentation site without adding dependencies.",
+      "Refreshes generated release data, metadata dates, feeds, sitemap, and machine-readable product data.",
+      "Rethemes the static CSS without adding a framework runtime or heavy dependency.",
     ],
     limitations: [
       "The canonical product source repository may not be publicly accessible to all users.",
@@ -942,6 +1018,12 @@ function pagePath(urlPath) {
   if (urlPath === "/") return "index.html";
   if (urlPath.endsWith(".html")) return urlPath.slice(1);
   return path.join(urlPath.slice(1), "index.html");
+}
+
+function absoluteUrl(href) {
+  if (href.startsWith("http")) return href;
+  if (href.startsWith("/#")) return `${site}/${href.slice(1)}`;
+  return `${site}${href === "/" ? "/" : href}`;
 }
 
 function statusBadge(status) {
@@ -1129,7 +1211,7 @@ function layout(page) {
           ${nav
             .map(
               ([label, href]) =>
-                `<a href="${href}"${active && href.startsWith(`/${active}`) ? ' aria-current="page"' : ""}>${label}</a>`,
+                `<a href="${href}"${active && href.startsWith("/") && href.startsWith(`/${active}`) ? ' aria-current="page"' : ""}>${label}</a>`,
             )
             .join("")}
         </div>
@@ -1189,80 +1271,135 @@ addPage({
   active: "",
   jsonLd: [siteSchema, softwareSchema],
   body: `<section class="hero landing-hero">
-    <div class="shell indie-hero-grid">
-      <div class="indie-hero-copy reveal">
+    <div class="shell product-hero-grid">
+      <div class="product-hero-copy reveal">
         <div class="hero-logo-line"><img src="/assets/wooolfmesh.png" alt=""><span>Wooolfmesh</span></div>
-        <p class="system-label">Local-first work memory</p>
-        <h1>Agentic workbench for builders.</h1>
-        <p class="lead">Capture ideas, shape tasks, run focus, review the loop. Your Markdown stays yours.</p>
-        <div class="hero-actions"><a class="button primary" href="/install/">Install locally</a><a class="button" href="/guides/">Docs</a><a class="button ghost" href="${productRepo}">GitHub</a></div>
-      </div>
-      <div class="workbench-visual reveal" role="img" aria-label="Wooolfmesh workbench visual">
-        <div class="mascot-chip"><img src="/assets/wooolfmesh.png" alt="Wooolfmesh mascot"></div>
-        <div class="terminal-card">
-          <span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span>
-          <pre><code>vault: ./_WorkOS
- capture.md
- task.next_action
- focus.session
- review.lessons
- bite.reuse</code></pre>
+        <h1>Local-first memory for agentic work.</h1>
+        <p class="lead">Wooolfmesh connects tasks, capture, focus sessions, reviews, cognitive bites, project health, and local knowledge into one private execution loop over your Markdown vault.</p>
+        <div class="hero-actions"><a class="button primary" href="/install/">Start locally</a><a class="button" href="/guides/">Read the docs</a><a class="button ghost" href="${productRepo}">View on GitHub</a></div>
+        <div class="hero-proof-row">
+          <span>Markdown stays yours</span>
+          <span>Preview-first by design</span>
+          <span>Optional AI</span>
         </div>
-        <div class="stack-card stack-card-a">no silent writes</div>
-        <div class="stack-card stack-card-b">AI optional</div>
-        <div class="stack-card stack-card-c">local-first</div>
       </div>
-    </div>
-  </section>
-  <section class="section loop-section">
-    <div class="shell compact-section">
-      <p class="system-label">Product loop</p>
-      <div class="loop-orbit" role="list" aria-label="Wooolfmesh product loop">
-        ${loop.map((step, index) => `<article class="loop-orbit-step reveal" role="listitem"><span>${String(index + 1).padStart(2, "0")}</span><strong>${step}</strong></article>`).join("")}
-      </div>
-    </div>
-  </section>
-  <section class="section architecture-section">
-    <div class="shell data-map-layout">
-      <div class="section-heading reveal"><p class="system-label">Local-first map</p><h2>Private context, visible boundaries.</h2></div>
-      <div class="data-map reveal" role="img" aria-label="Local-first architecture diagram">
-        <div class="data-node data-node-user">Builder</div>
-        <div class="data-arrow">capture / plan / review</div>
-        <div class="data-node data-node-app">Wooolfmesh</div>
-        <div class="data-split">
-          <div class="data-node data-node-vault">Markdown vault<br><small>owned, readable, portable</small></div>
-          <div class="data-node data-node-runtime">SQLite runtime<br><small>reminders, events, indexes</small></div>
+      <div class="hero-command-object reveal" role="img" aria-label="Wooolfmesh command center showing today, focus, review, lessons, local vault, runtime state, and explicit write flow">
+        <div class="command-header"><span>Wooolfmesh command center</span><strong>All systems local</strong></div>
+        <div class="mascot-guardian">
+          <img src="/assets/wooolfmesh.png" alt="Wooolfmesh mascot">
+          <div><strong>Local work guardian</strong><span>watching the loop, not owning the vault</span></div>
         </div>
-        <div class="data-node data-node-ai">Optional AI<br><small>suggestions only</small></div>
+        <div class="command-modules">
+          ${["Today", "Capture", "Focus", "Review", "Lessons", "Project Health", "Markdown Vault", "SQLite Runtime", "Optional AI"].map((item) => `<div><span>${escapeHtml(item)}</span></div>`).join("")}
+        </div>
+        <div class="execution-mesh">
+          <svg viewBox="0 0 820 260" aria-hidden="true">
+            <defs>
+              <linearGradient id="meshLine" x1="0" x2="1"><stop offset="0" stop-color="#25d7ff"/><stop offset="1" stop-color="#ffc857"/></linearGradient>
+            </defs>
+            <path d="M95 130 C190 40 270 218 382 112 S585 68 708 130" fill="none" stroke="url(#meshLine)" stroke-width="2"/>
+            <path d="M95 130 H250 H410 H570 H708" fill="none" stroke="#5ea7ff" stroke-width="1.4" stroke-dasharray="7 8"/>
+            <path d="M250 130 C252 40 422 44 570 130" fill="none" stroke="#725cff" stroke-width="1.2" stroke-dasharray="5 8"/>
+          </svg>
+          ${[
+            ["Task", "Define the next valuable step"],
+            ["Focus", "Block time and do the work"],
+            ["Review", "Ask what happened"],
+            ["Cognitive Bite", "Capture the reusable lesson"],
+            ["Next Action", "Choose how it moves"],
+          ]
+            .map(
+              ([title, text], index) =>
+                `<article class="mesh-node mesh-node-${index + 1}"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(text)}</span></article>`,
+            )
+            .join("")}
+        </div>
+        <div class="write-flow-mini">
+          <span>Preview</span><span>Approve</span><span>Write</span>
+        </div>
       </div>
     </div>
   </section>
-  <section class="section feature-slab">
+  <section class="section problem-section">
     <div class="shell">
-      <div class="feature-slab-head reveal"><p class="system-label">Built for the loop</p><h2>Deep work, tasks, reviews, bites, project memory.</h2></div>
-      <div class="home-feature-grid">
-        ${homeFeatures
-          .map(
-            ([title, text], index) =>
-              `<article class="home-feature-card reveal"><span>${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`,
-          )
-          .join("")}
+      ${sectionHeading("Problem", "Modern work tools split the execution loop.", "Tasks live in one place, notes in another, reviews disappear, AI chats are not durable, and lessons rarely return when planning the next project.")}
+      <div class="problem-grid">
+        ${landingWorkflows.map(([title, text]) => `<article class="problem-card reveal"><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}
       </div>
     </div>
   </section>
-  <section class="trust-ribbon" aria-label="Wooolfmesh trust principles">
-    <div class="shell trust-ribbon-inner">
-      <span>Your Markdown stays yours</span>
-      <span>AI is optional</span>
-      <span>No silent writes</span>
-      <span>Local-first by default</span>
+  <section id="how-it-works" class="section loop-section">
+    <div class="shell">
+      ${sectionHeading("Core loop", "Capture -> Clarify -> Plan -> Focus -> Track -> Review -> Learn -> Reuse", "Wooolfmesh is built around a repeatable loop, not isolated productivity features.")}
+      <div class="execution-loop" role="list" aria-label="Wooolfmesh execution loop">
+        ${loopDetails.map(([step, text], index) => `<article class="loop-card reveal" role="listitem"><span>${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(step)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}
+      </div>
     </div>
   </section>
-  <section class="section landing-link-section">
-    <div class="shell landing-link-grid reveal">
-      <a href="/guides/"><strong>Docs</strong><span>Setup, vaults, AI, troubleshooting.</span></a>
-      <a href="${productRepo}"><strong>GitHub</strong><span>Read the source and run locally.</span></a>
-      <a href="/support/"><strong>Support</strong><span>Report issues and request workflow fixes.</span></a>
+  <section class="section core-surfaces-section">
+    <div class="shell">
+      ${sectionHeading("Core surfaces", "The product surfaces that make the loop practical.", "Each surface is small enough to use daily and connected enough to compound over time.")}
+      <div class="surface-grid">
+        ${homeFeatures.map(([title, text, icon], index) => `<article class="surface-card reveal"><div class="surface-icon ${icon}"><span>${String(index + 1).padStart(2, "0")}</span></div><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}
+      </div>
+    </div>
+  </section>
+  <section id="local-first" class="section local-first-section">
+    <div class="shell local-first-grid">
+      <div class="section-heading reveal"><p class="system-label">Local-first architecture</p><h2>Your work memory stays inspectable.</h2><p>Markdown owns durable work memory. SQLite supports runtime behavior. AI is optional. Durable writes require explicit approval.</p></div>
+      <div class="architecture-diagram reveal" role="img" aria-label="Architecture diagram showing app, Markdown vault, SQLite runtime, optional AI, diagnostics, search, analytics, and approval before durable writes">
+        <div class="arch-node arch-app">Wooolfmesh app<small>Today, capture, focus, review, search</small></div>
+        <div class="arch-row">
+          <div class="arch-node arch-vault">Markdown vault<small>Tasks, memory, bites, reviews, focus sessions</small></div>
+          <div class="arch-node arch-runtime">SQLite runtime<small>Reminders, events, registry, indexes, diagnostics</small></div>
+        </div>
+        <div class="arch-row">
+          <div class="arch-node arch-ai">Optional AI<small>Ollama or configured providers</small></div>
+          <div class="arch-node arch-support">Local support surfaces<small>Search, analytics, project health, safe diagnostics</small></div>
+        </div>
+        <div class="arch-approval">Preview -> Approve -> Write</div>
+      </div>
+    </div>
+  </section>
+  <section class="section preview-section">
+    <div class="shell preview-grid">
+      <div class="preview-flow reveal">
+        <div>Suggestion<span>Capture, task shaping, review, or agent output</span></div>
+        <div>Preview<span>You inspect the proposed change</span></div>
+        <div>Approve<span>You choose what is useful</span></div>
+        <div>Write<span>Only then does Markdown change</span></div>
+      </div>
+      <div class="section-heading reveal"><p class="system-label">Preview-first safety</p><h2>AI and capture output remain suggestions until approved.</h2><p>Wooolfmesh is designed for explicit control. Capture, task shaping, reviews, and agents should not silently mutate durable user data.</p></div>
+    </div>
+  </section>
+  <section class="section compare-section">
+    <div class="shell">
+      ${sectionHeading("Built different", "Not a cloud task manager, notes app, or chatbot wrapper.", "Wooolfmesh connects execution, memory, focus, review, lessons, and local ownership in one practical system.")}
+      <div class="comparison-grid">
+        ${comparison.map(([title, text], index) => `<article class="comparison-card ${index === 3 ? "featured" : ""} reveal"><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}
+      </div>
+    </div>
+  </section>
+  <section class="section use-case-section">
+    <div class="shell">
+      ${sectionHeading("Use cases", "Concrete work moments Wooolfmesh is built for.", "The product is easiest to understand as repeated execution pressure, not as a feature list.")}
+      <div class="use-case-grid">
+        ${homeUseCases.map(([title, text]) => `<article class="use-case-card reveal"><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}
+      </div>
+    </div>
+  </section>
+  <section class="section final-cta">
+    <div class="shell final-cta-grid">
+      <div>
+        <p class="system-label">Start local</p>
+        <h2>Your work memory should stay yours and become useful again.</h2>
+        <p>Run Wooolfmesh locally, point it at your <code>_WorkOS</code> Markdown vault, and use the loop to turn capture, focus, review, and lessons into next action.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="button primary" href="${productRepo}">View on GitHub</a>
+        <a class="button" href="/guides/">Read the docs</a>
+        <a class="button" href="/install/">Start locally</a>
+      </div>
     </div>
   </section>`,
 });
@@ -1362,6 +1499,18 @@ for (const scenario of scenarios) {
       <section><h2>Product behavior</h2><p>${escapeHtml(scenario.behavior)}</p></section>
       <section><h2>Benefit</h2><p>${escapeHtml(scenario.benefit)}</p></section>
     </div><aside class="sidebar-box"><h2>Implementation status</h2>${statusBadge(scenario.status)}<p>${statusCopy[scenario.status]}</p><p><a href="/roadmap/">View roadmap</a></p></aside></div></section>`,
+  });
+}
+
+for (const [oldSlug, newSlug, oldTitle] of legacyScenarioRedirects) {
+  const target = scenarios.find((scenario) => scenario.slug === newSlug);
+  addPage({
+    url: `/use-cases/${oldSlug}/`,
+    title: `${oldTitle} moved - Wooolfmesh`,
+    description: `${oldTitle} has moved to ${target?.title ?? "the current Wooolfmesh use cases"}.`,
+    active: "use-cases",
+    robots: "noindex, follow",
+    body: `${hero("Use case moved", `${oldTitle} now points to the current scenario: ${target?.title ?? "Wooolfmesh use cases"}.`, `<div class="page-actions"><a class="button primary" href="/use-cases/${newSlug}/">Open current scenario</a><a class="button" href="/use-cases/">All use cases</a></div>`)}`,
   });
 }
 
@@ -1698,8 +1847,7 @@ async function main() {
   await writeJson("data/product.json", {
     name: "Wooolfmesh",
     definition: oneSentence,
-    tagline:
-      "Private local operating system for daily execution over a Markdown vault.",
+    tagline: "Local-first memory for agentic work over a Markdown vault.",
     description: seoDescription,
     legacy_name: "WorkOS Local",
     current_status:
@@ -1799,7 +1947,7 @@ async function main() {
       "@type": "SiteNavigationElement",
       position: index + 1,
       name: label,
-      url: `${site}${href === "/" ? "/" : href}`,
+      url: absoluteUrl(href),
     })),
   });
   await writeJson("schema/defined-terms.jsonld", {
@@ -1845,7 +1993,9 @@ async function main() {
   });
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages
-    .filter((page) => page.url !== "/404.html")
+    .filter(
+      (page) => page.url !== "/404.html" && !page.robots?.startsWith("noindex"),
+    )
     .map(
       (page) =>
         `  <url><loc>${site}${page.url === "/" ? "/" : page.url}</loc><lastmod>${today}</lastmod><changefreq>${page.url === "/releases/" || page.url === "/roadmap/" ? "weekly" : "monthly"}</changefreq><priority>${page.url === "/" ? "1.0" : "0.8"}</priority></url>`,
@@ -1889,12 +2039,12 @@ async function main() {
   const feedItems = releases
     .map(
       (release) =>
-        `<item><title>${escapeHtml(release.version)}</title><link>${site}/releases/#release-${slug(release.version)}</link><guid>${site}/releases/#release-${slug(release.version)}</guid><pubDate>Wed, 27 May 2026 00:00:00 +0300</pubDate><description>${escapeHtml(release.summary)}</description></item>`,
+        `<item><title>${escapeHtml(release.version)}</title><link>${site}/releases/#release-${slug(release.version)}</link><guid>${site}/releases/#release-${slug(release.version)}</guid><pubDate>${updatedRss}</pubDate><description>${escapeHtml(release.summary)}</description></item>`,
     )
     .join("");
   await writeText(
     "feed.xml",
-    `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wooolfmesh Updates</title><link>${site}/</link><description>Public updates for Wooolfmesh.</description><language>en</language><lastBuildDate>Wed, 27 May 2026 00:00:00 +0300</lastBuildDate><atom:link href="${site}/feed.xml" rel="self" type="application/rss+xml"/>${feedItems}</channel></rss>\n`,
+    `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wooolfmesh Updates</title><link>${site}/</link><description>Public updates for Wooolfmesh.</description><language>en</language><lastBuildDate>${updatedRss}</lastBuildDate><atom:link href="${site}/feed.xml" rel="self" type="application/rss+xml"/>${feedItems}</channel></rss>\n`,
   );
   await writeText(
     "atom.xml",

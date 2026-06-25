@@ -1,8 +1,8 @@
 {
   "name": "Wooolfmesh",
-  "definition": "Wooolfmesh is local-first memory for agentic work: a private command center that turns Markdown-owned work memory into daily execution.",
-  "tagline": "Private local operating system for daily execution over a Markdown vault.",
-  "description": "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, learning, analytics, search, and optional AI over user-owned Markdown.",
+  "definition": "Wooolfmesh is local-first memory for agentic work: a private command center that connects tasks, capture, focus, reviews, lessons, project health, and local knowledge into one execution loop over a Markdown vault.",
+  "tagline": "Local-first memory for agentic work over a Markdown vault.",
+  "description": "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.",
   "legacy_name": "WorkOS Local",
   "current_status": "Many product surfaces are implemented; some integration loops and public packaging remain partial or roadmap.",
   "core_loop": [
