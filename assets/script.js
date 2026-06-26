@@ -28,3 +28,24 @@ if ("IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => item.classList.add("visible"));
 }
+
+const motionAllowed = !window.matchMedia("(prefers-reduced-motion: reduce)")
+  .matches;
+const tiltScope = document.querySelector("[data-tilt-scope]");
+const tiltCard = document.querySelector("[data-tilt-card]");
+
+if (motionAllowed && tiltScope && tiltCard) {
+  tiltScope.addEventListener("pointermove", (event) => {
+    const rect = tiltCard.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+    tiltCard.style.setProperty("--tilt-x", `${x * 5}deg`);
+    tiltCard.style.setProperty("--tilt-y", `${y * -5}deg`);
+  });
+
+  tiltScope.addEventListener("pointerleave", () => {
+    tiltCard.style.setProperty("--tilt-x", "0deg");
+    tiltCard.style.setProperty("--tilt-y", "0deg");
+  });
+}

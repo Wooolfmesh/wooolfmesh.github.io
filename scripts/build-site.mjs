@@ -2,9 +2,9 @@ import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const site = "https://wooolfmesh.github.io";
-const today = "2026-06-24";
-const updatedIso = "2026-06-24T00:00:00+03:00";
-const updatedRss = "Wed, 24 Jun 2026 00:00:00 +0300";
+const today = "2026-06-26";
+const updatedIso = "2026-06-26T00:00:00+03:00";
+const updatedRss = "Fri, 26 Jun 2026 00:00:00 +0300";
 const siteName = "Wooolfmesh";
 const productRepo = "https://github.com/dkharlanau/work-os-local";
 const publicIssues =
@@ -867,8 +867,29 @@ const roadmap = {
 
 const releases = [
   {
-    version: "2026-06-24 premium product site relaunch",
+    version: "2026-06-26 minimal landing page direction",
     date: today,
+    summary:
+      "Tightens the homepage into a more minimal, animated, value-led product introduction.",
+    user: [
+      "Reduces homepage text density and replaces feature-heavy sections with a concise value story.",
+      "Adds motion-led system visuals for capture, focus, review, learning, and local ownership.",
+      "Preserves local-first, preview-first, and optional AI positioning while making the first screen sharper.",
+    ],
+    technical: [
+      "Keeps the static generator as the source of truth for the homepage and generated metadata.",
+      "Adds progressive enhancement motion with reduced-motion fallbacks.",
+      "Refreshes generated release data, feeds, sitemap, and machine-readable context dates.",
+    ],
+    limitations: [
+      "The canonical product source repository may not be publicly accessible to all users.",
+      "GitHub Pages can briefly serve a previous build while edge caches update.",
+      "The product is not packaged for Store distribution and should not be described as packaged distribution.",
+    ],
+  },
+  {
+    version: "2026-06-24 premium product site relaunch",
+    date: "2026-06-24",
     summary:
       "Rebuilds the public website around Wooolfmesh as local-first memory for agentic work.",
     user: [
@@ -1270,136 +1291,96 @@ addPage({
   description: seoDescription,
   active: "",
   jsonLd: [siteSchema, softwareSchema],
-  body: `<section class="hero landing-hero">
-    <div class="shell product-hero-grid">
-      <div class="product-hero-copy reveal">
+  body: `<section class="hero landing-hero award-hero" data-tilt-scope>
+    <div class="shell award-hero-grid">
+      <div class="award-hero-copy reveal">
         <div class="hero-logo-line"><img src="/assets/wooolfmesh.png" alt=""><span>Wooolfmesh</span></div>
         <h1>Local-first memory for agentic work.</h1>
-        <p class="lead">Wooolfmesh connects tasks, capture, focus sessions, reviews, cognitive bites, project health, and local knowledge into one private execution loop over your Markdown vault.</p>
-        <div class="hero-actions"><a class="button primary" href="/install/">Start locally</a><a class="button" href="/guides/">Read the docs</a><a class="button ghost" href="${productRepo}">View on GitHub</a></div>
-        <div class="hero-proof-row">
-          <span>Markdown stays yours</span>
-          <span>Preview-first by design</span>
-          <span>Optional AI</span>
-        </div>
+        <p class="lead">One private loop for capture, focus, review, and reusable lessons. Your Markdown stays yours. AI stays optional.</p>
+        <div class="hero-actions"><a class="button primary" href="/install/">Start locally</a><a class="button" href="${productRepo}">GitHub</a></div>
       </div>
-      <div class="hero-command-object reveal" role="img" aria-label="Wooolfmesh command center showing today, focus, review, lessons, local vault, runtime state, and explicit write flow">
-        <div class="command-header"><span>Wooolfmesh command center</span><strong>All systems local</strong></div>
-        <div class="mascot-guardian">
-          <img src="/assets/wooolfmesh.png" alt="Wooolfmesh mascot">
-          <div><strong>Local work guardian</strong><span>watching the loop, not owning the vault</span></div>
-        </div>
-        <div class="command-modules">
-          ${["Today", "Capture", "Focus", "Review", "Lessons", "Project Health", "Markdown Vault", "SQLite Runtime", "Optional AI"].map((item) => `<div><span>${escapeHtml(item)}</span></div>`).join("")}
-        </div>
-        <div class="execution-mesh">
-          <svg viewBox="0 0 820 260" aria-hidden="true">
-            <defs>
-              <linearGradient id="meshLine" x1="0" x2="1"><stop offset="0" stop-color="#25d7ff"/><stop offset="1" stop-color="#ffc857"/></linearGradient>
-            </defs>
-            <path d="M95 130 C190 40 270 218 382 112 S585 68 708 130" fill="none" stroke="url(#meshLine)" stroke-width="2"/>
-            <path d="M95 130 H250 H410 H570 H708" fill="none" stroke="#5ea7ff" stroke-width="1.4" stroke-dasharray="7 8"/>
-            <path d="M250 130 C252 40 422 44 570 130" fill="none" stroke="#725cff" stroke-width="1.2" stroke-dasharray="5 8"/>
-          </svg>
-          ${[
-            ["Task", "Define the next valuable step"],
-            ["Focus", "Block time and do the work"],
-            ["Review", "Ask what happened"],
-            ["Cognitive Bite", "Capture the reusable lesson"],
-            ["Next Action", "Choose how it moves"],
-          ]
-            .map(
-              ([title, text], index) =>
-                `<article class="mesh-node mesh-node-${index + 1}"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(text)}</span></article>`,
-            )
-            .join("")}
-        </div>
-        <div class="write-flow-mini">
-          <span>Preview</span><span>Approve</span><span>Write</span>
+      <div class="award-orbit reveal" data-tilt-card role="img" aria-label="Animated Wooolfmesh local work memory loop">
+        <div class="orbit-field">
+          <div class="orbit-ring ring-one"></div>
+          <div class="orbit-ring ring-two"></div>
+          <div class="orbit-ring ring-three"></div>
+          <div class="orbit-core"><img src="/assets/wooolfmesh.png" alt="Wooolfmesh mascot"><strong>Local</strong><span>work memory</span></div>
+          <div class="orbit-chip chip-capture">Capture</div>
+          <div class="orbit-chip chip-focus">Focus</div>
+          <div class="orbit-chip chip-review">Review</div>
+          <div class="orbit-chip chip-learn">Learn</div>
+          <div class="orbit-status"><span>Preview</span><span>Approve</span><span>Write</span></div>
         </div>
       </div>
     </div>
   </section>
-  <section class="section problem-section">
-    <div class="shell">
-      ${sectionHeading("Problem", "Modern work tools split the execution loop.", "Tasks live in one place, notes in another, reviews disappear, AI chats are not durable, and lessons rarely return when planning the next project.")}
-      <div class="problem-grid">
-        ${landingWorkflows.map(([title, text]) => `<article class="problem-card reveal"><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}
+  <section class="section value-strip-section">
+    <div class="shell value-strip">
+      ${[
+        ["No cloud account", "Run the loop locally."],
+        ["No silent writes", "Suggestions wait for approval."],
+        ["No lost lessons", "Reviews become reusable memory."],
+      ]
+        .map(
+          ([title, text]) =>
+            `<article class="value-item reveal"><span></span><h2>${escapeHtml(title)}</h2><p>${escapeHtml(text)}</p></article>`,
+        )
+        .join("")}
+    </div>
+  </section>
+  <section id="how-it-works" class="section minimal-loop-section">
+    <div class="shell minimal-loop-grid">
+      <div class="section-heading reveal"><p class="system-label">The loop</p><h2>From rough thought to next action.</h2><p>Wooolfmesh is not another inbox. It is a small execution system that keeps work moving.</p></div>
+      <div class="loop-sculpture reveal" role="list" aria-label="Capture, clarify, focus, review, learn, reuse">
+        ${[
+          ["Capture", "raw input"],
+          ["Clarify", "next action"],
+          ["Focus", "deep work"],
+          ["Review", "what changed"],
+          ["Learn", "cognitive bite"],
+          ["Reuse", "future context"],
+        ]
+          .map(
+            ([step, text], index) =>
+              `<article class="loop-pill loop-pill-${index + 1}" role="listitem"><strong>${escapeHtml(step)}</strong><span>${escapeHtml(text)}</span></article>`,
+          )
+          .join("")}
       </div>
     </div>
   </section>
-  <section id="how-it-works" class="section loop-section">
-    <div class="shell">
-      ${sectionHeading("Core loop", "Capture -> Clarify -> Plan -> Focus -> Track -> Review -> Learn -> Reuse", "Wooolfmesh is built around a repeatable loop, not isolated productivity features.")}
-      <div class="execution-loop" role="list" aria-label="Wooolfmesh execution loop">
-        ${loopDetails.map(([step, text], index) => `<article class="loop-card reveal" role="listitem"><span>${String(index + 1).padStart(2, "0")}</span><h3>${escapeHtml(step)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}
+  <section class="section proof-section">
+    <div class="shell proof-grid">
+      ${[
+        ["Markdown vault", "Durable memory stays readable and inspectable."],
+        ["SQLite runtime", "Reminders, indexes, and events stay support-only."],
+        [
+          "Optional AI",
+          "Local or configured providers can help, never required.",
+        ],
+        ["Preview-first", "Capture and review output remains a proposal."],
+      ]
+        .map(
+          ([title, text]) =>
+            `<article class="proof-card reveal"><h2>${escapeHtml(title)}</h2><p>${escapeHtml(text)}</p></article>`,
+        )
+        .join("")}
+    </div>
+  </section>
+  <section id="local-first" class="section minimal-architecture-section">
+    <div class="shell minimal-architecture">
+      <div class="architecture-copy reveal">
+        <p class="system-label">Local-first</p>
+        <h2>A private command layer over files you can open.</h2>
+      </div>
+      <div class="architecture-line reveal" role="img" aria-label="App connects to Markdown vault, SQLite runtime, and optional AI through approval">
+        <span>App</span><i></i><span>Preview</span><i></i><span>Approve</span><i></i><span>Markdown</span>
       </div>
     </div>
   </section>
-  <section class="section core-surfaces-section">
-    <div class="shell">
-      ${sectionHeading("Core surfaces", "The product surfaces that make the loop practical.", "Each surface is small enough to use daily and connected enough to compound over time.")}
-      <div class="surface-grid">
-        ${homeFeatures.map(([title, text, icon], index) => `<article class="surface-card reveal"><div class="surface-icon ${icon}"><span>${String(index + 1).padStart(2, "0")}</span></div><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}
-      </div>
-    </div>
-  </section>
-  <section id="local-first" class="section local-first-section">
-    <div class="shell local-first-grid">
-      <div class="section-heading reveal"><p class="system-label">Local-first architecture</p><h2>Your work memory stays inspectable.</h2><p>Markdown owns durable work memory. SQLite supports runtime behavior. AI is optional. Durable writes require explicit approval.</p></div>
-      <div class="architecture-diagram reveal" role="img" aria-label="Architecture diagram showing app, Markdown vault, SQLite runtime, optional AI, diagnostics, search, analytics, and approval before durable writes">
-        <div class="arch-node arch-app">Wooolfmesh app<small>Today, capture, focus, review, search</small></div>
-        <div class="arch-row">
-          <div class="arch-node arch-vault">Markdown vault<small>Tasks, memory, bites, reviews, focus sessions</small></div>
-          <div class="arch-node arch-runtime">SQLite runtime<small>Reminders, events, registry, indexes, diagnostics</small></div>
-        </div>
-        <div class="arch-row">
-          <div class="arch-node arch-ai">Optional AI<small>Ollama or configured providers</small></div>
-          <div class="arch-node arch-support">Local support surfaces<small>Search, analytics, project health, safe diagnostics</small></div>
-        </div>
-        <div class="arch-approval">Preview -> Approve -> Write</div>
-      </div>
-    </div>
-  </section>
-  <section class="section preview-section">
-    <div class="shell preview-grid">
-      <div class="preview-flow reveal">
-        <div>Suggestion<span>Capture, task shaping, review, or agent output</span></div>
-        <div>Preview<span>You inspect the proposed change</span></div>
-        <div>Approve<span>You choose what is useful</span></div>
-        <div>Write<span>Only then does Markdown change</span></div>
-      </div>
-      <div class="section-heading reveal"><p class="system-label">Preview-first safety</p><h2>AI and capture output remain suggestions until approved.</h2><p>Wooolfmesh is designed for explicit control. Capture, task shaping, reviews, and agents should not silently mutate durable user data.</p></div>
-    </div>
-  </section>
-  <section class="section compare-section">
-    <div class="shell">
-      ${sectionHeading("Built different", "Not a cloud task manager, notes app, or chatbot wrapper.", "Wooolfmesh connects execution, memory, focus, review, lessons, and local ownership in one practical system.")}
-      <div class="comparison-grid">
-        ${comparison.map(([title, text], index) => `<article class="comparison-card ${index === 3 ? "featured" : ""} reveal"><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}
-      </div>
-    </div>
-  </section>
-  <section class="section use-case-section">
-    <div class="shell">
-      ${sectionHeading("Use cases", "Concrete work moments Wooolfmesh is built for.", "The product is easiest to understand as repeated execution pressure, not as a feature list.")}
-      <div class="use-case-grid">
-        ${homeUseCases.map(([title, text]) => `<article class="use-case-card reveal"><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}
-      </div>
-    </div>
-  </section>
-  <section class="section final-cta">
-    <div class="shell final-cta-grid">
-      <div>
-        <p class="system-label">Start local</p>
-        <h2>Your work memory should stay yours and become useful again.</h2>
-        <p>Run Wooolfmesh locally, point it at your <code>_WorkOS</code> Markdown vault, and use the loop to turn capture, focus, review, and lessons into next action.</p>
-      </div>
-      <div class="cta-actions">
-        <a class="button primary" href="${productRepo}">View on GitHub</a>
-        <a class="button" href="/guides/">Read the docs</a>
-        <a class="button" href="/install/">Start locally</a>
-      </div>
+  <section class="section award-cta">
+    <div class="shell award-cta-inner reveal">
+      <h2>Build a work memory that compounds.</h2>
+      <div class="hero-actions"><a class="button primary" href="/install/">Start locally</a><a class="button" href="/guides/">Docs</a><a class="button" href="/privacy/">Privacy</a></div>
     </div>
   </section>`,
 });
