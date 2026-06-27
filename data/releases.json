@@ -6,12 +6,14 @@
     "user": [
       "Makes the first screen explicit about local ownership, optional AI, preview-first behavior, and the product’s private execution role.",
       "Reduces the homepage to one execution loop, one distinction, three pillars, a technical architecture, and two product-evidence views.",
-      "Uses the existing mascot as a restrained identity seal instead of a hero illustration."
+      "Uses the existing mascot as a restrained identity seal instead of a hero illustration.",
+      "Adds consistent social previews, browser icons, Apple touch support, and installable-site icon discovery using the existing mascot."
     ],
     "technical": [
       "Replaces the accumulated visual layers with one responsive CSS system and no new dependencies.",
       "Builds the execution loop and architecture diagrams from semantic HTML and CSS.",
-      "Refreshes metadata, social preview, release data, feeds, sitemap, and machine-readable context dates."
+      "Refreshes metadata, social preview, release data, feeds, sitemap, and machine-readable context dates.",
+      "Enforces canonical metadata, JSON-LD, crawler files, manifest icons, title templates, and internal links in the static validation script."
     ],
     "limitations": [
       "The canonical product source repository may not be publicly accessible to all users.",

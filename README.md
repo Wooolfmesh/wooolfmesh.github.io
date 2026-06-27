@@ -40,6 +40,9 @@ Generate the static site, Open Graph image, machine-readable files, and run stat
 npm run check
 ```
 
+The SEO/discovery contract and manual verification notes are documented in
+[`docs/public-site-seo.md`](docs/public-site-seo.md).
+
 Generate without checks:
 
 ```bash
@@ -115,6 +118,8 @@ The repository includes `.nojekyll` so GitHub Pages serves files as-is.
 - `assets/` — CSS, JavaScript and brand SVG
 - `feed.xml`, `atom.xml`, `feed.json` — public update feeds
 - `site.webmanifest`, `robots.txt`, `sitemap.xml`, `llms.txt`, `humans.txt` — discovery and metadata files
+- `favicon.ico`, `favicon.svg`, `assets/icons/` — browser, Apple touch, and maskable manifest icons generated from the existing mascot
+- `assets/og.png` — 1200×630 Open Graph/Twitter preview generated from the existing mascot
 - `llms-full.txt` — fuller AI-readable product context
 - `data/*.json` — machine-readable product, feature, roadmap, glossary, FAQ and entity data
 - `schema/*.jsonld` — reusable Schema.org JSON-LD snippets

@@ -10,29 +10,35 @@ const productRepo = "https://github.com/dkharlanau/work-os-local";
 const publicIssues =
   "https://github.com/Wooolfmesh/wooolfmesh.github.io/issues";
 const siteRepo = "https://github.com/Wooolfmesh/wooolfmesh.github.io";
+const authorGitHub = "https://github.com/dkharlanau";
+const authorLinkedIn = "https://www.linkedin.com/in/dkharlanau/";
 const seoDescription =
   "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.";
 const oneSentence =
   "Wooolfmesh is local-first memory for agentic work: a private command center that connects tasks, capture, focus, reviews, lessons, project health, and local knowledge into one execution loop over a Markdown vault.";
 
 const author = {
-  name: "Dzmitryi Kharlanau",
-  url: "https://dkharlanau.github.io/",
+  name: "Dzmitry Kharlanau",
+  url: authorGitHub,
   description:
-    "SAP consultant and builder focused on local-first productivity systems, agentic work memory, and practical execution loops.",
+    "Creator of Wooolfmesh, focused on local-first productivity systems, agentic work memory, and practical execution loops.",
+  sameAs: [authorGitHub, authorLinkedIn],
 };
 
 const targetKeywords = [
-  "private local operating system",
   "local-first productivity",
-  "Markdown vault productivity system",
-  "personal knowledge management",
+  "local-first memory",
   "agentic work memory",
-  "daily execution loop",
+  "private productivity app",
+  "Markdown productivity",
+  "Obsidian workflow",
   "focus sessions",
+  "weekly review",
   "cognitive bites",
-  "review-driven productivity",
-  "WorkOS Local",
+  "local AI",
+  "Ollama",
+  "personal operating system",
+  "knowledge work",
 ];
 
 const nav = [
@@ -871,11 +877,13 @@ const releases = [
       "Makes the first screen explicit about local ownership, optional AI, preview-first behavior, and the product’s private execution role.",
       "Reduces the homepage to one execution loop, one distinction, three pillars, a technical architecture, and two product-evidence views.",
       "Uses the existing mascot as a restrained identity seal instead of a hero illustration.",
+      "Adds consistent social previews, browser icons, Apple touch support, and installable-site icon discovery using the existing mascot.",
     ],
     technical: [
       "Replaces the accumulated visual layers with one responsive CSS system and no new dependencies.",
       "Builds the execution loop and architecture diagrams from semantic HTML and CSS.",
       "Refreshes metadata, social preview, release data, feeds, sitemap, and machine-readable context dates.",
+      "Enforces canonical metadata, JSON-LD, crawler files, manifest icons, title templates, and internal links in the static validation script.",
     ],
     limitations: [
       "The canonical product source repository may not be publicly accessible to all users.",
@@ -1037,6 +1045,14 @@ function pagePath(urlPath) {
   return path.join(urlPath.slice(1), "index.html");
 }
 
+function displayTitle(page) {
+  return page.title.replace(" - Wooolfmesh", "").replace(" — Wooolfmesh", "");
+}
+
+function documentTitle(page) {
+  return page.url === "/" ? page.title : `${displayTitle(page)} | ${siteName}`;
+}
+
 function absoluteUrl(href) {
   if (href.startsWith("http")) return href;
   if (href.startsWith("/#")) return `${site}/${href.slice(1)}`;
@@ -1078,7 +1094,13 @@ function breadcrumbs(page) {
   let current = "";
   for (const part of parts) {
     current += `/${part}`;
-    items.push({ name: part.replaceAll("-", " "), item: `${site}${current}/` });
+    const isCurrent = current + "/" === page.url;
+    const name = isCurrent
+      ? displayTitle(page)
+      : part
+          .replaceAll("-", " ")
+          .replace(/\b\w/g, (letter) => letter.toUpperCase());
+    items.push({ name, item: `${site}${current}/` });
   }
   return {
     "@context": "https://schema.org",
@@ -1123,6 +1145,8 @@ const softwareSchema = {
     (feature) => `${feature.title} (${statusCopy[feature.status]})`,
   ),
   sameAs: [productRepo, siteRepo],
+  softwareHelp: `${site}/support/`,
+  creator: { "@id": `${site}/#person-dzmitry-kharlanau` },
 };
 
 const personSchema = {
@@ -1131,24 +1155,50 @@ const personSchema = {
   "@id": `${site}/#person-dzmitryi-kharlanau`,
   name: author.name,
   url: author.url,
-  jobTitle: "SAP consultant and builder",
   description: author.description,
-  sameAs: [author.url],
+  sameAs: author.sameAs,
+  knowsAbout: [
+    "local-first software",
+    "personal knowledge management",
+    "agentic work",
+  ],
+};
+
+const projectSchema = {
+  "@context": "https://schema.org",
+  "@type": "Project",
+  "@id": `${site}/#project`,
+  name: "Wooolfmesh",
+  alternateName: "WorkOS Local",
+  url: `${site}/`,
+  description: seoDescription,
+  image: `${site}/assets/og.png`,
+  logo: `${site}/assets/icons/icon-512.png`,
+  creator: { "@id": `${site}/#person-dzmitryi-kharlanau` },
+  sameAs: [productRepo, siteRepo],
 };
 
 function webPageSchema(page) {
+  const canonical = `${site}${page.url === "/" ? "/" : page.url}`;
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${site}${page.url === "/" ? "/" : page.url}#webpage`,
-    name: page.title.replace(" - Wooolfmesh", "").replace(" — Wooolfmesh", ""),
-    url: `${site}${page.url === "/" ? "/" : page.url}`,
+    name: displayTitle(page),
+    url: canonical,
     description: page.description,
     inLanguage: "en",
     datePublished: today,
     dateModified: today,
     isPartOf: { "@id": `${site}/#website` },
     author: { "@id": `${site}/#person-dzmitryi-kharlanau` },
+    about: { "@id": `${site}/#software` },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: `${site}/assets/og.png`,
+      width: 1200,
+      height: 630,
+    },
   };
 }
 
@@ -1170,38 +1220,43 @@ function pageJsonLd(page) {
 
 function layout(page) {
   const canonical = `${site}${page.url === "/" ? "/" : page.url}`;
+  const title = documentTitle(page);
   const active = page.active ?? page.url.split("/")[1] ?? "";
   const robots =
     page.robots ??
     "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
-  const keywords = [...new Set([...(page.keywords ?? []), ...targetKeywords])]
-    .slice(0, 16)
-    .join(", ");
   return `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${escapeHtml(page.title)}</title>
+    <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(page.description)}">
     <meta name="robots" content="${robots}">
     <meta name="author" content="${author.name}">
+    <meta name="creator" content="${author.name}">
+    <meta name="publisher" content="${siteName}">
     <meta name="application-name" content="${siteName}">
-    <meta name="keywords" content="${escapeHtml(keywords)}">
+    <meta name="apple-mobile-web-app-title" content="${siteName}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
     <link rel="canonical" href="${canonical}">
     <link rel="author" href="${author.url}">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <meta property="og:type" content="${page.ogType ?? "website"}">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="${siteName}">
-    <meta property="og:title" content="${escapeHtml(page.ogTitle ?? page.title)}">
+    <meta property="og:title" content="${escapeHtml(page.ogTitle ?? title)}">
     <meta property="og:description" content="${escapeHtml(page.description)}">
     <meta property="og:url" content="${canonical}">
     <meta property="og:image" content="${site}/assets/og.png">
+    <meta property="og:image:secure_url" content="${site}/assets/og.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Wooolfmesh local-first memory for agentic work">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="${escapeHtml(page.ogTitle ?? page.title)}">
+    <meta name="twitter:title" content="${escapeHtml(page.ogTitle ?? title)}">
     <meta name="twitter:description" content="${escapeHtml(page.description)}">
     <meta name="twitter:image" content="${site}/assets/og.png">
     <meta name="twitter:image:alt" content="Wooolfmesh local-first memory for agentic work">
@@ -1210,7 +1265,10 @@ function layout(page) {
     <link rel="alternate" type="application/atom+xml" title="Wooolfmesh Atom" href="/atom.xml">
     <link rel="alternate" type="application/feed+json" title="Wooolfmesh JSON Feed" href="/feed.json">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180">
     <link rel="stylesheet" href="/assets/styles.css">
     ${pageJsonLd(page)
       .map(
@@ -1289,7 +1347,7 @@ addPage({
   title: "Wooolfmesh — Local-first memory for agentic work",
   description: seoDescription,
   active: "",
-  jsonLd: [siteSchema, softwareSchema],
+  jsonLd: [siteSchema, softwareSchema, personSchema, projectSchema],
   body: `<section class="landing-hero">
     <div class="shell hero-grid">
       <div class="hero-copy reveal">
@@ -1747,11 +1805,11 @@ addPage({
 addPage({
   url: "/about/",
   title: "About - Wooolfmesh",
-  description: "About Dzmitryi Kharlanau and the origin of Wooolfmesh.",
+  description: "About Dzmitry Kharlanau and the origin of Wooolfmesh.",
   active: "about",
   jsonLd: [personSchema],
-  body: `${hero("About", "Wooolfmesh is built by Dzmitryi Kharlanau as a private local work system for real execution loops.")}
-  <section class="section"><div class="shell about-card reveal"><div class="portrait-mark">DK</div><div><h2>Dzmitryi Kharlanau</h2><p>${escapeHtml(author.description)}</p><p>Wooolfmesh grew from the need to manage tasks, decisions, focus, reviews, and lessons without putting the whole system into a SaaS black box.</p><div class="link-list"><a class="button primary" href="${author.url}">Professional site</a><a class="button" href="${productRepo}">Product source</a></div></div></div></section>`,
+  body: `${hero("About", "Wooolfmesh is built by Dzmitry Kharlanau as a private local work system for real execution loops.")}
+  <section class="section"><div class="shell about-card reveal"><div class="portrait-mark">DK</div><div><h2>Dzmitry Kharlanau</h2><p>${escapeHtml(author.description)}</p><p>Wooolfmesh grew from the need to manage tasks, decisions, focus, reviews, and lessons without putting the whole system into a SaaS black box.</p><div class="link-list"><a class="button primary" href="${authorGitHub}">GitHub profile</a><a class="button" href="${authorLinkedIn}">LinkedIn</a><a class="button" href="${productRepo}">Product source</a></div></div></div></section>`,
 });
 
 addPage({
@@ -1827,12 +1885,12 @@ addPage({
   url: "/ai/entities/",
   title: "AI entities - Wooolfmesh",
   description:
-    "Entity index for Wooolfmesh, Dzmitryi Kharlanau, WorkOS Local, and local-first work memory concepts.",
+    "Entity index for Wooolfmesh, Dzmitry Kharlanau, WorkOS Local, and local-first work memory concepts.",
   active: "ai",
   body: `${hero("Entity index", "Named concepts for semantic indexing.")}
   <section class="section"><div class="shell entity-list">${[
     ["Wooolfmesh", "Software product", "/"],
-    ["Dzmitryi Kharlanau", "Person", "/about/"],
+    ["Dzmitry Kharlanau", "Person", "/about/"],
     ["WorkOS Local", "Legacy/internal name", "/glossary/#workos-local"],
     ["Markdown vault", "Storage concept", "/features/local-knowledge/"],
     ["Cognitive bites", "Product concept", "/features/cognitive-bites/"],
@@ -2021,15 +2079,7 @@ async function main() {
       url: `${site}/data/${name}.json`,
     })),
   });
-  await writeJson("schema/organization-or-project.jsonld", {
-    "@context": "https://schema.org",
-    "@type": "Project",
-    "@id": `${site}/#project`,
-    name: "Wooolfmesh",
-    alternateName: "WorkOS Local",
-    creator: personSchema,
-    description: seoDescription,
-  });
+  await writeJson("schema/organization-or-project.jsonld", projectSchema);
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages
     .filter(
@@ -2043,19 +2093,59 @@ async function main() {
   await writeText("sitemap.xml", sitemap);
   await writeText(
     "robots.txt",
-    `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\nHost: wooolfmesh.github.io\n`,
+    `User-agent: *\nAllow: /\nDisallow: /.git/\nDisallow: /.github/\nDisallow: /docs/\nDisallow: /node_modules/\nDisallow: /scripts/\n\nSitemap: ${site}/sitemap.xml\nHost: wooolfmesh.github.io\n`,
   );
+  await writeJson("site.webmanifest", {
+    id: "/",
+    name: "Wooolfmesh",
+    short_name: "Wooolfmesh",
+    description: "Local-first memory for agentic work.",
+    start_url: "/",
+    scope: "/",
+    display: "standalone",
+    background_color: "#f5f3ec",
+    theme_color: "#f5f3ec",
+    categories: ["productivity", "utilities"],
+    icons: [
+      {
+        src: "/assets/icons/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+        purpose: "any",
+      },
+      {
+        src: "/assets/icons/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "any",
+      },
+      {
+        src: "/assets/icons/maskable-192.png",
+        sizes: "192x192",
+        type: "image/png",
+        purpose: "maskable",
+      },
+      {
+        src: "/assets/icons/maskable-512.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "maskable",
+      },
+    ],
+  });
 
   const pageLines = pages
-    .filter((page) => page.url !== "/404.html")
+    .filter(
+      (page) => page.url !== "/404.html" && !page.robots?.startsWith("noindex"),
+    )
     .map(
       (page) =>
-        `- [${page.title.replace(" - Wooolfmesh", "")}](${site}${page.url === "/" ? "/" : page.url})`,
+        `- [${displayTitle(page)}](${site}${page.url === "/" ? "/" : page.url})`,
     )
     .join("\n");
   await writeText(
     "llms.txt",
-    `# Wooolfmesh\n\n${oneSentence}\n\nThe product is local-first, Markdown-backed, and preview-first. AI can help, but the app works without it.\n\n## Main pages\n\n${pageLines}\n\n## Machine-readable files\n\n- [Product data](${site}/data/product.json)\n- [Features data](${site}/data/features.json)\n- [Roadmap data](${site}/data/roadmap.json)\n- [Releases data](${site}/data/releases.json)\n- [Guides data](${site}/data/guides.json)\n- [Store readiness data](${site}/data/store-readiness.json)\n- [Full AI context](${site}/llms-full.txt)\n\nNo private vault data is published on this site.\n`,
+    `# Wooolfmesh\n\n${oneSentence}\n\nWooolfmesh is local-first, Markdown-backed, and preview-first. It is not a cloud-first task manager or a generic AI chatbot. Optional AI requires a configured local or hosted provider; the app remains useful without AI.\n\n## Canonical links\n\n- [Public site](${site}/)\n- [Privacy](${site}/privacy/)\n- [Support](${site}/support/)\n- [Guides](${site}/guides/)\n- [Product repository](${productRepo})\n- [Creator on GitHub](${authorGitHub})\n- [Creator on LinkedIn](${authorLinkedIn})\n\n## Public pages\n\n${pageLines}\n\n## Machine-readable files\n\n- [Product data](${site}/data/product.json)\n- [Features data](${site}/data/features.json)\n- [Roadmap data](${site}/data/roadmap.json)\n- [Releases data](${site}/data/releases.json)\n- [Guides data](${site}/data/guides.json)\n- [Full AI context](${site}/llms-full.txt)\n\nNo private vault data is published on this site.\n`,
   );
   await writeText(
     "llms-full.txt",
@@ -2068,11 +2158,11 @@ async function main() {
       )
       .join(
         "\n\n",
-      )}\n\n## Store readiness\nWooolfmesh is not ready for Microsoft Store distribution yet. Missing: MSIX/upload package, package validation, clean Windows install/update/uninstall validation, Partner Center confirmation, final Store screenshots, and legal/policy review.\n\n## Privacy principles\nNo private vault data is published on this site. Capture is preview-first. External integrations and AI providers are optional. Registered knowledge vaults are read-only by default.\n\n## Canonical links\n- Site: ${site}/\n- Privacy: ${site}/privacy/\n- Support: ${site}/support/\n- Public issues: ${publicIssues}\n- Product source: ${productRepo}\n- Site source: ${siteRepo}\n- Author: ${author.url}\n`,
+      )}\n\n## Store readiness\nWooolfmesh is not ready for Microsoft Store distribution yet. Missing: MSIX/upload package, package validation, clean Windows install/update/uninstall validation, Partner Center confirmation, final Store screenshots, and legal/policy review.\n\n## Privacy principles\nNo private vault data is published on this site. Capture is preview-first. External integrations and AI providers are optional. Registered knowledge vaults are read-only by default.\n\n## Canonical links\n- Site: ${site}/\n- Privacy: ${site}/privacy/\n- Support: ${site}/support/\n- Public issues: ${publicIssues}\n- Product source: ${productRepo}\n- Site source: ${siteRepo}\n- Creator GitHub: ${authorGitHub}\n- Creator LinkedIn: ${authorLinkedIn}\n`,
   );
   await writeText(
     "humans.txt",
-    `Product: Wooolfmesh\nAuthor: ${author.name}\nSite purpose: Public product website, AI-readable context, screenshots, guides, roadmap, and support entry point.\nPublic feedback: ${publicIssues}\nPublic site repository: ${siteRepo}\nCanonical product repository: ${productRepo}\nNo private data note: this site must not contain private vault data, secrets, sensitive screenshots, personal logs, or client information.\n`,
+    `Product: Wooolfmesh\nCreator: ${author.name}\nCreator GitHub: ${authorGitHub}\nCreator LinkedIn: ${authorLinkedIn}\nSite purpose: Public product website, AI-readable context, screenshots, guides, roadmap, and support entry point.\nPublic feedback: ${publicIssues}\nPublic site repository: ${siteRepo}\nCanonical product repository: ${productRepo}\nNo private data note: this site must not contain private vault data, secrets, sensitive screenshots, personal logs, or client information.\n`,
   );
 
   const feedItems = releases

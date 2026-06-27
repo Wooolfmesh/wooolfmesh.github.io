@@ -4,17 +4,15 @@
   "@id": "https://wooolfmesh.github.io/#project",
   "name": "Wooolfmesh",
   "alternateName": "WorkOS Local",
+  "url": "https://wooolfmesh.github.io/",
+  "description": "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.",
+  "image": "https://wooolfmesh.github.io/assets/og.png",
+  "logo": "https://wooolfmesh.github.io/assets/icons/icon-512.png",
   "creator": {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau",
-    "name": "Dzmitryi Kharlanau",
-    "url": "https://dkharlanau.github.io/",
-    "jobTitle": "SAP consultant and builder",
-    "description": "SAP consultant and builder focused on local-first productivity systems, agentic work memory, and practical execution loops.",
-    "sameAs": [
-      "https://dkharlanau.github.io/"
-    ]
+    "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
   },
-  "description": "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown."
+  "sameAs": [
+    "https://github.com/dkharlanau/work-os-local",
+    "https://github.com/Wooolfmesh/wooolfmesh.github.io"
+  ]
 }

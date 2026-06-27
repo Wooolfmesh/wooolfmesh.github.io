@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /docs/
+Disallow: /node_modules/
+Disallow: /scripts/
 
 Sitemap: https://wooolfmesh.github.io/sitemap.xml
 Host: wooolfmesh.github.io

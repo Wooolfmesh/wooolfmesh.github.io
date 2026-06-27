@@ -1,5 +1,7 @@
 Product: Wooolfmesh
-Author: Dzmitryi Kharlanau
+Creator: Dzmitry Kharlanau
+Creator GitHub: https://github.com/dkharlanau
+Creator LinkedIn: https://www.linkedin.com/in/dkharlanau/
 Site purpose: Public product website, AI-readable context, screenshots, guides, roadmap, and support entry point.
 Public feedback: https://github.com/Wooolfmesh/wooolfmesh.github.io/issues
 Public site repository: https://github.com/Wooolfmesh/wooolfmesh.github.io

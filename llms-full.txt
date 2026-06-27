@@ -63,4 +63,5 @@ No private vault data is published on this site. Capture is preview-first. Exter
 - Public issues: https://github.com/Wooolfmesh/wooolfmesh.github.io/issues
 - Product source: https://github.com/dkharlanau/work-os-local
 - Site source: https://github.com/Wooolfmesh/wooolfmesh.github.io
-- Author: https://dkharlanau.github.io/
+- Creator GitHub: https://github.com/dkharlanau
+- Creator LinkedIn: https://www.linkedin.com/in/dkharlanau/

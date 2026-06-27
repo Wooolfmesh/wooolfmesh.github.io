@@ -15,9 +15,13 @@
     "Reuse"
   ],
   "author": {
-    "name": "Dzmitryi Kharlanau",
-    "url": "https://dkharlanau.github.io/",
-    "description": "SAP consultant and builder focused on local-first productivity systems, agentic work memory, and practical execution loops."
+    "name": "Dzmitry Kharlanau",
+    "url": "https://github.com/dkharlanau",
+    "description": "Creator of Wooolfmesh, focused on local-first productivity systems, agentic work memory, and practical execution loops.",
+    "sameAs": [
+      "https://github.com/dkharlanau",
+      "https://www.linkedin.com/in/dkharlanau/"
+    ]
   },
   "urls": {
     "site": "https://wooolfmesh.github.io/",

@@ -14,16 +14,19 @@
   "description": "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.",
   "isAccessibleForFree": true,
   "keywords": [
-    "private local operating system",
     "local-first productivity",
-    "Markdown vault productivity system",
-    "personal knowledge management",
+    "local-first memory",
     "agentic work memory",
-    "daily execution loop",
+    "private productivity app",
+    "Markdown productivity",
+    "Obsidian workflow",
     "focus sessions",
+    "weekly review",
     "cognitive bites",
-    "review-driven productivity",
-    "WorkOS Local"
+    "local AI",
+    "Ollama",
+    "personal operating system",
+    "knowledge work"
   ],
   "featureList": [
     "Today operating layer (Implemented)",
@@ -40,5 +43,9 @@
   "sameAs": [
     "https://github.com/dkharlanau/work-os-local",
     "https://github.com/Wooolfmesh/wooolfmesh.github.io"
-  ]
+  ],
+  "softwareHelp": "https://wooolfmesh.github.io/support/",
+  "creator": {
+    "@id": "https://wooolfmesh.github.io/#person-dzmitry-kharlanau"
+  }
 }
