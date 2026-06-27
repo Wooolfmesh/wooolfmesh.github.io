@@ -1,17 +1,17 @@
 [
   {
-    "version": "2026-06-26 minimal landing page direction",
-    "date": "2026-06-26",
-    "summary": "Tightens the homepage into a more minimal, animated, value-led product introduction.",
+    "version": "2026-06-27 compact editorial redesign",
+    "date": "2026-06-27",
+    "summary": "Rebuilds the public site as a compact, editorial product system for local-first work memory.",
     "user": [
-      "Reduces homepage text density and replaces feature-heavy sections with a concise value story.",
-      "Adds motion-led system visuals for capture, focus, review, learning, and local ownership.",
-      "Preserves local-first, preview-first, and optional AI positioning while making the first screen sharper."
+      "Makes the first screen explicit about local ownership, optional AI, preview-first behavior, and the product’s private execution role.",
+      "Reduces the homepage to one execution loop, one distinction, three pillars, a technical architecture, and two product-evidence views.",
+      "Uses the existing mascot as a restrained identity seal instead of a hero illustration."
     ],
     "technical": [
-      "Keeps the static generator as the source of truth for the homepage and generated metadata.",
-      "Adds progressive enhancement motion with reduced-motion fallbacks.",
-      "Refreshes generated release data, feeds, sitemap, and machine-readable context dates."
+      "Replaces the accumulated visual layers with one responsive CSS system and no new dependencies.",
+      "Builds the execution loop and architecture diagrams from semantic HTML and CSS.",
+      "Refreshes metadata, social preview, release data, feeds, sitemap, and machine-readable context dates."
     ],
     "limitations": [
       "The canonical product source repository may not be publicly accessible to all users.",

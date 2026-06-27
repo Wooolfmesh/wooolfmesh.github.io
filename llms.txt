@@ -6,7 +6,7 @@ The product is local-first, Markdown-backed, and preview-first. AI can help, but
 
 ## Main pages
 
-- [Wooolfmesh - Local-first memory for agentic work](https://wooolfmesh.github.io/)
+- [Wooolfmesh — Local-first memory for agentic work](https://wooolfmesh.github.io/)
 - [Product](https://wooolfmesh.github.io/product/)
 - [Feature status](https://wooolfmesh.github.io/features/)
 - [Today operating layer feature](https://wooolfmesh.github.io/features/today-command-center/)
@@ -66,7 +66,7 @@ The product is local-first, Markdown-backed, and preview-first. AI can help, but
 - [Roadmap](https://wooolfmesh.github.io/roadmap/)
 - [Support](https://wooolfmesh.github.io/support/)
 - [Privacy and local-first trust](https://wooolfmesh.github.io/privacy/)
-- [Screenshots](https://wooolfmesh.github.io/screenshots/)
+- [Product evidence](https://wooolfmesh.github.io/screenshots/)
 - [Store readiness](https://wooolfmesh.github.io/store-readiness/)
 - [Install](https://wooolfmesh.github.io/install/)
 - [Releases](https://wooolfmesh.github.io/releases/)

@@ -7,7 +7,7 @@ Wooolfmesh is local-first memory for agentic work: a private command center that
 Wooolfmesh is a local-first operating layer for daily execution. It connects tasks, capture, focus sessions, reviews, cognitive bites, memory, projects, routines, signals, analytics, search, local knowledge, and optional AI into one loop.
 
 ## Core loop
-Capture -> Clarify -> Plan -> Focus -> Track -> Review -> Learn -> Reuse
+Capture -> Clarify -> Plan -> Focus -> Review -> Learn -> Reuse
 
 ## Storage model
 Markdown under the configured _WorkOS vault is the durable source of truth for user-owned entities. SQLite stores runtime support such as reminders, task events, indexes, registry data, routine state, diagnostics, and analytics.
