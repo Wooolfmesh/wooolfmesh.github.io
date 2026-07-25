@@ -1230,6 +1230,7 @@ function layout(page) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="NVjLGEd7e79H41hAX7li-wqcvb5KLEPmDwml8uLge6g" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(page.description)}">
     <meta name="robots" content="${robots}">

@@ -1,557 +1,183 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="NVjLGEd7e79H41hAX7li-wqcvb5KLEPmDwml8uLge6g" />
     <title>Wooolfmesh — Local-first memory for agentic work</title>
-    <meta
-      name="description"
-      content="Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown."
-    />
-    <meta
-      name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    />
-    <meta name="author" content="Dzmitry Kharlanau" />
-    <meta name="creator" content="Dzmitry Kharlanau" />
-    <meta name="publisher" content="Wooolfmesh" />
-    <meta name="application-name" content="Wooolfmesh" />
-    <meta name="apple-mobile-web-app-title" content="Wooolfmesh" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="format-detection" content="telephone=no" />
-    <link rel="canonical" href="https://wooolfmesh.github.io/" />
-    <link rel="author" href="https://github.com/dkharlanau" />
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Wooolfmesh" />
-    <meta
-      property="og:title"
-      content="Wooolfmesh — Local-first memory for agentic work"
-    />
-    <meta
-      property="og:description"
-      content="Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown."
-    />
-    <meta property="og:url" content="https://wooolfmesh.github.io/" />
-    <meta
-      property="og:image"
-      content="https://wooolfmesh.github.io/assets/og.png"
-    />
-    <meta
-      property="og:image:secure_url"
-      content="https://wooolfmesh.github.io/assets/og.png"
-    />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Wooolfmesh local-first memory for agentic work"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Wooolfmesh — Local-first memory for agentic work"
-    />
-    <meta
-      name="twitter:description"
-      content="Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown."
-    />
-    <meta
-      name="twitter:image"
-      content="https://wooolfmesh.github.io/assets/og.png"
-    />
-    <meta
-      name="twitter:image:alt"
-      content="Wooolfmesh local-first memory for agentic work"
-    />
-    <meta name="theme-color" content="#f5f3ec" />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="Wooolfmesh RSS"
-      href="/feed.xml"
-    />
-    <link
-      rel="alternate"
-      type="application/atom+xml"
-      title="Wooolfmesh Atom"
-      href="/atom.xml"
-    />
-    <link
-      rel="alternate"
-      type="application/feed+json"
-      title="Wooolfmesh JSON Feed"
-      href="/feed.json"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link
-      rel="icon"
-      href="/assets/icons/favicon-32x32.png"
-      type="image/png"
-      sizes="32x32"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/assets/icons/apple-touch-icon.png"
-      sizes="180x180"
-    />
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "@id": "https://wooolfmesh.github.io/#webpage",
-        "name": "Wooolfmesh — Local-first memory for agentic work",
-        "url": "https://wooolfmesh.github.io/",
-        "description": "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.",
-        "inLanguage": "en",
-        "datePublished": "2026-06-27",
-        "dateModified": "2026-06-27",
-        "isPartOf": { "@id": "https://wooolfmesh.github.io/#website" },
-        "author": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-        },
-        "about": { "@id": "https://wooolfmesh.github.io/#software" },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "https://wooolfmesh.github.io/assets/og.png",
-          "width": 1200,
-          "height": 630
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://wooolfmesh.github.io/"
-          }
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": "https://wooolfmesh.github.io/#website",
-        "name": "Wooolfmesh",
-        "alternateName": ["WorkOS Local", "work-os-local", "Work OS Local"],
-        "url": "https://wooolfmesh.github.io/",
-        "description": "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.",
-        "inLanguage": "en",
-        "dateModified": "2026-06-27",
-        "publisher": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "@id": "https://wooolfmesh.github.io/#software",
-        "name": "Wooolfmesh",
-        "alternateName": "WorkOS Local",
-        "applicationCategory": "ProductivityApplication",
-        "operatingSystem": "Windows, macOS, local web app",
-        "url": "https://wooolfmesh.github.io/",
-        "image": "https://wooolfmesh.github.io/assets/og.png",
-        "author": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-        },
-        "description": "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.",
-        "isAccessibleForFree": true,
-        "keywords": [
-          "local-first productivity",
-          "local-first memory",
-          "agentic work memory",
-          "private productivity app",
-          "Markdown productivity",
-          "Obsidian workflow",
-          "focus sessions",
-          "weekly review",
-          "cognitive bites",
-          "local AI",
-          "Ollama",
-          "personal operating system",
-          "knowledge work"
-        ],
-        "featureList": [
-          "Today operating layer (Implemented)",
-          "Executable tasks (Implemented)",
-          "Capture and inbox (Partial)",
-          "Focus sessions (Implemented)",
-          "Reviews and follow-through (Partial)",
-          "Memory and cognitive bites (Implemented)",
-          "Project health (Partial)",
-          "Signals and analytics (Implemented)",
-          "Local knowledge search (Implemented)",
-          "Optional AI assistance (Optional)"
-        ],
-        "sameAs": [
-          "https://github.com/dkharlanau/work-os-local",
-          "https://github.com/Wooolfmesh/wooolfmesh.github.io"
-        ],
-        "softwareHelp": "https://wooolfmesh.github.io/support/",
-        "creator": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitry-kharlanau"
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau",
-        "name": "Dzmitry Kharlanau",
-        "url": "https://github.com/dkharlanau",
-        "description": "Creator of Wooolfmesh, focused on local-first productivity systems, agentic work memory, and practical execution loops.",
-        "sameAs": [
-          "https://github.com/dkharlanau",
-          "https://www.linkedin.com/in/dkharlanau/"
-        ],
-        "knowsAbout": [
-          "local-first software",
-          "personal knowledge management",
-          "agentic work"
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Project",
-        "@id": "https://wooolfmesh.github.io/#project",
-        "name": "Wooolfmesh",
-        "alternateName": "WorkOS Local",
-        "url": "https://wooolfmesh.github.io/",
-        "description": "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.",
-        "image": "https://wooolfmesh.github.io/assets/og.png",
-        "logo": "https://wooolfmesh.github.io/assets/icons/icon-512.png",
-        "creator": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-        },
-        "sameAs": [
-          "https://github.com/dkharlanau/work-os-local",
-          "https://github.com/Wooolfmesh/wooolfmesh.github.io"
-        ]
-      }
-    </script>
+    <meta name="description" content="Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Dzmitry Kharlanau">
+    <meta name="creator" content="Dzmitry Kharlanau">
+    <meta name="publisher" content="Wooolfmesh">
+    <meta name="application-name" content="Wooolfmesh">
+    <meta name="apple-mobile-web-app-title" content="Wooolfmesh">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="https://wooolfmesh.github.io/">
+    <link rel="author" href="https://github.com/dkharlanau">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Wooolfmesh">
+    <meta property="og:title" content="Wooolfmesh — Local-first memory for agentic work">
+    <meta property="og:description" content="Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.">
+    <meta property="og:url" content="https://wooolfmesh.github.io/">
+    <meta property="og:image" content="https://wooolfmesh.github.io/assets/og.png">
+    <meta property="og:image:secure_url" content="https://wooolfmesh.github.io/assets/og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Wooolfmesh local-first memory for agentic work">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wooolfmesh — Local-first memory for agentic work">
+    <meta name="twitter:description" content="Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.">
+    <meta name="twitter:image" content="https://wooolfmesh.github.io/assets/og.png">
+    <meta name="twitter:image:alt" content="Wooolfmesh local-first memory for agentic work">
+    <meta name="theme-color" content="#f5f3ec">
+    <link rel="alternate" type="application/rss+xml" title="Wooolfmesh RSS" href="/feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="Wooolfmesh Atom" href="/atom.xml">
+    <link rel="alternate" type="application/feed+json" title="Wooolfmesh JSON Feed" href="/feed.json">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://wooolfmesh.github.io/#webpage","name":"Wooolfmesh — Local-first memory for agentic work","url":"https://wooolfmesh.github.io/","description":"Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.","inLanguage":"en","datePublished":"2026-06-27","dateModified":"2026-06-27","isPartOf":{"@id":"https://wooolfmesh.github.io/#website"},"author":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"},"about":{"@id":"https://wooolfmesh.github.io/#software"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://wooolfmesh.github.io/assets/og.png","width":1200,"height":630}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wooolfmesh.github.io/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://wooolfmesh.github.io/#website","name":"Wooolfmesh","alternateName":["WorkOS Local","work-os-local","Work OS Local"],"url":"https://wooolfmesh.github.io/","description":"Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.","inLanguage":"en","dateModified":"2026-06-27","publisher":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://wooolfmesh.github.io/#software","name":"Wooolfmesh","alternateName":"WorkOS Local","applicationCategory":"ProductivityApplication","operatingSystem":"Windows, macOS, local web app","url":"https://wooolfmesh.github.io/","image":"https://wooolfmesh.github.io/assets/og.png","author":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"},"description":"Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.","isAccessibleForFree":true,"keywords":["local-first productivity","local-first memory","agentic work memory","private productivity app","Markdown productivity","Obsidian workflow","focus sessions","weekly review","cognitive bites","local AI","Ollama","personal operating system","knowledge work"],"featureList":["Today operating layer (Implemented)","Executable tasks (Implemented)","Capture and inbox (Partial)","Focus sessions (Implemented)","Reviews and follow-through (Partial)","Memory and cognitive bites (Implemented)","Project health (Partial)","Signals and analytics (Implemented)","Local knowledge search (Implemented)","Optional AI assistance (Optional)"],"sameAs":["https://github.com/dkharlanau/work-os-local","https://github.com/Wooolfmesh/wooolfmesh.github.io"],"softwareHelp":"https://wooolfmesh.github.io/support/","creator":{"@id":"https://wooolfmesh.github.io/#person-dzmitry-kharlanau"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau","name":"Dzmitry Kharlanau","url":"https://github.com/dkharlanau","description":"Creator of Wooolfmesh, focused on local-first productivity systems, agentic work memory, and practical execution loops.","sameAs":["https://github.com/dkharlanau","https://www.linkedin.com/in/dkharlanau/"],"knowsAbout":["local-first software","personal knowledge management","agentic work"]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Project","@id":"https://wooolfmesh.github.io/#project","name":"Wooolfmesh","alternateName":"WorkOS Local","url":"https://wooolfmesh.github.io/","description":"Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.","image":"https://wooolfmesh.github.io/assets/og.png","logo":"https://wooolfmesh.github.io/assets/icons/icon-512.png","creator":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"},"sameAs":["https://github.com/dkharlanau/work-os-local","https://github.com/Wooolfmesh/wooolfmesh.github.io"]}</script>
   </head>
   <body>
     <header class="site-header">
       <nav class="nav-shell" aria-label="Main navigation">
-        <a class="brand" href="/" aria-label="Wooolfmesh home"
-          ><img src="/assets/wooolfmesh.png" alt="" />Wooolfmesh</a
-        >
-        <button
-          class="menu-toggle"
-          type="button"
-          data-menu-toggle
-          aria-expanded="false"
-          aria-label="Open menu"
-        >
-          <span></span>
-        </button>
+        <a class="brand" href="/" aria-label="Wooolfmesh home"><img src="/assets/wooolfmesh.png" alt="">Wooolfmesh</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu"><span></span></button>
         <div class="nav-links" data-nav-links>
-          <a href="/product/">Product</a
-          ><a href="/architecture/">Architecture</a
-          ><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
+          <a href="/product/">Product</a><a href="/architecture/">Architecture</a><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
         </div>
       </nav>
     </header>
-    <main>
-      <section class="landing-hero">
-        <div class="shell hero-grid">
-          <div class="hero-copy reveal">
-            <h1>Local-first memory for agentic work.</h1>
-            <p class="lead">
-              A private execution layer for tasks, focus, reviews, lessons,
-              projects, and local Markdown knowledge.
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="/product/"
-                >Explore product <span aria-hidden="true">↗</span></a
-              ><a
-                class="button"
-                href="https://github.com/dkharlanau/work-os-local"
-                >View source</a
-              >
+    <main><section class="landing-hero">
+    <div class="shell hero-grid">
+      <div class="hero-copy reveal">
+        <h1>Local-first memory for agentic work.</h1>
+        <p class="lead">A private execution layer for tasks, focus, reviews, lessons, projects, and local Markdown knowledge.</p>
+        <div class="hero-actions"><a class="button primary" href="/product/">Explore product <span aria-hidden="true">↗</span></a><a class="button" href="https://github.com/dkharlanau/work-os-local">View source</a></div>
+        <p class="trust-row"><span>Markdown-owned</span><span>Local runtime</span><span>Optional AI</span><span>Preview-first</span></p>
+      </div>
+      <div class="memory-map reveal" role="img" aria-label="Seven-step execution loop connected to a local Markdown vault and local runtime">
+        <div class="map-inputs">
+          <div class="map-node"><span>01</span><strong>Capture</strong><i></i></div><div class="map-node"><span>02</span><strong>Clarify</strong><i></i></div><div class="map-node"><span>03</span><strong>Plan</strong><i></i></div><div class="map-node"><span>04</span><strong>Focus</strong><i></i></div>
+        </div>
+        <div class="map-core">
+          <span class="map-lock" aria-hidden="true"></span>
+          <strong>Local vault</strong>
+          <small>user-owned Markdown</small>
+        </div>
+        <div class="map-outputs">
+          <div class="map-node"><i></i><span>05</span><strong>Review</strong></div><div class="map-node"><i></i><span>06</span><strong>Learn</strong></div><div class="map-node active"><i></i><span>07</span><strong>Reuse</strong></div>
+        </div>
+        <div class="map-runtime"><strong>Local runtime</strong><small>SQLite support · optional AI</small></div>
+        <div class="map-connector connector-left"></div>
+        <div class="map-connector connector-right"></div>
+        <div class="map-connector connector-down"></div>
+      </div>
+    </div>
+  </section>
+  <section id="execution-loop" class="home-section loop-section">
+    <div class="shell">
+      <div class="section-index"><span>01</span><span>Execution loop</span><span>Your work, in a better loop.</span></div>
+      <div class="execution-loop" role="list" aria-label="Capture, clarify, plan, focus, review, learn, reuse">
+        <article class="loop-step" role="listitem"><span>01</span><i></i><strong>Capture</strong></article><article class="loop-step" role="listitem"><span>02</span><i></i><strong>Clarify</strong></article><article class="loop-step" role="listitem"><span>03</span><i></i><strong>Plan</strong></article><article class="loop-step active" role="listitem"><span>04</span><i></i><strong>Focus</strong></article><article class="loop-step" role="listitem"><span>05</span><i></i><strong>Review</strong></article><article class="loop-step" role="listitem"><span>06</span><i></i><strong>Learn</strong></article><article class="loop-step" role="listitem"><span>07</span><i></i><strong>Reuse</strong></article>
+      </div>
+    </div>
+  </section>
+  <section class="home-section distinction-section">
+    <div class="shell distinction-grid">
+      <div class="section-index vertical"><span>02</span><span>Distinction</span></div>
+      <div class="distinction-copy reveal">
+        <p>Not a task app.</p>
+        <p>Not a note app.</p>
+        <p>Not an AI chatbot.</p>
+        <p>A local memory and execution layer.</p>
+      </div>
+    </div>
+  </section>
+  <section class="home-section pillars-section">
+    <div class="shell">
+      <div class="section-index"><span>03</span><span>Product pillars</span><span>One private system.</span></div>
+      <div class="pillars">
+        <article class="pillar reveal"><span>P01</span><h2>Own your memory</h2><p>Your context stays readable, portable, and yours.</p></article>
+        <article class="pillar reveal"><span>P02</span><h2>Execute from Today</h2><p>Turn plans and signals into the next useful action.</p></article>
+        <article class="pillar reveal"><span>P03</span><h2>Learn from work</h2><p>Bring reviews and lessons back into future decisions.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="how-it-works" class="home-section architecture-section">
+    <div class="shell">
+      <div class="section-index"><span>04</span><span>How it works</span><span>Local-first. Private by design.</span></div>
+      <div class="architecture-diagram reveal" role="img" aria-label="Markdown vault and optional AI connect through Wooolfmesh, with explicit approval before durable writes and SQLite used for runtime support">
+        <article><h2>Markdown vault</h2><p>source of truth</p><i></i><small>.md files on disk</small></article>
+        <span class="flow-label">read</span>
+        <article><h2>Wooolfmesh</h2><p>private execution layer</p><i></i><small>tasks · focus · reviews</small></article>
+        <span class="flow-label">propose</span>
+        <article class="approval-node"><h2>Explicit approval</h2><p>you review changes</p><i>✓</i><small>before durable writes</small></article>
+        <span class="flow-label accent">approve</span>
+        <article><h2>SQLite runtime</h2><p>support state</p><i></i><small>local runtime file</small></article>
+        <span class="flow-label reverse">assist</span>
+        <article><h2>Optional AI</h2><p>configured by you</p><i></i><small>your provider · your settings</small></article>
+      </div>
+      <p class="architecture-note">No durable AI-assisted write happens without your approval.</p>
+    </div>
+  </section>
+  <section class="home-section evidence-section">
+    <div class="shell">
+      <div class="section-index"><span>05</span><span>Product evidence</span><span>Two surfaces. One loop.</span></div>
+      <div class="evidence-grid">
+        <figure class="evidence-item reveal">
+          <figcaption><span>01</span><strong>Today</strong><small>See the next useful move.</small></figcaption>
+          <div class="product-fragment today-fragment" role="img" aria-label="Abstract Wooolfmesh Today interface showing one next move">
+            <div class="fragment-rail"><span>Local / Today</span><span>27 Jun</span></div>
+            <div class="fragment-body">
+              <p>One next move</p>
+              <h3>Clarify the finish line</h3>
+              <div class="fragment-task"><span>Next action</span><strong>Write the acceptance criteria</strong><small>Focus · 45 min</small></div>
+              <div class="fragment-queue"><span>Later</span><i></i><i></i><i></i></div>
             </div>
-            <p class="trust-row">
-              <span>Markdown-owned</span><span>Local runtime</span
-              ><span>Optional AI</span><span>Preview-first</span>
-            </p>
           </div>
-          <div
-            class="memory-map reveal"
-            role="img"
-            aria-label="Seven-step execution loop connected to a local Markdown vault and local runtime"
-          >
-            <div class="map-inputs">
-              <div class="map-node">
-                <span>01</span><strong>Capture</strong><i></i>
-              </div>
-              <div class="map-node">
-                <span>02</span><strong>Clarify</strong><i></i>
-              </div>
-              <div class="map-node">
-                <span>03</span><strong>Plan</strong><i></i>
-              </div>
-              <div class="map-node">
-                <span>04</span><strong>Focus</strong><i></i>
-              </div>
+        </figure>
+        <figure class="evidence-item reveal">
+          <figcaption><span>02</span><strong>Review</strong><small>Turn work history into follow-through.</small></figcaption>
+          <div class="product-fragment review-fragment" role="img" aria-label="Abstract Wooolfmesh Review interface showing preview-first proposed actions">
+            <div class="fragment-rail"><span>Local / Review</span><span>Preview-first</span></div>
+            <div class="fragment-body">
+              <p>What changed</p>
+              <h3>Proposals waiting for review</h3>
+              <div class="proposal-row"><span>01</span><strong>Create next action</strong><small>Review</small></div>
+              <div class="proposal-row"><span>02</span><strong>Save a cognitive bite</strong><small>Review</small></div>
+              <div class="fragment-approval"><span>Nothing writes until approved.</span><strong>Approve selected</strong></div>
             </div>
-            <div class="map-core">
-              <span class="map-lock" aria-hidden="true"></span>
-              <strong>Local vault</strong>
-              <small>user-owned Markdown</small>
-            </div>
-            <div class="map-outputs">
-              <div class="map-node">
-                <i></i><span>05</span><strong>Review</strong>
-              </div>
-              <div class="map-node">
-                <i></i><span>06</span><strong>Learn</strong>
-              </div>
-              <div class="map-node active">
-                <i></i><span>07</span><strong>Reuse</strong>
-              </div>
-            </div>
-            <div class="map-runtime">
-              <strong>Local runtime</strong
-              ><small>SQLite support · optional AI</small>
-            </div>
-            <div class="map-connector connector-left"></div>
-            <div class="map-connector connector-right"></div>
-            <div class="map-connector connector-down"></div>
           </div>
-        </div>
-      </section>
-      <section id="execution-loop" class="home-section loop-section">
-        <div class="shell">
-          <div class="section-index">
-            <span>01</span><span>Execution loop</span
-            ><span>Your work, in a better loop.</span>
-          </div>
-          <div
-            class="execution-loop"
-            role="list"
-            aria-label="Capture, clarify, plan, focus, review, learn, reuse"
-          >
-            <article class="loop-step" role="listitem">
-              <span>01</span><i></i><strong>Capture</strong>
-            </article>
-            <article class="loop-step" role="listitem">
-              <span>02</span><i></i><strong>Clarify</strong>
-            </article>
-            <article class="loop-step" role="listitem">
-              <span>03</span><i></i><strong>Plan</strong>
-            </article>
-            <article class="loop-step active" role="listitem">
-              <span>04</span><i></i><strong>Focus</strong>
-            </article>
-            <article class="loop-step" role="listitem">
-              <span>05</span><i></i><strong>Review</strong>
-            </article>
-            <article class="loop-step" role="listitem">
-              <span>06</span><i></i><strong>Learn</strong>
-            </article>
-            <article class="loop-step" role="listitem">
-              <span>07</span><i></i><strong>Reuse</strong>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="home-section distinction-section">
-        <div class="shell distinction-grid">
-          <div class="section-index vertical">
-            <span>02</span><span>Distinction</span>
-          </div>
-          <div class="distinction-copy reveal">
-            <p>Not a task app.</p>
-            <p>Not a note app.</p>
-            <p>Not an AI chatbot.</p>
-            <p>A local memory and execution layer.</p>
-          </div>
-        </div>
-      </section>
-      <section class="home-section pillars-section">
-        <div class="shell">
-          <div class="section-index">
-            <span>03</span><span>Product pillars</span
-            ><span>One private system.</span>
-          </div>
-          <div class="pillars">
-            <article class="pillar reveal">
-              <span>P01</span>
-              <h2>Own your memory</h2>
-              <p>Your context stays readable, portable, and yours.</p>
-            </article>
-            <article class="pillar reveal">
-              <span>P02</span>
-              <h2>Execute from Today</h2>
-              <p>Turn plans and signals into the next useful action.</p>
-            </article>
-            <article class="pillar reveal">
-              <span>P03</span>
-              <h2>Learn from work</h2>
-              <p>Bring reviews and lessons back into future decisions.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section id="how-it-works" class="home-section architecture-section">
-        <div class="shell">
-          <div class="section-index">
-            <span>04</span><span>How it works</span
-            ><span>Local-first. Private by design.</span>
-          </div>
-          <div
-            class="architecture-diagram reveal"
-            role="img"
-            aria-label="Markdown vault and optional AI connect through Wooolfmesh, with explicit approval before durable writes and SQLite used for runtime support"
-          >
-            <article>
-              <h2>Markdown vault</h2>
-              <p>source of truth</p>
-              <i></i><small>.md files on disk</small>
-            </article>
-            <span class="flow-label">read</span>
-            <article>
-              <h2>Wooolfmesh</h2>
-              <p>private execution layer</p>
-              <i></i><small>tasks · focus · reviews</small>
-            </article>
-            <span class="flow-label">propose</span>
-            <article class="approval-node">
-              <h2>Explicit approval</h2>
-              <p>you review changes</p>
-              <i>✓</i><small>before durable writes</small>
-            </article>
-            <span class="flow-label accent">approve</span>
-            <article>
-              <h2>SQLite runtime</h2>
-              <p>support state</p>
-              <i></i><small>local runtime file</small>
-            </article>
-            <span class="flow-label reverse">assist</span>
-            <article>
-              <h2>Optional AI</h2>
-              <p>configured by you</p>
-              <i></i><small>your provider · your settings</small>
-            </article>
-          </div>
-          <p class="architecture-note">
-            No durable AI-assisted write happens without your approval.
-          </p>
-        </div>
-      </section>
-      <section class="home-section evidence-section">
-        <div class="shell">
-          <div class="section-index">
-            <span>05</span><span>Product evidence</span
-            ><span>Two surfaces. One loop.</span>
-          </div>
-          <div class="evidence-grid">
-            <figure class="evidence-item reveal">
-              <figcaption>
-                <span>01</span><strong>Today</strong
-                ><small>See the next useful move.</small>
-              </figcaption>
-              <div
-                class="product-fragment today-fragment"
-                role="img"
-                aria-label="Abstract Wooolfmesh Today interface showing one next move"
-              >
-                <div class="fragment-rail">
-                  <span>Local / Today</span><span>27 Jun</span>
-                </div>
-                <div class="fragment-body">
-                  <p>One next move</p>
-                  <h3>Clarify the finish line</h3>
-                  <div class="fragment-task">
-                    <span>Next action</span
-                    ><strong>Write the acceptance criteria</strong
-                    ><small>Focus · 45 min</small>
-                  </div>
-                  <div class="fragment-queue">
-                    <span>Later</span><i></i><i></i><i></i>
-                  </div>
-                </div>
-              </div>
-            </figure>
-            <figure class="evidence-item reveal">
-              <figcaption>
-                <span>02</span><strong>Review</strong
-                ><small>Turn work history into follow-through.</small>
-              </figcaption>
-              <div
-                class="product-fragment review-fragment"
-                role="img"
-                aria-label="Abstract Wooolfmesh Review interface showing preview-first proposed actions"
-              >
-                <div class="fragment-rail">
-                  <span>Local / Review</span><span>Preview-first</span>
-                </div>
-                <div class="fragment-body">
-                  <p>What changed</p>
-                  <h3>Proposals waiting for review</h3>
-                  <div class="proposal-row">
-                    <span>01</span><strong>Create next action</strong
-                    ><small>Review</small>
-                  </div>
-                  <div class="proposal-row">
-                    <span>02</span><strong>Save a cognitive bite</strong
-                    ><small>Review</small>
-                  </div>
-                  <div class="fragment-approval">
-                    <span>Nothing writes until approved.</span
-                    ><strong>Approve selected</strong>
-                  </div>
-                </div>
-              </div>
-            </figure>
-          </div>
-        </div>
-      </section>
-      <section class="home-section closing-section">
-        <div class="shell closing-grid reveal">
-          <h2>Keep the memory.<br />Improve the loop.</h2>
-          <div class="hero-actions">
-            <a class="button primary" href="/product/"
-              >Explore product <span aria-hidden="true">↗</span></a
-            ><a
-              class="button"
-              href="https://github.com/dkharlanau/work-os-local"
-              >View source</a
-            >
-          </div>
-        </div>
-      </section>
-    </main>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section class="home-section closing-section">
+    <div class="shell closing-grid reveal">
+      <h2>Keep the memory.<br>Improve the loop.</h2>
+      <div class="hero-actions"><a class="button primary" href="/product/">Explore product <span aria-hidden="true">↗</span></a><a class="button" href="https://github.com/dkharlanau/work-os-local">View source</a></div>
+    </div>
+  </section></main>
     <footer class="site-footer">
       <div class="footer-shell">
         <div class="footer-brand">
           <strong>Wooolfmesh</strong>
-          <p>
-            Wooolfmesh is local-first memory for agentic work: a private command
-            center that connects tasks, capture, focus, reviews, lessons,
-            project health, and local knowledge into one execution loop over a
-            Markdown vault.
-          </p>
-          <p class="footer-small">
-            Formerly WorkOS Local. No private vault data is published here.
-          </p>
+          <p>Wooolfmesh is local-first memory for agentic work: a private command center that connects tasks, capture, focus, reviews, lessons, project health, and local knowledge into one execution loop over a Markdown vault.</p>
+          <p class="footer-small">Formerly WorkOS Local. No private vault data is published here.</p>
         </div>
         <div class="footer-links">
           <a href="/product/">Product</a>
@@ -561,13 +187,9 @@
           <a href="/privacy/">Privacy</a>
           <a href="/support/">Support</a>
           <a href="/ai/">AI disclosure</a>
-          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io/issues"
-            >Feedback</a
-          >
+          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io/issues">Feedback</a>
           <a href="https://github.com/dkharlanau/work-os-local">GitHub</a>
-          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io"
-            >Site source</a
-          >
+          <a href="https://github.com/Wooolfmesh/wooolfmesh.github.io">Site source</a>
         </div>
       </div>
     </footer>
