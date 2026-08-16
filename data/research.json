@@ -1,10 +1,166 @@
 {
   "updated": "2026-08-16",
-  "principle": "Research results become product hypotheses, not automatic feature decisions.",
+  "principle": "Research results and market signals become product hypotheses, not automatic feature decisions.",
+  "current_direction": {
+    "name": "Studios, not dashboards",
+    "summary": "Wooolfmesh is exploring a simpler work environment where one focused Studio keeps the current task, selected memory, sources, AI, and durable output together. Secondary controls stay quiet until needed.",
+    "avoid": [
+      "Configurable widget walls",
+      "Permanent analytics rails",
+      "Separate AI destinations for every capability",
+      "A different bright color for every feature",
+      "New pages created only because a new backend object exists"
+    ]
+  },
   "evidence_levels": {
     "established": "Supported by a review, meta-analysis, or repeated research.",
     "strong_signal": "Useful experimental or field evidence, but context still matters.",
     "emerging": "Recent evidence that needs more replication."
+  },
+  "product_signals_2026": [
+    {
+      "signal": "Project-scoped context is becoming a primary product primitive",
+      "examples": ["ChatGPT Projects", "Microsoft Copilot Notebooks"],
+      "product_hypothesis": "Every Studio should have a compact context packet so the user does not rebuild background information each time.",
+      "sources": [
+        "https://openai.com/academy/projects/",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-notebooks"
+      ]
+    },
+    {
+      "signal": "Conversation and persistent work surface are separating",
+      "examples": ["ChatGPT Work", "Gemini Canvas", "Copilot Pages", "Claude Artifacts"],
+      "product_hypothesis": "The artifact should be the main work surface. AI conversation should support it and be collapsible.",
+      "sources": [
+        "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex",
+        "https://blog.google/products-and-platforms/products/search/ai-mode-canvas-writing-coding/",
+        "https://support.microsoft.com/en-US/Microsoft-365-Copilot/how-microsoft-365-copilot-pages-works",
+        "https://support.anthropic.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them"
+      ]
+    },
+    {
+      "signal": "Agent work is becoming recurring, inspectable, and attached to workspace context",
+      "examples": ["ChatGPT Work Scheduled Tasks", "Linear Loops", "Notion Custom Agents"],
+      "product_hypothesis": "Recurring agent work should appear as Runs inside the Studio it serves, not in a separate automation control room.",
+      "sources": [
+        "https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes",
+        "https://linear.app/changelog/2026-07-20-introducing-loops",
+        "https://www.notion.com/product/agents"
+      ]
+    },
+    {
+      "signal": "Information-dense products are deliberately calming their chrome",
+      "examples": ["Linear 2026 UI refresh"],
+      "product_hypothesis": "Navigation, separators, and icons should recede after the user reaches the work surface.",
+      "sources": ["https://linear.app/now/behind-the-latest-design-refresh"]
+    },
+    {
+      "signal": "Expressive design is being used to direct attention, not color every object",
+      "examples": ["Material 3 Expressive", "Apple content-first materials guidance"],
+      "product_hypothesis": "Use a calm neutral base and reserve stronger color, size, shape, and motion for the primary action or meaningful state.",
+      "sources": [
+        "https://design.google/library/expressive-material-design-google-research",
+        "https://developer.apple.com/design/human-interface-guidelines/materials"
+      ]
+    },
+    {
+      "signal": "Voice is returning as a lightweight work input",
+      "examples": ["Voice in ChatGPT Work", "Google Workspace conversational voice"],
+      "product_hypothesis": "Voice can later become a thin capture and steering layer over Studios instead of a separate product mode.",
+      "sources": [
+        "https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes",
+        "https://blog.google/products-and-platforms/products/workspace/workspace-updates/"
+      ]
+    }
+  ],
+  "facts_2026": [
+    {
+      "fact": "Participants in a CHI 2026 field study switched browser tabs more than 60 times per hour during knowledge work.",
+      "implication": "A Studio should bring active task context, sources, notes, memory, and output together to reduce context switching.",
+      "source": "https://doi.org/10.1145/3772318.3791979"
+    },
+    {
+      "fact": "In a field experiment across 66 firms and 7,137 knowledge workers, treated users who adopted integrated generative AI spent about two fewer hours on email per week, while task composition did not materially change.",
+      "implication": "Target overhead around existing work before inventing more work categories and dashboards.",
+      "source": "https://www.nber.org/papers/w33795"
+    },
+    {
+      "fact": "Google reports that participants found key interface elements up to four times faster in some Material 3 Expressive eye-tracking tests.",
+      "implication": "Strong visual hierarchy can make the primary action easier to find without adding more controls.",
+      "source": "https://design.google/library/expressive-material-design-google-research"
+    },
+    {
+      "fact": "A preregistered 2026 study found a speedup illusion: participants expected AI-assisted simple tasks to be faster even when measured completion times were similar; subjective effort was lower with AI.",
+      "implication": "Measure completed outcomes and reduced friction rather than AI activity, token volume, or perceived speed alone.",
+      "source": "https://arxiv.org/abs/2605.23177"
+    }
+  ],
+  "studio_hypotheses": [
+    {
+      "name": "One Studio shell",
+      "priority": "P0",
+      "idea": "Use one consistent work shell instead of many feature pages. The center is current work; AI, memory, sources, task state, and history are contextual layers.",
+      "test": "Can a user complete a real task without navigating away from the Studio?"
+    },
+    {
+      "name": "Minimum viable context packet",
+      "priority": "P0",
+      "idea": "Keep only goal, current state, next action, decisions, useful sources, and selected memory close to the work.",
+      "test": "Generate the packet automatically and let the user correct it.",
+      "source": "https://publications.jrc.ec.europa.eu/repository/handle/JRC146924"
+    },
+    {
+      "name": "Artifact-first work",
+      "priority": "P0",
+      "idea": "Keep the durable output persistent while AI works around it. Do not force the result back into a chat transcript.",
+      "test": "Use a dominant work surface with an optional AI panel that can collapse completely."
+    },
+    {
+      "name": "Resume line",
+      "priority": "P0",
+      "idea": "Keep one short exact next physical action for every active Studio.",
+      "test": "Show it when reopening a Studio and after interruptions."
+    },
+    {
+      "name": "Quiet memory",
+      "priority": "P1",
+      "idea": "Retrieve one to three high-signal memories only when they can change the current decision.",
+      "test": "Keep memory hidden by default and show a short relevance reason when it appears."
+    },
+    {
+      "name": "Risk-based agent checkpoints",
+      "priority": "P1",
+      "idea": "Confirmation frequency should depend on action risk, reversibility, uncertainty, and user preference.",
+      "test": "Compare end-only approval, every-step approval, and risk-based checkpoints.",
+      "source": "https://doi.org/10.1145/3772318.3790655"
+    }
+  ],
+  "visual_hypothesis": {
+    "name": "Calm base, expressive action",
+    "note": "This is a design hypothesis, not a neuroscience claim.",
+    "palette": [
+      {"role": "canvas", "hex": "#F4F2EC", "meaning": "Warm neutral work field"},
+      {"role": "surface", "hex": "#FBFAF7", "meaning": "Active artifact surface"},
+      {"role": "ink", "hex": "#20201E", "meaning": "Primary text"},
+      {"role": "muted", "hex": "#6F6B65", "meaning": "Secondary text"},
+      {"role": "action", "hex": "#4351C7", "meaning": "Primary action and active state"},
+      {"role": "success", "hex": "#2B7555", "meaning": "Completed or safe state"},
+      {"role": "warning", "hex": "#8D5B0C", "meaning": "Attention or warning state"},
+      {"role": "risk", "hex": "#A83A40", "meaning": "Destructive, failed, or high-risk state"}
+    ],
+    "rules": [
+      "Keep most of the interface neutral.",
+      "Use one strong accent for the current primary action or selected state.",
+      "Use semantic colors for meaning, not decoration.",
+      "Do not rely on color alone to communicate status.",
+      "Maintain WCAG 2.2 contrast requirements."
+    ],
+    "sources": [
+      "https://www.w3.org/TR/WCAG22/",
+      "https://linear.app/now/behind-the-latest-design-refresh",
+      "https://design.google/library/expressive-material-design-google-research",
+      "https://developer.apple.com/design/human-interface-guidelines/materials"
+    ]
   },
   "studies": [
     {
@@ -20,8 +176,8 @@
       "topic": "Attention residue after switching",
       "evidence": "strong_signal",
       "finding": "When people leave unfinished work, part of their attention can stay with the previous task and reduce performance on the next task.",
-      "product_hypothesis": "Focus should protect the active task while making interruptions safe to capture without opening a new work stream.",
-      "test": "Keep interruption capture inside Focus and close a session with outcome, next action, and an exact resume point.",
+      "product_hypothesis": "A Studio should protect the active task while making interruptions safe to capture without opening another work stream.",
+      "test": "Keep interruption capture inside the Studio and close work with outcome, next action, and an exact resume point.",
       "citation": "Leroy, S. (2009). Why is it so hard to do my work? The challenge of attention residue when switching between work tasks.",
       "doi": "https://doi.org/10.1016/j.obhdp.2009.04.002"
     },
@@ -29,8 +185,8 @@
       "topic": "Implementation intentions",
       "evidence": "established",
       "finding": "If-then plans can help people translate goals into action by connecting a situation with a planned response.",
-      "product_hypothesis": "Routines can be more useful when they are linked to clear triggers instead of only fixed schedules.",
-      "test": "Test local trigger rules such as: if a focus session ends with an open blocker, propose it for tomorrow's review. Durable changes stay preview-first.",
+      "product_hypothesis": "Background Runs can be linked to clear local triggers instead of requiring a separate routines dashboard.",
+      "test": "Test local trigger rules inside the relevant Studio. Durable changes stay preview-first.",
       "citation": "Gollwitzer, P. M., & Sheeran, P. (2006). Implementation Intentions and Goal Achievement: A Meta-analysis of Effects and Processes.",
       "doi": "https://doi.org/10.1016/S0065-2601(06)38002-1"
     },
@@ -38,8 +194,8 @@
       "topic": "Retrieval practice",
       "evidence": "established",
       "finding": "Trying to recall information can improve later retention more than simply reading the same material again.",
-      "product_hypothesis": "Cognitive bites should sometimes help the user retrieve a lesson, not only display it.",
-      "test": "Test an optional Recall first card for important lessons, decisions, and mistakes linked to current work.",
+      "product_hypothesis": "Memory should sometimes help the user retrieve a lesson, not only display it.",
+      "test": "Test an optional Recall first interaction for important lessons linked to the current Studio.",
       "citation": "Roediger, H. L., & Karpicke, J. D. (2006). Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention.",
       "doi": "https://doi.org/10.1111/j.1467-9280.2006.01693.x"
     },
@@ -48,44 +204,47 @@
       "evidence": "strong_signal",
       "finding": "A CHI 2025 study found that higher confidence in generative AI was linked with less reported critical-thinking effort. Critical thinking also moved toward verification, integration, and supervision.",
       "product_hypothesis": "AI should make verification easy and keep the user responsible for important decisions instead of only producing polished answers.",
-      "test": "Show sources, confidence, assumptions, and verify-before-apply cues for higher-impact AI suggestions.",
-      "citation": "Lee et al. (2025). The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers.",
+      "test": "Show sources, assumptions, and verify-before-apply cues for higher-impact AI suggestions.",
+      "citation": "Lee et al. (2025). The Impact of Generative AI on Critical Thinking.",
       "doi": "https://doi.org/10.1145/3706598.3713778"
     },
     {
-      "topic": "AI integration mode",
-      "evidence": "strong_signal",
-      "finding": "A CHI 2025 experiment found different cognitive patterns when AI led a task, co-led it, or was absent. More automation was not simply better in every dimension.",
-      "product_hypothesis": "Some workflows may work better when AI gives one step, question, or suggestion at a time instead of one complete answer.",
-      "test": "Test a co-led task shaping mode that asks one useful question before generating a full plan.",
-      "citation": "Productive vs. Reflective: How Different Ways of Integrating AI into Design Workflows Affect Cognition and Motivation (CHI 2025).",
-      "doi": "https://doi.org/10.1145/3706598.3713649"
+      "topic": "Autonomous versus dependent cognitive offloading to AI",
+      "evidence": "emerging",
+      "finding": "A 2026 study distinguishes AI that substitutes for the user's core thinking from AI that scaffolds thinking while the user retains cognitive agency.",
+      "product_hypothesis": "AI should sometimes structure, challenge, retrieve, or verify rather than immediately produce the final answer.",
+      "test": "Offer help-me-think and first-pass behaviors inside the same Studio rather than creating more AI pages.",
+      "citation": "Zhu et al. (2026). Not all cognitive offloading is equal: distinguishing dependent and autonomous offloading to generative AI.",
+      "doi": "https://doi.org/10.3389/fpsyg.2026.1878629"
     },
     {
       "topic": "Plan-then-execute agents",
       "evidence": "strong_signal",
-      "finding": "A CHI 2025 study of daily-assistant agents found that plan quality and user involvement both matter. Plausible-looking plans can still create misplaced trust.",
-      "product_hypothesis": "Agent work should be inspectable before execution, with bounded steps and visible checkpoints.",
-      "test": "Use Plan -> Preview -> Approve -> Execute for agent workflows and keep a local action log.",
-      "citation": "Plan-Then-Execute: An Empirical Study of User Trust and Team Performance When Using LLM Agents As Daily Assistants (CHI 2025).",
+      "finding": "Research on daily-assistant agents found that plan quality and user involvement both matter. Plausible-looking plans can still create misplaced trust.",
+      "product_hypothesis": "Agent work should be inspectable before execution and easy to steer while it runs.",
+      "test": "Use Plan -> Preview -> Run -> Checkpoint -> Result and keep a local action log.",
+      "citation": "Plan-Then-Execute (CHI 2025).",
       "doi": "https://doi.org/10.1145/3706598.3713218"
     },
     {
       "topic": "Adaptive agent autonomy",
       "evidence": "emerging",
-      "finding": "A 2026 productivity-agent study found lower workload with agentic support, while medium autonomy gave the best balance between productivity and preference for control in that study.",
-      "product_hypothesis": "The useful choice may not be manual versus fully autonomous. Different actions can have different autonomy levels based on risk and user choice.",
-      "test": "Allow pre-approved low-risk local actions while keeping durable or destructive actions behind explicit confirmation.",
-      "citation": "Geninatti Cossatin et al. (2026). The autonomy equation: How agentic AI reshapes trust and workload in routine productivity applications.",
+      "finding": "A 2026 productivity-agent study found lower workload with agentic support while user preference for control influenced trust. Other 2026 work shows that oversight itself can create workload.",
+      "product_hypothesis": "Useful control is not manual versus fully autonomous. Confirmation should adapt to the action.",
+      "test": "Use checkpoints based on risk, reversibility, uncertainty, and user preference.",
+      "citation": "Geninatti Cossatin et al. (2026). The autonomy equation.",
       "doi": "https://doi.org/10.1016/j.ipm.2026.104681"
     }
   ],
   "research_backlog": [
-    "Resume points after focus and interruptions",
-    "Trigger-based routines",
-    "Recall before reveal for selected cognitive bites",
-    "AI confidence and verification gates",
-    "Co-led AI workflows",
-    "Adaptive autonomy by action risk"
+    "One universal Studio shell",
+    "Minimum viable context packet",
+    "Artifact-first work surface",
+    "Exact resume line",
+    "Quiet memory retrieval",
+    "Risk-based agent checkpoints",
+    "Runs attached to their Studio instead of an automation dashboard",
+    "Voice capture and steering as a later thin input layer",
+    "Calm neutral palette with one expressive action color"
   ]
 }
