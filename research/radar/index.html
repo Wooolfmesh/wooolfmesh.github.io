@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research Radar | Wooolfmesh</title>
+    <meta name="description" content="Wooolfmesh Research Radar: emerging 2026 signals for work studios, agent initiative, interruption recovery, trustworthy memory, human agency, and local-first AI.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Wooolfmesh team">
+    <link rel="canonical" href="https://wooolfmesh.github.io/research/radar/">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <meta name="theme-color" content="#f4f2ec">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Research Radar","url":"https://wooolfmesh.github.io/research/radar/","description":"Emerging 2026 signals for Wooolfmesh work studios, memory, attention and human-AI collaboration.","inLanguage":"en","datePublished":"2026-08-16","dateModified":"2026-08-16"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="Wooolfmesh home"><img src="/assets/wooolfmesh.png" alt="">Wooolfmesh</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu"><span></span></button>
+        <div class="nav-links" data-nav-links>
+          <a href="/product/">Product</a><a href="/architecture/">Architecture</a><a href="/research/" aria-current="page">Research</a><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero compact">
+        <div class="shell reveal">
+          <p class="system-label">Research Radar / August 2026</p>
+          <h1>Signals worth testing next</h1>
+          <p class="lead">This page tracks newer ideas that may shape Wooolfmesh after the Studios pivot. These signals are more experimental than the main Research page. We use them to design small tests, not to justify a larger feature list.</p>
+          <div class="page-actions"><a class="button primary" href="#signals">New signals</a><a class="button" href="#experiments">Experiments</a><a class="button" href="/research/">Research principles</a></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell content-grid">
+          <div class="content-flow">
+            <section>
+              <h2>A stronger product rule</h2>
+              <p>The Studio should know more than it shows. It can understand work state, memory, sources, interruptions, and agent progress while keeping the visible interface stable and small.</p>
+            </section>
+            <section>
+              <h2>What changed in our thinking</h2>
+              <p>We no longer assume that more proactive AI is better. Good assistance depends on timing, task state, confidence, risk, and whether the user asked for help. Quiet intelligence is often more useful than visible intelligence.</p>
+            </section>
+          </div>
+          <aside class="sidebar-box">
+            <h2>Radar filter</h2>
+            <p><strong>Keep:</strong> ideas that reduce recovery cost, context rebuilding, or unnecessary decisions.</p>
+            <p><strong>Test carefully:</strong> proactive AI, long-term memory, automatic delegation.</p>
+            <p><strong>Reject:</strong> features that mainly make AI activity more visible.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="signals">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="system-label">Frontier signals</p>
+            <h2>New ideas from 2026 research</h2>
+            <p>Each signal ends with a practical product hypothesis for Wooolfmesh.</p>
+          </div>
+          <div class="index-grid">
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">Strong signal</span><span class="badge">Proactivity</span></div>
+              <h2>Offer help before taking over</h2>
+              <p>CHIWORK 2026 experiments found that unsolicited anticipatory AI help could increase self-threat and reduce willingness to accept help or use the system again.</p>
+              <p><strong>For Wooolfmesh:</strong> proactive AI should usually offer a small suggestion first. Automatic action needs stronger reasons: low risk, clear user preference, or an explicit routine.</p>
+              <p><strong>Design:</strong> “I found a blocker from yesterday. Bring it in?” is better than silently rewriting the Studio.</p>
+              <a class="text-link" href="https://doi.org/10.1145/3808045.3808054">Harari &amp; Amir, CHIWORK 2026</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">Emerging</span><span class="badge">Timing</span></div>
+              <h2>Intervene at boundaries, not in the middle</h2>
+              <p>A 2026 field study of proactive developer assistance found much higher engagement around workflow boundaries such as post-commit, while mid-task interventions were often dismissed.</p>
+              <p><strong>For Wooolfmesh:</strong> prefer moments such as task start, task finish, focus end, reopen, blocker creation, or explicit pause. Do not keep interrupting active work because a model has an idea.</p>
+              <p><strong>Design:</strong> build a small boundary-event model before building a large notification system.</p>
+              <a class="text-link" href="https://arxiv.org/abs/2601.10253">Kuo et al., 2026</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">Strong signal</span><span class="badge">Recovery</span></div>
+              <h2>Interruptibility and recovery are different</h2>
+              <p>CHIWORK 2026 studied how activity context, timing, and individual differences affect perceived interruptibility and behavioral recovery after interruptions.</p>
+              <p><strong>For Wooolfmesh:</strong> the useful question is not only “may we interrupt?” but also “how cheaply can the user recover?”</p>
+              <p><strong>Design:</strong> when work is interrupted, preserve a resume anchor automatically: current step, selected source, unfinished thought, next action.</p>
+              <a class="text-link" href="https://doi.org/10.1145/3808045.3808048">Lingler et al., CHIWORK 2026</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge optional">Emerging</span><span class="badge">Memory safety</span></div>
+              <h2>Memory is a trust boundary</h2>
+              <p>Recent 2026 research shows that semantic similarity alone can retrieve memory that is related but inappropriate for the current task. Persistent memory can influence later tool use and agent behavior.</p>
+              <p><strong>For Wooolfmesh:</strong> memory retrieval needs admission rules, not only ranking. Check Studio scope, source, age, sensitivity, task fit, and provenance before a memory reaches AI context.</p>
+              <p><strong>Design:</strong> every surfaced memory can answer “why this memory, from where, and for which task?”</p>
+              <a class="text-link" href="https://arxiv.org/abs/2606.06054">Beyond Similarity, 2026</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge optional">Emerging</span><span class="badge">Memory architecture</span></div>
+              <h2>Keep ground truth under summaries</h2>
+              <p>MemMachine argues for preserving complete episodes while using contextual retrieval around matching evidence, instead of replacing the original history with lossy extracted summaries.</p>
+              <p><strong>For Wooolfmesh:</strong> summaries, lessons, and context packets should be views over durable source material. The user should be able to trace important memory back to its original task, note, conversation, or artifact.</p>
+              <p><strong>Design:</strong> summary for speed, source for trust.</p>
+              <a class="text-link" href="https://arxiv.org/abs/2604.04853">MemMachine, 2026</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">Product signal</span><span class="badge">Human agency</span></div>
+              <h2>Different work needs different AI posture</h2>
+              <p>Microsoft's 2026 Work Trend Index describes different ways people work with AI, from asking and exploration to collaboration and delegation. Advanced users are notable for choosing the right pattern for the task.</p>
+              <p><strong>For Wooolfmesh:</strong> do not force every Studio through one chat behavior. The system can support a small visible posture: Help me think, Work with me, or Run this.</p>
+              <p><strong>Design:</strong> posture changes AI initiative and autonomy, not the whole Studio layout.</p>
+              <a class="text-link" href="https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization">Microsoft Work Trend Index 2026</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">Product signal</span><span class="badge">Learning loop</span></div>
+              <h2>Finished work should improve future work</h2>
+              <p>Microsoft frames high-performing organizations as learning systems: output becomes insight, and useful insight is captured and reused in later work.</p>
+              <p><strong>For Wooolfmesh:</strong> completion is a natural memory boundary. After meaningful work, propose one reusable decision, lesson, preference, or procedure instead of asking the user to maintain a separate knowledge system.</p>
+              <p><strong>Design:</strong> Finish → extract one candidate lesson → user approves → memory becomes available to relevant future Studios.</p>
+              <a class="text-link" href="https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization">Microsoft Work Trend Index 2026</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge optional">Emerging</span><span class="badge">Context budget</span></div>
+              <h2>Progressive disclosure also belongs under the hood</h2>
+              <p>2026 agent research suggests that loading every document or tool description into context can be wasteful. One useful layer of progressive disclosure can reduce context cost while preserving or improving retrieval quality as collections grow.</p>
+              <p><strong>For Wooolfmesh:</strong> AI should first see compact Studio summaries and catalogs, then open detailed sources only when needed.</p>
+              <p><strong>Design:</strong> context is a budget. Spend it on evidence needed for the current step.</p>
+              <a class="text-link" href="https://arxiv.org/abs/2607.17598">He et al., 2026</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="system-label">Possible differentiators</p>
+            <h2>What could make Wooolfmesh different</h2>
+            <p>These ideas fit a local-first Studio better than a generic cloud chatbot.</p>
+          </div>
+          <div class="note-grid">
+            <article class="note-block reveal"><h2>Context admission</h2><p>Do not ask only what memory is similar. Ask what context is allowed and useful for this Studio, task, and action.</p></article>
+            <article class="note-block reveal"><h2>Resume anchors</h2><p>Every interruption or exit can leave a tiny durable checkpoint: current step, next action, blocker, and active evidence.</p></article>
+            <article class="note-block reveal"><h2>Learning on completion</h2><p>Convert finished work into one approved reusable lesson or procedure instead of expecting manual knowledge gardening.</p></article>
+            <article class="note-block reveal"><h2>Quiet proactive layer</h2><p>Suggestions wait for good moments. The system earns initiative through relevance and timing, not animation.</p></article>
+            <article class="note-block reveal"><h2>Local provenance</h2><p>Important memories can link back to the original Markdown note, artifact, decision, or Studio run. Local-first becomes a trust advantage, not only a privacy slogan.</p></article>
+            <article class="note-block reveal"><h2>Human posture, stable shell</h2><p>Thinking, collaborating, and delegating can change how AI behaves while the visible workspace remains familiar.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experiments">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="system-label">Next experiments</p>
+            <h2>Small tests before features</h2>
+            <p>We want evidence from real use before these ideas become permanent product surfaces.</p>
+          </div>
+          <div class="index-grid">
+            <article class="index-card reveal"><h2>Boundary suggestion test</h2><p>Show proactive suggestions only at reopen, completion, pause, or focus-end boundaries.</p><p><strong>Measure:</strong> accept rate, dismiss rate, interruption complaints.</p></article>
+            <article class="index-card reveal"><h2>Memory admission gate</h2><p>Rank memory by semantic relevance, then filter by Studio, provenance, task fit, and sensitivity.</p><p><strong>Measure:</strong> useful reuse, wrong-context retrieval, user corrections.</p></article>
+            <article class="index-card reveal"><h2>AI posture test</h2><p>Try three postures: Think, Collaborate, Run. Keep the Studio shell unchanged.</p><p><strong>Measure:</strong> wrong-autonomy events and number of manual corrections.</p></article>
+            <article class="index-card reveal"><h2>Completion distillation</h2><p>At meaningful completion, propose one lesson or reusable procedure with its source.</p><p><strong>Measure:</strong> approval rate and later reuse, not number of memories created.</p></article>
+            <article class="index-card reveal"><h2>Resume anchor test</h2><p>Capture exact current step, next action, blocker, and active source when leaving work.</p><p><strong>Measure:</strong> time to resume after one day and one week.</p></article>
+            <article class="index-card reveal"><h2>Context budget test</h2><p>Start AI with a compact Studio packet and load detailed sources only on demand.</p><p><strong>Measure:</strong> task success, source accuracy, latency, and context size.</p></article>
+          </div>
+          <div class="definition"><strong>Radar principle</strong>Good proactive software should feel prepared, not impatient. Good memory should feel relevant, not omniscient. Good AI should change how much work the user must do, not how many panels they must watch.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-shell">
+        <div class="footer-brand">
+          <strong>Wooolfmesh</strong>
+          <p>Local-first work studios for persistent context, useful memory, tasks, sources, AI assistance, and finished work.</p>
+          <p class="footer-small">Research Radar contains emerging hypotheses and should not be read as settled product or scientific claims.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/product/">Product</a><a href="/architecture/">Architecture</a><a href="/research/">Research</a><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a><a href="https://github.com/dkharlanau/work-os-local">GitHub</a>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/script.js"></script>
+  </body>
+</html>
