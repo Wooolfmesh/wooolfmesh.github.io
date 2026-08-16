@@ -1,6 +1,26 @@
 const navToggle = document.querySelector("[data-menu-toggle]");
 const navLinks = document.querySelector("[data-nav-links]");
 
+if (navLinks && !navLinks.querySelector('a[href="/research/"]')) {
+  const researchLink = document.createElement("a");
+  researchLink.href = "/research/";
+  researchLink.textContent = "Research";
+  if (window.location.pathname.startsWith("/research/")) {
+    researchLink.setAttribute("aria-current", "page");
+  }
+  const roadmapLink = navLinks.querySelector('a[href="/roadmap/"]');
+  navLinks.insertBefore(researchLink, roadmapLink ?? null);
+}
+
+const footerLinks = document.querySelector(".footer-links");
+if (footerLinks && !footerLinks.querySelector('a[href="/research/"]')) {
+  const researchFooterLink = document.createElement("a");
+  researchFooterLink.href = "/research/";
+  researchFooterLink.textContent = "Research";
+  const roadmapFooterLink = footerLinks.querySelector('a[href="/roadmap/"]');
+  footerLinks.insertBefore(researchFooterLink, roadmapFooterLink ?? null);
+}
+
 if (navToggle && navLinks) {
   navToggle.addEventListener("click", () => {
     const open = navLinks.classList.toggle("open");
