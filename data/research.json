@@ -79,6 +79,84 @@
       "source": "https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes"
     }
   ],
+  "frontier_radar": {
+    "page": "/research/radar/",
+    "principle": "Good proactive software should feel prepared, not impatient.",
+    "signals": [
+      {
+        "name": "Offer help before taking over",
+        "priority": "P0",
+        "evidence_level": "strong_signal",
+        "finding": "CHIWORK 2026 experiments found that unsolicited anticipatory AI help could increase self-threat and reduce willingness to accept help or use the system again.",
+        "product_implication": "Proactive AI should usually offer a small suggestion before acting automatically unless the action is low-risk and explicitly pre-approved.",
+        "source": "https://doi.org/10.1145/3808045.3808054"
+      },
+      {
+        "name": "Intervene at workflow boundaries",
+        "priority": "P0",
+        "evidence_level": "emerging",
+        "finding": "A 2026 field study of proactive developer assistance found higher engagement at workflow boundaries and frequent dismissal for mid-task interventions.",
+        "product_implication": "Prefer suggestions at reopen, completion, pause, focus-end, blocker creation, or other natural boundaries.",
+        "source": "https://arxiv.org/abs/2601.10253"
+      },
+      {
+        "name": "Recovery is part of interruption design",
+        "priority": "P0",
+        "evidence_level": "strong_signal",
+        "finding": "CHIWORK 2026 studied how activity context, timing, and individual differences shape perceived interruptibility and behavioral recovery.",
+        "product_implication": "Preserve a resume anchor whenever work is interrupted: current step, next action, blocker, and active evidence.",
+        "source": "https://doi.org/10.1145/3808045.3808048"
+      },
+      {
+        "name": "Memory admission gate",
+        "priority": "P0",
+        "evidence_level": "emerging",
+        "finding": "2026 research shows that semantic similarity can retrieve contextually inappropriate long-term memory that changes later agent behavior.",
+        "product_implication": "Filter candidate memory by Studio scope, provenance, sensitivity, age, task fit, and allowed use before it reaches model context.",
+        "source": "https://arxiv.org/abs/2606.06054"
+      },
+      {
+        "name": "Ground truth under summaries",
+        "priority": "P1",
+        "evidence_level": "emerging",
+        "finding": "MemMachine reports benefits from preserving full episodes and improving retrieval rather than relying only on lossy extracted memory.",
+        "product_implication": "Treat summaries and context packets as views over durable source material and preserve traceability back to the original artifact or event.",
+        "source": "https://arxiv.org/abs/2604.04853"
+      },
+      {
+        "name": "AI posture by task",
+        "priority": "P1",
+        "evidence_level": "product_signal",
+        "finding": "Microsoft's 2026 Work Trend Index describes multiple patterns of human-AI work and emphasizes choosing the right pattern for the task.",
+        "product_implication": "Support a small set of AI postures such as Think, Collaborate, and Run without changing the Studio layout.",
+        "source": "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization"
+      },
+      {
+        "name": "Completion creates reusable learning",
+        "priority": "P1",
+        "evidence_level": "product_signal",
+        "finding": "Microsoft frames strong AI-enabled organizations as learning systems that turn work output into reusable insight.",
+        "product_implication": "At meaningful completion, propose one sourced lesson, decision, preference, or reusable procedure for approval into memory.",
+        "source": "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization"
+      },
+      {
+        "name": "Context is a budget",
+        "priority": "P1",
+        "evidence_level": "emerging",
+        "finding": "Recent 2026 agent research suggests one useful layer of progressive disclosure can reduce context cost as knowledge collections grow.",
+        "product_implication": "Give AI a compact Studio catalog first and open detailed sources only when the current step needs them.",
+        "source": "https://arxiv.org/abs/2607.17598"
+      }
+    ],
+    "experiments": [
+      "boundary-only proactive suggestions",
+      "task-conditioned memory admission",
+      "Think / Collaborate / Run AI posture",
+      "completion distillation into one approved lesson",
+      "automatic resume anchors",
+      "progressive context loading"
+    ]
+  },
   "evidence": [
     {
       "topic": "Progressive disclosure in generative AI search",
@@ -187,7 +265,9 @@
     "permanent memory feeds",
     "agent theatre",
     "single productivity scores",
-    "a separate dashboard for every capability"
+    "a separate dashboard for every capability",
+    "unsolicited proactive help in the middle of focused work",
+    "semantic-similarity-only memory retrieval"
   ],
   "research_backlog": [
     "24-hour Studio restart test",
@@ -197,6 +277,10 @@
     "task-shaped source shelf",
     "risk-based autonomy",
     "local-first context packet quality",
-    "measure useful work completed rather than AI activity"
+    "measure useful work completed rather than AI activity",
+    "boundary-only proactive suggestions",
+    "memory admission gate",
+    "completion distillation",
+    "AI posture without layout changes"
   ]
 }
