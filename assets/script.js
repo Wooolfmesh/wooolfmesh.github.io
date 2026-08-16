@@ -21,6 +21,17 @@ if (footerLinks && !footerLinks.querySelector('a[href="/research/"]')) {
   footerLinks.insertBefore(researchFooterLink, roadmapFooterLink ?? null);
 }
 
+if (window.location.pathname === "/research/" || window.location.pathname === "/research/index.html") {
+  const actions = document.querySelector(".page-hero .page-actions");
+  if (actions && !actions.querySelector('a[href="/research/radar/"]')) {
+    const radarLink = document.createElement("a");
+    radarLink.className = "button";
+    radarLink.href = "/research/radar/";
+    radarLink.textContent = "Research Radar";
+    actions.appendChild(radarLink);
+  }
+}
+
 if (navToggle && navLinks) {
   navToggle.addEventListener("click", () => {
     const open = navLinks.classList.toggle("open");
