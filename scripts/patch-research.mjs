@@ -4,6 +4,7 @@ import path from "node:path";
 const site = "https://wooolfmesh.github.io";
 const researchPath = "/research/";
 const researchUrl = `${site}${researchPath}`;
+const radarUrl = `${site}/research/radar/`;
 const today = new Date().toISOString().slice(0, 10);
 
 async function patchHtmlTree(directory = ".") {
@@ -36,22 +37,35 @@ async function patchHtmlTree(directory = ".") {
 async function patchSitemap() {
   const file = "sitemap.xml";
   let sitemap = await readFile(file, "utf8");
-  if (sitemap.includes(`<loc>${researchUrl}</loc>`)) return;
 
-  const entry = `  <url><loc>${researchUrl}</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n`;
-  sitemap = sitemap.replace("</urlset>", `${entry}</urlset>`);
+  if (!sitemap.includes(`<loc>${researchUrl}</loc>`)) {
+    const entry = `  <url><loc>${researchUrl}</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n`;
+    sitemap = sitemap.replace("</urlset>", `${entry}</urlset>`);
+  }
+
+  if (!sitemap.includes(`<loc>${radarUrl}</loc>`)) {
+    const entry = `  <url><loc>${radarUrl}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
+    sitemap = sitemap.replace("</urlset>", `${entry}</urlset>`);
+  }
+
   await writeFile(file, sitemap);
 }
 
 async function patchLlms() {
   const file = "llms.txt";
   let text = await readFile(file, "utf8");
-  if (text.includes(`[Research](${researchUrl})`)) return;
-
-  text = text.replace(
-    `- [Guides](${site}/guides/)`,
-    `- [Guides](${site}/guides/)\n- [Research](${researchUrl})`,
-  );
+  if (!text.includes(`[Research](${researchUrl})`)) {
+    text = text.replace(
+      `- [Guides](${site}/guides/)`,
+      `- [Guides](${site}/guides/)\n- [Research](${researchUrl})`,
+    );
+  }
+  if (!text.includes(`[Research Radar](${radarUrl})`)) {
+    text = text.replace(
+      `- [Research](${researchUrl})`,
+      `- [Research](${researchUrl})\n- [Research Radar](${radarUrl})`,
+    );
+  }
   await writeFile(file, text);
 }
 
