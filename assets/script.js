@@ -27,6 +27,12 @@ const researchRoot =
 const researchRadar =
   window.location.pathname === "/research/radar/" ||
   window.location.pathname === "/research/radar/index.html";
+const researchMechanics =
+  window.location.pathname === "/research/mechanics/" ||
+  window.location.pathname === "/research/mechanics/index.html";
+const researchBlueprint =
+  window.location.pathname === "/research/blueprint/" ||
+  window.location.pathname === "/research/blueprint/index.html";
 
 if (researchRoot) {
   const actions = document.querySelector(".page-hero .page-actions");
@@ -47,6 +53,28 @@ if (researchRoot || researchRadar) {
     mechanicsLink.href = "/research/mechanics/";
     mechanicsLink.textContent = "Studio Mechanics";
     actions.appendChild(mechanicsLink);
+  }
+}
+
+if (researchRoot || researchRadar || researchMechanics) {
+  const actions = document.querySelector(".page-hero .page-actions");
+  if (actions && !actions.querySelector('a[href="/research/blueprint/"]')) {
+    const blueprintLink = document.createElement("a");
+    blueprintLink.className = "button";
+    blueprintLink.href = "/research/blueprint/";
+    blueprintLink.textContent = "Product Blueprint";
+    actions.appendChild(blueprintLink);
+  }
+}
+
+if (researchBlueprint) {
+  const footer = document.querySelector(".footer-links");
+  if (footer && !footer.querySelector('a[href="/research/blueprint/"]')) {
+    const blueprintFooterLink = document.createElement("a");
+    blueprintFooterLink.href = "/research/blueprint/";
+    blueprintFooterLink.textContent = "Product Blueprint";
+    const roadmapFooterLink = footer.querySelector('a[href="/roadmap/"]');
+    footer.insertBefore(blueprintFooterLink, roadmapFooterLink ?? null);
   }
 }
 
