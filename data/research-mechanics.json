@@ -1,0 +1,82 @@
+{
+  "updated": "2026-08-17",
+  "theme": "Studio Mechanics",
+  "principle": "A smart Studio spends the user's attention only where attention changes the outcome.",
+  "behavioral_loop": ["observe", "decide", "act", "check", "recover", "learn"],
+  "mechanics": [
+    {
+      "name": "Adaptive checkpoints",
+      "priority": "P0",
+      "idea": "Confirm at meaningful branch points instead of every step or only at the end.",
+      "signals": ["risk", "irreversibility", "uncertainty", "novelty", "chain depth", "recoverability"],
+      "source": "https://doi.org/10.1145/3772318.3790655"
+    },
+    {
+      "name": "Goldilocks transparency",
+      "priority": "P0",
+      "idea": "Show enough process visibility for the task and user, but do not maximize transparency by default.",
+      "source": "https://doi.org/10.1145/3772318.3791157"
+    },
+    {
+      "name": "Uncertainty changes behavior",
+      "priority": "P0",
+      "idea": "Use uncertainty to trigger verify, ask, draft-only, review, or stop behaviors rather than relying on confidence meters alone.",
+      "source": "https://doi.org/10.1016/j.chbah.2026.100307"
+    },
+    {
+      "name": "Memory lifecycle",
+      "priority": "P0",
+      "idea": "Memories can be active, uncertain, superseded, or archived and carry temporal validity metadata.",
+      "source": "https://arxiv.org/abs/2605.06527"
+    },
+    {
+      "name": "Memory outcome feedback",
+      "priority": "P0",
+      "idea": "Later task success, failure, contradiction, and usefulness can increase or reduce trust in stored experience.",
+      "source": "https://aclanthology.org/2026.acl-long.27/"
+    },
+    {
+      "name": "Pack context for purpose",
+      "priority": "P1",
+      "idea": "Keep full private memory local and prepare the smallest relevant safe context packet for hosted reasoning.",
+      "source": "https://proceedings.mlr.press/v317/wu26a.html"
+    },
+    {
+      "name": "Compact provenance trail",
+      "priority": "P1",
+      "idea": "Important results expose the source, memory, tool, or decision lineage that materially caused them without dumping raw traces.",
+      "source": "https://arxiv.org/abs/2606.04990"
+    },
+    {
+      "name": "Recovery-first execution",
+      "priority": "P1",
+      "idea": "Durable actions prefer preview, snapshots, reversible mutation, and visible undo or retry paths.",
+      "source": "https://arxiv.org/abs/2604.05485"
+    },
+    {
+      "name": "External interface checkpointing",
+      "priority": "P2",
+      "idea": "Unexpected consent, fees, permissions, disclosure, destructive actions, or goal changes create checkpoints for GUI agents.",
+      "source": "https://doi.org/10.1145/3772318.3791568"
+    }
+  ],
+  "memory_metadata_hypothesis": [
+    "valid_from",
+    "valid_until",
+    "last_verified",
+    "volatility_class",
+    "provenance",
+    "authority",
+    "scope",
+    "outcome_feedback",
+    "supersession_history"
+  ],
+  "experiments": [
+    "dynamic checkpoint pressure versus confirm-everything and confirm-at-end",
+    "uncertainty-to-action rules versus confidence badges",
+    "stale-memory supersession challenge",
+    "downstream outcome labels for memory quality",
+    "purpose-built context packets for hosted AI",
+    "recovery drill after an injected wrong intermediate action"
+  ]
+}
