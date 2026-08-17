@@ -21,7 +21,14 @@ if (footerLinks && !footerLinks.querySelector('a[href="/research/"]')) {
   footerLinks.insertBefore(researchFooterLink, roadmapFooterLink ?? null);
 }
 
-if (window.location.pathname === "/research/" || window.location.pathname === "/research/index.html") {
+const researchRoot =
+  window.location.pathname === "/research/" ||
+  window.location.pathname === "/research/index.html";
+const researchRadar =
+  window.location.pathname === "/research/radar/" ||
+  window.location.pathname === "/research/radar/index.html";
+
+if (researchRoot) {
   const actions = document.querySelector(".page-hero .page-actions");
   if (actions && !actions.querySelector('a[href="/research/radar/"]')) {
     const radarLink = document.createElement("a");
@@ -29,6 +36,17 @@ if (window.location.pathname === "/research/" || window.location.pathname === "/
     radarLink.href = "/research/radar/";
     radarLink.textContent = "Research Radar";
     actions.appendChild(radarLink);
+  }
+}
+
+if (researchRoot || researchRadar) {
+  const actions = document.querySelector(".page-hero .page-actions");
+  if (actions && !actions.querySelector('a[href="/research/mechanics/"]')) {
+    const mechanicsLink = document.createElement("a");
+    mechanicsLink.className = "button";
+    mechanicsLink.href = "/research/mechanics/";
+    mechanicsLink.textContent = "Studio Mechanics";
+    actions.appendChild(mechanicsLink);
   }
 }
 
