@@ -9,6 +9,7 @@ Wooolfmesh is local-first, Markdown-friendly, and human-controlled. Important AI
 ## Current product direction
 
 - Studios, not dashboards.
+- Studio is currently a user-facing product concept over the existing Project scope plus the current Work Thread and contextual layers. A new canonical Studio entity is not required for the first implementation.
 - The work artifact or task is the primary surface.
 - AI, memory, sources, task state, and run history are contextual layers.
 - Studio context is bounded and inspectable.
@@ -19,6 +20,27 @@ Wooolfmesh is local-first, Markdown-friendly, and human-controlled. Important AI
 - Uncertainty should change system behavior, not only produce a confidence badge.
 - Important agent actions should have enough provenance and recovery information to explain and undo them.
 - Finished work should be able to produce approved reusable lessons for future work.
+- The intended daily product model is Studios, Memory, and Settings. Specialist routes may remain compatible while their useful capabilities move into contextual Studio layers.
+
+## Product blueprint
+
+The current repository already contains Projects, derived Work Threads, tasks, focus, memory, cognitive bites, links, conversations, routines, Obsidian context, project context packs, decision context, local learning feedback, Hermes, DIAL, and deterministic fallback behavior. The current product problem is primarily experience duplication and surface complexity, not absence of capabilities.
+
+The Product Blueprint therefore recommends reuse before rewrite:
+
+- Projects become the durable scope behind the user-facing Studio concept.
+- Workspace becomes the thin Studio shell rather than a multi-mode control room.
+- The separate Project workbench is gradually absorbed into Studio as contextual depth.
+- Tasks become current thread and compact Studio steps; detailed task routes remain secondary.
+- Focus becomes a state of the current thread rather than a separate mode in normal work.
+- Reviews become closeout and deliberate reflection first, specialist records second.
+- Memory and cognitive bites share one contextual daily retrieval experience while preserving existing formats.
+- Chats and prompts support the optional AI sidecar rather than competing as daily destinations.
+- Quick Links and Obsidian context become a task-shaped Sources shelf.
+- Routines and agent execution become Studio-local Runs; global automation is advanced or troubleshooting depth.
+- Signals, readiness, analytics, and provenance should usually inform the Studio underneath and surface only when they change a decision.
+
+The north-star interaction is: Open Studio → understand goal and state → continue one useful action → use context or AI only when needed → leave a resume anchor → return later without rebuilding the work in your head.
 
 ## Canonical links
 
@@ -28,6 +50,7 @@ Wooolfmesh is local-first, Markdown-friendly, and human-controlled. Important AI
 - [Research](https://wooolfmesh.github.io/research/)
 - [Research Radar](https://wooolfmesh.github.io/research/radar/)
 - [Studio Mechanics](https://wooolfmesh.github.io/research/mechanics/)
+- [Product Blueprint](https://wooolfmesh.github.io/research/blueprint/)
 - [Roadmap](https://wooolfmesh.github.io/roadmap/)
 - [Guides](https://wooolfmesh.github.io/guides/)
 - [Privacy](https://wooolfmesh.github.io/privacy/)
@@ -43,10 +66,13 @@ The Research Radar contains newer and more experimental 2026 signals. Important 
 
 Studio Mechanics focuses on behavior rather than surface design. Current hypotheses include adaptive confirmation checkpoints, context-sensitive transparency, uncertainty-to-action rules, memory validity and supersession, downstream memory quality feedback, purpose-built private context packets, compact execution provenance, and recovery-first actions.
 
+The Product Blueprint maps those research principles onto the current repository and proposes a staged migration to one Studio shell without introducing a parallel canonical storage model.
+
 ## Machine-readable files
 
 - [Research data](https://wooolfmesh.github.io/data/research.json)
 - [Studio Mechanics data](https://wooolfmesh.github.io/data/research-mechanics.json)
+- [Product Blueprint data](https://wooolfmesh.github.io/data/research-blueprint.json)
 - [Product data](https://wooolfmesh.github.io/data/product.json)
 - [Roadmap data](https://wooolfmesh.github.io/data/roadmap.json)
 - [Releases data](https://wooolfmesh.github.io/data/releases.json)
