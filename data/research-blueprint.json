@@ -1,0 +1,68 @@
+{
+  "updated": "2026-08-17",
+  "theme": "Studios product blueprint",
+  "principle": "Build the new user experience from existing project, work-thread, task, memory, focus, source and AI capabilities before creating new canonical entities.",
+  "product_shape": {
+    "primary_destinations": ["Studios", "Memory", "Settings"],
+    "studio_internal_mapping": "Existing Project scope plus current Work Thread and contextual layers",
+    "new_studio_entity": false,
+    "compatibility_rule": "Keep current Project IDs, Markdown formats, WORKOS naming and specialist routes during migration."
+  },
+  "studio_shell": [
+    "goal",
+    "resume_anchor",
+    "main_artifact_or_current_thread",
+    "next_action",
+    "compact_task_drawer",
+    "context_shelf",
+    "optional_AI_sidecar",
+    "inline_focus_state",
+    "closeout",
+    "studio_local_runs"
+  ],
+  "capability_mapping": [
+    {"from": "Projects", "to": "Studios", "treatment": "Reuse Project as durable scope; replace separate project workbench over time."},
+    {"from": "Workspace", "to": "Studio home/shell", "treatment": "Keep derived Work Thread but remove mode bar, graph, permanent queue and competing workbench layers."},
+    {"from": "Tasks", "to": "Studio steps and current thread", "treatment": "Keep detailed editor as secondary route."},
+    {"from": "Focus", "to": "Thread state", "treatment": "Keep service and fallback route; primary controls stay inline."},
+    {"from": "Reviews", "to": "Closeout and deliberate reflection", "treatment": "Keep durable review records as secondary depth."},
+    {"from": "Memory + Cognitive Bites", "to": "One contextual Memory layer", "treatment": "Preserve formats; unify daily retrieval UX."},
+    {"from": "Chats + Prompts", "to": "AI sidecar and Studio instructions", "treatment": "Keep full libraries secondary."},
+    {"from": "Quick Links + Obsidian context", "to": "Sources shelf", "treatment": "Preserve provenance and original source access."},
+    {"from": "Routines + Agents", "to": "Studio-local Runs", "treatment": "Global automation stays troubleshooting/advanced."},
+    {"from": "Signals + Readiness + Analytics", "to": "Background signals", "treatment": "Use underneath ranking/intervention; surface only when a decision needs them."},
+    {"from": "Provenance", "to": "Why this? trail", "treatment": "Contextual verification, not a daily destination."},
+    {"from": "Batches", "to": "Advanced execution", "treatment": "Keep outside default Studio grammar until repeated real use proves value."}
+  ],
+  "service_responsibilities": [
+    {"name": "Context Compiler", "purpose": "Build the smallest useful Studio context packet from existing services."},
+    {"name": "Memory Governor", "purpose": "Admit, rank, verify, supersede and forget memory."},
+    {"name": "Attention Governor", "purpose": "Decide whether a signal or suggestion deserves visible attention now."},
+    {"name": "Action Governor", "purpose": "Decide whether work can continue, needs preview, or needs a checkpoint."},
+    {"name": "Recovery Ledger", "purpose": "Keep enough provenance, snapshots and outcomes to explain, undo, retry and resume."}
+  ],
+  "implementation_sequence": [
+    {"slice": 1, "name": "Define Studio without new storage", "goal": "Document Studio as Project scope + Work Thread + contextual layers."},
+    {"slice": 2, "name": "Build one thin Studio shell", "goal": "Goal, resume anchor, current artifact/thread, next action and one contextual drawer."},
+    {"slice": 3, "name": "Absorb Project workbench", "goal": "Move context pack, Obsidian context, decision context, intervention and trail into optional Studio layers."},
+    {"slice": 4, "name": "Compress task execution", "goal": "Capture, clarify, Focus, interruption parking, closeout and next-action handoff become one continuous flow."},
+    {"slice": 5, "name": "Add Context Compiler", "goal": "Return one Studio context response rather than assembling many independent queries in the frontend."},
+    {"slice": 6, "name": "Add AI sidecar", "goal": "Hermes/DIAL use the same context packet; AI-disabled remains first-class."},
+    {"slice": 7, "name": "Hide secondary product grammar", "goal": "Remove old areas from normal navigation after contextual entry points exist."},
+    {"slice": 8, "name": "Dogfood restart loop", "goal": "Measure 24-hour resume time, navigation decisions and closeout quality."}
+  ],
+  "remove_from_main_experience": [
+    "Workspace mode bar",
+    "relationship graph by default",
+    "permanent work queue",
+    "permanent recommendation-training panel",
+    "duplicate Project workbench",
+    "AI as a separate product area"
+  ],
+  "north_star_interaction": "Open Studio -> understand goal and state -> continue one useful action -> use context or AI only when needed -> leave a resume anchor -> return later without rebuilding the work in your head.",
+  "research_sources": [
+    "https://www.microsoft.com/en-us/research/publication/goals-as-first-class-abstractions-in-human-ai-collaboration/",
+    "https://www.microsoft.com/en-us/research/blog/from-raw-interaction-to-reusable-knowledge-rethinking-memory-for-ai-agents/",
+    "https://proceedings.mlr.press/v317/wu26a.html"
+  ]
+}
