@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Blueprint | Wooolfmesh</title>
+    <meta name="description" content="A project-specific blueprint for simplifying Wooolfmesh into local-first work Studios using the capabilities already present in the product repository.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Wooolfmesh team">
+    <link rel="canonical" href="https://wooolfmesh.github.io/research/blueprint/">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <meta name="theme-color" content="#f4f2ec">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Wooolfmesh Product Blueprint","url":"https://wooolfmesh.github.io/research/blueprint/","description":"A project-specific blueprint for simplifying Wooolfmesh into local-first work Studios using existing project, task, memory, focus, context and AI capabilities.","inLanguage":"en","datePublished":"2026-08-17","dateModified":"2026-08-17"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="Wooolfmesh home"><img src="/assets/wooolfmesh.png" alt="">Wooolfmesh</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu"><span></span></button>
+        <div class="nav-links" data-nav-links>
+          <a href="/product/">Product</a><a href="/architecture/">Architecture</a><a href="/research/" aria-current="page">Research</a><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero compact">
+        <div class="shell reveal">
+          <p class="system-label">Product Blueprint / August 2026</p>
+          <h1>Build the new product from what already works</h1>
+          <p class="lead">Wooolfmesh does not need another large architecture pivot. The repository already contains the main capabilities for the Studios model. The next job is product compression: keep the data and services, remove competing surfaces, and make one calm Studio shell the normal way to work.</p>
+          <div class="page-actions"><a class="button primary" href="#shape">Product shape</a><a class="button" href="#mapping">Capability map</a><a class="button" href="#sequence">Build sequence</a><a class="button" href="/data/research-blueprint.json">Blueprint data</a></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell content-grid">
+          <div class="content-flow">
+            <section>
+              <h2>The key repository finding</h2>
+              <p>The current code already has Projects, Work Threads, tasks, memory scoped by project, focus sessions, links, conversations, routines, Obsidian context, context packs, decision context, intervention suggestions, local learning feedback, Hermes, DIAL, and deterministic fallback behavior.</p>
+              <p>At the same time, the frontend still exposes many route families and two very large work surfaces: the main Workspace page and the Project workbench. Both try to organize the same underlying work from different angles.</p>
+            </section>
+            <section>
+              <h2>Therefore: do not invent a Studio entity yet</h2>
+              <p><strong>Studio should first be a product view over the existing Project scope.</strong> Keep the internal Project model and Markdown formats for compatibility. Use “Studio” as the user-facing concept. A Work Thread is the current active thread inside that Studio.</p>
+              <p>This gives the product a major UX change without introducing a new Markdown entity family, migration, sync rule, or parallel canonical model.</p>
+            </section>
+          </div>
+          <aside class="sidebar-box">
+            <h2>Compression rule</h2>
+            <p>If two pages explain the same work with different controls, merge the capability before adding another abstraction.</p>
+            <p>If a capability is useful only occasionally, keep it contextual or secondary.</p>
+            <p>If a capability can be inferred or derived, do not make the user manage it as another object.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="shape">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="system-label">Target product</p>
+            <h2>Three destinations, one work grammar</h2>
+            <p>The product can become much smaller without deleting the underlying capabilities.</p>
+          </div>
+          <div class="index-grid">
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">Primary</span></div>
+              <h2>Studios</h2>
+              <p>The normal place to work. Open a Studio, see the goal, resume point, current thread, artifact, and next action. Tasks, sources, memory, Focus, AI and runs appear only when relevant.</p>
+              <p><strong>Internal mapping:</strong> existing Project scope + Work Thread. Keep current IDs and Markdown compatibility.</p>
+            </article>
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">Primary</span></div>
+              <h2>Memory</h2>
+              <p>A global place to search, inspect, correct, pin, archive and understand durable memory. Normal memory reuse still happens quietly inside Studios.</p>
+              <p><strong>Rule:</strong> Memory is a library and trust surface, not a feed the user must process every day.</p>
+            </article>
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">Primary</span></div>
+              <h2>Settings</h2>
+              <p>Vaults, Hermes or DIAL, permissions, diagnostics, backup, integrations and advanced system controls. These belong outside the daily work loop.</p>
+              <p><strong>Rule:</strong> system complexity may exist, but it should not leak into the normal Studio experience.</p>
+            </article>
+          </div>
+          <div class="definition"><strong>Navigation hypothesis</strong>Show Studios, Memory and Settings as the stable top-level model. Keep specialist routes compatible, but stop teaching them as equal product areas.</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="system-label">Studio shell</p>
+            <h2>What one Studio should contain</h2>
+            <p>One stable shell can support research, planning, coding, writing, analysis and personal execution without changing the product grammar.</p>
+          </div>
+          <div class="note-grid">
+            <article class="note-block reveal"><h2>1. Goal</h2><p>A short statement of what this Studio is trying to achieve. Microsoft Research argues that goals should become first-class abstractions in human-AI collaboration because planning, orchestration and evaluation all depend on them.</p><a class="text-link" href="https://www.microsoft.com/en-us/research/publication/goals-as-first-class-abstractions-in-human-ai-collaboration/">Microsoft Research, 2026</a></article>
+            <article class="note-block reveal"><h2>2. Resume anchor</h2><p>Last meaningful outcome, exact next action, blocker and active source. This should be more prominent than analytics, history or project health.</p></article>
+            <article class="note-block reveal"><h2>3. Main artifact</h2><p>The thing being worked on: a task, plan, note, report, checklist, analysis or linked external artifact. The artifact wins the visual hierarchy.</p></article>
+            <article class="note-block reveal"><h2>4. Thread</h2><p>The current Work Thread provides the next action and execution state. Other project tasks live behind a compact task drawer instead of becoming a permanent queue.</p></article>
+            <article class="note-block reveal"><h2>5. Context shelf</h2><p>Sources, one to three admitted memories, decisions and relevant Obsidian notes. Show why each item is present. Do not dump raw retrieval results into the work surface.</p></article>
+            <article class="note-block reveal"><h2>6. AI sidecar</h2><p>Optional and collapsible. It works with the current Studio context and can Think, Collaborate or Run. Provider choice stays in Settings and does not change the Studio model.</p></article>
+            <article class="note-block reveal"><h2>7. Focus state</h2><p>Focus is not a page or mode inside the Studio. It is a temporary state of the current thread: protect work, park interruptions, then leave a resume anchor.</p></article>
+            <article class="note-block reveal"><h2>8. Closeout</h2><p>Finish with outcome, next action and optionally one reusable lesson. Reviews become a closeout behavior first and a specialist record second.</p></article>
+            <article class="note-block reveal"><h2>9. Runs</h2><p>Routines and agent work appear as small Studio-local runs: last result, next run, exception and history. A global automation view remains a troubleshooting tool.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="mapping">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="system-label">Reuse before rewrite</p>
+            <h2>Map existing capabilities into the Studio</h2>
+            <p>The important change is where a capability appears, not whether its backend still exists.</p>
+          </div>
+          <div class="index-grid">
+            <article class="index-card reveal"><h2>Projects → Studios</h2><p>Use Project as the durable scope. Replace the separate project workbench experience with the Studio shell over time. Keep `/projects/*` as compatibility or specialist routes during migration.</p></article>
+            <article class="index-card reveal"><h2>Workspace → Studio home</h2><p>The current Workspace already derives a Work Thread without a new canonical entity. Keep that principle, but remove mode bars, relationship graph, permanent queue and competing workbench layers.</p></article>
+            <article class="index-card reveal"><h2>Tasks → Studio steps</h2><p>Keep the task model and detailed editor. Inside a Studio, expose only current thread, next action, blockers and a compact list when needed.</p></article>
+            <article class="index-card reveal"><h2>Focus → Thread state</h2><p>Keep existing focus services and fallback route. Primary controls stay inline with current work.</p></article>
+            <article class="index-card reveal"><h2>Reviews → Closeout + reflection</h2><p>Use the existing review records and generation logic, but make the normal entry point the end of work or a deliberate weekly reflection.</p></article>
+            <article class="index-card reveal"><h2>Memory + Bites → one retrieval layer</h2><p>Keep both internal formats while daily UX says Memory. Lessons, facts, preferences and procedures return through the same contextual retrieval surface.</p></article>
+            <article class="index-card reveal"><h2>Chats + Prompts → AI sidecar</h2><p>Conversation history and reusable instructions should support a Studio. They do not need equal navigation status. Full libraries remain secondary.</p></article>
+            <article class="index-card reveal"><h2>Quick Links + Obsidian → Sources</h2><p>Unify active links, local notes and external references into one contextual source shelf. Preserve original provenance and open the source when trust matters.</p></article>
+            <article class="index-card reveal"><h2>Routines + Agents → Runs</h2><p>Keep scheduling, proposals and execution services. Normal users see runs in the Studio they serve, not a separate automation universe.</p></article>
+            <article class="index-card reveal"><h2>Signals + Readiness + Analytics → background signals</h2><p>These may inform ranking or intervention underneath the UI. Do not expose a permanent panel unless dogfooding proves a repeated decision that needs it.</p></article>
+            <article class="index-card reveal"><h2>Provenance → “Why this?”</h2><p>Do not make provenance a daily destination. Surface compact lineage where a result, memory or action needs verification.</p></article>
+            <article class="index-card reveal"><h2>Batches → advanced execution</h2><p>Preserve for bulk work, but keep it outside the default Studio grammar until repeated real use proves otherwise.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell content-grid">
+          <div class="content-flow">
+            <section>
+              <h2>The backend should become more coherent, not larger</h2>
+              <p>Rather than adding another “Studio service”, compose a small Studio read model from existing services. The current Work overview already proves the pattern: it derives a provider-independent Work Thread from existing task and focus data without creating a parallel canonical entity.</p>
+              <p>Project context packs, decision context, Obsidian retrieval and work feedback can become inputs to one context compiler. The frontend should not independently query every capability and assemble a mini operating system inside one React page.</p>
+            </section>
+            <section>
+              <h2>Recommended internal capability boundaries</h2>
+              <p><strong>Context Compiler:</strong> creates the smallest useful Studio context packet.</p>
+              <p><strong>Memory Governor:</strong> admits, ranks, verifies, supersedes and forgets memory.</p>
+              <p><strong>Attention Governor:</strong> decides whether a suggestion deserves visible attention now.</p>
+              <p><strong>Action Governor:</strong> decides whether work can continue, needs preview, or needs a checkpoint.</p>
+              <p><strong>Recovery Ledger:</strong> keeps enough provenance, snapshots and outcomes to explain, undo, retry and resume.</p>
+            </section>
+          </div>
+          <aside class="sidebar-box">
+            <h2>Important restraint</h2>
+            <p>These are service responsibilities, not five new screens and not necessarily five new classes on day one.</p>
+            <p>Start by extracting duplicated orchestration from Workspace and Project workbench into narrow read models and policies.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="sequence">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="system-label">Implementation</p>
+            <h2>Build sequence</h2>
+            <p>The order matters. First remove product ambiguity, then make the intelligence deeper.</p>
+          </div>
+          <div class="index-grid">
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge partial">Slice 1</span></div><h2>Define Studio without new storage</h2><p>Document Studio = Project scope + current Work Thread + contextual layers. Keep Project IDs, Markdown and APIs. Add no new entity family.</p></article>
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge partial">Slice 2</span></div><h2>Build one thin Studio shell</h2><p>Start with goal, resume anchor, current artifact/thread, next action and one contextual drawer. Reuse current services. No graph, mode bar or permanent queue.</p></article>
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge partial">Slice 3</span></div><h2>Absorb Project workbench</h2><p>Move context pack, Obsidian context, decision context, project intervention and work trail into the Studio shell as optional layers. Stop developing a second full work surface.</p></article>
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge partial">Slice 4</span></div><h2>Compress task execution</h2><p>Task capture, clarification, Focus, interruption parking, closeout and next-action handoff become one continuous thread flow.</p></article>
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge partial">Slice 5</span></div><h2>Add Context Compiler</h2><p>Return one Studio context response: goal, state, resume anchor, sources, admitted memory, active runs and explanation of why each contextual item matters.</p></article>
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge optional">Slice 6</span></div><h2>Add AI sidecar</h2><p>Hermes or DIAL use the same context packet. AI disabled remains a valid state. Start with Think and Collaborate; add Run only for bounded actions with existing preview and recovery rules.</p></article>
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge optional">Slice 7</span></div><h2>Hide secondary product grammar</h2><p>Remove old areas from normal navigation one by one after their useful entry points exist in Studios. Keep redirects and specialist routes during the compatibility window.</p></article>
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge optional">Slice 8</span></div><h2>Dogfood the restart loop</h2><p>Measure whether a person can open a Studio after 24 hours, understand state in seconds, continue without searching old pages, and close work with a useful resume trail.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="system-label">What to remove from the main experience</p>
+            <h2>The deletion list matters as much as the feature list</h2>
+            <p>The following concepts can still exist internally or in specialist routes. They should not define the daily product.</p>
+          </div>
+          <div class="note-grid">
+            <article class="note-block reveal"><h2>No Workspace modes</h2><p>Flow, Routines, Batches, Focus and Review should not be five different ways to reinterpret the same page. They become contextual states or tools.</p></article>
+            <article class="note-block reveal"><h2>No relationship graph by default</h2><p>A graph can remain a Lab or diagnostic view. It should not sit between the user and the next action.</p></article>
+            <article class="note-block reveal"><h2>No permanent work queue</h2><p>Show current work first. Other tasks appear when the user switches thread or opens the task drawer.</p></article>
+            <article class="note-block reveal"><h2>No recommendation training UI in the main column</h2><p>Learning from corrections is useful, but it should happen through lightweight feedback and later reviewable proposals, not a permanent “improve future recommendations” section.</p></article>
+            <article class="note-block reveal"><h2>No duplicate project dashboard</h2><p>Project health, context, intervention and work trail become Studio context. One project should not require both Project Workbench and Workspace to understand it.</p></article>
+            <article class="note-block reveal"><h2>No “AI feature area”</h2><p>Hermes and DIAL are infrastructure choices. AI appears beside the work when useful, while deterministic retrieval and manual execution remain first-class.</p></article>
+          </div>
+          <div class="definition"><strong>North-star interaction</strong>Open Studio → understand goal and state → continue one useful action → use context or AI only when needed → leave a resume anchor → return later without rebuilding the work in your head.</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell content-grid">
+          <div class="content-flow">
+            <section>
+              <h2>Why this direction fits current research</h2>
+              <p>Recent human-AI research is increasingly interested in explicit goals, persistent common ground, bounded context, reusable structured memory and collaboration that remains steerable over time. These ideas fit the repository better than another set of independent AI widgets.</p>
+              <p>Microsoft Research argues for goals as first-class abstractions in human-AI collaboration. PlugMem explores turning raw interaction history into structured reusable knowledge instead of repeatedly retrieving long raw histories. Agent-Memory Protocol proposes purpose-built context packing at the privacy boundary.</p>
+            </section>
+            <section>
+              <h2>What we should test before making it architecture</h2>
+              <p>Studio as the user-facing name for Project; goal visibility; one-context-response orchestration; task drawer instead of queue; contextual memory limit; AI sidecar; runs inside Studio; and 24-hour restart performance.</p>
+              <p>If these do not reduce navigation and restart friction in real use, we should remove or revise them rather than protect the concept because it sounds elegant.</p>
+            </section>
+          </div>
+          <aside class="sidebar-box">
+            <h2>Sources</h2>
+            <p><a class="text-link" href="https://www.microsoft.com/en-us/research/publication/goals-as-first-class-abstractions-in-human-ai-collaboration/">Goals as First-Class Abstractions, 2026</a></p>
+            <p><a class="text-link" href="https://www.microsoft.com/en-us/research/blog/from-raw-interaction-to-reusable-knowledge-rethinking-memory-for-ai-agents/">Microsoft PlugMem, 2026</a></p>
+            <p><a class="text-link" href="https://proceedings.mlr.press/v317/wu26a.html">Agent-Memory Protocol, PMLR 2026</a></p>
+            <p><a class="text-link" href="/research/mechanics/">Studio Mechanics</a></p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-shell">
+        <div class="footer-brand">
+          <strong>Wooolfmesh</strong>
+          <p>Wooolfmesh is a local-first work environment for persistent context: work Studios, useful memory, sources, AI assistance and recoverable execution.</p>
+          <p class="footer-small">This blueprint is a product hypothesis based on the current repository and research. It is not a promise that every item will ship.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/product/">Product</a>
+          <a href="/architecture/">Architecture</a>
+          <a href="/research/">Research</a>
+          <a href="/research/radar/">Research Radar</a>
+          <a href="/research/mechanics/">Studio Mechanics</a>
+          <a href="/roadmap/">Roadmap</a>
+          <a href="/support/">Support</a>
+          <a href="https://github.com/dkharlanau/work-os-local">GitHub</a>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/script.js"></script>
+  </body>
+</html>
