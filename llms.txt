@@ -12,9 +12,12 @@ Wooolfmesh is local-first, Markdown-friendly, and human-controlled. Important AI
 - The work artifact or task is the primary surface.
 - AI, memory, sources, task state, and run history are contextual layers.
 - Studio context is bounded and inspectable.
-- Memory should be relevant, sourced, and quiet rather than a permanent feed.
+- Memory should be relevant, sourced, temporally valid, and quiet rather than a permanent feed.
 - Proactive AI should prefer good workflow boundaries and avoid interrupting active work without a strong reason.
-- Autonomy should depend on risk, reversibility, task type, and user preference.
+- Autonomy should depend on risk, reversibility, uncertainty, chain depth, task type, and user preference.
+- Checkpoints should appear where the cost of the next mistake starts to rise, not after every harmless step.
+- Uncertainty should change system behavior, not only produce a confidence badge.
+- Important agent actions should have enough provenance and recovery information to explain and undo them.
 - Finished work should be able to produce approved reusable lessons for future work.
 
 ## Canonical links
@@ -24,6 +27,7 @@ Wooolfmesh is local-first, Markdown-friendly, and human-controlled. Important AI
 - [Architecture](https://wooolfmesh.github.io/architecture/)
 - [Research](https://wooolfmesh.github.io/research/)
 - [Research Radar](https://wooolfmesh.github.io/research/radar/)
+- [Studio Mechanics](https://wooolfmesh.github.io/research/mechanics/)
 - [Roadmap](https://wooolfmesh.github.io/roadmap/)
 - [Guides](https://wooolfmesh.github.io/guides/)
 - [Privacy](https://wooolfmesh.github.io/privacy/)
@@ -37,9 +41,12 @@ Research is used to create product hypotheses, not scientific-looking marketing.
 
 The Research Radar contains newer and more experimental 2026 signals. Important current hypotheses include workflow-boundary suggestions, resume anchors, task-conditioned memory admission, source provenance, AI postures such as Think / Collaborate / Run, completion distillation, and progressive context loading.
 
+Studio Mechanics focuses on behavior rather than surface design. Current hypotheses include adaptive confirmation checkpoints, context-sensitive transparency, uncertainty-to-action rules, memory validity and supersession, downstream memory quality feedback, purpose-built private context packets, compact execution provenance, and recovery-first actions.
+
 ## Machine-readable files
 
 - [Research data](https://wooolfmesh.github.io/data/research.json)
+- [Studio Mechanics data](https://wooolfmesh.github.io/data/research-mechanics.json)
 - [Product data](https://wooolfmesh.github.io/data/product.json)
 - [Roadmap data](https://wooolfmesh.github.io/data/roadmap.json)
 - [Releases data](https://wooolfmesh.github.io/data/releases.json)
