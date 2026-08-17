@@ -30,10 +30,34 @@
       "source": "https://arxiv.org/abs/2605.06527"
     },
     {
+      "name": "Temporal awareness",
+      "priority": "P0",
+      "idea": "Time elapsed since a fact, tool result, or decision was observed should affect whether Wooolfmesh trusts it, rechecks it, or calls a tool again.",
+      "source": "https://aclanthology.org/2026.findings-acl.1848/"
+    },
+    {
+      "name": "Semantic time, not only message time",
+      "priority": "P1",
+      "idea": "Memory should model when something was actually true and for how long, not only when the user happened to mention it.",
+      "source": "https://aclanthology.org/2026.findings-acl.1496/"
+    },
+    {
       "name": "Memory outcome feedback",
       "priority": "P0",
       "idea": "Later task success, failure, contradiction, and usefulness can increase or reduce trust in stored experience.",
       "source": "https://aclanthology.org/2026.acl-long.27/"
+    },
+    {
+      "name": "Preserve raw episodes",
+      "priority": "P1",
+      "idea": "Keep original evidence and task episodes as first-class memory. Summaries and consolidated lessons should never erase the evidence they came from.",
+      "source": "https://arxiv.org/abs/2605.12978"
+    },
+    {
+      "name": "Purposeful forgetting",
+      "priority": "P1",
+      "idea": "Temporary or volatile memories may decay, retire, or lose retrieval priority while stable facts remain durable. Forgetting can improve relevance when it is explicit and reversible.",
+      "source": "https://arxiv.org/abs/2608.04746"
     },
     {
       "name": "Pack context for purpose",
@@ -63,19 +87,26 @@
   "memory_metadata_hypothesis": [
     "valid_from",
     "valid_until",
+    "occurred_at",
+    "observed_at",
     "last_verified",
     "volatility_class",
     "provenance",
     "authority",
     "scope",
     "outcome_feedback",
-    "supersession_history"
+    "supersession_history",
+    "raw_episode_reference"
   ],
   "experiments": [
     "dynamic checkpoint pressure versus confirm-everything and confirm-at-end",
     "uncertainty-to-action rules versus confidence badges",
     "stale-memory supersession challenge",
+    "time-elapsed tool recheck policy",
+    "semantic-time memory retrieval versus dialogue-time retrieval",
     "downstream outcome labels for memory quality",
+    "raw episode versus continuously rewritten summary",
+    "type-conditioned memory decay for volatile information",
     "purpose-built context packets for hosted AI",
     "recovery drill after an injected wrong intermediate action"
   ]
