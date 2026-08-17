@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Studio Mechanics | Wooolfmesh</title>
+    <meta name="description" content="Wooolfmesh Studio Mechanics: 2026 research hypotheses for adaptive checkpoints, useful transparency, trustworthy memory, uncertainty, provenance, privacy, and recovery-first agent work.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Wooolfmesh team">
+    <link rel="canonical" href="https://wooolfmesh.github.io/research/mechanics/">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <meta name="theme-color" content="#f4f2ec">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Studio Mechanics","url":"https://wooolfmesh.github.io/research/mechanics/","description":"Research hypotheses for how Wooolfmesh Studios should behave: checkpoints, transparency, memory lifecycle, provenance, privacy and recovery.","inLanguage":"en","datePublished":"2026-08-17","dateModified":"2026-08-17"}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="Wooolfmesh home"><img src="/assets/wooolfmesh.png" alt="">Wooolfmesh</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu"><span></span></button>
+        <div class="nav-links" data-nav-links>
+          <a href="/product/">Product</a><a href="/architecture/">Architecture</a><a href="/research/" aria-current="page">Research</a><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero compact">
+        <div class="shell reveal">
+          <p class="system-label">Research / Studio Mechanics / August 2026</p>
+          <h1>How a Studio should behave</h1>
+          <p class="lead">A calm interface is not enough. The system also needs good judgment about when to act, when to ask, what to remember, what to distrust, and how to recover when an agent is wrong.</p>
+          <div class="page-actions"><a class="button primary" href="#mechanics">Mechanics</a><a class="button" href="#experiments">Experiments</a><a class="button" href="/research/radar/">Research Radar</a><a class="button" href="/research/">Research principles</a></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell content-grid">
+          <div class="content-flow">
+            <section>
+              <h2>The behavioral loop</h2>
+              <p>We are exploring a simple loop for intelligent work: <strong>Observe → Decide → Act → Check → Recover → Learn.</strong> The user should not need to manage each internal step, but important transitions must remain understandable and recoverable.</p>
+            </section>
+            <section>
+              <h2>Less supervision, better supervision</h2>
+              <p>Watching every agent click creates cognitive load. Confirming only at the end allows small mistakes to grow into large failures. The useful middle ground is selective intervention at moments where the cost of being wrong starts to rise.</p>
+            </section>
+          </div>
+          <aside class="sidebar-box">
+            <h2>Working heuristic</h2>
+            <p><strong>Checkpoint pressure</strong> grows with action risk, irreversibility, uncertainty, novelty, and chain depth.</p>
+            <p><strong>Checkpoint pressure</strong> falls when an action is local, reversible, easy to inspect, and cheap to retry.</p>
+            <p class="footer-small">This is a product heuristic, not a scientific formula.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="mechanics">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="system-label">Behavioral design</p>
+            <h2>Mechanics worth testing</h2>
+            <p>The goal is not more controls. The goal is better decisions about when controls are needed.</p>
+          </div>
+          <div class="index-grid">
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">P0</span><span class="badge">Agents</span></div>
+              <h2>Adaptive checkpoints</h2>
+              <p>Do not confirm every step and do not wait until the entire run is complete. Ask at meaningful branch points where a wrong decision would become expensive to undo.</p>
+              <p><strong>Evidence:</strong> a CHI 2026 study found that 81% of participants preferred intermediate confirmations over confirm-at-end, while task completion time fell by 13.54% in the reported experiment.</p>
+              <p><strong>For Wooolfmesh:</strong> low-risk reversible work can continue quietly. Important writes, uncertain branches, external side effects, or growing error chains create a checkpoint.</p>
+              <a class="text-link" href="https://doi.org/10.1145/3772318.3790655">CHI 2026: When Should Users Check?</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">P0</span><span class="badge">Transparency</span></div>
+              <h2>Goldilocks transparency</h2>
+              <p>Transparency should be sufficient for the task, not maximal. Simple work may need only the result. Ambiguous or important work may need evidence, disagreement, assumptions, and process detail.</p>
+              <p><strong>Evidence:</strong> CHI 2026 research on multi-agent interfaces found that preferred transparency was dynamic and context-sensitive. Too little and too much process visibility could both reduce trust.</p>
+              <p><strong>For Wooolfmesh:</strong> default to outcome + next action. Reveal “Why?”, evidence, provenance, disagreement, and execution detail when the task or user needs them.</p>
+              <a class="text-link" href="https://doi.org/10.1145/3772318.3791157">CHI 2026: Sensemaking in Multi-Agent LLM Interfaces</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">P0</span><span class="badge">Uncertainty</span></div>
+              <h2>Turn uncertainty into behavior</h2>
+              <p>A confidence meter can look scientific without helping the user make a better decision. More uncertainty UI is not automatically safer.</p>
+              <p><strong>Evidence:</strong> a 2026 preregistered study found that visual confidence cues improved subjective accuracy discrimination but also increased behavioral overreliance on some incorrect outputs.</p>
+              <p><strong>For Wooolfmesh:</strong> uncertainty should change what the system does: verify a source, ask one question, keep a draft, require review, or stop before execution. A number alone should not carry the safety burden.</p>
+              <a class="text-link" href="https://doi.org/10.1016/j.chbah.2026.100307">More is not better, 2026</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">P0</span><span class="badge">Memory</span></div>
+              <h2>Memory needs a lifecycle</h2>
+              <p>A stored fact should not stay equally trusted forever. Work changes. Preferences change. APIs change. Decisions are replaced.</p>
+              <p><strong>Evidence:</strong> the 2026 STALE benchmark shows a large gap between retrieving newer evidence and actually acting on it; even the best evaluated system reached only 55.2% overall accuracy across the benchmark.</p>
+              <p><strong>For Wooolfmesh:</strong> memory can have states such as active, uncertain, superseded, and archived, with source, last verified date, and a volatility class.</p>
+              <a class="text-link" href="https://arxiv.org/abs/2605.06527">STALE, 2026</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge partial">P0</span><span class="badge">Memory quality</span></div>
+              <h2>Past success is not enough</h2>
+              <p>Agents can copy old experience too eagerly. A memory that once looked successful can still be wrong for the next task.</p>
+              <p><strong>Evidence:</strong> ACL 2026 research found experience-following behavior, error propagation, and misaligned experience replay in agent memory systems. The authors show value in regulating memory quality and using later task outcomes as quality signals.</p>
+              <p><strong>For Wooolfmesh:</strong> memories should gain or lose trust from later outcomes. A repeatedly helpful lesson becomes stronger; a lesson linked to failed work becomes suspect.</p>
+              <a class="text-link" href="https://aclanthology.org/2026.acl-long.27/">ACL 2026</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge optional">P1</span><span class="badge">Privacy</span></div>
+              <h2>Pack context for purpose</h2>
+              <p>Long-term memory does not need to be sent whole to every model or provider. Context should be prepared for the specific task.</p>
+              <p><strong>Evidence:</strong> the 2026 Agent-Memory Protocol proposes deterministic operations described as redact at rest, pack for purpose, and hydrate on return to protect identity while keeping useful reasoning context.</p>
+              <p><strong>For Wooolfmesh:</strong> keep full private context locally. Build the smallest task packet needed for hosted AI, preserve provenance, and rehydrate local references after the response returns.</p>
+              <a class="text-link" href="https://proceedings.mlr.press/v317/wu26a.html">PMLR 2026: Agent-Memory Protocol</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge optional">P1</span><span class="badge">Provenance</span></div>
+              <h2>A small “because” trail</h2>
+              <p>Users should be able to answer: what source, memory, tool, or decision caused this result? They should not need a wall of raw agent logs.</p>
+              <p><strong>Signal:</strong> 2026 work on execution provenance argues that final-answer correctness is not enough for debugging, audit, and recovery. Memory and tool influence need traceable lineage.</p>
+              <p><strong>For Wooolfmesh:</strong> each important suggestion or run can expose a compact trail: inputs → key evidence → action → result → recovery option.</p>
+              <a class="text-link" href="https://arxiv.org/abs/2606.04990">From Agent Traces to Trust, 2026</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge optional">P1</span><span class="badge">Recovery</span></div>
+              <h2>Recovery is part of execution</h2>
+              <p>An action is safer when the system already knows how to recover from it. Recovery should be designed before autonomy, not added after a failure.</p>
+              <p><strong>Signal:</strong> current work on auditable agents treats recoverability as a core system property, alongside lifecycle coverage, policy checks, responsibility, and evidence integrity.</p>
+              <p><strong>For Wooolfmesh:</strong> durable actions should prefer preview, snapshot, reversible mutation, and a visible undo or retry path. The action log exists to recover work, not to decorate an admin screen.</p>
+              <a class="text-link" href="https://arxiv.org/abs/2604.05485">Auditable Agents, 2026</a>
+            </article>
+
+            <article class="index-card reveal">
+              <div class="card-meta"><span class="status-badge optional">P2</span><span class="badge">External agents</span></div>
+              <h2>Do not trust the interface an agent sees</h2>
+              <p>When an agent works through another application's GUI, visual prominence and task-completion pressure can push it toward bad choices.</p>
+              <p><strong>Evidence:</strong> CHI 2026 found GUI agents vulnerable to dark patterns. Human oversight improved avoidance in many tasks but also introduced attentional tunneling and cognitive load.</p>
+              <p><strong>For Wooolfmesh:</strong> future external-action agents should treat unexpected consent, fees, permissions, disclosure, destructive actions, or goal changes as checkpoint events.</p>
+              <a class="text-link" href="https://doi.org/10.1145/3772318.3791568">CHI 2026: Dark Patterns Meet GUI Agents</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="system-label">Memory schema hypothesis</p>
+            <h2>Memory should carry more than text</h2>
+            <p>The visible note can stay simple while the local system keeps small pieces of metadata that improve trust and retrieval.</p>
+          </div>
+          <div class="note-grid">
+            <article class="note-block reveal"><h2>Validity</h2><p><strong>valid_from</strong>, optional <strong>valid_until</strong>, last verified time, and a volatility class such as stable / changing / temporary.</p></article>
+            <article class="note-block reveal"><h2>Provenance</h2><p>Where did this come from: user statement, file, imported source, AI inference, completed task, or external observation?</p></article>
+            <article class="note-block reveal"><h2>Authority</h2><p>A user-approved rule has more authority than a model-generated guess. Retrieval relevance must not silently increase authority.</p></article>
+            <article class="note-block reveal"><h2>Outcome feedback</h2><p>Record whether later work confirmed, contradicted, ignored, or benefited from the memory. Use this as a quality signal.</p></article>
+            <article class="note-block reveal"><h2>Scope</h2><p>Personal, Studio, project, task, or temporary session scope. Broader retrieval should be deliberate, not automatic.</p></article>
+            <article class="note-block reveal"><h2>Recovery</h2><p>Never destroy provenance when a memory is superseded. Keep enough history to explain why the current state changed.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experiments">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="system-label">Research backlog</p>
+            <h2>Experiments to build next</h2>
+            <p>These tests should stay small enough to delete if they do not help.</p>
+          </div>
+          <div class="index-grid">
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge partial">P0</span></div><h2>Checkpoint pressure</h2><p>Score actions using risk, reversibility, uncertainty, novelty, and chain depth. Compare dynamic checkpoints with confirm-everything and confirm-at-end.</p><p><strong>Measure:</strong> intervention count, recovery time, task completion, user corrections.</p></article>
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge partial">P0</span></div><h2>Uncertainty → action</h2><p>Replace confidence badges with behavior rules such as verify, ask, draft-only, or require review.</p><p><strong>Measure:</strong> wrong-action rate and unnecessary interruptions.</p></article>
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge partial">P0</span></div><h2>Stale-memory challenge</h2><p>Change a fact after it was learned and check whether Wooolfmesh stops using the old state in later tasks.</p><p><strong>Measure:</strong> stale-memory use and correct supersession.</p></article>
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge optional">P1</span></div><h2>Memory outcome labels</h2><p>After a task succeeds or fails, update trust in memories that materially influenced the work.</p><p><strong>Measure:</strong> future retrieval quality and repeated-error rate.</p></article>
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge optional">P1</span></div><h2>Purpose-built context packet</h2><p>Compare full-context AI with a local pack-for-purpose step that sends only relevant, safe context.</p><p><strong>Measure:</strong> answer quality, context size, privacy exposure, latency.</p></article>
+            <article class="index-card reveal"><div class="card-meta"><span class="status-badge optional">P1</span></div><h2>Recovery drill</h2><p>Inject one wrong intermediate agent action and measure whether the user can understand, undo, and continue without restarting the whole run.</p><p><strong>Measure:</strong> recovery time and lost work.</p></article>
+          </div>
+          <div class="definition"><strong>Mechanics principle</strong>A smart Studio does not ask for more attention. It spends the user's attention only where attention changes the outcome.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-shell">
+        <div class="footer-brand">
+          <strong>Wooolfmesh</strong>
+          <p>Wooolfmesh is a local-first work environment for persistent context: tasks, useful memory, sources, AI assistance, and finished work in calm Studios.</p>
+          <p class="footer-small">Research notes describe product hypotheses, not guarantees about future features.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/product/">Product</a>
+          <a href="/architecture/">Architecture</a>
+          <a href="/research/">Research</a>
+          <a href="/research/radar/">Research Radar</a>
+          <a href="/roadmap/">Roadmap</a>
+          <a href="/support/">Support</a>
+          <a href="https://github.com/dkharlanau/work-os-local">GitHub</a>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/script.js"></script>
+  </body>
+</html>
