@@ -6,6 +6,7 @@ const researchPath = "/research/";
 const researchUrl = `${site}${researchPath}`;
 const radarUrl = `${site}/research/radar/`;
 const mechanicsUrl = `${site}/research/mechanics/`;
+const blueprintUrl = `${site}/research/blueprint/`;
 const today = new Date().toISOString().slice(0, 10);
 
 async function patchHtmlTree(directory = ".") {
@@ -54,6 +55,11 @@ async function patchSitemap() {
     sitemap = sitemap.replace("</urlset>", `${entry}</urlset>`);
   }
 
+  if (!sitemap.includes(`<loc>${blueprintUrl}</loc>`)) {
+    const entry = `  <url><loc>${blueprintUrl}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
+    sitemap = sitemap.replace("</urlset>", `${entry}</urlset>`);
+  }
+
   await writeFile(file, sitemap);
 }
 
@@ -76,6 +82,12 @@ async function patchLlms() {
     text = text.replace(
       `- [Research Radar](${radarUrl})`,
       `- [Research Radar](${radarUrl})\n- [Studio Mechanics](${mechanicsUrl})`,
+    );
+  }
+  if (!text.includes(`[Product Blueprint](${blueprintUrl})`)) {
+    text = text.replace(
+      `- [Studio Mechanics](${mechanicsUrl})`,
+      `- [Studio Mechanics](${mechanicsUrl})\n- [Product Blueprint](${blueprintUrl})`,
     );
   }
   await writeFile(file, text);
@@ -109,6 +121,7 @@ async function patchDataCatalog() {
   const datasets = data.dataset ?? [];
   const researchDataUrl = `${site}/data/research.json`;
   const mechanicsDataUrl = `${site}/data/research-mechanics.json`;
+  const blueprintDataUrl = `${site}/data/research-blueprint.json`;
 
   if (!datasets.some((item) => item.url === researchDataUrl)) {
     datasets.push({
@@ -123,6 +136,14 @@ async function patchDataCatalog() {
       "@type": "Dataset",
       name: "research-mechanics",
       url: mechanicsDataUrl,
+    });
+  }
+
+  if (!datasets.some((item) => item.url === blueprintDataUrl)) {
+    datasets.push({
+      "@type": "Dataset",
+      name: "research-blueprint",
+      url: blueprintDataUrl,
     });
   }
 
