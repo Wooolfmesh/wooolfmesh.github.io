@@ -5,6 +5,7 @@ const site = "https://wooolfmesh.github.io";
 const researchPath = "/research/";
 const researchUrl = `${site}${researchPath}`;
 const radarUrl = `${site}/research/radar/`;
+const mechanicsUrl = `${site}/research/mechanics/`;
 const today = new Date().toISOString().slice(0, 10);
 
 async function patchHtmlTree(directory = ".") {
@@ -48,6 +49,11 @@ async function patchSitemap() {
     sitemap = sitemap.replace("</urlset>", `${entry}</urlset>`);
   }
 
+  if (!sitemap.includes(`<loc>${mechanicsUrl}</loc>`)) {
+    const entry = `  <url><loc>${mechanicsUrl}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
+    sitemap = sitemap.replace("</urlset>", `${entry}</urlset>`);
+  }
+
   await writeFile(file, sitemap);
 }
 
@@ -64,6 +70,12 @@ async function patchLlms() {
     text = text.replace(
       `- [Research](${researchUrl})`,
       `- [Research](${researchUrl})\n- [Research Radar](${radarUrl})`,
+    );
+  }
+  if (!text.includes(`[Studio Mechanics](${mechanicsUrl})`)) {
+    text = text.replace(
+      `- [Research Radar](${radarUrl})`,
+      `- [Research Radar](${radarUrl})\n- [Studio Mechanics](${mechanicsUrl})`,
     );
   }
   await writeFile(file, text);
@@ -96,6 +108,8 @@ async function patchDataCatalog() {
   const data = JSON.parse(await readFile(file, "utf8"));
   const datasets = data.dataset ?? [];
   const researchDataUrl = `${site}/data/research.json`;
+  const mechanicsDataUrl = `${site}/data/research-mechanics.json`;
+
   if (!datasets.some((item) => item.url === researchDataUrl)) {
     datasets.push({
       "@type": "Dataset",
@@ -103,6 +117,15 @@ async function patchDataCatalog() {
       url: researchDataUrl,
     });
   }
+
+  if (!datasets.some((item) => item.url === mechanicsDataUrl)) {
+    datasets.push({
+      "@type": "Dataset",
+      name: "research-mechanics",
+      url: mechanicsDataUrl,
+    });
+  }
+
   await writeFile(file, `${JSON.stringify(data, null, 2)}\n`);
 }
 
