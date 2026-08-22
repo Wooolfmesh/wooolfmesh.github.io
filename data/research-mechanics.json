@@ -8,7 +8,14 @@
       "name": "Adaptive checkpoints",
       "priority": "P0",
       "idea": "Confirm at meaningful branch points instead of every step or only at the end.",
-      "signals": ["risk", "irreversibility", "uncertainty", "novelty", "chain depth", "recoverability"],
+      "signals": [
+        "risk",
+        "irreversibility",
+        "uncertainty",
+        "novelty",
+        "chain depth",
+        "recoverability"
+      ],
       "source": "https://doi.org/10.1145/3772318.3790655"
     },
     {

@@ -56,11 +56,16 @@ The north-star interaction is: Open Studio → understand goal and state → con
 - [Privacy](https://wooolfmesh.github.io/privacy/)
 - [Support](https://wooolfmesh.github.io/support/)
 - [AI disclosure](https://wooolfmesh.github.io/ai/)
-- [Product repository](https://github.com/dkharlanau/work-os-local)
+- [Product repository (private beta)](https://github.com/dkharlanau/work-os-local)
+- [Creator on GitHub](https://github.com/dkharlanau)
+- [Creator on LinkedIn](https://www.linkedin.com/in/dkharlanau/)
 
 ## Research direction
 
 Research is used to create product hypotheses, not scientific-looking marketing. Current topics include persistent work context, progressive disclosure, interruption recovery, cognitive offloading, task-shaped sources, trustworthy long-term memory, agent autonomy, proactive AI timing, human agency, and calm visual hierarchy.
+
+The product repository is private during beta. An open-source license and a
+history audit are required before it is made public.
 
 The Research Radar contains newer and more experimental 2026 signals. Important current hypotheses include workflow-boundary suggestions, resume anchors, task-conditioned memory admission, source provenance, AI postures such as Think / Collaborate / Run, completion distillation, and progressive context loading.
 

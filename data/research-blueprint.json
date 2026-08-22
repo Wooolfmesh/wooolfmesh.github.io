@@ -21,35 +21,130 @@
     "studio_local_runs"
   ],
   "capability_mapping": [
-    {"from": "Projects", "to": "Studios", "treatment": "Reuse Project as durable scope; replace separate project workbench over time."},
-    {"from": "Workspace", "to": "Studio home/shell", "treatment": "Keep derived Work Thread but remove mode bar, graph, permanent queue and competing workbench layers."},
-    {"from": "Tasks", "to": "Studio steps and current thread", "treatment": "Keep detailed editor as secondary route."},
-    {"from": "Focus", "to": "Thread state", "treatment": "Keep service and fallback route; primary controls stay inline."},
-    {"from": "Reviews", "to": "Closeout and deliberate reflection", "treatment": "Keep durable review records as secondary depth."},
-    {"from": "Memory + Cognitive Bites", "to": "One contextual Memory layer", "treatment": "Preserve formats; unify daily retrieval UX."},
-    {"from": "Chats + Prompts", "to": "AI sidecar and Studio instructions", "treatment": "Keep full libraries secondary."},
-    {"from": "Quick Links + Obsidian context", "to": "Sources shelf", "treatment": "Preserve provenance and original source access."},
-    {"from": "Routines + Agents", "to": "Studio-local Runs", "treatment": "Global automation stays troubleshooting/advanced."},
-    {"from": "Signals + Readiness + Analytics", "to": "Background signals", "treatment": "Use underneath ranking/intervention; surface only when a decision needs them."},
-    {"from": "Provenance", "to": "Why this? trail", "treatment": "Contextual verification, not a daily destination."},
-    {"from": "Batches", "to": "Advanced execution", "treatment": "Keep outside default Studio grammar until repeated real use proves value."}
+    {
+      "from": "Projects",
+      "to": "Studios",
+      "treatment": "Reuse Project as durable scope; replace separate project workbench over time."
+    },
+    {
+      "from": "Workspace",
+      "to": "Studio home/shell",
+      "treatment": "Keep derived Work Thread but remove mode bar, graph, permanent queue and competing workbench layers."
+    },
+    {
+      "from": "Tasks",
+      "to": "Studio steps and current thread",
+      "treatment": "Keep detailed editor as secondary route."
+    },
+    {
+      "from": "Focus",
+      "to": "Thread state",
+      "treatment": "Keep service and fallback route; primary controls stay inline."
+    },
+    {
+      "from": "Reviews",
+      "to": "Closeout and deliberate reflection",
+      "treatment": "Keep durable review records as secondary depth."
+    },
+    {
+      "from": "Memory + Cognitive Bites",
+      "to": "One contextual Memory layer",
+      "treatment": "Preserve formats; unify daily retrieval UX."
+    },
+    {
+      "from": "Chats + Prompts",
+      "to": "AI sidecar and Studio instructions",
+      "treatment": "Keep full libraries secondary."
+    },
+    {
+      "from": "Quick Links + Obsidian context",
+      "to": "Sources shelf",
+      "treatment": "Preserve provenance and original source access."
+    },
+    {
+      "from": "Routines + Agents",
+      "to": "Studio-local Runs",
+      "treatment": "Global automation stays troubleshooting/advanced."
+    },
+    {
+      "from": "Signals + Readiness + Analytics",
+      "to": "Background signals",
+      "treatment": "Use underneath ranking/intervention; surface only when a decision needs them."
+    },
+    {
+      "from": "Provenance",
+      "to": "Why this? trail",
+      "treatment": "Contextual verification, not a daily destination."
+    },
+    {
+      "from": "Batches",
+      "to": "Advanced execution",
+      "treatment": "Keep outside default Studio grammar until repeated real use proves value."
+    }
   ],
   "service_responsibilities": [
-    {"name": "Context Compiler", "purpose": "Build the smallest useful Studio context packet from existing services."},
-    {"name": "Memory Governor", "purpose": "Admit, rank, verify, supersede and forget memory."},
-    {"name": "Attention Governor", "purpose": "Decide whether a signal or suggestion deserves visible attention now."},
-    {"name": "Action Governor", "purpose": "Decide whether work can continue, needs preview, or needs a checkpoint."},
-    {"name": "Recovery Ledger", "purpose": "Keep enough provenance, snapshots and outcomes to explain, undo, retry and resume."}
+    {
+      "name": "Context Compiler",
+      "purpose": "Build the smallest useful Studio context packet from existing services."
+    },
+    {
+      "name": "Memory Governor",
+      "purpose": "Admit, rank, verify, supersede and forget memory."
+    },
+    {
+      "name": "Attention Governor",
+      "purpose": "Decide whether a signal or suggestion deserves visible attention now."
+    },
+    {
+      "name": "Action Governor",
+      "purpose": "Decide whether work can continue, needs preview, or needs a checkpoint."
+    },
+    {
+      "name": "Recovery Ledger",
+      "purpose": "Keep enough provenance, snapshots and outcomes to explain, undo, retry and resume."
+    }
   ],
   "implementation_sequence": [
-    {"slice": 1, "name": "Define Studio without new storage", "goal": "Document Studio as Project scope + Work Thread + contextual layers."},
-    {"slice": 2, "name": "Build one thin Studio shell", "goal": "Goal, resume anchor, current artifact/thread, next action and one contextual drawer."},
-    {"slice": 3, "name": "Absorb Project workbench", "goal": "Move context pack, Obsidian context, decision context, intervention and trail into optional Studio layers."},
-    {"slice": 4, "name": "Compress task execution", "goal": "Capture, clarify, Focus, interruption parking, closeout and next-action handoff become one continuous flow."},
-    {"slice": 5, "name": "Add Context Compiler", "goal": "Return one Studio context response rather than assembling many independent queries in the frontend."},
-    {"slice": 6, "name": "Add AI sidecar", "goal": "Hermes/DIAL use the same context packet; AI-disabled remains first-class."},
-    {"slice": 7, "name": "Hide secondary product grammar", "goal": "Remove old areas from normal navigation after contextual entry points exist."},
-    {"slice": 8, "name": "Dogfood restart loop", "goal": "Measure 24-hour resume time, navigation decisions and closeout quality."}
+    {
+      "slice": 1,
+      "name": "Define Studio without new storage",
+      "goal": "Document Studio as Project scope + Work Thread + contextual layers."
+    },
+    {
+      "slice": 2,
+      "name": "Build one thin Studio shell",
+      "goal": "Goal, resume anchor, current artifact/thread, next action and one contextual drawer."
+    },
+    {
+      "slice": 3,
+      "name": "Absorb Project workbench",
+      "goal": "Move context pack, Obsidian context, decision context, intervention and trail into optional Studio layers."
+    },
+    {
+      "slice": 4,
+      "name": "Compress task execution",
+      "goal": "Capture, clarify, Focus, interruption parking, closeout and next-action handoff become one continuous flow."
+    },
+    {
+      "slice": 5,
+      "name": "Add Context Compiler",
+      "goal": "Return one Studio context response rather than assembling many independent queries in the frontend."
+    },
+    {
+      "slice": 6,
+      "name": "Add AI sidecar",
+      "goal": "Hermes/DIAL use the same context packet; AI-disabled remains first-class."
+    },
+    {
+      "slice": 7,
+      "name": "Hide secondary product grammar",
+      "goal": "Remove old areas from normal navigation after contextual entry points exist."
+    },
+    {
+      "slice": 8,
+      "name": "Dogfood restart loop",
+      "goal": "Measure 24-hour resume time, navigation decisions and closeout quality."
+    }
   ],
   "remove_from_main_experience": [
     "Workspace mode bar",

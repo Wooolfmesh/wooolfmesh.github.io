@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { access, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const site = "https://wooolfmesh.github.io";
@@ -9,6 +9,8 @@ const siteName = "Wooolfmesh";
 const productRepo = "https://github.com/dkharlanau/work-os-local";
 const publicIssues =
   "https://github.com/Wooolfmesh/wooolfmesh.github.io/issues";
+const privateBeta =
+  "https://github.com/Wooolfmesh/wooolfmesh.github.io/issues/new?title=Private%20beta%20request&body=What%20I%20want%20Wooolfmesh%20to%20help%20me%20resume%3A%0A%0AMy%20platform%3A%0A";
 const siteRepo = "https://github.com/Wooolfmesh/wooolfmesh.github.io";
 const authorGitHub = "https://github.com/dkharlanau";
 const authorLinkedIn = "https://www.linkedin.com/in/dkharlanau/";
@@ -16,6 +18,8 @@ const seoDescription =
   "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.";
 const oneSentence =
   "Wooolfmesh is local-first memory for agentic work: a private command center that connects tasks, capture, focus, reviews, lessons, project health, and local knowledge into one execution loop over a Markdown vault.";
+const resumeDescription =
+  "Wooolfmesh keeps your last result, key decisions, sources, and next step together so you can return without starting over.";
 
 const author = {
   name: "Dzmitry Kharlanau",
@@ -36,7 +40,8 @@ const targetKeywords = [
   "weekly review",
   "cognitive bites",
   "local AI",
-  "Ollama",
+  "Hermes",
+  "DIAL",
   "personal operating system",
   "knowledge work",
 ];
@@ -235,7 +240,7 @@ const features = [
     title: "Optional AI assistance",
     status: "optional",
     short:
-      "Ollama/local AI and configured hosted providers can assist capture, shaping, summaries, and reflection, but normal use does not require AI.",
+      "Hermes and DIAL can assist capture, shaping, summaries, and reflection, but normal use does not require AI.",
     problem:
       "AI productivity tools often make private context upload the center of the workflow.",
     behavior:
@@ -336,7 +341,7 @@ const scenarios = [
     status: "optional",
     problem:
       "AI productivity tools often require private context upload or fail when the model is unavailable.",
-    flow: "Use manual workflows by default, enable local Ollama or an explicit hosted provider when desired, and treat generated output as preview data.",
+    flow: "Use deterministic workflows by default, enable Hermes or DIAL when desired, and treat generated output as preview data.",
     behavior:
       "AI settings are optional and degraded/manual mode remains a normal operating path.",
     benefit:
@@ -561,7 +566,7 @@ const homeFeatures = [
   ],
   [
     "Optional AI",
-    "Use local Ollama or configured providers for suggestions without making AI mandatory.",
+    "Use Hermes or DIAL for suggestions without making AI mandatory.",
     "ai",
   ],
 ];
@@ -619,7 +624,7 @@ const trustPrinciples = [
   ],
   [
     "Optional AI",
-    "Ollama or configured hosted providers can help, but manual/local workflows remain normal.",
+    "Hermes or DIAL can help, but deterministic local workflows remain normal.",
   ],
   [
     "Explicit approval",
@@ -691,8 +696,8 @@ const guides = [
   {
     slug: "ai-setup",
     title: "Optional AI setup",
-    short: "Use local or hosted providers deliberately.",
-    body: "Ollama is the preferred local AI path. Hosted providers can be configured only when desired. AI output is suggestion data and should not be treated as an automatic write authority.",
+    short: "Use Hermes or DIAL deliberately.",
+    body: "Hermes is the preferred local integration and DIAL is the optional alternate runtime. AI output is suggestion data and should not be treated as an automatic write authority.",
   },
   {
     slug: "backup-restore",
@@ -796,7 +801,7 @@ const docsGroups = [
   },
   {
     title: "Optional AI",
-    text: "Use local or configured providers only when they help, with preview-first output.",
+    text: "Use Hermes or DIAL only when they help, with preview-first output.",
     links: [
       [
         "AI setup",
@@ -830,11 +835,15 @@ const docsGroups = [
   },
   {
     title: "Support",
-    text: "Find privacy, support, source, and public feedback routes quickly.",
+    text: "Find privacy, support, source-roadmap, and public feedback routes quickly.",
     links: [
       ["Support", "/support/", "Report bugs or request workflow improvements."],
       ["Privacy", "/privacy/", "Local-first trust principles."],
-      ["Product source", productRepo, "Canonical application repository."],
+      [
+        "Source roadmap",
+        "/roadmap/#open-source-readiness",
+        "Private beta now; public repository and license are launch gates.",
+      ],
     ],
   },
 ];
@@ -851,6 +860,7 @@ const roadmap = {
     "Upgrade focus activation and closeout so readiness, interruptions, outcomes, and lessons feed the learning loop.",
     "Consolidate review, project, agent, and import suggestions into one follow-through rail.",
     "Keep product docs, backlog, release notes, and public website stewardship aligned with implemented reality.",
+    "Select and publish a root project license, then align contribution terms, Store drafts, and public copy before an open-source announcement.",
   ],
   "Later / P1": [
     "Weekly outcomes planner refinements and stronger outcome-to-review comparison.",
@@ -972,7 +982,7 @@ const faq = [
   ],
   [
     "Is AI required?",
-    "No. AI is optional. Ollama/local AI and configured hosted providers can assist, but normal workflows remain usable without a model.",
+    "No. AI is optional. Hermes and DIAL can assist, but normal workflows remain usable without a model.",
   ],
   [
     "Can Wooolfmesh write into my other notes?",
@@ -1144,7 +1154,7 @@ const softwareSchema = {
   featureList: features.map(
     (feature) => `${feature.title} (${statusCopy[feature.status]})`,
   ),
-  sameAs: [productRepo, siteRepo],
+  sameAs: [siteRepo],
   softwareHelp: `${site}/support/`,
   creator: { "@id": `${site}/#person-dzmitry-kharlanau` },
 };
@@ -1175,7 +1185,7 @@ const projectSchema = {
   image: `${site}/assets/og.png`,
   logo: `${site}/assets/icons/icon-512.png`,
   creator: { "@id": `${site}/#person-dzmitryi-kharlanau` },
-  sameAs: [productRepo, siteRepo],
+  sameAs: [siteRepo],
 };
 
 function webPageSchema(page) {
@@ -1310,7 +1320,7 @@ function layout(page) {
           <a href="/support/">Support</a>
           <a href="/ai/">AI disclosure</a>
           <a href="${publicIssues}">Feedback</a>
-          <a href="${productRepo}">GitHub</a>
+          <a href="/roadmap/#open-source-readiness">Our source plan</a>
           <a href="${siteRepo}">Site source</a>
         </div>
       </div>
@@ -1345,134 +1355,83 @@ function statusColumns() {
 
 addPage({
   url: "/",
-  title: "Wooolfmesh — Local-first memory for agentic work",
-  description: seoDescription,
+  title: "Wooolfmesh — Pick up where you left off",
+  description: resumeDescription,
   active: "",
   jsonLd: [siteSchema, softwareSchema, personSchema, projectSchema],
-  body: `<section class="landing-hero">
-    <div class="shell hero-grid">
-      <div class="hero-copy reveal">
-        <h1>Local-first memory for agentic work.</h1>
-        <p class="lead">A private execution layer for tasks, focus, reviews, lessons, projects, and local Markdown knowledge.</p>
-        <div class="hero-actions"><a class="button primary" href="/product/">Explore product <span aria-hidden="true">↗</span></a><a class="button" href="${productRepo}">View source</a></div>
-        <p class="trust-row"><span>Markdown-owned</span><span>Local runtime</span><span>Optional AI</span><span>Preview-first</span></p>
-      </div>
-      <div class="memory-map reveal" role="img" aria-label="Seven-step execution loop connected to a local Markdown vault and local runtime">
-        <div class="map-inputs">
-          ${["Capture", "Clarify", "Plan", "Focus"]
-            .map(
-              (step, index) =>
-                `<div class="map-node"><span>0${index + 1}</span><strong>${step}</strong><i></i></div>`,
-            )
-            .join("")}
+  body: `<section class="manifesto-hero">
+    <div class="shell manifesto-grid">
+      <div class="manifesto-copy reveal">
+        <h1><span>We keep<br>your work</span><em>ready to<br>continue.</em></h1>
+        <p class="manifesto-lead">We bring back your last result, key decisions, sources, and next step—so you can return without starting over.</p>
+        <div class="manifesto-rule" aria-hidden="true"></div>
+        <div class="hero-actions">
+          <a class="button primary" href="${privateBeta}">Join the private beta</a>
+          <a class="button" href="/roadmap/#open-source-readiness">See our source plan</a>
         </div>
-        <div class="map-core">
-          <span class="map-lock" aria-hidden="true"></span>
-          <strong>Local vault</strong>
-          <small>user-owned Markdown</small>
-        </div>
-        <div class="map-outputs">
-          ${["Review", "Learn", "Reuse"]
-            .map(
-              (step, index) =>
-                `<div class="map-node${index === 2 ? " active" : ""}"><i></i><span>0${index + 5}</span><strong>${step}</strong></div>`,
-            )
-            .join("")}
-        </div>
-        <div class="map-runtime"><strong>Local runtime</strong><small>SQLite support · optional AI</small></div>
-        <div class="map-connector connector-left"></div>
-        <div class="map-connector connector-right"></div>
-        <div class="map-connector connector-down"></div>
+        <p class="trust-row"><span>Private beta</span><span>Task playbooks</span><span>Your Markdown</span><span>No silent writes</span></p>
       </div>
+      <ol class="handoff-timeline reveal">
+        <li>
+          <span class="timeline-number">01</span>
+          <div><strong>What changed</strong><p>We reviewed the public support and privacy pages</p><small>August 22, 2026</small></div>
+        </li>
+        <li>
+          <span class="timeline-number">02</span>
+          <div><strong>What we decided</strong><p>We keep private vault data out of public URLs</p><small>Decision saved</small></div>
+        </li>
+        <li>
+          <span class="timeline-number">03</span>
+          <div><strong>What’s next</strong><p>We can return to the focus session and ship the change</p><small>Ready to continue</small></div>
+        </li>
+      </ol>
     </div>
+    <figure class="shell product-proof reveal">
+      <img src="/assets/screenshots/resume-handoff.png" alt="Wooolfmesh Today screen returning the user to a focus session already in progress">
+      <figcaption>Actual product view · Today / Do</figcaption>
+    </figure>
   </section>
-  <section id="execution-loop" class="home-section loop-section">
+  <section class="home-section handoff-section">
     <div class="shell">
-      <div class="section-index"><span>01</span><span>Execution loop</span><span>Your work, in a better loop.</span></div>
-      <div class="execution-loop" role="list" aria-label="Capture, clarify, plan, focus, review, learn, reuse">
-        ${loop
-          .map(
-            (step, index) =>
-              `<article class="loop-step${step === "Focus" ? " active" : ""}" role="listitem"><span>0${index + 1}</span><i></i><strong>${step}</strong></article>`,
-          )
-          .join("")}
+      <div class="handoff-intro">
+        <span class="section-number">01</span>
+        <h2>We give every task<br>a better starting point.</h2>
+        <p>We match the work with a clear playbook, ask for the few fields that matter, and keep the plan ready to continue.</p>
+      </div>
+      <div class="handoff-principles">
+        <article><span>Choose a playbook</span><p>Start with a bug fix, research, release, decision, agent loop, or your own local template.</p></article>
+        <article><span>Fill the essentials</span><p>We ask for the outcome, next action, finish line, and checks this task actually needs.</p></article>
+        <article><span>Use smart suggestions</span><p>Local ML can suggest effort and work mode. Hermes or DIAL can help shape the plan.</p></article>
+        <article><span>Stay in control</span><p>You review the draft before anything is written to your Markdown.</p></article>
       </div>
     </div>
   </section>
-  <section class="home-section distinction-section">
-    <div class="shell distinction-grid">
-      <div class="section-index vertical"><span>02</span><span>Distinction</span></div>
-      <div class="distinction-copy reveal">
-        <p>Not a task app.</p>
-        <p>Not a note app.</p>
-        <p>Not an AI chatbot.</p>
-        <p>A local memory and execution layer.</p>
-      </div>
-    </div>
-  </section>
-  <section class="home-section pillars-section">
+  <section class="home-section modes-section">
     <div class="shell">
-      <div class="section-index"><span>03</span><span>Product pillars</span><span>One private system.</span></div>
-      <div class="pillars">
-        <article class="pillar reveal"><span>P01</span><h2>Own your memory</h2><p>Your context stays readable, portable, and yours.</p></article>
-        <article class="pillar reveal"><span>P02</span><h2>Execute from Today</h2><p>Turn plans and signals into the next useful action.</p></article>
-        <article class="pillar reveal"><span>P03</span><h2>Learn from work</h2><p>Bring reviews and lessons back into future decisions.</p></article>
+      <div class="section-index"><span>02</span><span>Four modes</span><span>One shared context.</span></div>
+      <div class="mode-list">
+        <a href="/use-cases/capture-chaos-to-structured-work/"><span>01</span><h2>Discuss</h2><p>We help you think things through with Hermes or DIAL, then keep the decisions that matter.</p></a>
+        <a href="/features/tasks/"><span>02</span><h2>Do</h2><p>We turn each task into a clear brief with the right playbook, the fields that matter, and one next move.</p></a>
+        <a href="/features/local-knowledge/"><span>03</span><h2>Find</h2><p>We bring back the right memory, note, decision, or source with its context intact.</p></a>
+        <a href="/roadmap/"><span>04</span><h2>Run</h2><p>We help you reuse templates and preview every automation before it writes.</p></a>
       </div>
     </div>
   </section>
-  <section id="how-it-works" class="home-section architecture-section">
-    <div class="shell">
-      <div class="section-index"><span>04</span><span>How it works</span><span>Local-first. Private by design.</span></div>
-      <div class="architecture-diagram reveal" role="img" aria-label="Markdown vault and optional AI connect through Wooolfmesh, with explicit approval before durable writes and SQLite used for runtime support">
-        <article><h2>Markdown vault</h2><p>source of truth</p><i></i><small>.md files on disk</small></article>
-        <span class="flow-label">read</span>
-        <article><h2>Wooolfmesh</h2><p>private execution layer</p><i></i><small>tasks · focus · reviews</small></article>
-        <span class="flow-label">propose</span>
-        <article class="approval-node"><h2>Explicit approval</h2><p>you review changes</p><i>✓</i><small>before durable writes</small></article>
-        <span class="flow-label accent">approve</span>
-        <article><h2>SQLite runtime</h2><p>support state</p><i></i><small>local runtime file</small></article>
-        <span class="flow-label reverse">assist</span>
-        <article><h2>Optional AI</h2><p>configured by you</p><i></i><small>your provider · your settings</small></article>
-      </div>
-      <p class="architecture-note">No durable AI-assisted write happens without your approval.</p>
-    </div>
-  </section>
-  <section class="home-section evidence-section">
-    <div class="shell">
-      <div class="section-index"><span>05</span><span>Product evidence</span><span>Two surfaces. One loop.</span></div>
-      <div class="evidence-grid">
-        <figure class="evidence-item reveal">
-          <figcaption><span>01</span><strong>Today</strong><small>See the next useful move.</small></figcaption>
-          <div class="product-fragment today-fragment" role="img" aria-label="Abstract Wooolfmesh Today interface showing one next move">
-            <div class="fragment-rail"><span>Local / Today</span><span>27 Jun</span></div>
-            <div class="fragment-body">
-              <p>One next move</p>
-              <h3>Clarify the finish line</h3>
-              <div class="fragment-task"><span>Next action</span><strong>Write the acceptance criteria</strong><small>Focus · 45 min</small></div>
-              <div class="fragment-queue"><span>Later</span><i></i><i></i><i></i></div>
-            </div>
-          </div>
-        </figure>
-        <figure class="evidence-item reveal">
-          <figcaption><span>02</span><strong>Review</strong><small>Turn work history into follow-through.</small></figcaption>
-          <div class="product-fragment review-fragment" role="img" aria-label="Abstract Wooolfmesh Review interface showing preview-first proposed actions">
-            <div class="fragment-rail"><span>Local / Review</span><span>Preview-first</span></div>
-            <div class="fragment-body">
-              <p>What changed</p>
-              <h3>Proposals waiting for review</h3>
-              <div class="proposal-row"><span>01</span><strong>Create next action</strong><small>Review</small></div>
-              <div class="proposal-row"><span>02</span><strong>Save a cognitive bite</strong><small>Review</small></div>
-              <div class="fragment-approval"><span>Nothing writes until approved.</span><strong>Approve selected</strong></div>
-            </div>
-          </div>
-        </figure>
+  <section class="home-section ownership-section">
+    <div class="shell ownership-grid">
+      <div><span class="section-number">03</span><h2>We keep you<br>in control.</h2></div>
+      <div class="ownership-points">
+        <article><strong>We store durable work in Markdown</strong><p>Your tasks and memory stay readable outside Wooolfmesh.</p></article>
+        <article><strong>We keep Obsidian local</strong><p>Your vault stays on your device and under your control.</p></article>
+        <article><strong>We make AI optional</strong><p>Hermes and DIAL can help; the core workflow works without them.</p></article>
+        <article><strong>We ask before we write</strong><p>Suggestions become durable only when you approve them.</p></article>
       </div>
     </div>
   </section>
   <section class="home-section closing-section">
     <div class="shell closing-grid reveal">
-      <h2>Keep the memory.<br>Improve the loop.</h2>
-      <div class="hero-actions"><a class="button primary" href="/product/">Explore product <span aria-hidden="true">↗</span></a><a class="button" href="${productRepo}">View source</a></div>
+      <h2>Let’s pick up<br>where we left off.</h2>
+      <div><p>We’ll keep the context ready.</p><div class="hero-actions"><a class="button primary" href="${privateBeta}">Join the private beta</a><a class="button" href="/roadmap/#open-source-readiness">See our source plan</a></div></div>
     </div>
   </section>`,
 });
@@ -1484,14 +1443,22 @@ addPage({
     "Detailed product overview for Wooolfmesh: thesis, target users, local-first storage, optional AI, and long-term value.",
   active: "product",
   jsonLd: [softwareSchema],
-  body: `${hero("Product overview", oneSentence, `<div class="page-actions"><a class="button primary" href="/features/">Feature status</a><a class="button" href="/architecture/">Architecture</a></div>`)}
+  body: `${hero("Product", "A continuity layer for work that should be easy to resume.", `<div class="page-actions"><a class="button primary" href="${privateBeta}">Join the private beta</a><a class="button" href="/architecture/">See how data stays local</a></div>`)}
   <section class="section"><div class="shell content-grid"><div class="content-flow">
-    <section><h2>Product thesis</h2><p>Wooolfmesh is a local operating layer for a single technical user who wants tasks, knowledge, lessons, focus, reviews, signals, and local AI assistance to participate in one execution loop.</p></section>
+    <section><h2>Product thesis</h2><p>Most work tools remember objects. Wooolfmesh remembers continuity: what happened, why it mattered, which sources were used, and what should happen next.</p></section>
     <section><h2>Who it is for</h2><p>It is for builders, consultants, researchers, and independent knowledge workers who already treat their notes as valuable infrastructure and want a private command layer over that knowledge.</p></section>
     <section><h2>Who it is not for</h2><p>It is not a team project-management SaaS, not a hosted collaboration workspace, not a cloud database product, and not a generic AI chatbot interface.</p></section>
-    <section><h2>How AI is used safely</h2><p>AI can propose capture candidates, task shapes, summaries, review ideas, and reflection prompts. Generated output is suggestion data. Durable writes require explicit approval through normal create or apply flows.</p></section>
+    <section><h2>How AI is used safely</h2><p>Hermes and DIAL can propose capture candidates, task shapes, summaries, review ideas, and reflection prompts. Generated output is suggestion data. Durable writes require explicit approval through normal create or apply flows.</p></section>
     <section><h2>Value over time</h2><p>The value compounds when yesterday's focus outcomes, review lessons, project signals, and cognitive bites reappear during today's planning and execution.</p></section>
   </div><aside class="sidebar-box"><h2>Core loop</h2><div class="badge-row">${loop.map((step) => `<span class="badge">${step}</span>`).join("")}</div></aside></div></section>
+  <section class="section"><div class="shell">${sectionHeading("Four modes", "One system, four clear entry points", "Chat, execution, retrieval, and repeatable work share the same local memory.")}
+    <div class="module-grid">
+      <article class="module-card"><span>Discuss</span><h2>Think out loud</h2><p>Chats stay useful when decisions and next steps can become owned work.</p></article>
+      <article class="module-card"><span>Do</span><h2>Move work forward</h2><p>Tasks, projects, focus, routines, and reviews point toward a concrete next move.</p></article>
+      <article class="module-card"><span>Find</span><h2>Recover context</h2><p>Search Wooolfmesh, Obsidian, and connected sources with citations and scope controls.</p></article>
+      <article class="module-card"><span>Run</span><h2>Repeat safely</h2><p>Templates and preview-first automations accelerate routine work without silent writes.</p></article>
+    </div>
+  </div></section>
   <section class="section"><div class="shell">${sectionHeading("Current state", "Implemented, partial, and roadmap", "Status is grounded in the current WorkOS Local product docs and backlog.")}${statusColumns()}</div></section>`,
 });
 
@@ -1640,10 +1607,10 @@ addPage({
       <div>FastAPI backend<span>Validates requests, owns Markdown IO, scheduler/runtime services, and optional AI calls.</span></div>
       <div>Markdown vault<span>Durable source of truth for user-owned entities under <code>_WorkOS</code>.</span></div>
       <div>SQLite runtime<span>Reminders, task events, indexes, cache, diagnostics, registry, routines, and analytics.</span></div>
-      <div>Optional AI<span>Ollama/local AI or configured providers. Useful, but never required for normal operation.</span></div>
+      <div>Optional AI<span>Hermes or DIAL. Useful, but never required for normal operation.</span></div>
     </div>
     <div class="content-flow architecture-copy">
-      <section><h2>Preview-first AI boundary</h2><p>Capture, task shaping, review generation, ADK/agent output, and import proposals are suggestions. Saving or applying them is a separate explicit action.</p></section>
+      <section><h2>Preview-first AI boundary</h2><p>Capture, task shaping, review generation, AI, automation, and import proposals are suggestions. Saving or applying them is a separate explicit action.</p></section>
       <section><h2>Explicit write policy</h2><p>The control vault configured by <code>WORKOS_VAULT_PATH</code> is the writable Wooolfmesh area. Registered reference or archive vaults are read-only by default. Indexing writes runtime cache rows, not source note edits.</p></section>
       <section><h2>No silent mutation of personal knowledge</h2><p>Wooolfmesh should not mutate, delete, reformat, migrate, or overwrite real user vault data without explicit user approval.</p></section>
     </div>
@@ -1664,7 +1631,16 @@ addPage({
       ([group, items]) =>
         `<article class="roadmap-column ${group.startsWith("Now") ? "now" : ""} reveal"><h2>${escapeHtml(group)}</h2>${bullets(items)}</article>`,
     )
-    .join("")}</div></section>`,
+    .join("")}</div></section>
+  <section class="section" id="open-source-readiness"><div class="shell">
+    ${sectionHeading("Source status", "Private beta now. Open-source launch next.", "The product repository is private today; publication and a root project license are explicit launch gates.")}
+    <div class="note-grid">
+      <article class="note-block"><h2>Ready now</h2><p>Contributor setup, invited-tester security guidance, privacy-safe product evidence, and public product documentation.</p></article>
+      <article class="note-block"><h2>Owner decision</h2><p>Select the root project license, audit the history for private data, and only then make the product repository public.</p></article>
+      <article class="note-block"><h2>Align before launch</h2><p>Update contribution terms, package metadata, Store-oriented drafts, third-party notices, and website wording together.</p></article>
+      <article class="note-block"><h2>Keep the product narrow</h2><p>Open-source readiness does not turn Wooolfmesh into team SaaS, hosted accounts, or mandatory AI.</p></article>
+    </div>
+  </div></section>`,
 });
 
 addPage({
@@ -1673,12 +1649,13 @@ addPage({
   description:
     "Report Wooolfmesh bugs, request features, discuss improvements, and find the source and roadmap links.",
   active: "support",
-  body: `${hero("Support and feedback", "Found a bug or have a product idea? Open a GitHub issue so it can be tracked publicly.", `<div class="page-actions"><a class="button primary" href="${publicIssues}">Open public issue</a><a class="button" href="${productRepo}">View product source</a></div>`)}
+  body: `${hero("Support and early access", "Use the public tracker for product feedback, or open a beta request to help shape the resume workflow.", `<div class="page-actions"><a class="button primary" href="${privateBeta}">Join the private beta</a><a class="button" href="${publicIssues}">Open public issue</a></div>`)}
   <section class="section"><div class="shell note-grid">
+    <article class="note-block" id="private-beta"><h2>Private beta</h2><p>Tell us what kind of work you repeatedly have to reconstruct. Beta access is for individual, local-first workflows—not team SaaS.</p><a class="text-link" href="${privateBeta}">Request beta access</a></article>
     <article class="note-block"><h2>Report bugs</h2><p>Use the public issue tracker for broken pages, confusing docs, install problems, or product behavior that needs triage.</p><a class="text-link" href="${publicIssues}">Report a bug</a></article>
     <article class="note-block"><h2>Request features</h2><p>Describe the workflow, the problem, and what would make the local-first loop better.</p><a class="text-link" href="${publicIssues}">Request a feature</a></article>
     <article class="note-block"><h2>Read docs first</h2><p>Use the docs index for setup, local data model, optional AI, troubleshooting, and current limitations.</p><a class="text-link" href="/guides/">Open docs</a></article>
-    <article class="note-block"><h2>Privacy and source</h2><p>Review local-first trust principles, then inspect the product source for implementation details.</p><a class="text-link" href="/privacy/">Privacy model</a></article>
+    <article class="note-block"><h2>Privacy and source</h2><p>Review local-first trust principles and the planned open-source launch gates. The product repository remains private during beta.</p><a class="text-link" href="/roadmap/#open-source-readiness">Source status</a></article>
   </div></section>`,
 });
 
@@ -1708,7 +1685,7 @@ addPage({
     ],
     [
       "Optional AI",
-      "Ollama/local AI and hosted providers can assist, but the app works without them.",
+      "Hermes and DIAL can assist, but the app works without them.",
     ],
     [
       "No private site data",
@@ -1809,8 +1786,8 @@ addPage({
   description: "About Dzmitry Kharlanau and the origin of Wooolfmesh.",
   active: "about",
   jsonLd: [personSchema],
-  body: `${hero("About", "Wooolfmesh is built by Dzmitry Kharlanau as a private local work system for real execution loops.")}
-  <section class="section"><div class="shell about-card reveal"><div class="portrait-mark">DK</div><div><h2>Dzmitry Kharlanau</h2><p>${escapeHtml(author.description)}</p><p>Wooolfmesh grew from the need to manage tasks, decisions, focus, reviews, and lessons without putting the whole system into a SaaS black box.</p><div class="link-list"><a class="button primary" href="${authorGitHub}">GitHub profile</a><a class="button" href="${authorLinkedIn}">LinkedIn</a><a class="button" href="${productRepo}">Product source</a></div></div></div></section>`,
+  body: `${hero("About", "Wooolfmesh is built by Dzmitry Kharlanau for one stubborn problem: returning to serious work without rebuilding the context.")}
+  <section class="section"><div class="shell about-card reveal"><div class="portrait-mark">DK</div><div><h2>Dzmitry Kharlanau</h2><p>${escapeHtml(author.description)}</p><p>Wooolfmesh grew from the need to keep tasks, decisions, sources, focus outcomes, and next moves together—locally, transparently, and without turning personal work into a SaaS black box.</p><div class="link-list"><a class="button primary" href="${authorGitHub}">GitHub profile</a><a class="button" href="${authorLinkedIn}">LinkedIn</a><a class="button" href="/roadmap/#open-source-readiness">Source roadmap</a></div></div></div></section>`,
 });
 
 addPage({
@@ -1924,6 +1901,15 @@ async function writeText(file, data) {
   await writeFile(file, data);
 }
 
+async function fileExists(file) {
+  try {
+    await access(file);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function aliasPage(target, title) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${escapeHtml(title)}</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="${site}${target}"><meta http-equiv="refresh" content="0; url=${target}"></head><body><p><a href="${target}">Continue to ${escapeHtml(title)}</a></p></body></html>`;
 }
@@ -1958,6 +1944,7 @@ async function main() {
       support: `${site}/support/`,
       feedback: publicIssues,
       source: productRepo,
+      source_visibility: "private beta",
       site_repo: siteRepo,
     },
   });
@@ -2144,10 +2131,12 @@ async function main() {
         `- [${displayTitle(page)}](${site}${page.url === "/" ? "/" : page.url})`,
     )
     .join("\n");
-  await writeText(
-    "llms.txt",
-    `# Wooolfmesh\n\n${oneSentence}\n\nWooolfmesh is local-first, Markdown-backed, and preview-first. It is not a cloud-first task manager or a generic AI chatbot. Optional AI requires a configured local or hosted provider; the app remains useful without AI.\n\n## Canonical links\n\n- [Public site](${site}/)\n- [Privacy](${site}/privacy/)\n- [Support](${site}/support/)\n- [Guides](${site}/guides/)\n- [Product repository](${productRepo})\n- [Creator on GitHub](${authorGitHub})\n- [Creator on LinkedIn](${authorLinkedIn})\n\n## Public pages\n\n${pageLines}\n\n## Machine-readable files\n\n- [Product data](${site}/data/product.json)\n- [Features data](${site}/data/features.json)\n- [Roadmap data](${site}/data/roadmap.json)\n- [Releases data](${site}/data/releases.json)\n- [Guides data](${site}/data/guides.json)\n- [Full AI context](${site}/llms-full.txt)\n\nNo private vault data is published on this site.\n`,
-  );
+  if (!(await fileExists("llms.txt"))) {
+    await writeText(
+      "llms.txt",
+      `# Wooolfmesh\n\n${oneSentence}\n\nWooolfmesh is local-first, Markdown-backed, and preview-first. It is not a cloud-first task manager or a generic AI chatbot. Optional AI requires a configured local or hosted provider; the app remains useful without AI.\n\n## Canonical links\n\n- [Public site](${site}/)\n- [Privacy](${site}/privacy/)\n- [Support](${site}/support/)\n- [Guides](${site}/guides/)\n- [Product repository](${productRepo})\n- [Creator on GitHub](${authorGitHub})\n- [Creator on LinkedIn](${authorLinkedIn})\n\n## Public pages\n\n${pageLines}\n\n## Machine-readable files\n\n- [Product data](${site}/data/product.json)\n- [Features data](${site}/data/features.json)\n- [Roadmap data](${site}/data/roadmap.json)\n- [Releases data](${site}/data/releases.json)\n- [Guides data](${site}/data/guides.json)\n- [Full AI context](${site}/llms-full.txt)\n\nNo private vault data is published on this site.\n`,
+    );
+  }
   await writeText(
     "llms-full.txt",
     `# Wooolfmesh full AI context\n\n## Product definition\n${oneSentence}\n\n## Product thesis\nWooolfmesh is a local-first operating layer for daily execution. It connects tasks, capture, focus sessions, reviews, cognitive bites, memory, projects, routines, signals, analytics, search, local knowledge, and optional AI into one loop.\n\n## Core loop\n${loop.join(" -> ")}\n\n## Storage model\nMarkdown under the configured _WorkOS vault is the durable source of truth for user-owned entities. SQLite stores runtime support such as reminders, task events, indexes, registry data, routine state, diagnostics, and analytics.\n\n## Feature status\n${features.map((feature) => `- ${feature.title}: ${statusCopy[feature.status]}. ${feature.short}`).join("\n")}\n\n## Roadmap\n${Object.entries(

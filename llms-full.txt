@@ -22,7 +22,7 @@ Markdown under the configured _WorkOS vault is the durable source of truth for u
 - Project health: Partial. Signals for stale, blocked, overloaded, or missing-next-action projects with concrete recovery direction.
 - Signals and analytics: Implemented. Local patterns over focus, planning quality, routines, signals, app health, and learning loops.
 - Local knowledge search: Implemented. Search across Wooolfmesh entities and indexed knowledge notes with citations, scope controls, and provenance.
-- Optional AI assistance: Optional. Ollama/local AI and configured hosted providers can assist capture, shaping, summaries, and reflection, but normal use does not require AI.
+- Optional AI assistance: Optional. Hermes and DIAL can assist capture, shaping, summaries, and reflection, but normal use does not require AI.
 
 ## Roadmap
 Now / implemented
@@ -36,6 +36,7 @@ Next / P0
 - Upgrade focus activation and closeout so readiness, interruptions, outcomes, and lessons feed the learning loop.
 - Consolidate review, project, agent, and import suggestions into one follow-through rail.
 - Keep product docs, backlog, release notes, and public website stewardship aligned with implemented reality.
+- Select and publish a root project license, then align contribution terms, Store drafts, and public copy before an open-source announcement.
 
 Later / P1
 - Weekly outcomes planner refinements and stronger outcome-to-review comparison.

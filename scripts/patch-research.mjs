@@ -24,12 +24,19 @@ async function patchHtmlTree(directory = ".") {
     if (!entry.name.endsWith(".html")) continue;
 
     let html = await readFile(filePath, "utf8");
-    if (!html.includes("data-nav-links") || html.includes('href="/research/"')) {
+    if (
+      !html.includes("data-nav-links") ||
+      html.includes('href="/research/"')
+    ) {
       continue;
     }
 
-    html = html.replaceAll(
-      /(<a href="\/architecture\/"[^>]*>Architecture<\/a>)/g,
+    html = html.replace(
+      /(<div class="nav-links" data-nav-links>[\s\S]*?<a href="\/architecture\/"[^>]*>Architecture<\/a>)/,
+      '$1<a href="/research/">Research</a>',
+    );
+    html = html.replace(
+      /(<div class="footer-links">[\s\S]*?<a href="\/architecture\/"[^>]*>Architecture<\/a>)/,
       '$1<a href="/research/">Research</a>',
     );
     await writeFile(filePath, html);
@@ -102,7 +109,8 @@ async function patchNavigationSchema() {
   const architectureIndex = items.findIndex(
     (item) => item.url === `${site}/architecture/`,
   );
-  const insertAt = architectureIndex >= 0 ? architectureIndex + 1 : items.length;
+  const insertAt =
+    architectureIndex >= 0 ? architectureIndex + 1 : items.length;
   items.splice(insertAt, 0, {
     "@type": "SiteNavigationElement",
     name: "Research",

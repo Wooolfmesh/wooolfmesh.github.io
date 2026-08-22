@@ -17,13 +17,19 @@
     },
     {
       "@type": "SiteNavigationElement",
-      "position": 3,
+      "name": "Research",
+      "url": "https://wooolfmesh.github.io/research/",
+      "position": 3
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 4,
       "name": "Roadmap",
       "url": "https://wooolfmesh.github.io/roadmap/"
     },
     {
       "@type": "SiteNavigationElement",
-      "position": 4,
+      "position": 5,
       "name": "Support",
       "url": "https://wooolfmesh.github.io/support/"
     }

@@ -42,9 +42,6 @@
   <url><loc>https://wooolfmesh.github.io/guides/diagnostics/</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://wooolfmesh.github.io/guides/limitations/</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://wooolfmesh.github.io/architecture/</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://wooolfmesh.github.io/research/</loc><lastmod>2026-08-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://wooolfmesh.github.io/research/radar/</loc><lastmod>2026-08-16</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://wooolfmesh.github.io/research/mechanics/</loc><lastmod>2026-08-17</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://wooolfmesh.github.io/roadmap/</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://wooolfmesh.github.io/support/</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://wooolfmesh.github.io/privacy/</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -61,4 +58,8 @@
   <url><loc>https://wooolfmesh.github.io/ai/context/</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://wooolfmesh.github.io/ai/use-cases/</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://wooolfmesh.github.io/ai/entities/</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wooolfmesh.github.io/research/</loc><lastmod>2026-08-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wooolfmesh.github.io/research/radar/</loc><lastmod>2026-08-22</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wooolfmesh.github.io/research/mechanics/</loc><lastmod>2026-08-22</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wooolfmesh.github.io/research/blueprint/</loc><lastmod>2026-08-22</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

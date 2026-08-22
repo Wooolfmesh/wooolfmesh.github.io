@@ -48,6 +48,21 @@
       "@type": "Dataset",
       "name": "entities",
       "url": "https://wooolfmesh.github.io/data/entities.json"
+    },
+    {
+      "@type": "Dataset",
+      "name": "research",
+      "url": "https://wooolfmesh.github.io/data/research.json"
+    },
+    {
+      "@type": "Dataset",
+      "name": "research-mechanics",
+      "url": "https://wooolfmesh.github.io/data/research-mechanics.json"
+    },
+    {
+      "@type": "Dataset",
+      "name": "research-blueprint",
+      "url": "https://wooolfmesh.github.io/data/research-blueprint.json"
     }
   ]
 }

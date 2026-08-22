@@ -13,7 +13,7 @@
   },
   {
     "question": "Is AI required?",
-    "answer": "No. AI is optional. Ollama/local AI and configured hosted providers can assist, but normal workflows remain usable without a model."
+    "answer": "No. AI is optional. Hermes and DIAL can assist, but normal workflows remain usable without a model."
   },
   {
     "question": "Can Wooolfmesh write into my other notes?",

@@ -62,7 +62,7 @@
   {
     "slug": "ai-setup",
     "title": "Optional AI setup",
-    "description": "Use local or hosted providers deliberately.",
+    "description": "Use Hermes or DIAL deliberately.",
     "url": "https://wooolfmesh.github.io/guides/ai-setup/"
   },
   {

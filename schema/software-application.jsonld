@@ -24,7 +24,8 @@
     "weekly review",
     "cognitive bites",
     "local AI",
-    "Ollama",
+    "Hermes",
+    "DIAL",
     "personal operating system",
     "knowledge work"
   ],
@@ -41,7 +42,6 @@
     "Optional AI assistance (Optional)"
   ],
   "sameAs": [
-    "https://github.com/dkharlanau/work-os-local",
     "https://github.com/Wooolfmesh/wooolfmesh.github.io"
   ],
   "softwareHelp": "https://wooolfmesh.github.io/support/",
