@@ -83,6 +83,7 @@ if (navToggle && navLinks) {
     const open = navLinks.classList.toggle("open");
     document.body.classList.toggle("menu-open", open);
     navToggle.setAttribute("aria-expanded", String(open));
+    navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   });
 }
 

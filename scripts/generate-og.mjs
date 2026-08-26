@@ -4,20 +4,26 @@ import sharp from "sharp";
 
 const brandAsset = "assets/wooolfmesh.png";
 const iconDirectory = "assets/icons";
-const background = "#f5f3ec";
+const background = "#ffffff";
 
 const svg = `<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <rect width="1200" height="630" fill="${background}"/>
-  <path d="M0 72h1200M0 554h1200" fill="none" stroke="#cbc8bd"/>
-  <path d="M62 0v630M748 0v630" fill="none" stroke="#e0ddd4"/>
-  <text x="62" y="48" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#171715">WOOOLFMESH</text>
-  <text x="62" y="193" font-family="Arial, sans-serif" font-size="70" font-weight="500" letter-spacing="-4" fill="#171715">Local-first memory</text>
-  <text x="62" y="267" font-family="Arial, sans-serif" font-size="70" font-weight="500" letter-spacing="-4" fill="#171715">for agentic work</text>
-  <text x="66" y="330" font-family="Arial, sans-serif" font-size="22" fill="#686862">Private execution over user-owned Markdown.</text>
-  <text x="66" y="508" font-family="monospace" font-size="15" fill="#686862">MARKDOWN-OWNED  ·  LOCAL RUNTIME  ·  OPTIONAL AI  ·  PREVIEW-FIRST</text>
-  <rect x="814" y="124" width="276" height="276" rx="24" fill="#e8e4da" stroke="#cbc8bd"/>
-  <path d="M780 464h344" fill="none" stroke="#cbc8bd"/>
-  <text x="952" y="498" text-anchor="middle" font-family="monospace" font-size="14" fill="#171715">PRIVATE COMMAND CENTER</text>
+  <rect width="78" height="630" fill="#050505"/>
+  <rect x="78" y="0" width="1122" height="16" fill="#08b9df"/>
+  <rect x="78" y="544" width="782" height="86" fill="#ff006e"/>
+  <rect x="860" y="544" width="340" height="86" fill="#ffe11a"/>
+  <path d="M78 82h1122M78 544h1122M860 82v548" fill="none" stroke="#050505" stroke-width="5"/>
+  <text x="118" y="61" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#050505">WOOOLFMESH</text>
+  <text x="116" y="198" font-family="Impact, Arial Black, sans-serif" font-size="88" font-weight="900" letter-spacing="-3" fill="#050505">PICK UP THE WORK.</text>
+  <text x="116" y="292" font-family="Impact, Arial Black, sans-serif" font-size="88" font-weight="900" letter-spacing="-3" fill="#ff006e">NOT THE RECAP.</text>
+  <text x="120" y="350" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#050505">Local-first memory for work that should be easy to resume.</text>
+  <text x="120" y="409" font-family="monospace" font-size="17" fill="#050505">LAST RESULT  /  KEY DECISION  /  NEXT MOVE</text>
+  <rect x="116" y="444" width="640" height="56" fill="#08b9df" stroke="#050505" stroke-width="4"/>
+  <text x="140" y="480" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#050505">YOUR MARKDOWN · NO SILENT WRITES · OPTIONAL AI</text>
+  <text x="116" y="600" font-family="Impact, Arial Black, sans-serif" font-size="32" font-weight="900" fill="#050505">LOCAL / PRIVATE / READY</text>
+  <text x="902" y="600" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#050505">PRIVATE BETA</text>
+  <rect x="900" y="122" width="236" height="236" fill="#ffe11a" stroke="#050505" stroke-width="5"/>
+  <text transform="translate(46 492) rotate(-90)" font-family="Impact, Arial Black, sans-serif" font-size="31" font-weight="900" fill="#ffffff">LOCAL / PRIVATE / READY</text>
 </svg>`;
 
 function buildIco(images) {
@@ -85,7 +91,7 @@ const mascot = await sharp(brandAsset)
   .toBuffer();
 
 await sharp(Buffer.from(svg))
-  .composite([{ input: mascot, left: 834, top: 144 }])
+  .composite([{ input: mascot, left: 900, top: 122 }])
   .png({ compressionLevel: 9 })
   .toFile("assets/og.png");
 

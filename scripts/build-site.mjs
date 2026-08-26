@@ -1271,7 +1271,7 @@ function layout(page) {
     <meta name="twitter:description" content="${escapeHtml(page.description)}">
     <meta name="twitter:image" content="${site}/assets/og.png">
     <meta name="twitter:image:alt" content="Wooolfmesh local-first memory for agentic work">
-    <meta name="theme-color" content="#f5f3ec">
+    <meta name="theme-color" content="#08b9df">
     <link rel="alternate" type="application/rss+xml" title="Wooolfmesh RSS" href="/feed.xml">
     <link rel="alternate" type="application/atom+xml" title="Wooolfmesh Atom" href="/atom.xml">
     <link rel="alternate" type="application/feed+json" title="Wooolfmesh JSON Feed" href="/feed.json">
@@ -1288,11 +1288,11 @@ function layout(page) {
       )
       .join("\n    ")}
   </head>
-  <body>
+  <body class="page-${escapeHtml(active || "home")}">
     <header class="site-header">
       <nav class="nav-shell" aria-label="Main navigation">
         <a class="brand" href="/" aria-label="Wooolfmesh home"><img src="/assets/wooolfmesh.png" alt="">Wooolfmesh</a>
-        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu"><span></span></button>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu"><span>Menu</span></button>
         <div class="nav-links" data-nav-links>
           ${nav
             .map(
@@ -1307,25 +1307,21 @@ function layout(page) {
     <footer class="site-footer">
       <div class="footer-shell">
         <div class="footer-brand">
-          <strong>Wooolfmesh</strong>
-          <p>${oneSentence}</p>
-          <p class="footer-small">Formerly WorkOS Local. No private vault data is published here.</p>
+          <a class="footer-logo brand" href="/" aria-label="Wooolfmesh home"><img src="/assets/wooolfmesh.png" alt="">Wooolfmesh</a>
+        </div>
+        <div class="footer-summary">
+          <p>Wooolfmesh is a local-first memory for agents with a private personal context that connects your tools and keeps your work moving.</p>
+          <p class="footer-small">Formerly Wooolf Chat. No hypeware and adds a polished time.</p>
         </div>
         <div class="footer-links">
-          <a href="/product/">Product</a>
-          <a href="/architecture/">Architecture</a>
-          <a href="/guides/">Guides</a>
-          <a href="/roadmap/">Roadmap</a>
-          <a href="/privacy/">Privacy</a>
-          <a href="/support/">Support</a>
-          <a href="/ai/">AI disclosure</a>
-          <a href="${publicIssues}">Feedback</a>
-          <a href="/roadmap/#open-source-readiness">Our source plan</a>
-          <a href="${siteRepo}">Site source</a>
+          <div><strong>Product</strong><a href="/product/">Overview</a><a href="/features/">Features</a><a href="/roadmap/#open-source-readiness">Your source plan</a></div>
+          <div><strong>Architecture</strong><a href="/architecture/">Overview</a><a href="/ai/">AI choices</a><a href="/privacy/">Be secure</a></div>
+          <div><strong>Research</strong><a href="/research/">Posts</a><a href="/research/radar/">Findings</a></div>
+          <div><strong>Support</strong><a href="/support/">Help</a><a href="${publicIssues}">Feedback</a></div>
         </div>
       </div>
     </footer>
-    <script src="/assets/script.js"></script>
+    <script src="/assets/script.js?v=20260826-exact"></script>
   </body>
 </html>`;
 }
@@ -1359,79 +1355,53 @@ addPage({
   description: resumeDescription,
   active: "",
   jsonLd: [siteSchema, softwareSchema, personSchema, projectSchema],
-  body: `<section class="manifesto-hero">
-    <div class="shell manifesto-grid">
+  body: `<aside class="poster-rail" aria-label="Local, private, and ready"><div class="rail-message" aria-hidden="true"><span>Local</span><b>/</b><span>Private</span><b>/</b><span>Ready</span></div><strong>Private<br>beta</strong><time datetime="2026-08-26">Aug<br>26<br>2026</time></aside>
+  <section class="manifesto-hero">
+    <div class="shell">
       <div class="manifesto-copy reveal">
-        <h1><span>We keep<br>your work</span><em>ready to<br>continue.</em></h1>
-        <p class="manifesto-lead">We bring back your last result, key decisions, sources, and next step—so you can return without starting over.</p>
-        <div class="manifesto-rule" aria-hidden="true"></div>
-        <div class="hero-actions">
-          <a class="button primary" href="${privateBeta}">Join the private beta</a>
-          <a class="button" href="/roadmap/#open-source-readiness">See our source plan</a>
-        </div>
-        <p class="trust-row"><span>Private beta</span><span>Task playbooks</span><span>Your Markdown</span><span>No silent writes</span></p>
+        <h1><span>Pick up</span><strong>The work.</strong><em>Not the recap.</em></h1>
       </div>
+      <div class="manifesto-grid">
+        <p class="manifesto-lead reveal">Local-first work memory<br>that keeps the last result,<br>key decisions, sources,<br>and next step ready—<br>so one technical person<br>can continue without<br>starting over.</p>
+        <div class="hero-trust-frame reveal">
+          <div class="hero-trust-panel" role="region" aria-label="Product trust principles">
+            <img class="trust-icon-strip" src="/assets/trust-icons.png" alt="" aria-hidden="true">
+            <article><div><strong>Your Markdown</strong><p>We keep your work as clean Markdown<br>that you can own and move.</p></div></article>
+            <article><div><strong>No silent writes</strong><p>You see what we store.<br>Nothing gets saved behind your back.</p></div></article>
+            <article><div><strong>Local ML optional</strong><p>Enable local models for smarter context<br>without leaving your machine.</p></div></article>
+            <article><div><strong>Hermes or DIAL optional</strong><p>Use Hermes or DIAL to write, or stay<br>in your favorite tools.</p></div></article>
+          </div>
+        </div>
+      </div>
+      <figure class="product-proof reveal">
+        <figcaption>Actual product evidence</figcaption>
+        <a href="/assets/screenshots/resume-handoff.png" aria-label="Open the full Work and Focus product screenshot"><img src="/assets/screenshots/resume-handoff.png" alt="Wooolfmesh Work screen returning the user to a protected focus session with its finish line visible"></a>
+      </figure>
+      <div class="evidence-wall-title reveal">Electric evidence wall</div>
       <ol class="handoff-timeline reveal">
         <li>
           <span class="timeline-number">01</span>
-          <div><strong>What changed</strong><p>We reviewed the public support and privacy pages</p><small>August 25, 2026</small></div>
+          <div><strong>Last result</strong><p>We save the work state<br>so you can continue<br>exactly where you left off.</p><figure class="timeline-shot timeline-shot-left"><img src="/assets/evidence-last-result.png" alt="Presented content preserved in Wooolfmesh"></figure></div>
         </li>
         <li>
           <span class="timeline-number">02</span>
-          <div><strong>What we decided</strong><p>We keep private vault data out of public URLs</p><small>Decision saved</small></div>
+          <div><strong>Key decision</strong><p>We capture what matters<br>so the intent stays clear<br>and decisions don't get lost.</p><figure class="timeline-shot timeline-shot-center"><img src="/assets/evidence-key-decision.png" alt="Key decision and focus context preserved in Wooolfmesh"></figure></div>
         </li>
         <li>
           <span class="timeline-number">03</span>
-          <div><strong>What’s next</strong><p>We can return to the focus session and ship the change</p><small>Ready to continue</small></div>
+          <div><strong>Next move</strong><p>We keep the next step<br>front and center<br>so progress is immediate.</p><figure class="timeline-shot timeline-shot-right"><img src="/assets/evidence-next-move.png" alt="Next action ready to continue in Wooolfmesh"></figure></div>
         </li>
       </ol>
     </div>
-    <figure class="shell product-proof reveal">
-      <img src="/assets/screenshots/resume-handoff.png" alt="Wooolfmesh Work screen returning the user to a protected focus session with its finish line visible">
-      <figcaption>Actual product view · Work / Focus</figcaption>
-    </figure>
   </section>
-  <section class="home-section handoff-section">
-    <div class="shell">
-      <div class="handoff-intro">
-        <span class="section-number">01</span>
-        <h2>We give every task<br>a better starting point.</h2>
-        <p>We match the work with a clear playbook, ask for the few fields that matter, and keep the plan ready to continue.</p>
-      </div>
-      <div class="handoff-principles">
-        <article><span>Choose a playbook</span><p>Start with a bug fix, research, release, decision, agent loop, or your own local template.</p></article>
-        <article><span>Fill the essentials</span><p>We ask for the outcome, next action, finish line, and checks this task actually needs.</p></article>
-        <article><span>Use smart suggestions</span><p>Local ML can suggest effort and work mode. Hermes or DIAL can help shape the plan.</p></article>
-        <article><span>Stay in control</span><p>You review the draft before anything is written to your Markdown.</p></article>
-      </div>
-    </div>
+  <section class="evidence-strip">
+    <div><h2>Notes. Decisions. Next step. Ready.</h2><p>We're not another note app. We're the memory layer for technical work.<br>Local, private, and ready when you are.</p></div>
+    <strong>Built for<br>technical<br>individuals.</strong>
   </section>
-  <section class="home-section modes-section">
-    <div class="shell">
-      <div class="section-index"><span>02</span><span>Four modes</span><span>One shared context.</span></div>
-      <div class="mode-list">
-        <a href="/use-cases/capture-chaos-to-structured-work/"><span>01</span><h2>Discuss</h2><p>We help you think things through with Hermes or DIAL, then keep the decisions that matter.</p></a>
-        <a href="/features/tasks/"><span>02</span><h2>Do</h2><p>We turn each task into a clear brief with the right playbook, the fields that matter, and one next move.</p></a>
-        <a href="/features/local-knowledge/"><span>03</span><h2>Find</h2><p>We bring back the right memory, note, decision, or source with its context intact.</p></a>
-        <a href="/roadmap/"><span>04</span><h2>Run</h2><p>We help you reuse templates and preview every automation before it writes.</p></a>
-      </div>
-    </div>
-  </section>
-  <section class="home-section ownership-section">
-    <div class="shell ownership-grid">
-      <div><span class="section-number">03</span><h2>We keep you<br>in control.</h2></div>
-      <div class="ownership-points">
-        <article><strong>We store durable work in Markdown</strong><p>Your tasks and memory stay readable outside Wooolfmesh.</p></article>
-        <article><strong>We keep Obsidian local</strong><p>Your vault stays on your device and under your control.</p></article>
-        <article><strong>We make AI optional</strong><p>Hermes and DIAL can help; the core workflow works without them.</p></article>
-        <article><strong>We ask before we write</strong><p>Suggestions become durable only when you approve them.</p></article>
-      </div>
-    </div>
-  </section>
-  <section class="home-section closing-section">
-    <div class="shell closing-grid reveal">
+  <section class="closing-section">
+    <div class="closing-grid reveal">
       <h2>Let’s pick up<br>where we left off.</h2>
-      <div><p>We’ll keep the context ready.</p><div class="hero-actions"><a class="button primary" href="${privateBeta}">Join the private beta</a><a class="button" href="/roadmap/#open-source-readiness">See our source plan</a></div></div>
+      <div class="hero-actions"><a class="button primary" href="${privateBeta}">Join the private beta <span aria-hidden="true">→</span></a><a class="button" href="/roadmap/#open-source-readiness">See our source plan <span aria-hidden="true">→</span></a></div>
     </div>
   </section>`,
 });
@@ -2091,8 +2061,8 @@ async function main() {
     start_url: "/",
     scope: "/",
     display: "standalone",
-    background_color: "#f5f3ec",
-    theme_color: "#f5f3ec",
+    background_color: "#ffffff",
+    theme_color: "#08b9df",
     categories: ["productivity", "utilities"],
     icons: [
       {
