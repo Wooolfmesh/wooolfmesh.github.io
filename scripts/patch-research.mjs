@@ -7,7 +7,9 @@ const researchUrl = `${site}${researchPath}`;
 const radarUrl = `${site}/research/radar/`;
 const mechanicsUrl = `${site}/research/mechanics/`;
 const blueprintUrl = `${site}/research/blueprint/`;
-const today = new Date().toISOString().slice(0, 10);
+// Keep sitemap output reproducible. Advance this only when the hand-authored
+// research pages change; build time is not evidence that their content changed.
+const researchLastModified = "2026-08-22";
 
 async function patchHtmlTree(directory = ".") {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -48,22 +50,22 @@ async function patchSitemap() {
   let sitemap = await readFile(file, "utf8");
 
   if (!sitemap.includes(`<loc>${researchUrl}</loc>`)) {
-    const entry = `  <url><loc>${researchUrl}</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n`;
+    const entry = `  <url><loc>${researchUrl}</loc><lastmod>${researchLastModified}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n`;
     sitemap = sitemap.replace("</urlset>", `${entry}</urlset>`);
   }
 
   if (!sitemap.includes(`<loc>${radarUrl}</loc>`)) {
-    const entry = `  <url><loc>${radarUrl}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
+    const entry = `  <url><loc>${radarUrl}</loc><lastmod>${researchLastModified}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
     sitemap = sitemap.replace("</urlset>", `${entry}</urlset>`);
   }
 
   if (!sitemap.includes(`<loc>${mechanicsUrl}</loc>`)) {
-    const entry = `  <url><loc>${mechanicsUrl}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
+    const entry = `  <url><loc>${mechanicsUrl}</loc><lastmod>${researchLastModified}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
     sitemap = sitemap.replace("</urlset>", `${entry}</urlset>`);
   }
 
   if (!sitemap.includes(`<loc>${blueprintUrl}</loc>`)) {
-    const entry = `  <url><loc>${blueprintUrl}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
+    const entry = `  <url><loc>${blueprintUrl}</loc><lastmod>${researchLastModified}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
     sitemap = sitemap.replace("</urlset>", `${entry}</urlset>`);
   }
 

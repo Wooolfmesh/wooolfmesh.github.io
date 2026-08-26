@@ -1810,6 +1810,33 @@ body {
   font-size: 0.78rem;
 }
 
+@media (min-width: 941px) and (max-height: 760px) {
+  .manifesto-hero {
+    padding-block: 44px 64px;
+  }
+
+  .manifesto-copy h1 {
+    font-size: clamp(4rem, 6.2vw, 6rem);
+  }
+
+  .manifesto-lead {
+    margin-top: 24px;
+    font-size: clamp(1.05rem, 1.25vw, 1.25rem);
+  }
+
+  .manifesto-copy .hero-actions {
+    margin-top: 20px;
+  }
+
+  .manifesto-copy .button {
+    min-height: 52px;
+  }
+
+  .trust-row {
+    margin-top: 18px;
+  }
+}
+
 .handoff-timeline {
   position: relative;
   display: grid;

@@ -1374,7 +1374,7 @@ addPage({
       <ol class="handoff-timeline reveal">
         <li>
           <span class="timeline-number">01</span>
-          <div><strong>What changed</strong><p>We reviewed the public support and privacy pages</p><small>August 22, 2026</small></div>
+          <div><strong>What changed</strong><p>We reviewed the public support and privacy pages</p><small>August 25, 2026</small></div>
         </li>
         <li>
           <span class="timeline-number">02</span>
@@ -1387,8 +1387,8 @@ addPage({
       </ol>
     </div>
     <figure class="shell product-proof reveal">
-      <img src="/assets/screenshots/resume-handoff.png" alt="Wooolfmesh Today screen returning the user to a focus session already in progress">
-      <figcaption>Actual product view · Today / Do</figcaption>
+      <img src="/assets/screenshots/resume-handoff.png" alt="Wooolfmesh Work screen returning the user to a protected focus session with its finish line visible">
+      <figcaption>Actual product view · Work / Focus</figcaption>
     </figure>
   </section>
   <section class="home-section handoff-section">
