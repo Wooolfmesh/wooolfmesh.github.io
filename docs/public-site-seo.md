@@ -17,8 +17,12 @@ Every canonical page includes:
 - Twitter/X summary-large-image metadata;
 - favicon, PNG favicon, Apple touch icon, and web manifest links.
 
-The metadata describes Wooolfmesh as local-first memory for agentic work. AI is
-described as optional and provider-configured. No Store availability, ratings,
+The metadata describes Wooolfmesh as a local execution workspace that remembers
+work between sessions. Work Thread, recorded outcomes, decisions, sources and
+the next move are the user-facing proof; Markdown ownership and optional AI
+support that outcome. The app source is private, its root license is pending,
+and this public website repository is not the app. No free-access promise,
+Store availability, ratings,
 reviews, certifications, awards, or user-count claims are made.
 
 ## Structured data
@@ -64,6 +68,10 @@ npm run check:a11y
 templates, one H1 per canonical page, metadata coverage, JSON-LD syntax/types,
 manifest icon coverage and dimensions, the ICO header, sitemap coverage, and
 local links.
+
+The positioning guard also checks the shared definition across HTML, JSON and
+LLM context, explicit beta/source status, request-access wording, illustrative
+versus actual screenshots, and the absence of unsupported availability markup.
 
 ## Known limitations and manual follow-up
 

@@ -5,13 +5,13 @@
   "name": "Wooolfmesh",
   "alternateName": "WorkOS Local",
   "url": "https://wooolfmesh.github.io/",
-  "description": "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.",
+  "description": "Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.",
   "image": "https://wooolfmesh.github.io/assets/og.png",
   "logo": "https://wooolfmesh.github.io/assets/icons/icon-512.png",
   "creator": {
     "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
   },
-  "sameAs": [
-    "https://github.com/Wooolfmesh/wooolfmesh.github.io"
-  ]
+  "subjectOf": {
+    "@id": "https://wooolfmesh.github.io/#website"
+  }
 }

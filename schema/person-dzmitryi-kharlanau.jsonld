@@ -4,14 +4,14 @@
   "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau",
   "name": "Dzmitry Kharlanau",
   "url": "https://github.com/dkharlanau",
-  "description": "Creator of Wooolfmesh, focused on local-first productivity systems, agentic work memory, and practical execution loops.",
+  "description": "Creator of Wooolfmesh, focused on resumable execution, user-owned context, and practical work loops.",
   "sameAs": [
     "https://github.com/dkharlanau",
     "https://www.linkedin.com/in/dkharlanau/"
   ],
   "knowsAbout": [
     "local-first software",
-    "personal knowledge management",
-    "agentic work"
+    "user-owned work context",
+    "resumable execution"
   ]
 }

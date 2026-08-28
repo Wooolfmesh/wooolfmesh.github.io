@@ -1,7 +1,7 @@
 [
   {
     "question": "What is Wooolfmesh?",
-    "answer": "Wooolfmesh is local-first memory for agentic work: a private command center that connects tasks, capture, focus, reviews, lessons, project health, and local knowledge into one execution loop over a Markdown vault."
+    "answer": "Wooolfmesh is a local execution workspace that remembers your work between sessions."
   },
   {
     "question": "Was Wooolfmesh previously called WorkOS Local?",

@@ -68,7 +68,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Today operating layer feature",
+          "name": "Work execution surface feature",
           "item": "https://wooolfmesh.github.io/features/today-command-center/"
         }
       ]
