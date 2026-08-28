@@ -1,11 +1,11 @@
 [
   {
     "slug": "today-command-center",
-    "title": "Today operating layer",
+    "title": "Work execution surface",
     "status": "implemented",
     "short": "A daily start surface for next action, planned work, routines, reminders, blockers, capacity, and local context.",
     "problem": "Daily work gets split across tasks, notes, reminders, review debt, and project drift.",
-    "behavior": "Today gathers local context into one operating layer and points the user toward the next useful action.",
+    "behavior": "Work brings the recorded outcome, decisions, sources, and next move into one thread, with task-owned preparation and an explicit Focus closeout.",
     "value": "The user starts from a concrete move instead of re-reading the whole system every morning.",
     "loop": ["Clarify", "Plan", "Focus", "Review"]
   },

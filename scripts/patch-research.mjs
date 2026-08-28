@@ -9,7 +9,7 @@ const mechanicsUrl = `${site}/research/mechanics/`;
 const blueprintUrl = `${site}/research/blueprint/`;
 // Keep sitemap output reproducible. Advance this only when the hand-authored
 // research pages change; build time is not evidence that their content changed.
-const researchLastModified = "2026-08-22";
+const researchLastModified = "2026-08-29";
 
 async function patchHtmlTree(directory = ".") {
   const entries = await readdir(directory, { withFileTypes: true });

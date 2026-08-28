@@ -312,6 +312,62 @@ for (const file of htmlFiles) {
   }
 }
 
+// Public positioning is a data contract as well as visible copy.
+const product = JSON.parse(await readFile("data/product.json", "utf8"));
+const software = JSON.parse(
+  await readFile("schema/software-application.jsonld", "utf8"),
+);
+const home = await readFile("index.html", "utf8");
+const definition =
+  "Wooolfmesh is a local execution workspace that remembers your work between sessions.";
+if (product.definition !== definition)
+  failures.push("Product definition drift");
+for (const file of [
+  "index.html",
+  "product/index.html",
+  "llms.txt",
+  "llms-full.txt",
+]) {
+  if (!(await readFile(file, "utf8")).replace(/\s+/g, " ").includes(definition))
+    failures.push(`${file} omits the product definition`);
+}
+if (
+  product.urls.source_visibility !== "private beta" ||
+  !product.urls.license_status?.includes("pending")
+)
+  failures.push(
+    "Product data must disclose private beta and pending root license",
+  );
+if (
+  software.description !== product.description ||
+  manifest.description !== product.description
+)
+  failures.push("Schema/manifest description drift");
+if (
+  "isAccessibleForFree" in software ||
+  "offers" in software ||
+  "downloadUrl" in software
+)
+  failures.push("Unverified application availability in SoftwareApplication");
+if (software.creator?.["@id"] !== software.author?.["@id"])
+  failures.push("Software creator/author identity drift");
+for (const phrase of [
+  "Request beta access",
+  "Access and source status",
+  "fictional demo work",
+  "Illustrated handoff",
+]) {
+  if (!home.includes(phrase))
+    failures.push(`Home missing honest access/evidence wording: ${phrase}`);
+}
+for (const phrase of [
+  "Join the private beta",
+  "local-first memory for agentic work",
+  "Nothing gets saved behind your back",
+])
+  if (home.includes(phrase))
+    failures.push(`Home has retired or unsupported claim: ${phrase}`);
+
 if (failures.length) {
   console.error(failures.join("\n"));
   process.exit(1);

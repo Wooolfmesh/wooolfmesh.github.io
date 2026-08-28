@@ -6,7 +6,7 @@
     {
       "@type": "DefinedTerm",
       "name": "Wooolfmesh",
-      "description": "Wooolfmesh is local-first memory for agentic work: a private command center that connects tasks, capture, focus, reviews, lessons, project health, and local knowledge into one execution loop over a Markdown vault.",
+      "description": "Wooolfmesh is a local execution workspace that remembers your work between sessions.",
       "url": "https://wooolfmesh.github.io/glossary/#wooolfmesh"
     },
     {

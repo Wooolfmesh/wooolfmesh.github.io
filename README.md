@@ -4,7 +4,9 @@ This repository contains the public GitHub Pages website for Wooolfmesh:
 
 https://wooolfmesh.github.io/
 
-Wooolfmesh is local-first memory for agentic work. The site explains the product, feature model, use cases, roadmap, changelog, local-first privacy principles, current install status and project background.
+**Your work should remember where you stopped.** Wooolfmesh is a local execution workspace that remembers your work between sessions. Return to the last outcome, decisions, sources, and next move.
+
+The application is in private beta; its source repository and root license are not public. This repository contains the public website, not the application. Public requests go through [Support](https://wooolfmesh.github.io/support/) and do not guarantee access. No Store installer or measured productivity result is claimed.
 
 ## Technical approach
 
@@ -85,18 +87,16 @@ The build writes static files in place. Important generated outputs include:
 
 ## GitHub Pages publishing
 
-Preferred setup uses GitHub Actions:
-
-- Settings → Pages → Source: GitHub Actions
-- Push to `main`
-
-The workflow in `.github/workflows/pages.yml` installs dependencies, runs static checks, uploads the repository root as a Pages artifact, and deploys it.
-
-Branch publishing also works with:
+The live configuration checked on 2026-08-29 uses branch publishing:
 
 - Source: deploy from a branch
 - Branch: `main`
 - Folder: `/ (root)`
+
+Run `npm run check` before merging generated files. GitHub's managed **pages
+build and deployment** workflow publishes the committed root; there is no
+repository-authored validation workflow. Verify the successful deployment SHA
+and live HTML/assets after pushing. A push alone does not prove publication.
 
 The repository includes `.nojekyll` so GitHub Pages serves files as-is.
 

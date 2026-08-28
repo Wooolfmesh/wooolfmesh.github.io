@@ -14,12 +14,12 @@ const svg = `<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http:/
   <rect x="860" y="544" width="340" height="86" fill="#ffe11a"/>
   <path d="M78 82h1122M78 544h1122M860 82v548" fill="none" stroke="#050505" stroke-width="5"/>
   <text x="118" y="61" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#050505">WOOOLFMESH</text>
-  <text x="116" y="198" font-family="Impact, Arial Black, sans-serif" font-size="88" font-weight="900" letter-spacing="-3" fill="#050505">PICK UP THE WORK.</text>
-  <text x="116" y="292" font-family="Impact, Arial Black, sans-serif" font-size="88" font-weight="900" letter-spacing="-3" fill="#ff006e">NOT THE RECAP.</text>
-  <text x="120" y="350" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#050505">Local-first memory for work that should be easy to resume.</text>
+  <text x="116" y="198" font-family="Impact, Arial Black, sans-serif" font-size="66" font-weight="900" letter-spacing="-3" fill="#050505">PICK UP THE WORK.</text>
+  <text x="116" y="292" font-family="Impact, Arial Black, sans-serif" font-size="72" font-weight="900" letter-spacing="-3" textLength="710" lengthAdjust="spacingAndGlyphs" fill="#ff006e">NOT THE RECAP.</text>
+  <text x="120" y="350" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#050505">A local execution workspace. Pick up where you stopped.</text>
   <text x="120" y="409" font-family="monospace" font-size="17" fill="#050505">LAST RESULT  /  KEY DECISION  /  NEXT MOVE</text>
   <rect x="116" y="444" width="640" height="56" fill="#08b9df" stroke="#050505" stroke-width="4"/>
-  <text x="140" y="480" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#050505">YOUR MARKDOWN · NO SILENT WRITES · OPTIONAL AI</text>
+  <text x="140" y="480" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#050505">YOUR MARKDOWN · REVIEWED PROPOSALS · OPTIONAL AI</text>
   <text x="116" y="600" font-family="Impact, Arial Black, sans-serif" font-size="32" font-weight="900" fill="#050505">LOCAL / PRIVATE / READY</text>
   <text x="902" y="600" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#050505">PRIVATE BETA</text>
   <rect x="900" y="122" width="236" height="236" fill="#ffe11a" stroke="#050505" stroke-width="5"/>

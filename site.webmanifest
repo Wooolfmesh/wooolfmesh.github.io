@@ -2,7 +2,7 @@
   "id": "/",
   "name": "Wooolfmesh",
   "short_name": "Wooolfmesh",
-  "description": "Local-first memory for agentic work.",
+  "description": "Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

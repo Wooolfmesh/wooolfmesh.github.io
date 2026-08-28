@@ -11,12 +11,11 @@
   "author": {
     "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
   },
-  "description": "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.",
-  "isAccessibleForFree": true,
+  "description": "Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.",
   "keywords": [
-    "local-first productivity",
-    "local-first memory",
-    "agentic work memory",
+    "resumable work",
+    "execution workspace",
+    "Work Thread",
     "private productivity app",
     "Markdown productivity",
     "Obsidian workflow",
@@ -26,11 +25,11 @@
     "local AI",
     "Hermes",
     "DIAL",
-    "personal operating system",
+    "Work Protocol",
     "knowledge work"
   ],
   "featureList": [
-    "Today operating layer (Implemented)",
+    "Work execution surface (Implemented)",
     "Executable tasks (Implemented)",
     "Capture and inbox (Partial)",
     "Focus sessions (Implemented)",
@@ -41,11 +40,11 @@
     "Local knowledge search (Implemented)",
     "Optional AI assistance (Optional)"
   ],
-  "sameAs": [
-    "https://github.com/Wooolfmesh/wooolfmesh.github.io"
-  ],
+  "subjectOf": {
+    "@id": "https://wooolfmesh.github.io/#website"
+  },
   "softwareHelp": "https://wooolfmesh.github.io/support/",
   "creator": {
-    "@id": "https://wooolfmesh.github.io/#person-dzmitry-kharlanau"
+    "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
   }
 }

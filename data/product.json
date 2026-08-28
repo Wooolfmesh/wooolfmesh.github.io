@@ -1,23 +1,15 @@
 {
   "name": "Wooolfmesh",
-  "definition": "Wooolfmesh is local-first memory for agentic work: a private command center that connects tasks, capture, focus, reviews, lessons, project health, and local knowledge into one execution loop over a Markdown vault.",
-  "tagline": "Local-first memory for agentic work over a Markdown vault.",
-  "description": "Wooolfmesh is local-first memory for agentic work: a private command center for tasks, capture, focus, reviews, cognitive bites, project health, local search, and optional AI over user-owned Markdown.",
+  "definition": "Wooolfmesh is a local execution workspace that remembers your work between sessions.",
+  "tagline": "Your work should remember where you stopped.",
+  "description": "Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.",
   "legacy_name": "WorkOS Local",
-  "current_status": "Many product surfaces are implemented; some integration loops and public packaging remain partial or roadmap.",
-  "core_loop": [
-    "Capture",
-    "Clarify",
-    "Plan",
-    "Focus",
-    "Review",
-    "Learn",
-    "Reuse"
-  ],
+  "current_status": "Private beta. Application source is private; a root project license and public release are still pending. Implemented capabilities are not measured adoption results.",
+  "core_loop": ["Capture", "Prepare", "Focus", "Close out", "Resume", "Learn"],
   "author": {
     "name": "Dzmitry Kharlanau",
     "url": "https://github.com/dkharlanau",
-    "description": "Creator of Wooolfmesh, focused on local-first productivity systems, agentic work memory, and practical execution loops.",
+    "description": "Creator of Wooolfmesh, focused on resumable execution, user-owned context, and practical work loops.",
     "sameAs": [
       "https://github.com/dkharlanau",
       "https://www.linkedin.com/in/dkharlanau/"
@@ -30,6 +22,7 @@
     "feedback": "https://github.com/Wooolfmesh/wooolfmesh.github.io/issues",
     "source": "https://github.com/dkharlanau/work-os-local",
     "source_visibility": "private beta",
+    "license_status": "Root project license pending",
     "site_repo": "https://github.com/Wooolfmesh/wooolfmesh.github.io"
   }
 }
