@@ -2116,6 +2116,24 @@ async function main() {
       )}\n\n## Store readiness\nWooolfmesh is not ready for Microsoft Store distribution yet. Missing: MSIX/upload package, package validation, clean Windows install/update/uninstall validation, Partner Center confirmation, final Store screenshots, and legal/policy review.\n\n## Privacy principles\nNo private vault data is published on this site. Capture is preview-first. External integrations and AI providers are optional. Registered knowledge vaults are read-only by default.\n\n## Canonical links\n- Site: ${site}/\n- Privacy: ${site}/privacy/\n- Support: ${site}/support/\n- Public issues: ${publicIssues}\n- Product source: ${productRepo}\n- Site source: ${siteRepo}\n- Creator GitHub: ${authorGitHub}\n- Creator LinkedIn: ${authorLinkedIn}\n`,
   );
   await writeText(
+    "ai/site-profile.json",
+    `${JSON.stringify({
+      $schema: "https://raw.githubusercontent.com/dkharlanau/agent-ready-web-profile/main/schema/site-profile.schema.json",
+      profileVersion: "0.1",
+      id: "wooolfmesh-work-execution",
+      name: siteName,
+      canonicalUrl: `${site}/`,
+      description: seoDescription,
+      languages: ["en"],
+      web: { sitemap: `${site}/sitemap.xml`, robots: `${site}/robots.txt`, llms: `${site}/llms.txt` },
+      retrieval: { indexes: [
+        { name: "Public product data", url: `${site}/data/product.json`, mediaType: "application/json", format: "json", description: "Public product positioning and capability data." },
+        { name: "Public guides", url: `${site}/data/guides.json`, mediaType: "application/json", format: "json", description: "Public guide inventory for the local-first workflow." },
+      ] },
+      trust: { privacy: `${site}/privacy/`, limitations: `${site}/guides/limitations/`, provenance: `${site}/ai/context/` },
+    }, null, 2)}\n`,
+  );
+  await writeText(
     "humans.txt",
     `Product: Wooolfmesh\nCreator: ${author.name}\nCreator GitHub: ${authorGitHub}\nCreator LinkedIn: ${authorLinkedIn}\nSite purpose: Public product website, AI-readable context, screenshots, guides, roadmap, and support entry point.\nPublic feedback: ${publicIssues}\nPublic site repository: ${siteRepo}\nCanonical product repository: ${productRepo}\nNo private data note: this site must not contain private vault data, secrets, sensitive screenshots, personal logs, or client information.\n`,
   );
