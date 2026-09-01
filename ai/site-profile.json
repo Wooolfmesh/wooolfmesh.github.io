@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dkharlanau/agent-ready-web-profile/main/schema/site-profile.schema.json",
+  "profileVersion": "0.1",
+  "id": "wooolfmesh-work-execution",
+  "name": "Wooolfmesh",
+  "canonicalUrl": "https://wooolfmesh.github.io/",
+  "description": "Local-first work execution workspace with durable memory, explicit review, focus sessions, and optional AI assistance.",
+  "languages": ["en"],
+  "web": {
+    "sitemap": "https://wooolfmesh.github.io/sitemap.xml",
+    "robots": "https://wooolfmesh.github.io/robots.txt",
+    "llms": "https://wooolfmesh.github.io/llms.txt"
+  },
+  "retrieval": {
+    "indexes": [
+      {"name":"Public product data","url":"https://wooolfmesh.github.io/data/product.json","mediaType":"application/json","format":"json","description":"Public product positioning and capability data."},
+      {"name":"Public guides","url":"https://wooolfmesh.github.io/data/guides.json","mediaType":"application/json","format":"json","description":"Public guide inventory for the local-first workflow."}
+    ]
+  },
+  "trust": {
+    "privacy": "https://wooolfmesh.github.io/privacy/",
+    "limitations": "https://wooolfmesh.github.io/guides/limitations/",
+    "provenance": "https://wooolfmesh.github.io/ai/context/"
+  }
+}
