@@ -8,7 +8,10 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#08b9df",
-  "categories": ["productivity", "utilities"],
+  "categories": [
+    "productivity",
+    "utilities"
+  ],
   "icons": [
     {
       "src": "/assets/icons/icon-192.png",

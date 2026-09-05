@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Public GitHub Pages website for Wooolfmesh.",
   "scripts": {
-    "build": "node scripts/build-site.mjs && node scripts/patch-research.mjs && npm run generate:og",
+    "build": "node scripts/build-site.mjs && node scripts/patch-research.mjs && node scripts/apply-consent-analytics.mjs && npm run generate:og",
     "generate:og": "node scripts/generate-og.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

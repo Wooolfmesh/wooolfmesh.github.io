@@ -5,7 +5,14 @@
   "description": "Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.",
   "legacy_name": "WorkOS Local",
   "current_status": "Private beta. Application source is private; a root project license and public release are still pending. Implemented capabilities are not measured adoption results.",
-  "core_loop": ["Capture", "Prepare", "Focus", "Close out", "Resume", "Learn"],
+  "core_loop": [
+    "Capture",
+    "Prepare",
+    "Focus",
+    "Close out",
+    "Resume",
+    "Learn"
+  ],
   "author": {
     "name": "Dzmitry Kharlanau",
     "url": "https://github.com/dkharlanau",

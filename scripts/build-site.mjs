@@ -20,6 +20,10 @@ const oneSentence =
   "Wooolfmesh is a local execution workspace that remembers your work between sessions.";
 const resumeDescription = seoDescription;
 
+const googleTagManagerHead = `    <!-- Consent-aware portfolio analytics -->
+    <script src="/assets/analytics-consent.js" defer></script>`;
+const googleTagManagerBody = "";
+
 const author = {
   name: "Dzmitry Kharlanau",
   url: authorGitHub,
@@ -1229,6 +1233,7 @@ function layout(page) {
   return `<!doctype html>
 <html lang="en">
   <head>
+${googleTagManagerHead}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="NVjLGEd7e79H41hAX7li-wqcvb5KLEPmDwml8uLge6g" />
@@ -1280,6 +1285,7 @@ function layout(page) {
       .join("\n    ")}
   </head>
   <body class="page-${escapeHtml(active || "home")}">
+${googleTagManagerBody}
     <header class="site-header">
       <nav class="nav-shell" aria-label="Main navigation">
         <a class="brand" href="/" aria-label="Wooolfmesh home"><img src="/assets/wooolfmesh.png" alt="">Wooolfmesh</a>
@@ -1652,6 +1658,10 @@ addPage({
     [
       "No private site data",
       "This public site must not include private vault content, secrets, credentials, or sensitive screenshots.",
+    ],
+    [
+      "Optional website analytics",
+      "This public documentation site loads aggregate Google Analytics only after explicit consent. Product telemetry, vault content, task text, and focus-session content remain local and are not sent.",
     ],
   ]
     .map(
@@ -2117,21 +2127,49 @@ async function main() {
   );
   await writeText(
     "ai/site-profile.json",
-    `${JSON.stringify({
-      $schema: "https://raw.githubusercontent.com/dkharlanau/agent-ready-web-profile/main/schema/site-profile.schema.json",
-      profileVersion: "0.1",
-      id: "wooolfmesh-work-execution",
-      name: siteName,
-      canonicalUrl: `${site}/`,
-      description: seoDescription,
-      languages: ["en"],
-      web: { sitemap: `${site}/sitemap.xml`, robots: `${site}/robots.txt`, llms: `${site}/llms.txt` },
-      retrieval: { indexes: [
-        { name: "Public product data", url: `${site}/data/product.json`, mediaType: "application/json", format: "json", description: "Public product positioning and capability data." },
-        { name: "Public guides", url: `${site}/data/guides.json`, mediaType: "application/json", format: "json", description: "Public guide inventory for the local-first workflow." },
-      ] },
-      trust: { privacy: `${site}/privacy/`, limitations: `${site}/guides/limitations/`, provenance: `${site}/ai/context/` },
-    }, null, 2)}\n`,
+    `${JSON.stringify(
+      {
+        $schema:
+          "https://raw.githubusercontent.com/dkharlanau/agent-ready-web-profile/main/schema/site-profile.schema.json",
+        profileVersion: "0.1",
+        id: "wooolfmesh-work-execution",
+        name: siteName,
+        canonicalUrl: `${site}/`,
+        description: seoDescription,
+        languages: ["en"],
+        web: {
+          sitemap: `${site}/sitemap.xml`,
+          robots: `${site}/robots.txt`,
+          llms: `${site}/llms.txt`,
+        },
+        retrieval: {
+          indexes: [
+            {
+              name: "Public product data",
+              url: `${site}/data/product.json`,
+              mediaType: "application/json",
+              format: "json",
+              description: "Public product positioning and capability data.",
+            },
+            {
+              name: "Public guides",
+              url: `${site}/data/guides.json`,
+              mediaType: "application/json",
+              format: "json",
+              description:
+                "Public guide inventory for the local-first workflow.",
+            },
+          ],
+        },
+        trust: {
+          privacy: `${site}/privacy/`,
+          limitations: `${site}/guides/limitations/`,
+          provenance: `${site}/ai/context/`,
+        },
+      },
+      null,
+      2,
+    )}\n`,
   );
   await writeText(
     "humans.txt",

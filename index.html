@@ -1,477 +1,132 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="google-site-verification"
-      content="NVjLGEd7e79H41hAX7li-wqcvb5KLEPmDwml8uLge6g"
-    />
+    <!-- Consent-aware portfolio analytics -->
+    <script src="/assets/analytics-consent.js" defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="NVjLGEd7e79H41hAX7li-wqcvb5KLEPmDwml8uLge6g" />
     <title>Wooolfmesh — Pick up where you left off</title>
-    <meta
-      name="description"
-      content="Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI."
-    />
-    <meta
-      name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    />
-    <meta name="author" content="Dzmitry Kharlanau" />
-    <meta name="creator" content="Dzmitry Kharlanau" />
-    <meta name="publisher" content="Wooolfmesh" />
-    <meta name="application-name" content="Wooolfmesh" />
-    <meta name="apple-mobile-web-app-title" content="Wooolfmesh" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="format-detection" content="telephone=no" />
-    <link rel="canonical" href="https://wooolfmesh.github.io/" />
-    <link rel="author" href="https://github.com/dkharlanau" />
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Wooolfmesh" />
-    <meta
-      property="og:title"
-      content="Wooolfmesh — Pick up where you left off"
-    />
-    <meta
-      property="og:description"
-      content="Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI."
-    />
-    <meta property="og:url" content="https://wooolfmesh.github.io/" />
-    <meta
-      property="og:image"
-      content="https://wooolfmesh.github.io/assets/og.png"
-    />
-    <meta
-      property="og:image:secure_url"
-      content="https://wooolfmesh.github.io/assets/og.png"
-    />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Wooolfmesh — a resumable execution workspace"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Wooolfmesh — Pick up where you left off"
-    />
-    <meta
-      name="twitter:description"
-      content="Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI."
-    />
-    <meta
-      name="twitter:image"
-      content="https://wooolfmesh.github.io/assets/og.png"
-    />
-    <meta
-      name="twitter:image:alt"
-      content="Wooolfmesh — a resumable execution workspace"
-    />
-    <meta name="theme-color" content="#08b9df" />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="Wooolfmesh RSS"
-      href="/feed.xml"
-    />
-    <link
-      rel="alternate"
-      type="application/atom+xml"
-      title="Wooolfmesh Atom"
-      href="/atom.xml"
-    />
-    <link
-      rel="alternate"
-      type="application/feed+json"
-      title="Wooolfmesh JSON Feed"
-      href="/feed.json"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link
-      rel="icon"
-      href="/assets/icons/favicon-32x32.png"
-      type="image/png"
-      sizes="32x32"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/assets/icons/apple-touch-icon.png"
-      sizes="180x180"
-    />
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "@id": "https://wooolfmesh.github.io/#webpage",
-        "name": "Wooolfmesh — Pick up where you left off",
-        "url": "https://wooolfmesh.github.io/",
-        "description": "Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.",
-        "inLanguage": "en",
-        "datePublished": "2026-08-29",
-        "dateModified": "2026-08-29",
-        "isPartOf": { "@id": "https://wooolfmesh.github.io/#website" },
-        "author": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-        },
-        "about": { "@id": "https://wooolfmesh.github.io/#software" },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "https://wooolfmesh.github.io/assets/og.png",
-          "width": 1200,
-          "height": 630
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://wooolfmesh.github.io/"
-          }
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": "https://wooolfmesh.github.io/#website",
-        "name": "Wooolfmesh",
-        "alternateName": ["WorkOS Local", "work-os-local", "Work OS Local"],
-        "url": "https://wooolfmesh.github.io/",
-        "description": "Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.",
-        "inLanguage": "en",
-        "dateModified": "2026-08-29",
-        "publisher": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "@id": "https://wooolfmesh.github.io/#software",
-        "name": "Wooolfmesh",
-        "alternateName": "WorkOS Local",
-        "applicationCategory": "ProductivityApplication",
-        "operatingSystem": "Windows, macOS, local web app",
-        "url": "https://wooolfmesh.github.io/",
-        "image": "https://wooolfmesh.github.io/assets/og.png",
-        "author": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-        },
-        "description": "Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.",
-        "keywords": [
-          "resumable work",
-          "execution workspace",
-          "Work Thread",
-          "private productivity app",
-          "Markdown productivity",
-          "Obsidian workflow",
-          "focus sessions",
-          "weekly review",
-          "cognitive bites",
-          "local AI",
-          "Hermes",
-          "DIAL",
-          "Work Protocol",
-          "knowledge work"
-        ],
-        "featureList": [
-          "Work execution surface (Implemented)",
-          "Executable tasks (Implemented)",
-          "Capture and inbox (Partial)",
-          "Focus sessions (Implemented)",
-          "Reviews and follow-through (Partial)",
-          "Memory and cognitive bites (Implemented)",
-          "Project health (Partial)",
-          "Signals and analytics (Implemented)",
-          "Local knowledge search (Implemented)",
-          "Optional AI assistance (Optional)"
-        ],
-        "subjectOf": { "@id": "https://wooolfmesh.github.io/#website" },
-        "softwareHelp": "https://wooolfmesh.github.io/support/",
-        "creator": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau",
-        "name": "Dzmitry Kharlanau",
-        "url": "https://github.com/dkharlanau",
-        "description": "Creator of Wooolfmesh, focused on resumable execution, user-owned context, and practical work loops.",
-        "sameAs": [
-          "https://github.com/dkharlanau",
-          "https://www.linkedin.com/in/dkharlanau/"
-        ],
-        "knowsAbout": [
-          "local-first software",
-          "user-owned work context",
-          "resumable execution"
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Project",
-        "@id": "https://wooolfmesh.github.io/#project",
-        "name": "Wooolfmesh",
-        "alternateName": "WorkOS Local",
-        "url": "https://wooolfmesh.github.io/",
-        "description": "Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.",
-        "image": "https://wooolfmesh.github.io/assets/og.png",
-        "logo": "https://wooolfmesh.github.io/assets/icons/icon-512.png",
-        "creator": {
-          "@id": "https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"
-        },
-        "subjectOf": { "@id": "https://wooolfmesh.github.io/#website" }
-      }
-    </script>
+    <meta name="description" content="Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Dzmitry Kharlanau">
+    <meta name="creator" content="Dzmitry Kharlanau">
+    <meta name="publisher" content="Wooolfmesh">
+    <meta name="application-name" content="Wooolfmesh">
+    <meta name="apple-mobile-web-app-title" content="Wooolfmesh">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="https://wooolfmesh.github.io/">
+    <link rel="author" href="https://github.com/dkharlanau">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Wooolfmesh">
+    <meta property="og:title" content="Wooolfmesh — Pick up where you left off">
+    <meta property="og:description" content="Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.">
+    <meta property="og:url" content="https://wooolfmesh.github.io/">
+    <meta property="og:image" content="https://wooolfmesh.github.io/assets/og.png">
+    <meta property="og:image:secure_url" content="https://wooolfmesh.github.io/assets/og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Wooolfmesh — a resumable execution workspace">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wooolfmesh — Pick up where you left off">
+    <meta name="twitter:description" content="Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.">
+    <meta name="twitter:image" content="https://wooolfmesh.github.io/assets/og.png">
+    <meta name="twitter:image:alt" content="Wooolfmesh — a resumable execution workspace">
+    <meta name="theme-color" content="#08b9df">
+    <link rel="alternate" type="application/rss+xml" title="Wooolfmesh RSS" href="/feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="Wooolfmesh Atom" href="/atom.xml">
+    <link rel="alternate" type="application/feed+json" title="Wooolfmesh JSON Feed" href="/feed.json">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://wooolfmesh.github.io/#webpage","name":"Wooolfmesh — Pick up where you left off","url":"https://wooolfmesh.github.io/","description":"Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.","inLanguage":"en","datePublished":"2026-08-29","dateModified":"2026-08-29","isPartOf":{"@id":"https://wooolfmesh.github.io/#website"},"author":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"},"about":{"@id":"https://wooolfmesh.github.io/#software"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://wooolfmesh.github.io/assets/og.png","width":1200,"height":630}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wooolfmesh.github.io/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://wooolfmesh.github.io/#website","name":"Wooolfmesh","alternateName":["WorkOS Local","work-os-local","Work OS Local"],"url":"https://wooolfmesh.github.io/","description":"Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.","inLanguage":"en","dateModified":"2026-08-29","publisher":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://wooolfmesh.github.io/#software","name":"Wooolfmesh","alternateName":"WorkOS Local","applicationCategory":"ProductivityApplication","operatingSystem":"Windows, macOS, local web app","url":"https://wooolfmesh.github.io/","image":"https://wooolfmesh.github.io/assets/og.png","author":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"},"description":"Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.","keywords":["resumable work","execution workspace","Work Thread","private productivity app","Markdown productivity","Obsidian workflow","focus sessions","weekly review","cognitive bites","local AI","Hermes","DIAL","Work Protocol","knowledge work"],"featureList":["Work execution surface (Implemented)","Executable tasks (Implemented)","Capture and inbox (Partial)","Focus sessions (Implemented)","Reviews and follow-through (Partial)","Memory and cognitive bites (Implemented)","Project health (Partial)","Signals and analytics (Implemented)","Local knowledge search (Implemented)","Optional AI assistance (Optional)"],"subjectOf":{"@id":"https://wooolfmesh.github.io/#website"},"softwareHelp":"https://wooolfmesh.github.io/support/","creator":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau","name":"Dzmitry Kharlanau","url":"https://github.com/dkharlanau","description":"Creator of Wooolfmesh, focused on resumable execution, user-owned context, and practical work loops.","sameAs":["https://github.com/dkharlanau","https://www.linkedin.com/in/dkharlanau/"],"knowsAbout":["local-first software","user-owned work context","resumable execution"]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Project","@id":"https://wooolfmesh.github.io/#project","name":"Wooolfmesh","alternateName":"WorkOS Local","url":"https://wooolfmesh.github.io/","description":"Return to the last outcome, decisions, sources, and next move. A local execution workspace with Markdown-owned context and optional AI.","image":"https://wooolfmesh.github.io/assets/og.png","logo":"https://wooolfmesh.github.io/assets/icons/icon-512.png","creator":{"@id":"https://wooolfmesh.github.io/#person-dzmitryi-kharlanau"},"subjectOf":{"@id":"https://wooolfmesh.github.io/#website"}}</script>
   </head>
   <body class="page-home">
+
     <header class="site-header">
       <nav class="nav-shell" aria-label="Main navigation">
-        <a class="brand" href="/" aria-label="Wooolfmesh home"
-          ><img src="/assets/wooolfmesh.png" alt="" />Wooolfmesh</a
-        >
-        <button
-          class="menu-toggle"
-          type="button"
-          data-menu-toggle
-          aria-expanded="false"
-          aria-label="Open menu"
-        >
-          <span>Menu</span>
-        </button>
+        <a class="brand" href="/" aria-label="Wooolfmesh home"><img src="/assets/wooolfmesh.png" alt="">Wooolfmesh</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu"><span>Menu</span></button>
         <div class="nav-links" data-nav-links>
-          <a href="/product/">Product</a
-          ><a href="/architecture/">Architecture</a
-          ><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
+          <a href="/product/">Product</a><a href="/architecture/">Architecture</a><a href="/roadmap/">Roadmap</a><a href="/support/">Support</a>
         </div>
       </nav>
     </header>
-    <main>
-      <aside class="poster-rail" aria-label="Local, private, and ready">
-        <div class="rail-message" aria-hidden="true">
-          <span>Local</span><b>/</b><span>Private</span><b>/</b
-          ><span>Ready</span>
-        </div>
-        <strong>Private<br />beta</strong
-        ><time datetime="2026-08-29">Aug<br />29<br />2026</time>
-      </aside>
-      <section class="manifesto-hero">
-        <div class="shell">
-          <div class="manifesto-copy reveal">
-            <h1>
-              <span>Pick up</span><strong>The work.</strong
-              ><em>Not the recap.</em>
-            </h1>
-          </div>
-          <div class="manifesto-grid">
-            <p class="manifesto-lead reveal">
-              Wooolfmesh is a local execution workspace that remembers your work
-              between sessions.<br />Return to the last outcome,<br />decisions,
-              sources,<br />and next move.
-            </p>
-            <div class="hero-trust-frame reveal">
-              <div
-                class="hero-trust-panel"
-                role="region"
-                aria-label="Product trust principles"
-              >
-                <img
-                  class="trust-icon-strip"
-                  src="/assets/trust-icons.png"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <article>
-                  <div>
-                    <strong>Your Markdown</strong>
-                    <p>
-                      We keep your work as clean Markdown<br />that you can own
-                      and move.
-                    </p>
-                  </div>
-                </article>
-                <article>
-                  <div>
-                    <strong>No silent writes</strong>
-                    <p>
-                      Review generated proposals.<br />Apply them explicitly.
-                    </p>
-                  </div>
-                </article>
-                <article>
-                  <div>
-                    <strong>Useful without AI</strong>
-                    <p>
-                      Prepare, focus, and close out<br />with deterministic
-                      local workflows.
-                    </p>
-                  </div>
-                </article>
-                <article>
-                  <div>
-                    <strong>Hermes or DIAL optional</strong>
-                    <p>
-                      Request suggestions when configured.<br />Review before
-                      saving.
-                    </p>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-          <figure class="product-proof reveal">
-            <figcaption>
-              Actual local app · fictional demo work · 29 Aug 2026
-            </figcaption>
-            <a
-              href="/assets/screenshots/resume-handoff.png"
-              aria-label="Open the full Work resume screenshot"
-              ><img
-                src="/assets/screenshots/resume-handoff.png"
-                alt="Wooolfmesh Work Thread showing a recorded demo outcome, decision, and next move after a Focus closeout"
-            /></a>
-          </figure>
-          <div class="evidence-wall-title reveal">
-            Illustrated handoff — example fragments
-          </div>
-          <ol class="handoff-timeline reveal">
-            <li>
-              <span class="timeline-number">01</span>
-              <div>
-                <strong>Last result</strong>
-                <p>
-                  Record what happened<br />at closeout so the result<br />is
-                  there when you return.
-                </p>
-                <figure class="timeline-shot timeline-shot-left">
-                  <img
-                    src="/assets/evidence-last-result.png"
-                    alt="Illustration of a recorded result, not an application screenshot"
-                  />
-                </figure>
-              </div>
-            </li>
-            <li>
-              <span class="timeline-number">02</span>
-              <div>
-                <strong>Key decision</strong>
-                <p>
-                  Record the decision<br />and its source so the<br />reason
-                  stays visible.
-                </p>
-                <figure class="timeline-shot timeline-shot-center">
-                  <img
-                    src="/assets/evidence-key-decision.png"
-                    alt="Illustration of decision context, not an application screenshot"
-                  />
-                </figure>
-              </div>
-            </li>
-            <li>
-              <span class="timeline-number">03</span>
-              <div>
-                <strong>Next move</strong>
-                <p>
-                  Keep the next step<br />visible and distinguish it<br />from
-                  unapplied suggestions.
-                </p>
-                <figure class="timeline-shot timeline-shot-right">
-                  <img
-                    src="/assets/evidence-next-move.png"
-                    alt="Illustration of a next move, not an application screenshot"
-                  />
-                </figure>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-      <section class="evidence-strip">
-        <div>
-          <h2>Your work should remember where you stopped.</h2>
-          <p>
-            A resumable execution workspace for one technical person.<br />Work
-            Thread → prepare → Focus → close out → resume.
-          </p>
-        </div>
-        <strong>Built for<br />technical<br />individuals.</strong>
-      </section>
-      <section class="closing-section">
-        <div class="closing-grid reveal">
-          <h2>Let’s pick up<br />where we left off.</h2>
-          <div class="hero-actions">
-            <a
-              class="button primary"
-              href="https://github.com/Wooolfmesh/wooolfmesh.github.io/issues/new?title=Private%20beta%20request&body=What%20I%20want%20Wooolfmesh%20to%20help%20me%20resume%3A%0A%0AMy%20platform%3A%0A"
-              >Request beta access <span aria-hidden="true">→</span></a
-            ><a class="button" href="/roadmap/#open-source-readiness"
-              >Access and source status <span aria-hidden="true">→</span></a
-            >
-            <p>
-              Public request, not guaranteed access. App source is private;
-              license and public release are pending.
-            </p>
+    <main><aside class="poster-rail" aria-label="Local, private, and ready"><div class="rail-message" aria-hidden="true"><span>Local</span><b>/</b><span>Private</span><b>/</b><span>Ready</span></div><strong>Private<br>beta</strong><time datetime="2026-08-29">Aug<br>29<br>2026</time></aside>
+  <section class="manifesto-hero">
+    <div class="shell">
+      <div class="manifesto-copy reveal">
+        <h1><span>Pick up</span><strong>The work.</strong><em>Not the recap.</em></h1>
+      </div>
+      <div class="manifesto-grid">
+        <p class="manifesto-lead reveal">Wooolfmesh is a local execution workspace that remembers your work between sessions.<br>Return to the last outcome,<br>decisions, sources,<br>and next move.</p>
+        <div class="hero-trust-frame reveal">
+          <div class="hero-trust-panel" role="region" aria-label="Product trust principles">
+            <img class="trust-icon-strip" src="/assets/trust-icons.png" alt="" aria-hidden="true">
+            <article><div><strong>Your Markdown</strong><p>We keep your work as clean Markdown<br>that you can own and move.</p></div></article>
+            <article><div><strong>No silent writes</strong><p>Review generated proposals.<br>Apply them explicitly.</p></div></article>
+            <article><div><strong>Useful without AI</strong><p>Prepare, focus, and close out<br>with deterministic local workflows.</p></div></article>
+            <article><div><strong>Hermes or DIAL optional</strong><p>Request suggestions when configured.<br>Review before saving.</p></div></article>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+      <figure class="product-proof reveal">
+        <figcaption>Actual local app · fictional demo work · 29 Aug 2026</figcaption>
+        <a href="/assets/screenshots/resume-handoff.png" aria-label="Open the full Work resume screenshot"><img src="/assets/screenshots/resume-handoff.png" alt="Wooolfmesh Work Thread showing a recorded demo outcome, decision, and next move after a Focus closeout"></a>
+      </figure>
+      <div class="evidence-wall-title reveal">Illustrated handoff — example fragments</div>
+      <ol class="handoff-timeline reveal">
+        <li>
+          <span class="timeline-number">01</span>
+          <div><strong>Last result</strong><p>Record what happened<br>at closeout so the result<br>is there when you return.</p><figure class="timeline-shot timeline-shot-left"><img src="/assets/evidence-last-result.png" alt="Illustration of a recorded result, not an application screenshot"></figure></div>
+        </li>
+        <li>
+          <span class="timeline-number">02</span>
+          <div><strong>Key decision</strong><p>Record the decision<br>and its source so the<br>reason stays visible.</p><figure class="timeline-shot timeline-shot-center"><img src="/assets/evidence-key-decision.png" alt="Illustration of decision context, not an application screenshot"></figure></div>
+        </li>
+        <li>
+          <span class="timeline-number">03</span>
+          <div><strong>Next move</strong><p>Keep the next step<br>visible and distinguish it<br>from unapplied suggestions.</p><figure class="timeline-shot timeline-shot-right"><img src="/assets/evidence-next-move.png" alt="Illustration of a next move, not an application screenshot"></figure></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+  <section class="evidence-strip">
+    <div><h2>Your work should remember where you stopped.</h2><p>A resumable execution workspace for one technical person.<br>Work Thread → prepare → Focus → close out → resume.</p></div>
+    <strong>Built for<br>technical<br>individuals.</strong>
+  </section>
+  <section class="closing-section">
+    <div class="closing-grid reveal">
+      <h2>Let’s pick up<br>where we left off.</h2>
+      <div class="hero-actions"><a class="button primary" href="https://github.com/Wooolfmesh/wooolfmesh.github.io/issues/new?title=Private%20beta%20request&body=What%20I%20want%20Wooolfmesh%20to%20help%20me%20resume%3A%0A%0AMy%20platform%3A%0A">Request beta access <span aria-hidden="true">→</span></a><a class="button" href="/roadmap/#open-source-readiness">Access and source status <span aria-hidden="true">→</span></a><p>Public request, not guaranteed access. App source is private; license and public release are pending.</p></div>
+    </div>
+  </section></main>
     <footer class="site-footer">
       <div class="footer-shell">
         <div class="footer-brand">
-          <a class="footer-logo brand" href="/" aria-label="Wooolfmesh home"
-            ><img src="/assets/wooolfmesh.png" alt="" />Wooolfmesh</a
-          >
+          <a class="footer-logo brand" href="/" aria-label="Wooolfmesh home"><img src="/assets/wooolfmesh.png" alt="">Wooolfmesh</a>
         </div>
         <div class="footer-summary">
-          <p>
-            Wooolfmesh is a local execution workspace that remembers your work
-            between sessions.
-          </p>
-          <p class="footer-small">
-            Formerly Wooolf Chat. No hypeware and adds a polished time.
-          </p>
+          <p>Wooolfmesh is a local execution workspace that remembers your work between sessions.</p>
+          <p class="footer-small">Formerly Wooolf Chat. No hypeware and adds a polished time.</p>
         </div>
         <div class="footer-links">
-          <div>
-            <strong>Product</strong><a href="/product/">Overview</a
-            ><a href="/features/">Features</a
-            ><a href="/roadmap/#open-source-readiness">Your source plan</a>
-          </div>
-          <div>
-            <strong>Architecture</strong><a href="/architecture/">Overview</a
-            ><a href="/ai/">AI choices</a><a href="/privacy/">Be secure</a>
-          </div>
-          <div>
-            <strong>Research</strong><a href="/research/">Posts</a
-            ><a href="/research/radar/">Findings</a>
-          </div>
-          <div>
-            <strong>Support</strong><a href="/support/">Help</a
-            ><a href="https://github.com/Wooolfmesh/wooolfmesh.github.io/issues"
-              >Feedback</a
-            >
-          </div>
+          <div><strong>Product</strong><a href="/product/">Overview</a><a href="/features/">Features</a><a href="/roadmap/#open-source-readiness">Your source plan</a></div>
+          <div><strong>Architecture</strong><a href="/architecture/">Overview</a><a href="/ai/">AI choices</a><a href="/privacy/">Be secure</a></div>
+          <div><strong>Research</strong><a href="/research/">Posts</a><a href="/research/radar/">Findings</a></div>
+          <div><strong>Support</strong><a href="/support/">Help</a><a href="https://github.com/Wooolfmesh/wooolfmesh.github.io/issues">Feedback</a></div>
         </div>
       </div>
     </footer>
