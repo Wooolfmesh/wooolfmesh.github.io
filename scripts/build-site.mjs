@@ -1247,7 +1247,7 @@ ${googleTagManagerHead}
     <meta name="apple-mobile-web-app-title" content="${siteName}">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="canonical" href="${canonical}">
+    <link rel="canonical" href="${canonical}">${page.url === "/" ? '\n    <link rel="describedby" type="application/json" href="/ai/site-profile.json" title="Agent-Ready Web Profile">' : ""}
     <link rel="author" href="${author.url}">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <meta property="og:type" content="${page.ogType ?? "website"}">
@@ -2162,9 +2162,13 @@ async function main() {
           ],
         },
         trust: {
-          privacy: `${site}/privacy/`,
-          limitations: `${site}/guides/limitations/`,
           provenance: `${site}/ai/context/`,
+        },
+        extensions: {
+          "wooolfmesh.github.io/trust": {
+            privacy: `${site}/privacy/`,
+            limitations: `${site}/guides/limitations/`,
+          },
         },
       },
       null,

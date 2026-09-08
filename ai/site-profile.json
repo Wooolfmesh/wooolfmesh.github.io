@@ -32,8 +32,12 @@
     ]
   },
   "trust": {
-    "privacy": "https://wooolfmesh.github.io/privacy/",
-    "limitations": "https://wooolfmesh.github.io/guides/limitations/",
     "provenance": "https://wooolfmesh.github.io/ai/context/"
+  },
+  "extensions": {
+    "wooolfmesh.github.io/trust": {
+      "privacy": "https://wooolfmesh.github.io/privacy/",
+      "limitations": "https://wooolfmesh.github.io/guides/limitations/"
+    }
   }
 }
