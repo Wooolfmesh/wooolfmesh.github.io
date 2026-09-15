@@ -136,6 +136,8 @@ const sitemapUrls = [
 ].map((match) => match[1]);
 if (new Set(sitemapUrls).size !== sitemapUrls.length)
   failures.push("sitemap.xml contains duplicate URLs");
+if (sitemapUrls.some((url) => url.includes("/404")))
+  failures.push("sitemap.xml must not contain the 404 error route");
 for (const file of required.filter((item) => item.endsWith("index.html"))) {
   const url =
     file === "index.html"
@@ -202,26 +204,32 @@ const titles = new Map();
 const descriptions = new Map();
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
+  const isErrorPage = file === "404.html";
   const expectedCanonical =
     file === "index.html"
       ? "https://wooolfmesh.github.io/"
-      : file === "404.html"
-        ? "https://wooolfmesh.github.io/404.html"
+      : isErrorPage
+        ? null
         : `https://wooolfmesh.github.io/${path.dirname(file).replaceAll(path.sep, "/")}/`;
   const canonicalMatches = [
     ...html.matchAll(/<link\s+rel="canonical"\s+href="([^"]+)"(?:\s*\/?)?>/g),
   ];
-  if (
+  if (isErrorPage) {
+    if (canonicalMatches.length !== 0)
+      failures.push("404.html must not advertise a canonical URL");
+    if (!html.includes('name="robots" content="noindex, follow"'))
+      failures.push("404.html must remain noindex, follow");
+    if (html.includes('property="og:url"'))
+      failures.push("404.html must not advertise og:url as canonical content");
+  } else if (
     canonicalMatches.length !== 1 ||
     canonicalMatches[0]?.[1] !== expectedCanonical
-  )
-    failures.push(
-      `${file} canonical must be unique and equal ${expectedCanonical}`,
-    );
+  ) {
+    failures.push(`${file} canonical must be unique and equal ${expectedCanonical}`);
+  }
   const h1Count = [...html.matchAll(/<h1(?:\s|>)/g)].length;
   if (h1Count !== 1) failures.push(`${file} has ${h1Count} h1 elements`);
-  for (const must of [
-    'rel="canonical"',
+  const requiredMetadata = [
     'name="description"',
     'name="robots"',
     'name="author"',
@@ -230,7 +238,6 @@ for (const file of htmlFiles) {
     'name="apple-mobile-web-app-title"',
     'property="og:title"',
     'property="og:description"',
-    'property="og:url"',
     'property="og:image:type"',
     'property="og:image:alt"',
     'name="twitter:card"',
@@ -240,8 +247,9 @@ for (const file of htmlFiles) {
     'rel="manifest"',
     'rel="apple-touch-icon"',
     'href="/favicon.ico"',
-    'type="application/ld+json"',
-  ]) {
+  ];
+  if (!isErrorPage) requiredMetadata.push('rel="canonical"', 'property="og:url"', 'type="application/ld+json"');
+  for (const must of requiredMetadata) {
     if (!html.includes(must)) failures.push(`${file} missing ${must}`);
   }
   const title = html.match(/<title>([^<]+)<\/title>/)?.[1];
@@ -279,9 +287,9 @@ for (const file of htmlFiles) {
   const jsonLdTypes = jsonLd.flatMap((item) =>
     Array.isArray(item["@type"]) ? item["@type"] : [item["@type"]],
   );
-  if (!jsonLdTypes.includes("WebPage"))
+  if (!isErrorPage && !jsonLdTypes.includes("WebPage"))
     failures.push(`${file} JSON-LD missing WebPage`);
-  if (file !== "404.html" && !jsonLdTypes.includes("BreadcrumbList"))
+  if (!isErrorPage && !jsonLdTypes.includes("BreadcrumbList"))
     failures.push(`${file} JSON-LD missing BreadcrumbList`);
   if (file === "index.html") {
     for (const type of [
@@ -374,5 +382,5 @@ if (failures.length) {
 }
 
 console.log(
-  `Validated ${required.length} files, metadata, JSON-LD, icons, sitemap, llms.txt and local links.`,
+  `Validated ${required.length} files, metadata, JSON-LD, icons, sitemap, llms.txt, 404 error semantics and local links.`,
 );

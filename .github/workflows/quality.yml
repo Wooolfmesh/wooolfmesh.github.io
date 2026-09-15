@@ -1,0 +1,38 @@
+name: Site quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wooolfmesh-quality-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build final static surface
+        run: npm run build
+      - name: Validate Search Release, metadata, JSON-LD, favicon, sitemap and 404
+        run: npm run validate
+      - name: Check formatting
+        run: npm run format:check
+      - name: Validate HTML
+        run: npm run lint:html
+      - name: Require deterministic committed build output
+        run: git diff --exit-code
